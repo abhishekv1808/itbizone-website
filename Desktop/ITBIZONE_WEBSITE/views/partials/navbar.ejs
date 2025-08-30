@@ -1,0 +1,363 @@
+<!-- Tailwind CSS Navbar Component -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-dark-charcoal/95 backdrop-blur-glass border-b border-gray-200/20 dark:border-white/10 shadow-lg navbar-transition"
+    id="navbar">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+
+            <!-- Logo Section -->
+            <div class="flex-shrink-0">
+                <a href="/" class="flex items-center space-x-2 hover-lift">
+                    <!-- Logo for light theme -->
+                    <img src="/images/itbizone logo(black).svg" alt="ITBIZONE" class="h-10 w-auto dark:hidden" />
+                    <!-- Logo for dark theme -->
+                    <img src="/images/itbizone logo(white).svg" alt="ITBIZONE" class="h-10 w-auto hidden dark:block" />
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-4">
+                    <a href="/"
+                        class="nav-link active bg-primary/10 text-primary px-3 py-2 rounded-md text-sm font-medium navbar-transition hover-lift"
+                        data-page="home">
+                        Home
+                    </a>
+
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+
+                        <button
+                            class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium navbar-transition hover-lift flex items-center"
+                            data-page="services" id="servicesDropdown">
+                            Services
+                            <svg class="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+
+                        <!-- Dropdown Menu -->
+                        <div class="absolute left-0 mt-2 w-56 bg-white dark:bg-dark-charcoal rounded-lg shadow-lg border border-gray-200/20 dark:border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform translate-y-2 group-hover:translate-y-0 z-50"
+                            id="servicesDropdownMenu">
+                            <div class="py-2">
+                                <a href="/services/website-development"
+                                    class="block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-primary/10 hover:text-primary transition-colors duration-200 flex items-center">
+                                    <svg class="w-5 h-5 mr-3 text-primary" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                    </svg>
+                                    Website Development
+                                </a>
+                                <a href="/services/digital-marketing"
+                                    class="block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-primary/10 hover:text-primary transition-colors duration-200 flex items-center">
+                                    <svg class="w-5 h-5 mr-3 text-secondary" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                    </svg>
+                                    Digital Marketing
+                                </a>
+                                <a href="/services/graphic-design"
+                                    class="block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-primary/10 hover:text-primary transition-colors duration-200 flex items-center">
+                                    <svg class="w-5 h-5 mr-3 text-accent" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17v4a2 2 0 002 2h4M15 7l-3 3">
+                                        </path>
+                                    </svg>
+                                    Graphic Design
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="/portfolio"
+                        class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium navbar-transition hover-lift"
+                        data-page="portfolio">
+                        Portfolio
+                    </a>
+                    <a href="/about"
+                        class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium navbar-transition hover-lift"
+                        data-page="about">
+                        About Us
+                    </a>
+                    <a href="/contact"
+                        class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium navbar-transition hover-lift"
+                        data-page="about">
+                        Contact Us
+                    </a>
+                    <a href="/reach-us"
+                        class="contact-cta ml-4 bg-main text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg hover:shadow-xl navbar-transition hover-lift hover:scale-105"
+                        data-page="contact">
+                        Reach Us
+                    </a>
+                </div>
+            </div>
+
+            <!-- Theme Toggle & Mobile Menu Container -->
+            <div class="flex items-center space-x-4">
+
+                <!-- Theme Toggle Button -->
+                <button id="themeToggle"
+                    class="relative p-2 rounded-full border-2 border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300 hover:border-primary hover:text-primary hover:rotate-180 navbar-transition"
+                    aria-label="Toggle theme">
+                    <!-- Sun Icon -->
+                    <svg class="w-5 h-5 absolute inset-2 transition-all duration-300 opacity-100 dark:opacity-0 dark:rotate-180"
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" />
+                        <path
+                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+                            stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    <!-- Moon Icon -->
+                    <svg class="w-5 h-5 absolute inset-2 transition-all duration-300 opacity-0 rotate-180 dark:opacity-100 dark:rotate-0"
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor"
+                            stroke-width="2" />
+                    </svg>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileToggle"
+                    class="md:hidden relative flex flex-col justify-center items-center w-8 h-8 bg-transparent border-none cursor-pointer"
+                    aria-label="Toggle mobile menu">
+                    <span
+                        class="hamburger-line block w-6 h-0.5 bg-gray-600 dark:bg-gray-300 transition-all duration-300 ease-in-out"></span>
+                    <span
+                        class="hamburger-line block w-6 h-0.5 bg-gray-600 dark:bg-gray-300 transition-all duration-300 ease-in-out mt-1"></span>
+                    <span
+                        class="hamburger-line block w-6 h-0.5 bg-gray-600 dark:bg-gray-300 transition-all duration-300 ease-in-out mt-1"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="navbarMenu"
+        class="md:hidden fixed inset-x-0 top-16 bg-white/95 dark:bg-dark-charcoal/95 backdrop-blur-glass border-b border-gray-200/20 dark:border-white/10 shadow-lg transform -translate-y-full opacity-0 invisible transition-all duration-300 ease-in-out">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="/"
+                class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-primary bg-primary/10"
+                data-page="home">
+                Home
+            </a>
+
+            <!-- Mobile Services Dropdown -->
+            <div class="mobile-dropdown">
+                <button
+                    class="mobile-services-toggle w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-primary/10 navbar-transition flex items-center justify-between"
+                    data-page="services" id="mobileServicesToggle">
+                    Services
+                    <svg class="w-5 h-5 transition-transform duration-200" id="mobileServicesIcon" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+
+                <!-- Mobile Dropdown Items -->
+                <div class="mobile-dropdown-content ml-4 mt-1 space-y-1 max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                    id="mobileServicesContent">
+                    <a href="/services/website-development"
+                        class="block px-3 py-2 rounded-md text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:bg-primary/5 transition-colors duration-200 flex items-center">
+                        <svg class="w-4 h-4 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                        Website Development
+                    </a>
+                    <a href="/services/digital-marketing"
+                        class="block px-3 py-2 rounded-md text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:bg-primary/5 transition-colors duration-200 flex items-center">
+                        <svg class="w-4 h-4 mr-2 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                        Digital Marketing
+                    </a>
+                    <a href="/services/graphic-design"
+                        class="block px-3 py-2 rounded-md text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:bg-primary/5 transition-colors duration-200 flex items-center">
+                        <svg class="w-4 h-4 mr-2 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17v4a2 2 0 002 2h4M15 7l-3 3">
+                            </path>
+                        </svg>
+                        Graphic Design
+                    </a>
+                </div>
+            </div>
+
+            <a href="/portfolio"
+                class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-primary/10 navbar-transition"
+                data-page="portfolio">
+                Portfolio
+            </a>
+            <a href="/about"
+                class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-primary/10 navbar-transition"
+                data-page="about">
+                About Us
+            </a>
+            <a href="/contact"
+                class="mobile-nav-link block mx-3 mt-4 gradient-royal-purple text-white px-6 py-3 rounded-full text-base font-semibold text-center shadow-lg"
+                data-page="contact">
+                Contact Us
+            </a>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Navbar JavaScript functionality
+    document.addEventListener('DOMContentLoaded', function () {
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navbarMenu = document.getElementById('navbarMenu');
+        const hamburgerLines = mobileToggle.querySelectorAll('.hamburger-line');
+
+        mobileToggle.addEventListener('click', function () {
+            // Toggle mobile menu
+            const isActive = navbarMenu.classList.contains('active');
+
+            if (isActive) {
+                navbarMenu.classList.remove('active', 'translate-y-0', 'opacity-100', 'visible');
+                navbarMenu.classList.add('-translate-y-full', 'opacity-0', 'invisible');
+
+                // Reset hamburger animation
+                hamburgerLines[0].classList.remove('rotate-45', 'translate-y-2');
+                hamburgerLines[1].classList.remove('opacity-0');
+                hamburgerLines[2].classList.remove('-rotate-45', '-translate-y-2');
+            } else {
+                navbarMenu.classList.add('active', 'translate-y-0', 'opacity-100', 'visible');
+                navbarMenu.classList.remove('-translate-y-full', 'opacity-0', 'invisible');
+
+                // Animate hamburger to X
+                hamburgerLines[0].classList.add('rotate-45', 'translate-y-2');
+                hamburgerLines[1].classList.add('opacity-0');
+                hamburgerLines[2].classList.add('-rotate-45', '-translate-y-2');
+            }
+        });
+
+        // Mobile services dropdown functionality
+        const mobileServicesToggle = document.getElementById('mobileServicesToggle');
+        const mobileServicesContent = document.getElementById('mobileServicesContent');
+        const mobileServicesIcon = document.getElementById('mobileServicesIcon');
+
+        if (mobileServicesToggle && mobileServicesContent) {
+            mobileServicesToggle.addEventListener('click', function (e) {
+                e.preventDefault();
+                const isOpen = mobileServicesContent.style.maxHeight && mobileServicesContent.style.maxHeight !== '0px';
+
+                if (isOpen) {
+                    // Close dropdown
+                    mobileServicesContent.style.maxHeight = '0px';
+                    mobileServicesIcon.classList.remove('rotate-180');
+                } else {
+                    // Open dropdown
+                    mobileServicesContent.style.maxHeight = mobileServicesContent.scrollHeight + 'px';
+                    mobileServicesIcon.classList.add('rotate-180');
+                }
+            });
+        }
+
+        // Close mobile menu when clicking on a link
+        const allNavLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+        allNavLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                if (navbarMenu.classList.contains('active')) {
+                    mobileToggle.click(); // Trigger the toggle to close menu
+                }
+            });
+        });
+
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const currentTheme = localStorage.getItem('theme') || 'light';
+
+        // Set initial theme
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        if (currentTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+
+        themeToggle.addEventListener('click', function () {
+            const isDark = document.documentElement.classList.contains('dark');
+
+            if (isDark) {
+                document.documentElement.classList.remove('dark');
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Active link highlighting
+        function setActiveLink() {
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('.nav-link');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            [...navLinks, ...mobileNavLinks].forEach(link => {
+                link.classList.remove('active', 'bg-primary/10', 'text-primary');
+                link.classList.add('text-gray-700', 'dark:text-gray-300');
+
+                if (link.getAttribute('href') === currentPath ||
+                    (currentPath === '/' && link.getAttribute('href') === '/')) {
+                    link.classList.add('active', 'bg-primary/10', 'text-primary');
+                    link.classList.remove('text-gray-700', 'dark:text-gray-300');
+                }
+            });
+        }
+
+        setActiveLink();
+
+        // Navbar scroll effect
+        let lastScroll = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', function () {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll <= 0) {
+                navbar.style.transform = 'translateY(0)';
+                return;
+            }
+
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                // Scrolling down - hide navbar
+                navbar.style.transform = 'translateY(-100%)';
+            } else {
+                // Scrolling up - show navbar
+                navbar.style.transform = 'translateY(0)';
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function (event) {
+            const isClickInsideNav = navbarMenu.contains(event.target) ||
+                mobileToggle.contains(event.target);
+
+            if (!isClickInsideNav && navbarMenu.classList.contains('active')) {
+                mobileToggle.click(); // Close the menu
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    });
+</script>

@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+/* Tailwind CSS 4.1 Base Layer */
+@layer base {
+  /* CSS Custom Properties for Brand Colors */
+  :root {
+    --color-royal-blue: #2563eb;
+    --color-electric-purple: #8b5cf6;
+    --color-emerald-green: #10b981;
+    --color-amber-gold: #f59e0b;
+    --color-dark-charcoal: #111827;
+    --color-light-gray: #f3f4f6;
+    --color-pure-white: #ffffff;
+    --color-primary: #1f889f;
+    --color-secondary: #f9c053;
+  }
+  
+  /* Font Setup with Inter */
+  html {
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    font-feature-settings: 'cv11', 'ss01';
+    font-variation-settings: 'opsz' auto;
+    scroll-padding-top: 5rem;
+  }
+  
+  body {
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Tailwind CSS 4.1 Utilities Layer */
+@layer utilities {
+  /* Modern Transition Utilities */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .transition-fast {
+    transition: all 0.15s ease-out;
+  }
+  
+  /* Hover Effects */
+  .hover-lift {
+    transition: transform 0.2s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Modern Glassmorphism */
+  .glass-effect {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Custom Gradient Utilities */
+  .bg-gradient-brand {
+    background: linear-gradient(135deg, var(--color-royal-blue), var(--color-electric-purple));
+  }
+  
+  .bg-gradient-success {
+    background: linear-gradient(135deg, var(--color-emerald-green), var(--color-royal-blue));
+  }
+  
+  .bg-gradient-warning {
+    background: linear-gradient(135deg, var(--color-amber-gold), var(--color-emerald-green));
+  }
+  
+  /* Shadow Utilities */
+  .shadow-brand {
+    box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.15);
+  }
+  
+  .shadow-purple {
+    box-shadow: 0 4px 14px 0 rgba(139, 92, 246, 0.15);
+  }
+  
+  .shadow-emerald {
+    box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.15);
+  }
+}
+
+/* Custom utilities for smooth transitions and effects */
+@layer utilities {
+  .navbar-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-lift {
+    transition: transform 0.2s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px);
+  }
+  
+  .gradient-royal-purple {
+    background: linear-gradient(135deg, var(--royal-blue), var(--electric-purple));
+  }
+  
+  .backdrop-blur-glass {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  /* Dropdown specific utilities */
+  .dropdown-enter {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  
+  .dropdown-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+  }
+  
+  .dropdown-shadow {
+    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* Smooth scrolling offset for fixed navbar */
+html {
+  scroll-padding-top: 5rem;
+}
+
+
+.primary{
+    color : #1f889f;
+}
+
+.bg-main{
+    background-color: #1f889f;
+}
+
+.yellow-border{
+    border: 2px solid #f9c053;
+}
+
+.secondary{
+    color : #f9c053;
+}
+
+.bg-secondary{
+    background-color: #f9c053;
+}

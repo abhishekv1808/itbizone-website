@@ -1,0 +1,76 @@
+npx @tailwindcss/cli -i ./views/input.css -o ./public/output.css --watch
+
+
+                            <!-- Services Grid -->
+                            <div class="grid md:grid-cols-3 gap-6 pt-12">
+
+                                <!-- Website Development -->
+                                <div
+                                    class="group bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
+                                    <div
+                                        class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors duration-300">
+                                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Website
+                                        Development</h3>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                        Custom websites and web applications built with modern technologies for optimal
+                                        performance and user experience.
+                                    </p>
+                                    <div class="mt-4">
+                                        <a href="/services/website-development"
+                                            class="text-primary text-sm font-medium hover:underline">Learn more →</a>
+                                    </div>
+                                </div>
+
+                                <!-- Digital Marketing -->
+                                <div
+                                    class="group bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-secondary/30 transition-all duration-300 hover:shadow-lg">
+                                    <div
+                                        class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-secondary/20 transition-colors duration-300">
+                                        <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Digital
+                                        Marketing</h3>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                        Strategic marketing campaigns, SEO optimization, and social media management to
+                                        grow your online presence.
+                                    </p>
+                                    <div class="mt-4">
+                                        <a href="/services/digital-marketing"
+                                            class="text-secondary text-sm font-medium hover:underline">Learn more →</a>
+                                    </div>
+                                </div>
+
+                                <!-- Graphic Design -->
+                                <div
+                                    class="group bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-accent/30 transition-all duration-300 hover:shadow-lg">
+                                    <div
+                                        class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors duration-300">
+                                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17v4a2 2 0 002 2h4M15 7l-3 3">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Graphic Design
+                                    </h3>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                        Creative visual solutions including branding, logos, marketing materials, and
+                                        user interface designs.
+                                    </p>
+                                    <div class="mt-4">
+                                        <a href="/services/graphic-design"
+                                            class="text-accent text-sm font-medium hover:underline">Learn more →</a>
+                                    </div>
+                                </div>
+                            </div>
