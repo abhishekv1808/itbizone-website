@@ -1,0 +1,347 @@
+@import "tailwindcss";
+
+
+*{
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, span{
+    font-family: 'Alan Sans', sans-serif;
+}
+
+    /* Navbar CSS Start */
+    .navbar {
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #16a34a;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    .nav-link:hover {
+      color: #16a34a;
+    }
+
+    .dropdown-menu {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .mobile-menu.open {
+      max-height: 600px;
+    }
+
+    .logo-text {
+      background: linear-gradient(135deg, #16a34a 0%, #059669 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .cta-button {
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(22, 163, 74, 0.3);
+    }
+
+    .mobile-nav-link {
+      transition: all 0.3s ease;
+    }
+
+    .mobile-nav-link:hover {
+      background-color: #f0fdf4;
+      padding-left: 1.5rem;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-slide-down {
+      animation: slideDown 0.3s ease-out;
+    }
+        /* Navbar CSS End */
+
+
+   .slide {
+      opacity: 0;
+      transform: translateX(100%);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide.active {
+      opacity: 1;
+      transform: translateX(0);
+      position: relative;
+    }
+
+    .slide.prev {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+
+    .progress-bar {
+      animation: progress 5s linear;
+    }
+
+    @keyframes progress {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
+
+    .loan-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .slide.active .loan-icon {
+      animation: iconPop 0.6s ease-out 0.3s both;
+    }
+
+    @keyframes iconPop {
+      0% { transform: scale(0.8); opacity: 0; }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .slide-content {
+      animation: slideContent 0.8s ease-out 0.2s both;
+    }
+
+    @keyframes slideContent {
+      from { 
+        opacity: 0; 
+        transform: translateY(30px);
+      }
+      to { 
+        opacity: 1; 
+        transform: translateY(0);
+      }
+    }
+
+    /*  Products cards CSS Start*/
+
+     .product-card {
+      transition: all 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 130px;
+      height: 3px;
+      background-color: #16a34a;
+    }
+
+    .cta-link {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .cta-link svg {
+      transition: transform 0.3s ease;
+    }
+
+    .cta-link:hover svg {
+      transform: translateX(4px);
+    }
+
+    
+    /*  Products cards CSS End*/
+
+    /* platform benefit CSS Start */
+
+      .phone-mockup {
+      perspective: 1000px;
+    }
+
+    .phone-device {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px) rotateY(-5deg);
+      }
+      50% {
+        transform: translateY(-20px) rotateY(-5deg);
+      }
+    }
+
+    .feature-card {
+      animation: slideIn 0.6s ease-out forwards;
+      opacity: 0;
+    }
+
+    .feature-card:nth-child(1) { animation-delay: 0.1s; }
+    .feature-card:nth-child(2) { animation-delay: 0.2s; }
+    .feature-card:nth-child(3) { animation-delay: 0.3s; }
+    .feature-card:nth-child(4) { animation-delay: 0.4s; }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .check-icon {
+      flex-shrink: 0;
+    }
+
+    .cta-button {
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(22, 163, 74, 0.3);
+    }
+
+    .contact-button {
+      transition: all 0.3s ease;
+    }
+
+    .contact-button:hover {
+      background-color: #4b5563;
+    }
+
+    .popup-card {
+      animation: popIn 0.8s ease-out;
+    }
+
+    @keyframes popIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+      }
+      60% {
+        transform: scale(1.05) translateY(-5px);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    /* platform benefit CSS Start */
+
+
+    /*Testimonial CSS Start*/
+
+
+    .testimonial-card {
+      transition: all 0.4s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .star-rating {
+      color: #fbbf24;
+    }
+
+    .quote-icon {
+      opacity: 0.1;
+    }
+
+    .testimonial-slider {
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+    }
+
+    .testimonial-slider::-webkit-scrollbar {
+      display: none;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .stats-number {
+      font-feature-settings: 'tnum';
+      font-variant-numeric: tabular-nums;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #16a34a 0%, #059669 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /*Testimonial CSS End*/

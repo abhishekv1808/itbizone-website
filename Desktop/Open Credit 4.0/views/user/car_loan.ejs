@@ -1,0 +1,701 @@
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/navbar.ejs') %>
+
+            <main>
+                <!-- Hero Section - Diagonal Split Design -->
+                <section class="relative  overflow-hidden bg-green-600">
+
+                    <div class="relative z-10 container mx-auto px-6 lg:px-20 pt-20 pb-16">
+                        <div class="grid lg:grid-cols-2 gap-12 items-center ">
+                            <!-- Left Content -->
+                            <div class="text-white space-y-8">
+                                <!-- Badge -->
+                                <div class="inline-flex items-center gap-2 px-6 py-3
+                                    bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold">
+                                    <i class="fas fa-car text-yellow-400"></i>
+                                    <span>Car Loans Available</span>
+                                </div>
+
+                                <!-- Main Heading -->
+                                <div class="space-y-4">
+                                    <h1 class="text-5xl lg:text-6xl font-bold leading-tight">
+                                        Drive Your
+                                        <span class="text-yellow-400">Dream Car </span>
+                                        <br>
+                                        <span class="text-5xl lg:text-6xl text-gray-200">Today</span>
+                                    </h1>
+                                    <p class="text-xl lg:text-2xl text-gray-200 leading-relaxed">
+                                        Get instant car loan approval from <span class="text-yellow-400 font-bold">25+
+                                            leading banks</span>
+                                        with interest rates starting from <span
+                                            class="text-green-300 font-bold text-2xl">7.60%</span> p.a.
+                                    </p>
+                                </div>
+
+                                <!-- Key Benefits -->
+                                <div class="grid grid-cols-2 gap-6">
+                                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                                        <div class="text-2xl font-bold text-yellow-400">₹50L</div>
+                                        <div class="text-sm text-gray-200">Maximum Loan</div>
+                                    </div>
+                                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                                        <div class="text-2xl font-bold text-green-300">7 Years</div>
+                                        <div class="text-sm text-gray-200">Maximum Tenure</div>
+                                    </div>
+                                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                                        <div class="text-2xl font-bold text-blue-300">24 Hours</div>
+                                        <div class="text-sm text-gray-200">Quick Approval</div>
+                                    </div>
+                                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                                        <div class="text-2xl font-bold text-purple-300">100%</div>
+                                        <div class="text-sm text-gray-200">Financing Available</div>
+                                    </div>
+                                </div>
+
+                                <!-- CTA Buttons -->
+                                <div class="flex flex-col sm:flex-row gap-4">
+                                    <button onclick="scrollToForm()"
+                                        class="px-8 py-4 bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
+                                        <span class="flex items-center gap-2 justify-center">
+                                            <i class="fas fa-bolt"></i>
+                                            Apply Now - Get Instant Approval
+                                        </span>
+                                    </button>
+                                    <a href="/emi-calculator"
+                                        class="px-8 py-4 border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-blue-900 transition-all duration-300 flex items-center gap-2 justify-center">
+                                        <i class="fas fa-calculator"></i>
+                                        Calculate EMI
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Right Content - Car Showcase -->
+                            <div class="relative">
+                                <!-- Main Car Image -->
+                                <div class="relative">
+                                    <div class="bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30">
+                                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                            alt="Car Loan" class="w-full h-64 object-cover rounded-2xl">
+
+                                        <!-- Popular Car Models -->
+                                        <div class="mt-6 space-y-4">
+                                            <h3 class="text-xl font-bold text-white mb-4">Popular Car Models</h3>
+                                            <div class="grid grid-cols-2 gap-3 text-sm">
+                                                <div class="bg-white/10 rounded-lg p-3 text-center">
+                                                    <div class="font-semibold text-yellow-400">Maruti Swift</div>
+                                                    <div class="text-gray-200">₹6-8 Lakhs</div>
+                                                </div>
+                                                <div class="bg-white/10 rounded-lg p-3 text-center">
+                                                    <div class="font-semibold text-yellow-400">Hyundai i20</div>
+                                                    <div class="text-gray-200">₹7-11 Lakhs</div>
+                                                </div>
+                                                <div class="bg-white/10 rounded-lg p-3 text-center">
+                                                    <div class="font-semibold text-yellow-400">Honda City</div>
+                                                    <div class="text-gray-200">₹12-16 Lakhs</div>
+                                                </div>
+                                                <div class="bg-white/10 rounded-lg p-3 text-center">
+                                                    <div class="font-semibold text-yellow-400">Tata Nexon</div>
+                                                    <div class="text-gray-200">₹8-14 Lakhs</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Floating Rate Cards -->
+                                    <div
+                                        class="absolute -top-6 -right-6 bg-green-500 text-white p-4 rounded-2xl shadow-xl transform rotate-6">
+                                        <div class="text-2xl font-bold">7.60%*</div>
+                                        <div class="text-xs">Starting Rate</div>
+                                    </div>
+
+                                    <div
+                                        class="absolute -bottom-6 -left-6 bg-blue-600 text-white p-4 rounded-2xl shadow-xl transform -rotate-6">
+                                        <div class="text-lg font-bold">Zero</div>
+                                        <div class="text-xs">Processing Fee</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Interest Rates Comparison Section -->
+                <section class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-4xl font-bold text-gray-800 mb-4">Compare Car Loan Interest Rates</h2>
+                            <p class="text-xl text-gray-600">Get the best rates from top Indian banks</p>
+                        </div>
+
+                        <div class="overflow-x-auto">
+                            <table class="w-full bg-white rounded-2xl shadow-lg overflow-hidden">
+                                <thead class="bg-gradient-to-r from-blue-600 to-green-600 text-white">
+                                    <tr>
+                                        <th class="px-6 py-4 text-left font-semibold">Bank</th>
+                                        <th class="px-6 py-4 text-left font-semibold">Interest Rate (p.a.)</th>
+                                        <th class="px-6 py-4 text-left font-semibold">Maximum Tenure</th>
+                                        <th class="px-6 py-4 text-left font-semibold">Processing Fee</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr class="hover:bg-blue-50 transition duration-200">
+                                        <td class="px-6 py-4 font-semibold text-gray-800">UCO Bank</td>
+                                        <td class="px-6 py-4 text-green-600 font-bold">7.60% onwards</td>
+                                        <td class="px-6 py-4 text-gray-600">Up to 7 years</td>
+                                        <td class="px-6 py-4 text-gray-600">0.5% of loan amount</td>
+                                    </tr>
+                                    <tr class="hover:bg-blue-50 transition duration-200">
+                                        <td class="px-6 py-4 font-semibold text-gray-800">Bank of Maharashtra</td>
+                                        <td class="px-6 py-4 text-green-600 font-bold">7.70% onwards</td>
+                                        <td class="px-6 py-4 text-gray-600">Up to 7 years</td>
+                                        <td class="px-6 py-4 text-gray-600">₹2,500 + GST</td>
+                                    </tr>
+                                    <tr class="hover:bg-blue-50 transition duration-200">
+                                        <td class="px-6 py-4 font-semibold text-gray-800">Indian Bank</td>
+                                        <td class="px-6 py-4 text-green-600 font-bold">7.75% onwards</td>
+                                        <td class="px-6 py-4 text-gray-600">Up to 7 years</td>
+                                        <td class="px-6 py-4 text-gray-600">₹3,000 + GST</td>
+                                    </tr>
+                                    <tr class="hover:bg-blue-50 transition duration-200">
+                                        <td class="px-6 py-4 font-semibold text-gray-800">Indian Overseas Bank</td>
+                                        <td class="px-6 py-4 text-green-600 font-bold">7.80% onwards</td>
+                                        <td class="px-6 py-4 text-gray-600">Up to 7 years</td>
+                                        <td class="px-6 py-4 text-gray-600">₹5,000 + GST</td>
+                                    </tr>
+                                    <tr class="hover:bg-blue-50 transition duration-200">
+                                        <td class="px-6 py-4 font-semibold text-gray-800">IndusInd Bank</td>
+                                        <td class="px-6 py-4 text-green-600 font-bold">8.00% onwards</td>
+                                        <td class="px-6 py-4 text-gray-600">Up to 5 years</td>
+                                        <td class="px-6 py-4 text-gray-600">1% of loan amount</td>
+                                    </tr>
+                                    <tr class="hover:bg-blue-50 transition duration-200">
+                                        <td class="px-6 py-4 font-semibold text-gray-800">SBI</td>
+                                        <td class="px-6 py-4 text-green-600 font-bold">8.85% onwards</td>
+                                        <td class="px-6 py-4 text-gray-600">Up to 7 years</td>
+                                        <td class="px-6 py-4 text-gray-600">₹2,500 + GST</td>
+                                    </tr>
+                                    <tr class="hover:bg-blue-50 transition duration-200">
+                                        <td class="px-6 py-4 font-semibold text-gray-800">HDFC Bank</td>
+                                        <td class="px-6 py-4 text-green-600 font-bold">9.40% onwards</td>
+                                        <td class="px-6 py-4 text-gray-600">Up to 7 years</td>
+                                        <td class="px-6 py-4 text-gray-600">₹5,500 + GST</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="text-center mt-8">
+                            <p class="text-sm text-gray-500">*Interest rates are subject to change and may vary based on
+                                your credit profile</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Car Loan Features Section -->
+                <section class="py-16 bg-white">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-4xl font-bold text-gray-800 mb-4">Why Choose Our Car Loan?</h2>
+                            <p class="text-xl text-gray-600">Experience the best car financing solutions</p>
+                        </div>
+
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <!-- Feature 1 -->
+                            <div
+                                class="group bg-gradient-to-br from-blue-50 to-green-50 rounded-2xl p-8 border border-blue-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-r from-blue-600 to-green-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+                                    <i class="fas fa-rocket text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Instant Approval</h3>
+                                <p class="text-gray-600 text-center">Get pre-approved in just 2 minutes with our
+                                    AI-powered instant approval system. No waiting, no hassle.</p>
+                                <div class="mt-4 text-center">
+                                    <span
+                                        class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        2 Min Process
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Feature 2 -->
+                            <div
+                                class="group bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8 border border-green-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+                                    <i class="fas fa-percentage text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Lowest Interest Rates</h3>
+                                <p class="text-gray-600 text-center">Compare rates from 25+ lenders and get the best
+                                    deal. Starting from 7.60% p.a. with flexible tenure options.</p>
+                                <div class="mt-4 text-center">
+                                    <span
+                                        class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        25+ Lenders
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Feature 3 -->
+                            <div
+                                class="group bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border border-purple-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+                                    <i class="fas fa-file-alt text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Minimal Documentation</h3>
+                                <p class="text-gray-600 text-center">Simple paperwork with digital verification. Upload
+                                    documents online and get verified instantly.</p>
+                                <div class="mt-4 text-center">
+                                    <span
+                                        class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        Digital Process
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Feature 4 -->
+                            <div
+                                class="group bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-8 border border-yellow-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mb-6 mx-auto">
+                                    <i class="fas fa-money-bill-wave text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">100% Financing</h3>
+                                <p class="text-gray-600 text-center">Get up to 100% of your car's on-road price
+                                    financed. No need for a large down payment.</p>
+                                <div class="mt-4 text-center">
+                                    <span
+                                        class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        Zero Down Payment
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Feature 5 -->
+                            <div
+                                class="group bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl p-8 border border-indigo-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+                                    <i class="fas fa-shield-alt text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Secure & Safe</h3>
+                                <p class="text-gray-600 text-center">Bank-grade security with 256-bit SSL encryption.
+                                    Your data is completely safe and secure.</p>
+                                <div class="mt-4 text-center">
+                                    <span
+                                        class="inline-block bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        256-bit SSL
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Feature 6 -->
+                            <div
+                                class="group bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl p-8 border border-red-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-r from-red-600 to-pink-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+                                    <i class="fas fa-headset text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">24/7 Support</h3>
+                                <p class="text-gray-600 text-center">Dedicated relationship manager and 24/7 customer
+                                    support to help you throughout the loan journey.</p>
+                                <div class="mt-4 text-center">
+                                    <span
+                                        class="inline-block bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        Dedicated RM
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Eligibility Section -->
+                <section class="py-16 bg-blue-500 text-white">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-4xl font-bold mb-4">Car Loan Eligibility Criteria</h2>
+                            <p class="text-xl text-blue-100">Check if you qualify for our car loan</p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-12 items-center">
+                            <div class="space-y-6">
+                                <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-6">
+                                    <h3 class="text-2xl font-bold mb-4">Basic Requirements</h3>
+                                    <div class="space-y-4">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                                                <i class="fas fa-check text-white text-sm"></i>
+                                            </div>
+                                            <span>Age: 18 to 75 years</span>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                                                <i class="fas fa-check text-white text-sm"></i>
+                                            </div>
+                                            <span>Minimum Income: ₹20,000 per month</span>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                                                <i class="fas fa-check text-white text-sm"></i>
+                                            </div>
+                                            <span>Employment: Minimum 1 year with current employer</span>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                                                <i class="fas fa-check text-white text-sm"></i>
+                                            </div>
+                                            <span>Credit Score: 650 and above (preferred 750+)</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-6">
+                                    <h3 class="text-2xl font-bold mb-4">Documentation Required</h3>
+                                    <div class="grid grid-cols-2 gap-4 text-sm">
+                                        <div>
+                                            <h4 class="font-semibold mb-2">Identity Proof:</h4>
+                                            <ul class="space-y-1">
+                                                <li>• Aadhaar Card</li>
+                                                <li>• PAN Card</li>
+                                                <li>• Passport</li>
+                                                <li>• Driving License</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold mb-2">Income Proof:</h4>
+                                            <ul class="space-y-1">
+                                                <li>• Salary Slips (3 months)</li>
+                                                <li>• Bank Statements</li>
+                                                <li>• Form 16</li>
+                                                <li>• ITR (2 years)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <div class="bg-white/20 backdrop-blur-sm rounded-3xl p-8">
+                                    <h3 class="text-3xl font-bold mb-6">Check Your Eligibility</h3>
+                                    <p class="text-lg mb-8 text-blue-100">Get instant eligibility check in 30 seconds
+                                    </p>
+
+                                    <!-- Quick Eligibility Form -->
+                                    <form class="space-y-4" onsubmit="checkEligibility(event)">
+                                        <div>
+                                            <input type="number" placeholder="Monthly Income (₹)"
+                                                class="w-full px-4 py-3 bg-white rounded-xl border border-white-2 text-gray-800 placeholder-gray-500"
+                                                required>
+                                        </div>
+                                        <div>
+                                            <input type="number" placeholder="Age"
+                                                class="w-full px-4 py-3 bg-white rounded-xl border border-white-2 text-gray-800 placeholder-gray-500"
+                                                required>
+                                        </div>
+                                        <div>
+                                            <select
+                                                class="w-full px-4 py-3 bg-white rounded-xl border border-white-2 text-gray-800"
+                                                required>
+                                                <option value="">Select Employment Type</option>
+                                                <option value="salaried">Salaried</option>
+                                                <option value="self_employed">Self Employed</option>
+                                                <option value="business">Business Owner</option>
+                                            </select>
+                                        </div>
+                                        <button type="submit"
+                                            class="w-full px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold rounded-xl transition-all duration-300">
+                                            Check Eligibility
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Application Process Section -->
+                <section class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-4xl font-bold text-gray-800 mb-4">How to Apply for Car Loan?</h2>
+                            <p class="text-xl text-gray-600">Simple 4-step process to get your car loan approved</p>
+                        </div>
+
+                        <div class="grid md:grid-cols-4 gap-8 relative">
+                            <!-- Step 1 -->
+                            <div class="text-center relative">
+                                <div class="relative mb-6">
+                                    <div
+                                        class="w-20 h-20 bg-gradient-to-r from-blue-600 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 relative z-10">
+                                        <span class="text-2xl font-bold text-white">1</span>
+                                    </div>
+                                    <!-- Connecting line to step 2 -->
+                                    <div class="absolute top-10 left-1/2 w-full h-0.5 bg-red-500 hidden md:block z-0"
+                                        style="transform: translateX(10px); width: calc(100% + 2rem);"></div>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">Apply Online</h3>
+                                <p class="text-gray-600">Fill out our simple online application form with basic details
+                                </p>
+                            </div>
+
+                            <!-- Step 2 -->
+                            <div class="text-center relative">
+                                <div class="relative mb-6">
+                                    <div
+                                        class="w-20 h-20 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 relative z-10">
+                                        <span class="text-2xl font-bold text-white">2</span>
+                                    </div>
+                                    <!-- Connecting line to step 3 -->
+                                    <div class="absolute top-10 left-1/2 w-full h-0.5 bg-red-500 hidden md:block z-0"
+                                        style="transform: translateX(10px); width: calc(100% + 2rem);"></div>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">Document Upload</h3>
+                                <p class="text-gray-600">Upload required documents digitally for quick verification</p>
+                            </div>
+
+                            <!-- Step 3 -->
+                            <div class="text-center relative">
+                                <div class="relative mb-6">
+                                    <div
+                                        class="w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4 relative z-10">
+                                        <span class="text-2xl font-bold text-white">3</span>
+                                    </div>
+                                    <!-- Connecting line to step 4 -->
+                                    <div class="absolute top-10 left-1/2 w-full h-0.5 bg-red-500 hidden md:block z-0"
+                                        style="transform: translateX(10px); width: calc(100% + 2rem);"></div>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">Get Approved</h3>
+                                <p class="text-gray-600">Receive instant approval and compare offers from multiple
+                                    lenders</p>
+                            </div>
+
+                            <!-- Step 4 -->
+                            <div class="text-center relative">
+                                <div class="relative mb-6">
+                                    <div
+                                        class="w-20 h-20 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 relative z-10">
+                                        <span class="text-2xl font-bold text-white">4</span>
+                                    </div>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">Drive Home</h3>
+                                <p class="text-gray-600">Complete the formalities and drive home your dream car</p>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-12">
+                            <button onclick="scrollToForm()"
+                                class="px-8 py-4 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
+                                Start Your Car Loan Application
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Car Loan Application Form -->
+                <section id="applicationForm" class="py-16 bg-white">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="max-w-4xl mx-auto">
+                            <div class="text-center mb-12">
+                                <h2 class="text-4xl font-bold text-gray-800 mb-4">Apply for Car Loan</h2>
+                                <p class="text-xl text-gray-600">Get instant approval in just 2 minutes</p>
+                            </div>
+
+                            <div class="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 lg:p-12">
+                                <form class="space-y-6" onsubmit="submitCarLoanApplication(event)">
+                                    <!-- Personal Information -->
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div>
+                                            <label class="block text-sm font-semibold text-gray-700 mb-2">Full
+                                                Name</label>
+                                            <input type="text" required
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-semibold text-gray-700 mb-2">Mobile
+                                                Number</label>
+                                            <input type="tel" required
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                        </div>
+                                    </div>
+
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div>
+                                            <label class="block text-sm font-semibold text-gray-700 mb-2">Email
+                                                Address</label>
+                                            <input type="email" required
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-semibold text-gray-700 mb-2">PAN
+                                                Number</label>
+                                            <input type="text" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" required
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                        </div>
+                                    </div>
+
+                                    <!-- Employment Information -->
+                                    <div class="border-t pt-6">
+                                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Employment Information</h3>
+                                        <div class="grid md:grid-cols-2 gap-6">
+                                            <div>
+                                                <label class="block text-sm font-semibold text-gray-700 mb-2">Employment
+                                                    Type</label>
+                                                <select required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                                    <option value="">Select Employment Type</option>
+                                                    <option value="salaried">Salaried</option>
+                                                    <option value="self_employed">Self Employed</option>
+                                                    <option value="business">Business Owner</option>
+                                                </select>
+                                            </div>
+                                            <div>
+                                                <label class="block text-sm font-semibold text-gray-700 mb-2">Monthly
+                                                    Income (₹)</label>
+                                                <input type="number" min="20000" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Loan Information -->
+                                    <div class="border-t pt-6">
+                                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Loan Information</h3>
+                                        <div class="grid md:grid-cols-3 gap-6">
+                                            <div>
+                                                <label class="block text-sm font-semibold text-gray-700 mb-2">Loan
+                                                    Amount (₹)</label>
+                                                <input type="number" min="100000" max="5000000" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                            </div>
+                                            <div>
+                                                <label class="block text-sm font-semibold text-gray-700 mb-2">Loan
+                                                    Tenure (Years)</label>
+                                                <select required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                                    <option value="">Select Tenure</option>
+                                                    <option value="1">1 Year</option>
+                                                    <option value="2">2 Years</option>
+                                                    <option value="3">3 Years</option>
+                                                    <option value="4">4 Years</option>
+                                                    <option value="5">5 Years</option>
+                                                    <option value="6">6 Years</option>
+                                                    <option value="7">7 Years</option>
+                                                </select>
+                                            </div>
+                                            <div>
+                                                <label class="block text-sm font-semibold text-gray-700 mb-2">Car
+                                                    Type</label>
+                                                <select required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                                    <option value="">Select Car Type</option>
+                                                    <option value="new">New Car</option>
+                                                    <option value="used">Used Car</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Car Information -->
+                                    <div class="border-t pt-6">
+                                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Car Information</h3>
+                                        <div class="grid md:grid-cols-2 gap-6">
+                                            <div>
+                                                <label class="block text-sm font-semibold text-gray-700 mb-2">Car
+                                                    Brand</label>
+                                                <select required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                                    <option value="">Select Brand</option>
+                                                    <option value="maruti">Maruti Suzuki</option>
+                                                    <option value="hyundai">Hyundai</option>
+                                                    <option value="honda">Honda</option>
+                                                    <option value="toyota">Toyota</option>
+                                                    <option value="tata">Tata</option>
+                                                    <option value="mahindra">Mahindra</option>
+                                                    <option value="kia">Kia</option>
+                                                    <option value="nissan">Nissan</option>
+                                                    <option value="ford">Ford</option>
+                                                    <option value="renault">Renault</option>
+                                                    <option value="other">Other</option>
+                                                </select>
+                                            </div>
+                                            <div>
+                                                <label class="block text-sm font-semibold text-gray-700 mb-2">Car
+                                                    Model</label>
+                                                <input type="text" placeholder="e.g., Swift, i20, City" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Terms and Conditions -->
+                                    <div class="border-t pt-6">
+                                        <div class="flex items-start gap-3">
+                                            <input type="checkbox" id="terms" required
+                                                class="mt-1 h-5 w-5 text-blue-600 rounded border-gray-300 focus:ring-blue-500">
+                                            <label for="terms" class="text-sm text-gray-600">
+                                                I agree to the <a href="#" data-terms-modal
+                                                    class="text-blue-600 hover:underline cursor-pointer">Terms &
+                                                    Conditions</a>
+                                                and <a href="#" data-privacy-modal
+                                                    class="text-blue-600 hover:underline cursor-pointer">Privacy
+                                                    Policy</a>.
+                                                I authorize OpenCredit and its partners to contact me.
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <div class="text-center pt-6">
+                                        <button type="submit"
+                                            class="px-12 py-4 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
+                                            Get Instant Car Loan Approval
+                                        </button>
+                                        <p class="text-sm text-gray-500 mt-3">
+                                            Secure SSL encrypted form • 100% safe and secure
+                                        </p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <%- include('../partials/footer.ejs') %>
+                <%- include('../partials/privacy-policy.ejs') %>
+
+                    <!-- Car Loan JavaScript -->
+                    <script>
+                        function scrollToForm() {
+                            document.getElementById('applicationForm').scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+
+                        function checkEligibility(event) {
+                            event.preventDefault();
+                            // Simple eligibility check logic
+                            alert('Great! You are eligible for our car loan. Please fill the detailed application form below.');
+                            scrollToForm();
+                        }
+
+                        function submitCarLoanApplication(event) {
+                            event.preventDefault();
+                            // Form submission logic
+                            alert('Thank you for your application! Our team will contact you within 30 minutes.');
+                            // Reset form
+                            event.target.reset();
+                        }
+                    </script>
+    </body>
+
+    </html>

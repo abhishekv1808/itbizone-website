@@ -1,0 +1,1046 @@
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/navbar.ejs') %>
+
+            <main class="bg-gray-50">
+                <!-- Hero Section -->
+                <section class="bg-gradient-to-br from-green-600 to-green-800 text-white py-16 md:py-20">
+                    <div class="container mx-auto px-4 md:px-6 lg:px-20">
+                        <div class="flex flex-col lg:flex-row items-center justify-between">
+                            <!-- Left Content -->
+                            <div class="lg:w-1/2 mb-10 lg:mb-0">
+                                <div
+                                    class="inline-flex items-center bg-green-500 bg-opacity-20 rounded-full px-4 py-2 mb-6">
+                                    <span class="text-green-200 font-semibold text-sm">🛡️ Life Insurance</span>
+                                </div>
+                                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                                    Get ₹1 Crore Life Insurance Starting from ₹16/day*
+                                </h1>
+                                <p class="text-xl text-green-100 mb-8 leading-relaxed">
+                                    Secure your family's future with comprehensive life insurance coverage from India's
+                                    leading insurers. Compare plans and get instant quotes online.
+                                </p>
+
+                                <!-- Key Benefits -->
+                                <div class="grid sm:grid-cols-2 gap-4 mb-8">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-check-circle text-yellow-400 mr-3 text-lg"></i>
+                                        <span class="text-green-100">Expert Claim Support</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-check-circle text-yellow-400 mr-3 text-lg"></i>
+                                        <span class="text-green-100">Intra Plan Comparison</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-check-circle text-yellow-400 mr-3 text-lg"></i>
+                                        <span class="text-green-100">Additional Riders Available</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-check-circle text-yellow-400 mr-3 text-lg"></i>
+                                        <span class="text-green-100">Tax Benefits Under 80C</span>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="bg-yellow-400 text-yellow-900 px-4 py-2 rounded-lg inline-flex items-center mb-6">
+                                    <i class="fas fa-gift mr-2"></i>
+                                    <span class="font-semibold">Get Online Discount up to 15% off*</span>
+                                </div>
+                            </div>
+
+                            <!-- Right Quick Quote Form -->
+                            <div class="lg:w-1/2 lg:pl-12">
+                                <div class="bg-white rounded-2xl shadow-2xl p-8">
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">
+                                        Get Instant Life Insurance Quote
+                                    </h3>
+                                    <form id="quickQuoteForm" class="space-y-4">
+                                        <div class="grid sm:grid-cols-2 gap-4">
+                                            <div>
+                                                <label
+                                                    class="block text-sm font-medium text-gray-700 mb-2">Gender</label>
+                                                <select
+                                                    class="w-full p-3 text-gray-500 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                                                    <option>Male</option>
+                                                    <option>Female</option>
+                                                </select>
+                                            </div>
+                                            <div>
+                                                <label class="block text-sm font-medium text-gray-700 mb-2">Age</label>
+                                                <select
+                                                    class="w-full p-3 border text-gray-500 border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                                                    <option>18-25</option>
+                                                    <option>26-35</option>
+                                                    <option>36-45</option>
+                                                    <option>46-55</option>
+                                                    <option>55+</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">Full
+                                                Name</label>
+                                            <input type="text" placeholder="Enter your full name"
+                                                class="w-full text-gray-500 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                                        </div>
+
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">Date of
+                                                Birth</label>
+                                            <input type="date"
+                                                class="w-full p-3 text-gray-500 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                                        </div>
+
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">Mobile
+                                                Number</label>
+                                            <input type="tel" placeholder="Enter mobile number"
+                                                class="w-full p-3 text-gray-500 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                                        </div>
+
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">Smoking
+                                                Status</label>
+                                            <div class="grid grid-cols-2 gap-3">
+                                                <label class="cursor-pointer">
+                                                    <input type="radio" name="smoking" value="no" class="sr-only peer ">
+                                                    <div
+                                                        class="p-3 text-green-500 border-2 border-gray-200 rounded-lg peer-checked:border-green-500 peer-checked:bg-green-50 text-center">
+                                                        Non-Smoker
+                                                    </div>
+                                                </label>
+                                                <label class="cursor-pointer">
+                                                    <input type="radio" name="smoking" value="yes"
+                                                        class="sr-only peer text-gray-500">
+                                                    <div
+                                                        class="p-3 text-red-500 border-2 border-gray-200 rounded-lg peer-checked:border-green-500 peer-checked:bg-green-50 text-center">
+                                                        Smoker
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <button type="submit"
+                                            class="w-full bg-green-600 text-white py-3 px-6 rounded-lg font-semibold text-lg hover:bg-green-700 transition-colors flex items-center justify-center">
+                                            View Plans
+                                            <i class="fas fa-arrow-right ml-2"></i>
+                                        </button>
+
+                                        <p class="text-xs text-gray-600 text-center mt-3">
+                                            By clicking, I agree to <a href="#"
+                                                class="text-green-600 hover:underline">terms & conditions</a> and
+                                            <a href="#" class="text-green-600 hover:underline">privacy policy</a>
+                                        </p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Life Insurance Premium Calculator -->
+                <section class="py-16 bg-white">
+                    <div class="container mx-auto px-4 md:px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Life Insurance Premium Calculator
+                            </h2>
+                            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                                Calculate your life insurance premium based on your age, health status, and coverage
+                                requirements
+                            </p>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 lg:p-12">
+                            <form id="premiumCalculator" class="space-y-8">
+                                <!-- Gender Selection -->
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Gender</h3>
+                                    <div class="grid grid-cols-2 gap-4 max-w-md">
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="gender" value="male" class="sr-only peer">
+                                            <div
+                                                class="p-4 border-2 border-gray-200 rounded-lg peer-checked:border-green-500 peer-checked:bg-green-50 hover:border-green-300 transition-all text-center">
+                                                <i class="fas fa-mars text-2xl text-green-600 mb-2"></i>
+                                                <div class="font-medium text-gray-900">Male</div>
+                                            </div>
+                                        </label>
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="gender" value="female" class="sr-only peer">
+                                            <div
+                                                class="p-4 border-2 border-gray-200 rounded-lg peer-checked:border-green-500 peer-checked:bg-green-50 hover:border-green-300 transition-all text-center">
+                                                <i class="fas fa-venus text-2xl text-green-600 mb-2"></i>
+                                                <div class="font-medium text-gray-900">Female</div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Age and Tobacco Usage -->
+                                <div class="grid md:grid-cols-2 gap-8">
+                                    <div>
+                                        <label class="block text-lg font-semibold text-gray-900 mb-4">Age</label>
+                                        <input type="number" placeholder="Enter your age" min="18" max="65"
+                                            class="w-full p-4 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 text-lg">
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Do you smoke or chew
+                                            tobacco?</h3>
+                                        <div class="grid grid-cols-2 gap-3">
+                                            <label class="cursor-pointer">
+                                                <input type="radio" name="tobacco" value="no" class="sr-only peer">
+                                                <div
+                                                    class="p-3 border-2 border-gray-200 rounded-lg peer-checked:border-green-500 peer-checked:bg-green-50 text-center">
+                                                    No
+                                                </div>
+                                            </label>
+                                            <label class="cursor-pointer">
+                                                <input type="radio" name="tobacco" value="yes" class="sr-only peer">
+                                                <div
+                                                    class="p-3 border-2 border-gray-200 rounded-lg peer-checked:border-green-500 peer-checked:bg-green-50 text-center">
+                                                    Yes
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Coverage Amount -->
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Choose required coverage to
+                                        secure your family's future</h3>
+                                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="coverage" value="5000000" class="sr-only peer">
+                                            <div
+                                                class="p-6 border-2 border-gray-200 rounded-xl peer-checked:border-green-500 peer-checked:bg-green-50 hover:border-green-300 transition-all text-center">
+                                                <div class="text-2xl font-bold text-green-600 mb-2">₹50L</div>
+                                                <div class="text-sm text-gray-600">Basic Protection</div>
+                                            </div>
+                                        </label>
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="coverage" value="10000000" class="sr-only peer">
+                                            <div
+                                                class="p-6 border-2 border-gray-200 rounded-xl peer-checked:border-green-500 peer-checked:bg-green-50 hover:border-green-300 transition-all text-center">
+                                                <div class="text-2xl font-bold text-green-600 mb-2">₹1Cr</div>
+                                                <div class="text-sm text-gray-600">Most Popular</div>
+                                            </div>
+                                        </label>
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="coverage" value="15000000" class="sr-only peer">
+                                            <div
+                                                class="p-6 border-2 border-gray-200 rounded-xl peer-checked:border-green-500 peer-checked:bg-green-50 hover:border-green-300 transition-all text-center">
+                                                <div class="text-2xl font-bold text-green-600 mb-2">₹1.5Cr</div>
+                                                <div class="text-sm text-gray-600">Enhanced Cover</div>
+                                            </div>
+                                        </label>
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="coverage" value="20000000" class="sr-only peer">
+                                            <div
+                                                class="p-6 border-2 border-gray-200 rounded-xl peer-checked:border-green-500 peer-checked:bg-green-50 hover:border-green-300 transition-all text-center">
+                                                <div class="text-2xl font-bold text-green-600 mb-2">₹2Cr</div>
+                                                <div class="text-sm text-gray-600">Premium Cover</div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <button type="submit"
+                                        class="bg-green-600 text-white py-4 px-12 rounded-xl font-semibold text-lg hover:bg-green-700 transition-colors">
+                                        Calculate Premium
+                                    </button>
+                                    <p class="text-sm text-gray-600 mt-3">
+                                        *Premium calculated for coverage till 60 years. Final eligibility depends on
+                                        various factors.
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Types of Life Insurance Plans -->
+                <section class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-4 md:px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Types of Life Insurance Plans
+                            </h2>
+                            <p class="text-xl text-gray-600">
+                                Choose the right plan that suits your financial goals and protection needs
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <!-- Term Insurance -->
+                            <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                                <div
+                                    class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-shield-alt text-2xl text-green-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Term Insurance Plans</h3>
+                                <p class="text-gray-600 text-center mb-6">
+                                    Pure protection plans that provide high coverage at affordable premiums.
+                                    Ideal for young professionals and families.
+                                </p>
+                                <div class="text-center">
+                                    <button
+                                        class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                                        Check Premium
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- ULIPs -->
+                            <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                                <div
+                                    class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-chart-line text-2xl text-blue-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">ULIPs</h3>
+                                <p class="text-gray-600 text-center mb-6">
+                                    Unit-Linked Insurance Plans combine life coverage with investment in market-linked
+                                    funds.
+                                    Perfect for wealth creation.
+                                </p>
+                                <div class="text-center">
+                                    <button
+                                        class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                                        Check Premium
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Endowment Plans -->
+                            <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                                <div
+                                    class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-piggy-bank text-2xl text-purple-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Endowment Plans</h3>
+                                <p class="text-gray-600 text-center mb-6">
+                                    Traditional savings plans that provide guaranteed returns along with life coverage.
+                                    Safe investment option.
+                                </p>
+                                <div class="text-center">
+                                    <button
+                                        class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                                        Check Premium
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Money-Back Plans -->
+                            <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                                <div
+                                    class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-coins text-2xl text-yellow-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Money-Back Plans</h3>
+                                <p class="text-gray-600 text-center mb-6">
+                                    Get periodic payouts during policy term while maintaining life coverage.
+                                    Ideal for meeting future financial goals.
+                                </p>
+                                <div class="text-center">
+                                    <button
+                                        class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                                        Check Premium
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Child Protection Plans -->
+                            <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                                <div
+                                    class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-baby text-2xl text-pink-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Child Protection Plans</h3>
+                                <p class="text-gray-600 text-center mb-6">
+                                    Secure your child's future with plans that provide education and marriage funding
+                                    along with life coverage.
+                                </p>
+                                <div class="text-center">
+                                    <button
+                                        class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                                        Check Premium
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Retirement Plans -->
+                            <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                                <div
+                                    class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-user-clock text-2xl text-orange-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Retirement Plans</h3>
+                                <p class="text-gray-600 text-center mb-6">
+                                    Build a retirement corpus while ensuring life coverage.
+                                    Enjoy regular income post-retirement.
+                                </p>
+                                <div class="text-center">
+                                    <button
+                                        class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                                        Check Premium
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Key Features of Life Insurance -->
+                <section class="py-16 bg-white">
+                    <div class="container mx-auto px-4 md:px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Key Features of Life Insurance Policy
+                            </h2>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="flex items-start space-x-4">
+                                <div
+                                    class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-heart text-green-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">Death Benefits</h3>
+                                    <p class="text-gray-600">Sum assured provided to nominees in case of untimely death
+                                        during policy tenure, ensuring financial security for loved ones.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div
+                                    class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-chart-pie text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">Investment Component</h3>
+                                    <p class="text-gray-600">ULIPs and endowment plans offer dual benefits of life cover
+                                        and investments for wealth creation.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div
+                                    class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-percentage text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">Tax Exemptions</h3>
+                                    <p class="text-gray-600">Premium payments qualify for tax deductions under Section
+                                        80C and benefits under Section 10(10D).</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div
+                                    class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-trophy text-yellow-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">Maturity Benefits</h3>
+                                    <p class="text-gray-600">Some policies provide maturity benefits if the life assured
+                                        survives the entire policy term.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div
+                                    class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-plus-circle text-red-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">Additional Coverage</h3>
+                                    <p class="text-gray-600">Enhance coverage with riders like accidental death,
+                                        critical illness, and disability benefits.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div
+                                    class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-university text-indigo-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">Loan Facility</h3>
+                                    <p class="text-gray-600">Most policies offer loan facility against the policy value
+                                        for urgent financial requirements.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Benefits of Life Insurance -->
+                <section class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-4 md:px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Benefits of Life Insurance
+                            </h2>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="text-center">
+                                <div
+                                    class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-shield-alt text-3xl text-green-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4">Life Cover</h3>
+                                <p class="text-gray-600">
+                                    Provides financial security to your family in your absence, ensuring their
+                                    aspirations and goals remain uncompromised.
+                                </p>
+                            </div>
+
+                            <div class="text-center">
+                                <div
+                                    class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-peace text-3xl text-blue-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4">Peace of Mind</h3>
+                                <p class="text-gray-600">
+                                    Creates a sense of financial security knowing your loved ones will be
+                                    financially protected during difficult times.
+                                </p>
+                            </div>
+
+                            <div class="text-center">
+                                <div
+                                    class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-balance-scale text-3xl text-purple-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4">Financial Stability</h3>
+                                <p class="text-gray-600">
+                                    Helps maintain family's standard of living and clear debts or liabilities
+                                    in case of unfortunate events.
+                                </p>
+                            </div>
+
+                            <div class="text-center">
+                                <div
+                                    class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-receipt text-3xl text-yellow-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4">Tax Benefits</h3>
+                                <p class="text-gray-600">
+                                    Premium payments qualify for tax deductions up to ₹1.5 lakh under Section 80C,
+                                    plus tax-free benefits under Section 10(10D).
+                                </p>
+                            </div>
+
+                            <div class="text-center">
+                                <div
+                                    class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-money-bill-wave text-3xl text-red-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4">Assured Income Benefit</h3>
+                                <p class="text-gray-600">
+                                    Some plans offer regular income payouts on monthly, quarterly, or yearly basis
+                                    ensuring steady cash flow.
+                                </p>
+                            </div>
+
+                            <div class="text-center">
+                                <div
+                                    class="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-handshake text-3xl text-indigo-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4">Loan Facility</h3>
+                                <p class="text-gray-600">
+                                    Avail loans at nominal interest rates against your policy for urgent
+                                    financial requirements with substantial liquidity.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Life Insurance Riders -->
+                <section class="py-16 bg-white">
+                    <div class="container mx-auto px-4 md:px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Life Insurance Riders
+                            </h2>
+                            <p class="text-xl text-gray-600">
+                                Enhance your coverage with these helpful and economical add-on covers
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <div
+                                class="bg-white border-2 border-gray-200 rounded-2xl p-6 hover:border-green-500 transition-colors">
+                                <div
+                                    class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-car-crash text-red-600"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-3 text-center">Accidental Death Benefit
+                                </h3>
+                                <p class="text-gray-600 text-sm text-center mb-4">
+                                    Additional sum assured in case of death due to accident
+                                </p>
+                                <button
+                                    class="w-full text-green-600 border border-green-600 py-2 px-4 rounded-lg hover:bg-green-50 transition-colors">
+                                    Check Premium
+                                </button>
+                            </div>
+
+                            <div
+                                class="bg-white border-2 border-gray-200 rounded-2xl p-6 hover:border-green-500 transition-colors">
+                                <div
+                                    class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-heartbeat text-blue-600"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-3 text-center">Critical Illness</h3>
+                                <p class="text-gray-600 text-sm text-center mb-4">
+                                    Coverage for terminal illnesses like heart attack, cancer, stroke
+                                </p>
+                                <button
+                                    class="w-full text-green-600 border border-green-600 py-2 px-4 rounded-lg hover:bg-green-50 transition-colors">
+                                    Check Premium
+                                </button>
+                            </div>
+
+                            <div
+                                class="bg-white border-2 border-gray-200 rounded-2xl p-6 hover:border-green-500 transition-colors">
+                                <div
+                                    class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-wheelchair text-purple-600"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-3 text-center">Disability Benefit</h3>
+                                <p class="text-gray-600 text-sm text-center mb-4">
+                                    Benefit for total permanent disability making you unable to earn
+                                </p>
+                                <button
+                                    class="w-full text-green-600 border border-green-600 py-2 px-4 rounded-lg hover:bg-green-50 transition-colors">
+                                    Check Premium
+                                </button>
+                            </div>
+
+                            <div
+                                class="bg-white border-2 border-gray-200 rounded-2xl p-6 hover:border-green-500 transition-colors">
+                                <div
+                                    class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-hand-holding-usd text-yellow-600"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-3 text-center">Premium Waiver</h3>
+                                <p class="text-gray-600 text-sm text-center mb-4">
+                                    Waives future premiums in case of death, disability, or critical illness
+                                </p>
+                                <button
+                                    class="w-full text-green-600 border border-green-600 py-2 px-4 rounded-lg hover:bg-green-50 transition-colors">
+                                    Check Premium
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Top Life Insurance Companies -->
+                <section class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-4 md:px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Top Life Insurance Companies in India 2025
+                            </h2>
+                            <p class="text-xl text-gray-600">
+                                Choose from India's leading life insurers with high claim settlement ratios
+                            </p>
+                        </div>
+
+                        <div class="overflow-x-auto">
+                            <table class="w-full bg-white rounded-2xl shadow-lg overflow-hidden">
+                                <thead class="bg-green-600 text-white">
+                                    <tr>
+                                        <th class="py-4 px-6 text-left">Life Insurance Company</th>
+                                        <th class="py-4 px-6 text-center">Claim Settlement Ratio 2022-23</th>
+                                        <th class="py-4 px-6 text-center">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="py-4 px-6 font-medium text-gray-900">Bandhan Life Insurance</td>
+                                        <td class="py-4 px-6 text-center text-green-600 font-bold">99.66%</td>
+                                        <td class="py-4 px-6 text-center">
+                                            <button class="text-green-600 hover:text-green-800 font-medium">Check
+                                                Premium</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="py-4 px-6 font-medium text-gray-900">Axis Max Life Insurance</td>
+                                        <td class="py-4 px-6 text-center text-green-600 font-bold">99.35%</td>
+                                        <td class="py-4 px-6 text-center">
+                                            <button class="text-green-600 hover:text-green-800 font-medium">Check
+                                                Premium</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="py-4 px-6 font-medium text-gray-900">Bharti AXA Life Insurance</td>
+                                        <td class="py-4 px-6 text-center text-green-600 font-bold">99.05%</td>
+                                        <td class="py-4 px-6 text-center">
+                                            <button class="text-green-600 hover:text-green-800 font-medium">Check
+                                                Premium</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="py-4 px-6 font-medium text-gray-900">LIC (Life Insurance Corporation)
+                                        </td>
+                                        <td class="py-4 px-6 text-center text-green-600 font-bold">98.62%</td>
+                                        <td class="py-4 px-6 text-center">
+                                            <button class="text-green-600 hover:text-green-800 font-medium">Check
+                                                Premium</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="py-4 px-6 font-medium text-gray-900">HDFC Life Insurance</td>
+                                        <td class="py-4 px-6 text-center text-green-600 font-bold">98.01%</td>
+                                        <td class="py-4 px-6 text-center">
+                                            <button class="text-green-600 hover:text-green-800 font-medium">Check
+                                                Premium</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section class="py-16 bg-white">
+                    <div class="container mx-auto px-4 md:px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Frequently Asked Questions
+                            </h2>
+                        </div>
+
+                        <div class="max-w-4xl mx-auto">
+                            <div class="space-y-4">
+                                <div class="bg-gray-50 rounded-lg">
+                                    <button
+                                        class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
+                                        onclick="toggleFAQ(0)">
+                                        <span class="font-semibold text-gray-900">What is Life Insurance?</span>
+                                        <i class="fas fa-chevron-down transform transition-transform duration-300"
+                                            id="faq-icon-0"></i>
+                                    </button>
+                                    <div class="px-6 pb-4 hidden" id="faq-content-0">
+                                        <p class="text-gray-600">Life insurance is a contract between the policyholder
+                                            and insurance company. The insurer agrees to provide a sum assured (death
+                                            benefit) to nominees in case of the life assured's death during the policy
+                                            term, or maturity benefit if the person survives the policy term.</p>
+                                    </div>
+                                </div>
+
+                                <div class="bg-gray-50 rounded-lg">
+                                    <button
+                                        class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
+                                        onclick="toggleFAQ(1)">
+                                        <span class="font-semibold text-gray-900">Why should I purchase life
+                                            insurance?</span>
+                                        <i class="fas fa-chevron-down transform transition-transform duration-300"
+                                            id="faq-icon-1"></i>
+                                    </button>
+                                    <div class="px-6 pb-4 hidden" id="faq-content-1">
+                                        <p class="text-gray-600">Life insurance ensures your family's financial security
+                                            in your absence. It helps maintain their lifestyle, clear debts, fund future
+                                            goals, and provides tax benefits on premiums paid. It's an affordable way to
+                                            create a financial safety net for your loved ones.</p>
+                                    </div>
+                                </div>
+
+                                <div class="bg-gray-50 rounded-lg">
+                                    <button
+                                        class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
+                                        onclick="toggleFAQ(2)">
+                                        <span class="font-semibold text-gray-900">What is the difference between term
+                                            insurance and life insurance?</span>
+                                        <i class="fas fa-chevron-down transform transition-transform duration-300"
+                                            id="faq-icon-2"></i>
+                                    </button>
+                                    <div class="px-6 pb-4 hidden" id="faq-content-2">
+                                        <p class="text-gray-600">Term insurance is a type of life insurance that
+                                            provides pure protection at affordable premiums. Life insurance is a broader
+                                            category that includes term insurance, endowment plans, ULIPs, and other
+                                            investment-linked policies that offer both protection and savings
+                                            components.</p>
+                                    </div>
+                                </div>
+
+                                <div class="bg-gray-50 rounded-lg">
+                                    <button
+                                        class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
+                                        onclick="toggleFAQ(3)">
+                                        <span class="font-semibold text-gray-900">How much life insurance coverage do I
+                                            need?</span>
+                                        <i class="fas fa-chevron-down transform transition-transform duration-300"
+                                            id="faq-icon-3"></i>
+                                    </button>
+                                    <div class="px-6 pb-4 hidden" id="faq-content-3">
+                                        <p class="text-gray-600">Ideally, your life insurance coverage should be 10-15
+                                            times your annual income. Consider factors like your income, expenses,
+                                            debts, number of dependents, and future financial goals when determining the
+                                            coverage amount.</p>
+                                    </div>
+                                </div>
+
+                                <div class="bg-gray-50 rounded-lg">
+                                    <button
+                                        class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
+                                        onclick="toggleFAQ(4)">
+                                        <span class="font-semibold text-gray-900">Can I purchase multiple life insurance
+                                            policies?</span>
+                                        <i class="fas fa-chevron-down transform transition-transform duration-300"
+                                            id="faq-icon-4"></i>
+                                    </button>
+                                    <div class="px-6 pb-4 hidden" id="faq-content-4">
+                                        <p class="text-gray-600">Yes, you can purchase multiple life insurance policies
+                                            from different insurers. This helps increase your overall life coverage and
+                                            provides additional benefits. However, ensure the total coverage is
+                                            justified by your income and financial situation.</p>
+                                    </div>
+                                </div>
+
+                                <div class="bg-gray-50 rounded-lg">
+                                    <button
+                                        class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
+                                        onclick="toggleFAQ(5)">
+                                        <span class="font-semibold text-gray-900">What tax benefits do I get with life
+                                            insurance?</span>
+                                        <i class="fas fa-chevron-down transform transition-transform duration-300"
+                                            id="faq-icon-5"></i>
+                                    </button>
+                                    <div class="px-6 pb-4 hidden" id="faq-content-5">
+                                        <p class="text-gray-600">You can claim tax deductions up to ₹1.5 lakh on
+                                            premiums paid under Section 80C of the Income Tax Act. Additionally, the
+                                            death benefit and maturity proceeds are tax-free under Section 10(10D),
+                                            subject to certain conditions.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA Section -->
+                <section class="py-16 bg-gradient-to-r from-green-600 to-green-800 text-white">
+                    <div class="container mx-auto px-4 md:px-6 lg:px-20 text-center">
+                        <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+                            Ready to Secure Your Family's Future?
+                        </h2>
+                        <p class="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+                            Compare life insurance plans from top insurers, calculate premiums instantly, and buy online
+                            with exclusive discounts
+                        </p>
+                        <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                            <button
+                                class="bg-white text-green-600 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
+                                Compare Life Insurance Plans
+                            </button>
+                            <button
+                                class="border-2 border-white text-white py-4 px-8 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-600 transition-colors">
+                                Calculate Premium
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+
+            <%- include('../partials/footer.ejs') %>
+                <%- include('../partials/privacy-policy.ejs') %>
+                    <%- include('../partials/terms-of-service.ejs') %>
+
+                        <script>
+                            // FAQ Toggle Function
+                            function toggleFAQ(index) {
+                                const content = document.getElementById(`faq-content-${index}`);
+                                const icon = document.getElementById(`faq-icon-${index}`);
+
+                                if (content.classList.contains('hidden')) {
+                                    content.classList.remove('hidden');
+                                    icon.classList.add('rotate-180');
+                                } else {
+                                    content.classList.add('hidden');
+                                    icon.classList.remove('rotate-180');
+                                }
+                            }
+
+                            // Quick Quote Form Handler
+                            document.getElementById('quickQuoteForm').addEventListener('submit', function (e) {
+                                e.preventDefault();
+
+                                // Get form data
+                                const formData = new FormData(this);
+                                const data = Object.fromEntries(formData);
+
+                                // Simulate form submission
+                                alert('Thank you for your interest! Our team will contact you shortly with personalized life insurance quotes.');
+
+                                console.log('Quote form submitted:', data);
+                            });
+
+                            // Premium Calculator Form Handler
+                            document.getElementById('premiumCalculator').addEventListener('submit', function (e) {
+                                e.preventDefault();
+
+                                // Get selected values
+                                const gender = document.querySelector('input[name="gender"]:checked')?.value;
+                                const age = document.querySelector('input[type="number"]').value;
+                                const tobacco = document.querySelector('input[name="tobacco"]:checked')?.value;
+                                const coverage = document.querySelector('input[name="coverage"]:checked')?.value;
+
+                                if (!gender || !age || !tobacco || !coverage) {
+                                    alert('Please fill in all required fields');
+                                    return;
+                                }
+
+                                // Simulate premium calculation
+                                let basePremium = parseInt(coverage) * 0.0015; // 0.15% of coverage
+
+                                // Age multiplier
+                                const ageMultiplier = age > 50 ? 2.5 : age > 40 ? 2.0 : age > 30 ? 1.5 : 1.0;
+
+                                // Tobacco multiplier
+                                const tobaccoMultiplier = tobacco === 'yes' ? 1.8 : 1.0;
+
+                                // Gender multiplier (women generally get lower premiums)
+                                const genderMultiplier = gender === 'female' ? 0.9 : 1.0;
+
+                                const annualPremium = Math.round(basePremium * ageMultiplier * tobaccoMultiplier * genderMultiplier);
+                                const monthlyPremium = Math.round(annualPremium / 12);
+
+                                alert(`Estimated Premium:\n\nMonthly: ₹${monthlyPremium.toLocaleString()}\nAnnual: ₹${annualPremium.toLocaleString()}\n\nThis is an approximate calculation. Actual premium may vary based on medical tests and other factors. Our team will contact you with detailed quotes.`);
+
+                                console.log('Premium calculator:', {
+                                    gender, age, tobacco, coverage,
+                                    monthlyPremium, annualPremium
+                                });
+                            });
+
+                            // Form Validation
+                            document.querySelectorAll('input[required]').forEach(input => {
+                                input.addEventListener('blur', function () {
+                                    if (!this.value.trim()) {
+                                        this.classList.add('border-red-500');
+                                    } else {
+                                        this.classList.remove('border-red-500');
+                                        this.classList.add('border-green-500');
+                                    }
+                                });
+                            });
+
+                            // Radio button interactivity
+                            document.querySelectorAll('input[type="radio"]').forEach(radio => {
+                                radio.addEventListener('change', function () {
+                                    // Remove active state from siblings
+                                    const name = this.name;
+                                    document.querySelectorAll(`input[name="${name}"]`).forEach(sibling => {
+                                        const container = sibling.parentNode.querySelector('div');
+                                        if (container) {
+                                            container.classList.remove('border-green-500', 'bg-green-50');
+                                            container.classList.add('border-gray-200');
+                                        }
+                                    });
+
+                                    // Add active state to selected
+                                    const container = this.parentNode.querySelector('div');
+                                    if (container) {
+                                        container.classList.remove('border-gray-200');
+                                        container.classList.add('border-green-500', 'bg-green-50');
+                                    }
+                                });
+                            });
+                        </script>
+
+                        <style>
+                            /* Custom animations and transitions */
+                            .fade-in {
+                                animation: fadeIn 0.6s ease-in-out;
+                            }
+
+                            @keyframes fadeIn {
+                                from {
+                                    opacity: 0;
+                                    transform: translateY(20px);
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                }
+                            }
+
+                            /* Hover effects for cards */
+                            .hover-lift {
+                                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                            }
+
+                            .hover-lift:hover {
+                                transform: translateY(-5px);
+                                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+                            }
+
+                            /* Radio button styling */
+                            input[type="radio"]:checked+div {
+                                border-color: #059669;
+                                background-color: #ecfdf5;
+                            }
+
+                            /* Smooth transitions */
+                            * {
+                                transition: all 0.3s ease;
+                            }
+
+                            /* Table hover effects */
+                            tbody tr:hover {
+                                background-color: #f9fafb;
+                            }
+
+                            /* Mobile responsiveness */
+                            @media (max-width: 768px) {
+                                .hero-title {
+                                    font-size: 2.5rem;
+                                }
+
+                                .container {
+                                    padding-left: 1rem;
+                                    padding-right: 1rem;
+                                }
+
+                                .grid {
+                                    gap: 1rem;
+                                }
+
+                                /* Table responsive */
+                                .overflow-x-auto table {
+                                    font-size: 0.875rem;
+                                }
+
+                                .overflow-x-auto th,
+                                .overflow-x-auto td {
+                                    padding: 0.75rem 0.5rem;
+                                }
+                            }
+
+                            /* Premium calculator specific styles */
+                            .premium-result {
+                                background: linear-gradient(135deg, #059669 0%, #047857 100%);
+                                border-radius: 1rem;
+                                padding: 2rem;
+                                color: white;
+                                text-align: center;
+                                margin-top: 2rem;
+                            }
+                        </style>
+    </body>
+
+    </html>

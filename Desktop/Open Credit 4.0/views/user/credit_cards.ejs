@@ -1,0 +1,532 @@
+<%- include('../partials/head.ejs') %>
+
+    <body class="bg-black text-white">
+        <%- include('../partials/navbar.ejs') %>
+
+            <!-- Hero Section -->
+            <section class="bg-black text-white py-10 relative overflow-hidden">
+                <div class="container mx-auto px-6 lg:px-20">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <!-- Left Content -->
+                        <div>
+                            <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                                <span class="text-yellow-400">The Best Choice</span><br>
+                                <span class="text-yellow-400">for Lifetime</span><br>
+                                <span class="text-white">Credit Card</span>
+                            </h1>
+                            <p class="text-lg text-gray-300 mb-8">
+                                Trusted by over <span class="font-bold text-white">31 Million Consumers</span> from
+                                <span class="font-bold text-white">820+ cities</span>
+                            </p>
+
+                            <div class="flex flex-wrap gap-4 mb-8">
+                                <a href="https://customer.credilio.in/credit-card/utm-broadcast/CREDILIO_GILD/?utm_advisor_code=CRD0059735"
+                                    target="_blank"
+                                    class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full font-semibold transition-colors">
+                                    <i class="fas fa-credit-card mr-2"></i>
+                                    Apply credit card
+                                </a>
+                                <a href="#other-cards"
+                                    class="text-white hover:text-yellow-400 px-4 py-3 font-medium transition-colors">
+                                    other cards <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+
+                            <div class="flex items-center gap-3 text-sm text-gray-400">
+                                <span>issued by</span>
+                                <div class="flex items-center gap-2">
+                                    <img src="/images/sbm-logo.png" alt="SBM Bank" class="w-8 h-8 object-contain"
+                                        onerror="this.style.display='none'">
+                                    <span class="font-medium text-white">SBM Bank</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Content - Credit Card Video -->
+                        <div class="relative">
+                            <div class="relative">
+                                <video class="w-full max-w-lg mx-auto rounded-2xl shadow-2xl" autoplay muted loop
+                                    playsinline>
+                                    <source src="/images/credit card video.mp4" type="video/mp4">
+                                    <!-- Fallback for browsers that don't support video -->
+                                    <img src="/images/credilio-credit-card.png" alt="Credilio Credit Card"
+                                        class="w-full max-w-md mx-auto rounded-2xl shadow-2xl">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="bg-black py-16">
+                <div class="container mx-auto px-6 lg:px-20">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-white">Book a Fixed Deposit & Get an Assured
+                        Card</h2>
+                    <div class="grid md:grid-cols-4 gap-8">
+                        <!-- Feature 1 -->
+                        <div class="text-center">
+                            <div
+                                class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-600">
+                                <i class="fas fa-user-check text-green-400 text-xl"></i>
+                            </div>
+                            <h3 class="font-semibold mb-2 text-white">No Credit Score</h3>
+                            <p class="text-gray-400 text-sm">required</p>
+                        </div>
+
+                        <!-- Feature 2 -->
+                        <div class="text-center">
+                            <div
+                                class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-600">
+                                <i class="fas fa-file-invoice-dollar text-green-400 text-xl"></i>
+                            </div>
+                            <h3 class="font-semibold mb-2 text-white">No Income proof</h3>
+                            <p class="text-gray-400 text-sm">required</p>
+                        </div>
+
+                        <!-- Feature 3 -->
+                        <div class="text-center">
+                            <div
+                                class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-600">
+                                <i class="fas fa-percentage text-green-400 text-xl"></i>
+                            </div>
+                            <h3 class="font-semibold mb-2 text-white">Earn up to 7% p.a.</h3>
+                            <p class="text-gray-400 text-sm">on FD</p>
+                        </div>
+
+                        <!-- Feature 4 -->
+                        <div class="text-center">
+                            <div
+                                class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-600">
+                                <i class="fas fa-credit-card text-green-400 text-xl"></i>
+                            </div>
+                            <h3 class="font-semibold mb-2 text-white">Card limit is 90% of</h3>
+                            <p class="text-gray-400 text-sm">FD</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- No Sweat Section -->
+            <section class="bg-white text-black py-16">
+                <div class="container mx-auto px-6 lg:px-20">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <!-- Left - Credit Cards Video -->
+                        <div class="relative">
+                            <div>
+                                <video class="w-full max-w-lg rounded-2xl shadow-2xl" autoplay muted loop playsinline>
+                                    <source src="/images/single card video.mp4" type="video/mp4">
+                                    <!-- Fallback image -->
+                                    <img src="/images/credilio-credit-card.png" alt="Credit Cards"
+                                        class="w-full max-w-lg rounded-2xl shadow-2xl">
+                                </video>
+                            </div>
+                        </div>
+
+                        <!-- Right - Content -->
+                        <div>
+                            <h2 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                                Finally a card that doesn't make you sweat.
+                            </h2>
+                            <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                                Meaning your chances of defaulting is close to zero. We've changed the rules so
+                                there's finally a card in the market which you don't have to fear.
+                            </p>
+                            <a href="https://customer.credilio.in/credit-card/utm-broadcast/CREDILIO_GILD/?utm_advisor_code=CRD0059735"
+                                target="_blank"
+                                class="inline-block bg-gray-800 hover:bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                                GET CREDIT CARD NOW
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RBI Secured Section -->
+            <section class="bg-gray-900 text-white py-16">
+                <div class="container mx-auto px-6 lg:px-20">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <!-- Left Content -->
+                        <div>
+                            <h2 class="text-4xl font-bold mb-6">Secured by RBI</h2>
+                            <p class="text-lg text-gray-300 mb-8">
+                                Your money is protected by DICGC, a wholly owned subsidiary of the Reserve Bank of
+                                India.
+                            </p>
+                        </div>
+
+                        <!-- Right - RBI Logo -->
+                        <div class="flex justify-center lg:justify-end">
+                            <img src="/images/rbi-image.png" alt="RBI Logo" class="w-70 h-auto">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cashback Section -->
+            <section class="bg-white text-black py-16">
+                <div class="container mx-auto px-6 lg:px-20 text-center">
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                        Enjoy unlimited cashback on all your transactions
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+                        Say goodbye to restrictions and hello to endless possibilities! With our Credit Card,
+                        every purchase becomes a rewarding experience.
+                    </p>
+                    <a href="https://customer.credilio.in/credit-card/utm-broadcast/CREDILIO_GILD/?utm_advisor_code=CRD0059735"
+                        target="_blank"
+                        class="inline-block bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                        GET FREE CREDIT CARD
+                    </a>
+
+                    <!-- Exclusive Partner offers -->
+                    <div class="mt-16">
+                        <h3 class="text-2xl font-medium text-gray-500 mb-8">Exclusive Partner offers</h3>
+
+                        <div
+                            class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-7 gap-8 items-center justify-items-center max-w-4xl mx-auto">
+                            <!-- Myntra -->
+                            <div class="flex items-center justify-center">
+                                <img src="/images/credit-partners-logos/Myntra-logo.png" alt="Myntra"
+                                    class="h-8 md:h-10 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                            </div>
+
+                            <!-- BookMyShow -->
+                            <div class="flex items-center justify-center">
+                                <img src="/images/credit-partners-logos/bms-logo.png" alt="BookMyShow"
+                                    class="h-8 md:h-10 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                            </div>
+
+                            <!-- Zomato -->
+                            <div class="flex items-center justify-center">
+                                <img src="/images/credit-partners-logos/zomato-logo.png" alt="Zomato"
+                                    class="h-8 md:h-10 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                            </div>
+
+                            <!-- Swiggy -->
+                            <div class="flex items-center justify-center">
+                                <img src="/images/credit-partners-logos/swiggy-logo.png" alt="Swiggy"
+                                    class="h-8 md:h-10 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                            </div>
+
+                            <!-- Ajio -->
+                            <div class="flex items-center justify-center">
+                                <img src="/images/credit-partners-logos/Ajio-logo.png" alt="Ajio"
+                                    class="h-8 md:h-10 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                            </div>
+
+                            <!-- Gaana -->
+                            <div class="flex items-center justify-center">
+                                <img src="/images/credit-partners-logos/gaana-logo.png" alt="Gaana"
+                                    class="h-8 md:h-10 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                            </div>
+
+                            <!-- McDonald's -->
+                            <div class="flex items-center justify-center">
+                                <img src="/images/credit-partners-logos/mcd-logo.png" alt="McDonald's"
+                                    class="h-8 md:h-10 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Credit Cards Marketplace -->
+            <section id="other-cards" class="bg-gray-50 py-16">
+                <div class="container mx-auto px-6 lg:px-20">
+                    <div class="text-center mb-12">
+                        <div class="bg-green-50 rounded-lg p-4 mb-8 inline-block">
+                            <p class="text-gray-700">Looking for a credit card that's trusted and highly rated? Look no
+                                further than our Most Popular Cards section</p>
+                        </div>
+                        <h2 class="text-4xl font-bold text-gray-900 mb-4">Top Credit Cards on Our Marketplace</h2>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                        <!-- IDFC Card -->
+                        <div
+                            class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 text-center">
+                            <div class="mb-6">
+                                <img src="/images/idfc-credit-card.png" alt="IDFC Credit Card"
+                                    class="w-full h-40 object-contain mx-auto rounded-lg">
+                            </div>
+                            <div class="flex justify-center text-yellow-400 mb-4">
+                                <i class="fas fa-star text-lg"></i><i class="fas fa-star text-lg"></i><i
+                                    class="fas fa-star text-lg"></i><i class="fas fa-star text-lg"></i><i
+                                    class="fas fa-star text-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">IDFC WoW Credit Card</h3>
+                            <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                                10X rewards on your birthday, and crossing the spend threshold, on certain variants
+                            </p>
+                            <a href="https://customer.credilio.in/credit-card/utm-broadcast/IDFC/?utm_advisor_code=CRD0059735"
+                                target="_blank"
+                                class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-medium transition-colors border border-green-600">
+                                Apply now
+                            </a>
+                        </div>
+
+                        <!-- Axis Card -->
+                        <div
+                            class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 text-center">
+                            <div class="mb-6">
+                                <img src="/images/Axis-credit-card.png" alt="Axis Credit Card"
+                                    class="w-full h-40 object-contain mx-auto rounded-lg">
+                            </div>
+                            <div class="flex justify-center text-yellow-400 mb-4">
+                                <i class="fas fa-star text-lg"></i><i class="fas fa-star text-lg"></i><i
+                                    class="fas fa-star text-lg"></i><i class="fas fa-star text-lg"></i><i
+                                    class="fas fa-star text-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">Axis Credit Card</h3>
+                            <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                                Bouquet of membership up to Rs. 1,000 every anniversary year
+                            </p>
+                            <a href="https://customer.credilio.in/credit-card/utm-broadcast/AXIS/?utm_advisor_code=CRD0059735"
+                                target="_blank"
+                                class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-medium transition-colors border border-green-600">
+                                Apply now
+                            </a>
+                        </div>
+
+                        <!-- AU Bank Card -->
+                        <div
+                            class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 text-center">
+                            <div class="mb-6">
+                                <img src="/images/AU-bank-credit-card.png" alt="AU Bank Credit Card"
+                                    class="w-full h-40 object-contain mx-auto rounded-lg">
+                            </div>
+                            <div class="flex justify-center text-yellow-400 mb-4">
+                                <i class="fas fa-star text-lg"></i><i class="fas fa-star text-lg"></i><i
+                                    class="fas fa-star text-lg"></i><i class="fas fa-star text-lg"></i><i
+                                    class="fas fa-star text-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">AU Bank Credit Card</h3>
+                            <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                                Get 3 months free membership of ZEE5, Amazon Prime and Cult.fit
+                            </p>
+                            <a href="https://customer.credilio.in/credit-card/utm-broadcast/AU/?utm_advisor_code=CRD0059735"
+                                target="_blank"
+                                class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-medium transition-colors border border-green-600">
+                                Apply now
+                            </a>
+                        </div>
+
+                        <!-- ICICI Card -->
+                        <div
+                            class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 text-center">
+                            <div class="mb-6">
+                                <img src="/images/ICICI-Credit-Card.png" alt="ICICI Credit Card"
+                                    class="w-full h-40 object-contain mx-auto rounded-lg">
+                            </div>
+                            <div class="flex justify-center text-yellow-400 mb-4">
+                                <i class="fas fa-star text-lg"></i><i class="fas fa-star text-lg"></i><i
+                                    class="fas fa-star text-lg"></i><i class="fas fa-star text-lg"></i><i
+                                    class="fas fa-star text-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">ICICI Platinum Credit Card</h3>
+                            <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                                Experience life in the fast lane, with Safety, Flexibility, and Rewards, all infused in
+                                one card.
+                            </p>
+                            <a href="#"
+                                class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-medium transition-colors border border-green-600">
+                                Apply now
+                            </a>
+                        </div>
+
+                        <!-- Yes Bank Card -->
+                        <div
+                            class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 text-center">
+                            <div class="mb-6">
+                                <img src="/images/Yes-Bank-Credit-Card.png" alt="Yes Bank Credit Card"
+                                    class="w-full h-40 object-contain mx-auto rounded-lg">
+                            </div>
+                            <div class="flex justify-center text-yellow-400 mb-4">
+                                <i class="fas fa-star text-lg"></i><i class="fas fa-star text-lg"></i><i
+                                    class="fas fa-star text-lg"></i><i class="fas fa-star text-lg"></i><i
+                                    class="fas fa-star text-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">Yes Bank Credit Card</h3>
+                            <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                                Buy 1 Get 1 Free Movie Ticket booked through Book My show
+                            </p>
+                            <a href="#"
+                                class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-medium transition-colors border border-green-600">
+                                Apply now
+                            </a>
+                        </div>
+
+                        <!-- Kotak Card -->
+                        <div
+                            class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 text-center">
+                            <div class="mb-6">
+                                <img src="/images/Kotak-credit-card.png" alt="Kotak Credit Card"
+                                    class="w-full h-40 object-contain mx-auto rounded-lg">
+                            </div>
+                            <div class="flex justify-center text-yellow-400 mb-4">
+                                <i class="fas fa-star text-lg"></i><i class="fas fa-star text-lg"></i><i
+                                    class="fas fa-star text-lg"></i><i class="fas fa-star text-lg"></i><i
+                                    class="fas fa-star text-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">Kotak dream Credit Card</h3>
+                            <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                                Apply for 811 #DreamDifferent Credit Card online without any income documents.
+                            </p>
+                            <a href="https://customer.credilio.in/credit-card/utm-broadcast/KOTAK/?utm_advisor_code=CRD0059735"
+                                target="_blank"
+                                class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-medium transition-colors border border-green-600">
+                                Apply now
+                            </a>
+                        </div>
+
+                        <!-- BOB Card -->
+                        <div
+                            class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 text-center">
+                            <div class="mb-6">
+                                <img src="/images/BOB-credit-card.png" alt="Bank of Baroda Credit Card"
+                                    class="w-full h-40 object-contain mx-auto rounded-lg">
+                            </div>
+                            <div class="flex justify-center text-yellow-400 mb-4">
+                                <i class="fas fa-star text-lg"></i><i class="fas fa-star text-lg"></i><i
+                                    class="fas fa-star text-lg"></i><i class="fas fa-star text-lg"></i><i
+                                    class="fas fa-star text-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">Bank of Baroda Credit Card</h3>
+                            <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                                10X rewards on your birthday, and crossing the spend threshold, on certain variants
+                            </p>
+                            <a href="https://customer.credilio.in/credit-card/utm-broadcast/BANK_OF_BARODA/?utm_advisor_code=CRD0059735"
+                                target="_blank"
+                                class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-medium transition-colors border border-green-600">
+                                Apply now
+                            </a>
+                        </div>
+
+                        <!-- HSBC Card -->
+                        <div
+                            class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 text-center">
+                            <div class="mb-6">
+                                <img src="/images/HSBC-Credit-card.png" alt="HSBC Credit Card"
+                                    class="w-full h-40 object-contain mx-auto rounded-lg">
+                            </div>
+                            <div class="flex justify-center text-yellow-400 mb-4">
+                                <i class="fas fa-star text-lg"></i><i class="fas fa-star text-lg"></i><i
+                                    class="fas fa-star text-lg"></i><i class="fas fa-star text-lg"></i><i
+                                    class="fas fa-star text-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">HSBC Credit Card</h3>
+                            <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                                10% cashback on all dining, food delivery and grocery spends. Unlimited 1.5% cashback on
+                                all others spends
+                            </p>
+                            <a href="https://customer.credilio.in/credit-card/utm-broadcast/HSBC/?utm_advisor_code=CRD0059735"
+                                target="_blank"
+                                class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-medium transition-colors border border-green-600">
+                                Apply now
+                            </a>
+                        </div>
+
+                        <!-- SBI Card -->
+                        <div
+                            class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 text-center">
+                            <div class="mb-6">
+                                <img src="/images/SBI-Credit-card.png" alt="SBI Credit Card"
+                                    class="w-full h-40 object-contain mx-auto rounded-lg">
+                            </div>
+                            <div class="flex justify-center text-yellow-400 mb-4">
+                                <i class="fas fa-star text-lg"></i><i class="fas fa-star text-lg"></i><i
+                                    class="fas fa-star text-lg"></i><i class="fas fa-star text-lg"></i><i
+                                    class="fas fa-star text-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">SBI Credit Card</h3>
+                            <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                                With SBI Card, get cash on the go to fulfil your financial needs! Avail Encash up to or
+                                above your credit limit
+                            </p>
+                            <a href="https://customer.credilio.in/credit-card/utm-broadcast/SBI/?utm_advisor_code=CRD0059735"
+                                target="_blank"
+                                class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-medium transition-colors border border-green-600">
+                                Apply now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="bg-green-600 text-white py-16">
+                <div class="container mx-auto px-6 lg:px-20 text-center">
+                    <h2 class="text-3xl font-bold mb-4">Ready to Get Your Credit Card?</h2>
+                    <p class="text-xl text-green-100 mb-8">Join millions of satisfied customers and start your financial
+                        journey today!</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="https://customer.credilio.in/credit-card/utm-broadcast/CREDILIO_GILD/?utm_advisor_code=CRD0059735"
+                            target="_blank"
+                            class="bg-white text-green-600 px-8 py-3 rounded-full font-semibold hover:bg-green-50 transition-colors">
+                            Apply Now
+                        </a>
+                        <a href="/contact"
+                            class="border border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-green-600 transition-colors">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <%- include('../partials/footer.ejs') %>
+                <%- include('../partials/privacy-policy.ejs') %>
+                    <%- include('../partials/terms-of-service.ejs') %>
+
+                        <script>
+                            // Smooth scrolling for anchor links
+                            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                                anchor.addEventListener('click', function (e) {
+                                    e.preventDefault();
+                                    const target = document.querySelector(this.getAttribute('href'));
+                                    if (target) {
+                                        target.scrollIntoView({
+                                            behavior: 'smooth'
+                                        });
+                                    }
+                                });
+                            });
+
+                            // Credit card hover effects
+                            document.querySelectorAll('.bg-white.rounded-lg.shadow-lg').forEach(card => {
+                                card.addEventListener('mouseenter', function () {
+                                    this.style.transform = 'translateY(-5px)';
+                                });
+
+                                card.addEventListener('mouseleave', function () {
+                                    this.style.transform = 'translateY(0)';
+                                });
+                            });
+                        </script>
+
+                        <style>
+                            .nav-link.active {
+                                color: #059669 !important;
+                                border-bottom: 2px solid #059669;
+                            }
+
+                            /* Custom animations */
+                            @keyframes float {
+
+                                0%,
+                                100% {
+                                    transform: translateY(0px);
+                                }
+
+                                50% {
+                                    transform: translateY(-10px);
+                                }
+                            }
+
+                            .credit-card-float {
+                                animation: float 3s ease-in-out infinite;
+                            }
+                        </style>
+    </body>
+
+    </html>

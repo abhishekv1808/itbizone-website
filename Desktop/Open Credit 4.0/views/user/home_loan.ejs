@@ -1,0 +1,687 @@
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/navbar.ejs') %>
+
+            <main>
+                <!-- Hero Section -->
+                <section class="relative  bg-cover bg-center bg-no-repeat text-white overflow-hidden"
+                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+
+                    <div class="container mx-auto px-6 lg:px-20 relative z-10 pt-20 pb-10">
+                        <div class="text-center mb-16">
+                            <!-- Badge -->
+                            <div
+                                class="inline-flex items-center gap-2 px-6 py-3 bg-green-500 rounded-full text-sm font-semibold mb-6 shadow-2xl">
+                                <i class="fas fa-home text-white"></i>
+                                <span>Home Loans Available</span>
+                                <div class="w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
+                            </div>
+
+                            <!-- Main Heading -->
+                            <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-8 text-white ">
+                                Your Dream Home
+                                <br>
+                                <span class="text-4xl lg:text-6xl">Awaits You</span>
+                            </h1>
+
+                            <!-- Subtitle -->
+                            <p class="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
+                                Compare <span class="text-green-400 font-bold">30+ lenders</span> instantly and get the
+                                <span class="text-blue-400 font-bold">lowest interest rates</span> starting from
+                                <span class="text-yellow-400 font-bold text-3xl">7.90%</span> p.a.
+                            </p>
+                        </div>
+
+                    </div>
+                </section>
+
+
+                <!-- Home Gallery Section -->
+
+                <!-- Types of Home Loans Section -->
+                <section class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Types of Home Loans Available
+                            </h2>
+                            <p class="text-gray-600 text-lg">
+                                Choose the right loan product for your specific needs
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div
+                                class="bg-white rounded-xl p-6 shadow-lg text-center hover:shadow-xl transition-shadow">
+                                <div
+                                    class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-home text-blue-600 text-2xl"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Purchase Home Loan</h3>
+                                <p class="text-gray-600 text-sm">For buying ready-to-move or under-construction
+                                    properties</p>
+                            </div>
+
+                            <div
+                                class="bg-white rounded-xl p-6 shadow-lg text-center hover:shadow-xl transition-shadow">
+                                <div
+                                    class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-hammer text-green-600 text-2xl"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Construction Loan</h3>
+                                <p class="text-gray-600 text-sm">For constructing house on your existing plot of land
+                                </p>
+                            </div>
+
+                            <div
+                                class="bg-white rounded-xl p-6 shadow-lg text-center hover:shadow-xl transition-shadow">
+                                <div
+                                    class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-tools text-purple-600 text-2xl"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Home Improvement</h3>
+                                <p class="text-gray-600 text-sm">For renovation, extension or improvement of existing
+                                    home</p>
+                            </div>
+
+                            <div
+                                class="bg-white rounded-xl p-6 shadow-lg text-center hover:shadow-xl transition-shadow">
+                                <div
+                                    class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-exchange-alt text-orange-600 text-2xl"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Balance Transfer</h3>
+                                <p class="text-gray-600 text-sm">Transfer existing loan to get better interest rates and
+                                    terms</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Find Your Dream Home
+                            </h2>
+                            <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                                From cozy apartments to luxury villas, we help finance all types of properties
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <!-- Apartment -->
+                            <div
+                                class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                                <div
+                                    class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                                    <i class="fas fa-building text-white text-6xl"></i>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold text-gray-900 mb-2">Modern Apartments</h3>
+                                    <p class="text-gray-600 mb-4">2-3 BHK apartments in prime locations</p>
+                                    <div class="flex justify-between items-center text-sm text-gray-500">
+                                        <span>₹40L - ₹1.5Cr</span>
+                                        <span>Ready to Move</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Villa -->
+                            <div
+                                class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                                <div
+                                    class="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                                    <i class="fas fa-home text-white text-6xl"></i>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold text-gray-900 mb-2">Independent Villas</h3>
+                                    <p class="text-gray-600 mb-4">3-4 BHK villas with garden space</p>
+                                    <div class="flex justify-between items-center text-sm text-gray-500">
+                                        <span>₹80L - ₹3Cr</span>
+                                        <span>Under Construction</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Row House -->
+                            <div
+                                class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                                <div
+                                    class="h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                                    <i class="fas fa-city text-white text-6xl"></i>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold text-gray-900 mb-2">Row Houses</h3>
+                                    <p class="text-gray-600 mb-4">Duplex homes in gated communities</p>
+                                    <div class="flex justify-between items-center text-sm text-gray-500">
+                                        <span>₹60L - ₹2Cr</span>
+                                        <span>New Projects</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Lender Partners Section -->
+                <section class="py-16 bg-white">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Our Trusted Banking Partners
+                            </h2>
+                            <p class="text-gray-600 text-lg">
+                                Compare home loan offers from India's leading banks and NBFCs
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+                            <div class="bg-gray-50 rounded-lg p-6 text-center hover:shadow-md transition-shadow">
+                                <div class="text-2xl font-bold text-blue-600 mb-2">HDFC</div>
+                                <div class="text-sm text-gray-600">7.90% onwards</div>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-6 text-center hover:shadow-md transition-shadow">
+                                <div class="text-2xl font-bold text-red-600 mb-2">ICICI</div>
+                                <div class="text-sm text-gray-600">8.05% onwards</div>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-6 text-center hover:shadow-md transition-shadow">
+                                <div class="text-2xl font-bold text-blue-700 mb-2">SBI</div>
+                                <div class="text-sm text-gray-600">8.15% onwards</div>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-6 text-center hover:shadow-md transition-shadow">
+                                <div class="text-2xl font-bold text-orange-600 mb-2">AXIS</div>
+                                <div class="text-sm text-gray-600">8.25% onwards</div>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-6 text-center hover:shadow-md transition-shadow">
+                                <div class="text-2xl font-bold text-green-600 mb-2">PNB</div>
+                                <div class="text-sm text-gray-600">8.30% onwards</div>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-6 text-center hover:shadow-md transition-shadow">
+                                <div class="text-2xl font-bold text-purple-600 mb-2">Bajaj</div>
+                                <div class="text-sm text-gray-600">8.40% onwards</div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-8">
+                            <p class="text-gray-600 text-lg">
+                                <span class="font-bold text-blue-600">30+</span> more lenders available |
+                                <span class="font-bold text-green-600">Zero</span> processing fee options |
+                                <span class="font-bold text-purple-600">90%</span> LTV financing
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Home Loan Features Section -->
+                <section class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Home Loan Features & Benefits
+                            </h2>
+                            <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                                Why Open Credit is the best choice for your home loan needs
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                                    <i class="fas fa-percentage text-blue-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Competitive Interest Rates</h3>
+                                <p class="text-gray-600">Starting from 7.90% p.a. with comparison across 30+ lenders to
+                                    get the best deal.</p>
+                            </div>
+
+                            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                                    <i class="fas fa-calculator text-green-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">High Loan Amount</h3>
+                                <p class="text-gray-600">Finance up to ₹10 Crores with 90% LTV for property values up to
+                                    ₹30 lakhs.</p>
+                            </div>
+
+                            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                                    <i class="fas fa-clock text-purple-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Long Tenure</h3>
+                                <p class="text-gray-600">Repayment tenure up to 30 years for lower EMIs and comfortable
+                                    repayment.</p>
+                            </div>
+
+                            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                                    <i class="fas fa-file-alt text-orange-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Minimal Documentation</h3>
+                                <p class="text-gray-600">Simple paperwork with digital documentation and instant
+                                    approval process.</p>
+                            </div>
+
+                            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                                    <i class="fas fa-shield-alt text-red-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Tax Benefits</h3>
+                                <p class="text-gray-600">Save up to ₹3.5 lakhs annually under Section 80C and 24(b) of
+                                    Income Tax Act.</p>
+                            </div>
+
+                            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                                    <i class="fas fa-handshake text-teal-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Expert Guidance</h3>
+                                <p class="text-gray-600">Dedicated relationship manager to guide you throughout the loan
+                                    process.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Eligibility & Requirements Section -->
+                <section class="py-16 bg-white">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="grid lg:grid-cols-2 gap-12">
+                            <!-- Eligibility Criteria -->
+                            <div class="space-y-8">
+                                <div>
+                                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Eligibility Criteria</h2>
+                                    <div class="space-y-4">
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-check text-green-500 mt-1"></i>
+                                            <div>
+                                                <span class="font-semibold">Age:</span> 18 to 70 years at loan maturity
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-check text-green-500 mt-1"></i>
+                                            <div>
+                                                <span class="font-semibold">Income (Salaried):</span> Minimum ₹25,000
+                                                per month
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-check text-green-500 mt-1"></i>
+                                            <div>
+                                                <span class="font-semibold">Income (Self-Employed):</span> Minimum ₹2
+                                                lakhs annual turnover
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-check text-green-500 mt-1"></i>
+                                            <div>
+                                                <span class="font-semibold">Credit Score:</span> 650 and above preferred
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-check text-green-500 mt-1"></i>
+                                            <div>
+                                                <span class="font-semibold">Employment:</span> Minimum 2 years work
+                                                experience
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Required Documents -->
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Required Documents</h3>
+                                    <div class="grid sm:grid-cols-2 gap-4">
+                                        <div class="p-4 bg-blue-50 rounded-lg">
+                                            <h4 class="font-semibold text-blue-900 mb-2">Identity Proof</h4>
+                                            <p class="text-blue-700 text-sm">Aadhaar, PAN, Passport, Driving License</p>
+                                        </div>
+                                        <div class="p-4 bg-green-50 rounded-lg">
+                                            <h4 class="font-semibold text-green-900 mb-2">Income Proof</h4>
+                                            <p class="text-green-700 text-sm">Salary slips, ITR, Bank statements</p>
+                                        </div>
+                                        <div class="p-4 bg-purple-50 rounded-lg">
+                                            <h4 class="font-semibold text-purple-900 mb-2">Property Papers</h4>
+                                            <p class="text-purple-700 text-sm">Agreement, Title deeds, Approvals</p>
+                                        </div>
+                                        <div class="p-4 bg-orange-50 rounded-lg">
+                                            <h4 class="font-semibold text-orange-900 mb-2">Other Documents</h4>
+                                            <p class="text-orange-700 text-sm">Passport photos, Processing fee cheque
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Loan Process -->
+                            <div class="space-y-8">
+                                <h2 class="text-3xl font-bold text-gray-900">Simple Application Process</h2>
+                                <div class="space-y-6">
+                                    <div class="flex gap-4">
+                                        <div
+                                            class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">
+                                            1
+                                        </div>
+                                        <div>
+                                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Apply Online</h4>
+                                            <p class="text-gray-600">Fill our simple online form and upload basic
+                                                documents.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-4">
+                                        <div
+                                            class="w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">
+                                            2
+                                        </div>
+                                        <div>
+                                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Get Offers</h4>
+                                            <p class="text-gray-600">Receive pre-approved offers from multiple lenders
+                                                instantly.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-4">
+                                        <div
+                                            class="w-10 h-10 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">
+                                            3
+                                        </div>
+                                        <div>
+                                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Property Verification
+                                            </h4>
+                                            <p class="text-gray-600">Technical and legal verification of your chosen
+                                                property.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-4">
+                                        <div
+                                            class="w-10 h-10 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">
+                                            4
+                                        </div>
+                                        <div>
+                                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Loan Disbursement</h4>
+                                            <p class="text-gray-600">Get funds disbursed directly to builder/seller
+                                                account.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- EMI Calculator Widget -->
+                                <div class="bg-gradient-to-r from-blue-500 to-green-500 rounded-xl p-6 text-white">
+                                    <h3 class="text-xl font-semibold mb-4">Quick EMI Calculator</h3>
+                                    <div class="grid grid-cols-2 gap-4 text-center">
+                                        <div>
+                                            <div class="text-2xl font-bold">₹18,170</div>
+                                            <div class="text-sm opacity-90">Monthly EMI</div>
+                                        </div>
+                                        <div>
+                                            <div class="text-2xl font-bold">₹25L</div>
+                                            <div class="text-sm opacity-90">Loan Amount</div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4">
+                                        <a href="/emi-calculator"
+                                            class="block bg-white text-blue-600 text-center py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                            Calculate Your EMI
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <!-- Application Form Section -->
+                <section id="application-form" class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Apply for Home Loan
+                            </h2>
+                            <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                                Get pre-approved offers from 30+ lenders in just 5 minutes
+                            </p>
+                        </div>
+
+                        <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-8 lg:p-12">
+                            <form id="homeLoanForm" class="space-y-6">
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <!-- Personal Details -->
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Full Name *</label>
+                                        <input type="text" id="fullName" required
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                            placeholder="Enter your full name">
+                                        <span class="text-red-500 text-sm hidden" id="fullName-error"></span>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Mobile Number *</label>
+                                        <input type="tel" id="mobileNumber" required
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                            placeholder="Enter 10-digit mobile number">
+                                        <span class="text-red-500 text-sm hidden" id="mobileNumber-error"></span>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Email ID *</label>
+                                        <input type="email" id="emailId" required
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                            placeholder="Enter your email address">
+                                        <span class="text-red-500 text-sm hidden" id="emailId-error"></span>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">City *</label>
+                                        <select id="city" required
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                            <option value="">Select City</option>
+                                            <option value="Mumbai">Mumbai</option>
+                                            <option value="Delhi">Delhi</option>
+                                            <option value="Bangalore">Bangalore</option>
+                                            <option value="Chennai">Chennai</option>
+                                            <option value="Hyderabad">Hyderabad</option>
+                                            <option value="Pune">Pune</option>
+                                            <option value="Kolkata">Kolkata</option>
+                                            <option value="Ahmedabad">Ahmedabad</option>
+                                            <option value="Surat">Surat</option>
+                                            <option value="Jaipur">Jaipur</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                        <span class="text-red-500 text-sm hidden" id="city-error"></span>
+                                    </div>
+
+                                    <!-- Employment Details -->
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Employment Type *</label>
+                                        <select id="employmentType" required
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                            <option value="">Select Employment Type</option>
+                                            <option value="Salaried">Salaried</option>
+                                            <option value="Self Employed Professional">Self Employed Professional
+                                            </option>
+                                            <option value="Self Employed Business">Self Employed Business</option>
+                                        </select>
+                                        <span class="text-red-500 text-sm hidden" id="employmentType-error"></span>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Monthly Income *</label>
+                                        <input type="number" id="monthlyIncome" required min="25000"
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                            placeholder="Enter monthly income">
+                                        <span class="text-red-500 text-sm hidden" id="monthlyIncome-error"></span>
+                                    </div>
+
+                                    <!-- Property Details -->
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Property Type *</label>
+                                        <select id="propertyType" required
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                            <option value="">Select Property Type</option>
+                                            <option value="Apartment">Apartment</option>
+                                            <option value="Villa">Independent Villa</option>
+                                            <option value="Row House">Row House</option>
+                                            <option value="Plot">Plot/Land</option>
+                                        </select>
+                                        <span class="text-red-500 text-sm hidden" id="propertyType-error"></span>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Property Value *</label>
+                                        <input type="number" id="propertyValue" required min="500000"
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                            placeholder="Enter property value">
+                                        <span class="text-red-500 text-sm hidden" id="propertyValue-error"></span>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Loan Amount Required
+                                            *</label>
+                                        <input type="number" id="loanAmount" required min="500000"
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                            placeholder="Enter loan amount needed">
+                                        <span class="text-red-500 text-sm hidden" id="loanAmount-error"></span>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Loan Tenure *</label>
+                                        <select id="loanTenure" required
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                            <option value="">Select Tenure</option>
+                                            <option value="5">5 Years</option>
+                                            <option value="10">10 Years</option>
+                                            <option value="15">15 Years</option>
+                                            <option value="20">20 Years</option>
+                                            <option value="25">25 Years</option>
+                                            <option value="30">30 Years</option>
+                                        </select>
+                                        <span class="text-red-500 text-sm hidden" id="loanTenure-error"></span>
+                                    </div>
+                                </div>
+
+                                <div class="pt-6">
+                                    <button type="submit"
+                                        class="w-full cursor-pointer bg-green-500 text-white py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-green-700 transition-all duration-300 shadow-lg">
+                                        Get Pre-Approved Offers from 30+ Lenders
+                                    </button>
+                                </div>
+                            </form>
+
+                            <!-- Success Message -->
+                            <div id="success-message" class="hidden text-center py-12">
+                                <div
+                                    class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-check text-green-600 text-2xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Application Submitted Successfully!
+                                </h3>
+                                <p class="text-gray-600 mb-6">Thank you for choosing Open Credit. Our team will contact
+                                    you within 2 hours with pre-approved offers.</p>
+                                <div class="text-sm text-gray-500">
+                                    Application ID: <span class="font-mono font-bold" id="application-id"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+
+            <%- include('../partials/footer.ejs') %>
+                <%- include('../partials/privacy-policy.ejs') %>
+                    <%- include('../partials/terms-of-service.ejs') %>
+
+                        <script>
+                            // Form functionality
+                            function scrollToForm() {
+                                document.getElementById('application-form').scrollIntoView({
+                                    behavior: 'smooth'
+                                });
+                            }
+
+                            // Form validation and submission
+                            document.getElementById('homeLoanForm').addEventListener('submit', function (e) {
+                                e.preventDefault();
+
+                                if (!validateForm()) {
+                                    return;
+                                }
+
+                                // Simulate form submission
+                                const formData = new FormData(this);
+                                const applicationId = 'HL' + Date.now().toString().slice(-8);
+
+                                // Hide form and show success message
+                                this.classList.add('hidden');
+                                document.getElementById('success-message').classList.remove('hidden');
+                                document.getElementById('application-id').textContent = applicationId;
+
+                                console.log('Home loan application submitted:', Object.fromEntries(formData));
+                            });
+
+                            function validateForm() {
+                                let isValid = true;
+                                const fields = ['fullName', 'mobileNumber', 'emailId', 'city', 'employmentType', 'monthlyIncome', 'propertyType', 'propertyValue', 'loanAmount', 'loanTenure'];
+
+                                fields.forEach(field => {
+                                    const input = document.getElementById(field);
+                                    const errorElement = document.getElementById(`${field}-error`);
+
+                                    // Clear previous errors
+                                    errorElement.classList.add('hidden');
+                                    input.classList.remove('border-red-500');
+
+                                    if (!input.value.trim()) {
+                                        showError(field, 'This field is required');
+                                        isValid = false;
+                                    } else {
+                                        // Specific validations
+                                        if (field === 'mobileNumber' && !/^[6-9]\d{9}$/.test(input.value)) {
+                                            showError(field, 'Please enter a valid 10-digit mobile number');
+                                            isValid = false;
+                                        } else if (field === 'emailId' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) {
+                                            showError(field, 'Please enter a valid email address');
+                                            isValid = false;
+                                        } else if (field === 'monthlyIncome' && parseInt(input.value) < 25000) {
+                                            showError(field, 'Minimum income requirement is ₹25,000');
+                                            isValid = false;
+                                        } else if (field === 'loanAmount') {
+                                            const propertyValue = parseInt(document.getElementById('propertyValue').value);
+                                            const loanAmount = parseInt(input.value);
+                                            if (loanAmount > propertyValue * 0.9) {
+                                                showError(field, 'Loan amount cannot exceed 90% of property value');
+                                                isValid = false;
+                                            }
+                                        }
+                                    }
+                                });
+
+                                return isValid;
+                            }
+
+                            function showError(fieldId, message) {
+                                const errorElement = document.getElementById(`${fieldId}-error`);
+                                const inputElement = document.getElementById(fieldId);
+
+                                errorElement.textContent = message;
+                                errorElement.classList.remove('hidden');
+                                inputElement.classList.add('border-red-500');
+                            }
+
+                            // Clear errors on input
+                            document.querySelectorAll('input, select').forEach(input => {
+                                input.addEventListener('input', function () {
+                                    const errorElement = document.getElementById(`${this.id}-error`);
+                                    if (errorElement) {
+                                        errorElement.classList.add('hidden');
+                                        this.classList.remove('border-red-500');
+                                    }
+                                });
+                            });
+                        </script>
+    </body>
+
+    </html>

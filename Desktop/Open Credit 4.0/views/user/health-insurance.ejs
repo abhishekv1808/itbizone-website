@@ -1,0 +1,1481 @@
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/navbar.ejs') %>
+
+            <main class="bg-gray-50">
+                <!-- Hero Section -->
+                <section class="bg-gradient-to-br from-green-500 to-green-600 text-white py-16 md:py-20">
+                    <div class="container mx-auto px-4 md:px-6 lg:px-20">
+                        <div class="flex flex-col lg:flex-row items-center justify-between">
+                            <!-- Left Content -->
+                            <div class="lg:w-1/2 mb-10 lg:mb-0">
+                                <div
+                                    class="inline-flex items-center bg-blue-500 bg-opacity-20 rounded-full px-4 py-2 mb-6">
+                                    <span class="text-blue-200 font-semibold text-sm">🏥 Health Insurance</span>
+                                </div>
+                                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                                    Buy Health Insurance Plans Online
+                                </h1>
+                                <p class="text-xl text-blue-100 mb-8 leading-relaxed">
+                                    Secure your family's health with comprehensive coverage from India's leading
+                                    insurers.
+                                    Get instant quotes, compare plans, and buy online with up to 25% discount.
+                                </p>
+
+                                <!-- Key Highlights -->
+                                <div class="grid sm:grid-cols-2 gap-4 mb-8">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-400 mr-3 text-lg"></i>
+                                        <span class="text-blue-100">134+ Plans from 22+ Companies</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-400 mr-3 text-lg"></i>
+                                        <span class="text-blue-100">24x7 Claim Support</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-400 mr-3 text-lg"></i>
+                                        <span class="text-blue-100">1+ Lakh Families Insured</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-400 mr-3 text-lg"></i>
+                                        <span class="text-blue-100">Flexible Payment Options</span>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="bg-yellow-400 text-yellow-900 px-4 py-2 rounded-lg inline-flex items-center mb-6">
+                                    <i class="fas fa-gift mr-2"></i>
+                                    <span class="font-semibold">Get Online Discount up to 25% off*</span>
+                                </div>
+                            </div>
+
+                            <!-- Right Quick Quote Form -->
+                            <div class="lg:w-1/2 lg:pl-12">
+                                <div class="bg-white rounded-2xl shadow-2xl p-8">
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">
+                                        Get Instant Health Insurance Quote
+                                    </h3>
+                                    <form id="quickQuoteForm" class="space-y-4">
+                                        <div class="grid sm:grid-cols-2 gap-4">
+                                            <div>
+                                                <label
+                                                    class="block text-sm font-medium text-gray-700 mb-2">Gender</label>
+                                                <select
+                                                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                                    <option>Male</option>
+                                                    <option>Female</option>
+                                                </select>
+                                            </div>
+                                            <div>
+                                                <label class="block text-sm font-medium text-gray-700 mb-2">Age</label>
+                                                <select
+                                                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                                    <option>21-30</option>
+                                                    <option>31-40</option>
+                                                    <option>41-50</option>
+                                                    <option>51-60</option>
+                                                    <option>60+</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">Full
+                                                Name</label>
+                                            <input type="text" placeholder="Enter your full name"
+                                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                        </div>
+
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">Mobile
+                                                Number</label>
+                                            <input type="tel" placeholder="Enter mobile number"
+                                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                        </div>
+
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">Pincode</label>
+                                            <input type="text" placeholder="Enter your area pincode"
+                                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                        </div>
+
+                                        <button type="submit"
+                                            class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors flex items-center justify-center">
+                                            View Plans
+                                            <i class="fas fa-arrow-right ml-2"></i>
+                                        </button>
+
+                                        <p class="text-xs text-gray-600 text-center mt-3">
+                                            By clicking, I agree to <a href="#"
+                                                class="text-blue-600 hover:underline">terms & conditions</a> and
+                                            <a href="#" class="text-blue-600 hover:underline">privacy policy</a>
+                                        </p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Health Insurance Calculator Section -->
+                <section class="py-16 bg-white">
+                    <div class="container mx-auto px-4 md:px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                💊 Health Insurance Premium Calculator
+                            </h2>
+                            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                                Get personalized premium quotes in just 3 steps based on your age, location, and
+                                coverage requirements
+                            </p>
+                        </div>
+
+                        <div class="max-w-5xl mx-auto">
+                            <!-- Progress Steps -->
+                            <div class="flex items-center justify-center mb-8">
+                                <div class="flex items-center space-x-4">
+                                    <div class="flex items-center">
+                                        <div id="step1-indicator"
+                                            class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">
+                                            1
+                                        </div>
+                                        <span class="ml-2 text-sm font-medium text-blue-600">Who</span>
+                                    </div>
+                                    <div id="progress1-2" class="w-16 h-1 bg-gray-300 rounded"></div>
+                                    <div class="flex items-center">
+                                        <div id="step2-indicator"
+                                            class="w-10 h-10 bg-gray-300 text-gray-600 rounded-full flex items-center justify-center font-semibold">
+                                            2
+                                        </div>
+                                        <span class="ml-2 text-sm font-medium text-gray-500">Details</span>
+                                    </div>
+                                    <div id="progress2-3" class="w-16 h-1 bg-gray-300 rounded"></div>
+                                    <div class="flex items-center">
+                                        <div id="step3-indicator"
+                                            class="w-10 h-10 bg-gray-300 text-gray-600 rounded-full flex items-center justify-center font-semibold">
+                                            3
+                                        </div>
+                                        <span class="ml-2 text-sm font-medium text-gray-500">Coverage</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
+                                <div class="bg-gradient-to-r from-blue-600 to-indigo-600 p-6">
+                                    <div class="text-center">
+                                        <h3 class="text-2xl font-bold text-white mb-2">Calculate Your Premium</h3>
+                                        <p class="text-blue-100">Compare plans from 25+ top insurers and save up to 25%
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="p-8 lg:p-12">
+                                    <form id="healthCalculator" class="space-y-10">
+                                        <!-- Step 1: Who do you want insurance for -->
+                                        <div class="calculator-step" data-step="1">
+                                            <div class="text-center mb-8">
+                                                <div
+                                                    class="inline-flex items-center bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                                                    <i class="fas fa-users mr-2"></i>
+                                                    Step 1 of 3
+                                                </div>
+                                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Whom do you want the
+                                                    insurance for?</h3>
+                                                <p class="text-gray-600">Select who needs health insurance coverage</p>
+                                            </div>
+
+                                            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                                                <label class="cursor-pointer group">
+                                                    <input type="radio" name="insuranceFor" value="you"
+                                                        class="sr-only peer" required>
+                                                    <div
+                                                        class="p-6 border-2 border-gray-200 rounded-2xl peer-checked:border-blue-500 peer-checked:bg-blue-50 hover:border-blue-300 transition-all duration-300 text-center group-hover:shadow-lg">
+                                                        <div
+                                                            class="w-12 h-12 mx-auto mb-3 bg-blue-100 peer-checked:bg-blue-500 rounded-full flex items-center justify-center transition-colors">
+                                                            <i
+                                                                class="fas fa-user text-blue-600 peer-checked:text-white text-xl"></i>
+                                                        </div>
+                                                        <div
+                                                            class="font-semibold text-gray-900 peer-checked:text-blue-600">
+                                                            You</div>
+                                                        <div class="text-xs text-gray-500 mt-1">Individual</div>
+                                                    </div>
+                                                </label>
+
+                                                <label class="cursor-pointer group">
+                                                    <input type="radio" name="insuranceFor" value="couple"
+                                                        class="sr-only peer">
+                                                    <div
+                                                        class="p-6 border-2 border-gray-200 rounded-2xl peer-checked:border-blue-500 peer-checked:bg-blue-50 hover:border-blue-300 transition-all duration-300 text-center group-hover:shadow-lg">
+                                                        <div
+                                                            class="w-12 h-12 mx-auto mb-3 bg-pink-100 peer-checked:bg-blue-500 rounded-full flex items-center justify-center transition-colors">
+                                                            <i
+                                                                class="fas fa-heart text-pink-600 peer-checked:text-white text-xl"></i>
+                                                        </div>
+                                                        <div
+                                                            class="font-semibold text-gray-900 peer-checked:text-blue-600">
+                                                            Couple</div>
+                                                        <div class="text-xs text-gray-500 mt-1">You & Spouse</div>
+                                                    </div>
+                                                </label>
+
+                                                <label class="cursor-pointer group">
+                                                    <input type="radio" name="insuranceFor" value="family"
+                                                        class="sr-only peer">
+                                                    <div
+                                                        class="p-6 border-2 border-gray-200 rounded-2xl peer-checked:border-blue-500 peer-checked:bg-blue-50 hover:border-blue-300 transition-all duration-300 text-center group-hover:shadow-lg">
+                                                        <div
+                                                            class="w-12 h-12 mx-auto mb-3 bg-green-100 peer-checked:bg-blue-500 rounded-full flex items-center justify-center transition-colors">
+                                                            <i
+                                                                class="fas fa-users text-green-600 peer-checked:text-white text-xl"></i>
+                                                        </div>
+                                                        <div
+                                                            class="font-semibold text-gray-900 peer-checked:text-blue-600">
+                                                            Family</div>
+                                                        <div class="text-xs text-gray-500 mt-1">With Kids</div>
+                                                    </div>
+                                                </label>
+
+                                                <label class="cursor-pointer group">
+                                                    <input type="radio" name="insuranceFor" value="father"
+                                                        class="sr-only peer">
+                                                    <div
+                                                        class="p-6 border-2 border-gray-200 rounded-2xl peer-checked:border-blue-500 peer-checked:bg-blue-50 hover:border-blue-300 transition-all duration-300 text-center group-hover:shadow-lg">
+                                                        <div
+                                                            class="w-12 h-12 mx-auto mb-3 bg-blue-100 peer-checked:bg-blue-500 rounded-full flex items-center justify-center transition-colors">
+                                                            <i
+                                                                class="fas fa-male text-blue-600 peer-checked:text-white text-xl"></i>
+                                                        </div>
+                                                        <div
+                                                            class="font-semibold text-gray-900 peer-checked:text-blue-600">
+                                                            Father</div>
+                                                        <div class="text-xs text-gray-500 mt-1">Parent</div>
+                                                    </div>
+                                                </label>
+
+                                                <label class="cursor-pointer group">
+                                                    <input type="radio" name="insuranceFor" value="mother"
+                                                        class="sr-only peer">
+                                                    <div
+                                                        class="p-6 border-2 border-gray-200 rounded-2xl peer-checked:border-blue-500 peer-checked:bg-blue-50 hover:border-blue-300 transition-all duration-300 text-center group-hover:shadow-lg">
+                                                        <div
+                                                            class="w-12 h-12 mx-auto mb-3 bg-purple-100 peer-checked:bg-blue-500 rounded-full flex items-center justify-center transition-colors">
+                                                            <i
+                                                                class="fas fa-female text-purple-600 peer-checked:text-white text-xl"></i>
+                                                        </div>
+                                                        <div
+                                                            class="font-semibold text-gray-900 peer-checked:text-blue-600">
+                                                            Mother</div>
+                                                        <div class="text-xs text-gray-500 mt-1">Parent</div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <!-- Step 2: Age and Location -->
+                                        <div class="calculator-step hidden" data-step="2">
+                                            <div class="text-center mb-8">
+                                                <div
+                                                    class="inline-flex items-center bg-green-100 text-green-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                                                    <i class="fas fa-info-circle mr-2"></i>
+                                                    Step 2 of 3
+                                                </div>
+                                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Enter Your Details
+                                                </h3>
+                                                <p class="text-gray-600">Help us calculate accurate premium for your
+                                                    profile</p>
+                                            </div>
+
+                                            <div class="grid md:grid-cols-2 gap-8">
+                                                <div class="space-y-2">
+                                                    <label class="block text-lg font-semibold text-gray-900 mb-3">
+                                                        <i class="fas fa-birthday-cake text-blue-600 mr-2"></i>
+                                                        Enter Your Age
+                                                    </label>
+                                                    <div class="relative">
+                                                        <input type="number" id="ageInput" placeholder="Enter age"
+                                                            min="18" max="80"
+                                                            class="w-full px-6 py-4 text-lg border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 bg-gray-50 focus:bg-white"
+                                                            required>
+                                                        <div class="absolute right-4 top-4 text-gray-400">
+                                                            <i class="fas fa-calendar-alt"></i>
+                                                        </div>
+                                                    </div>
+                                                    <p class="text-sm text-gray-500 mt-2">
+                                                        <i class="fas fa-info-circle mr-1"></i>
+                                                        Age affects your premium calculation
+                                                    </p>
+                                                </div>
+
+                                                <div class="space-y-2">
+                                                    <label class="block text-lg font-semibold text-gray-900 mb-3">
+                                                        <i class="fas fa-map-marker-alt text-red-600 mr-2"></i>
+                                                        Where do you live?
+                                                    </label>
+                                                    <div class="relative">
+                                                        <input type="text" id="pincodeInput"
+                                                            placeholder="Enter Area Pincode" pattern="[0-9]{6}"
+                                                            maxlength="6"
+                                                            class="w-full px-6 py-4 text-lg border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 bg-gray-50 focus:bg-white"
+                                                            required>
+                                                        <div class="absolute right-4 top-4 text-gray-400">
+                                                            <i class="fas fa-location-arrow"></i>
+                                                        </div>
+                                                    </div>
+                                                    <p class="text-sm text-gray-500 mt-2">
+                                                        <i class="fas fa-info-circle mr-1"></i>
+                                                        Location helps determine network hospitals
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Step 3: Coverage Amount -->
+                                        <div class="calculator-step hidden" data-step="3">
+                                            <div class="text-center mb-8">
+                                                <div
+                                                    class="inline-flex items-center bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                                                    <i class="fas fa-shield-alt mr-2"></i>
+                                                    Step 3 of 3
+                                                </div>
+                                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Choose required
+                                                    Coverage for yourself?</h3>
+                                                <p class="text-gray-600">Select the sum insured that suits your needs
+                                                    and budget</p>
+                                            </div>
+
+                                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                                <label class="cursor-pointer group">
+                                                    <input type="radio" name="coverage" value="500000"
+                                                        class="sr-only peer" required>
+                                                    <div
+                                                        class="p-8 border-2 border-gray-200 rounded-2xl peer-checked:border-blue-500 peer-checked:bg-blue-50 hover:border-blue-300 transition-all duration-300 text-center group-hover:shadow-xl transform group-hover:scale-105">
+                                                        <div class="text-3xl font-bold text-blue-600 mb-3">₹5 Lac</div>
+                                                        <div class="text-sm text-gray-600 mb-4">Recommended for
+                                                            individuals</div>
+                                                        <div class="space-y-2 text-xs text-left">
+                                                            <div class="flex items-center text-green-600">
+                                                                <i class="fas fa-check-circle mr-2"></i>
+                                                                Basic coverage
+                                                            </div>
+                                                            <div class="flex items-center text-green-600">
+                                                                <i class="fas fa-check-circle mr-2"></i>
+                                                                Emergency treatment
+                                                            </div>
+                                                            <div class="flex items-center text-green-600">
+                                                                <i class="fas fa-check-circle mr-2"></i>
+                                                                Affordable premium
+                                                            </div>
+                                                        </div>
+                                                        <div class="mt-4 text-xs text-gray-500">Starting from
+                                                            ₹150/month*</div>
+                                                    </div>
+                                                </label>
+
+                                                <label class="cursor-pointer group">
+                                                    <input type="radio" name="coverage" value="1000000"
+                                                        class="sr-only peer">
+                                                    <div
+                                                        class="p-8 border-2 border-blue-300 bg-blue-25 rounded-2xl peer-checked:border-blue-500 peer-checked:bg-blue-50 hover:border-blue-400 transition-all duration-300 text-center group-hover:shadow-xl transform group-hover:scale-105 relative">
+                                                        <div
+                                                            class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                                                            <span
+                                                                class="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">POPULAR</span>
+                                                        </div>
+                                                        <div class="text-3xl font-bold text-blue-600 mb-3">₹10 Lac</div>
+                                                        <div class="text-sm text-gray-600 mb-4">Popular choice for
+                                                            families</div>
+                                                        <div class="space-y-2 text-xs text-left">
+                                                            <div class="flex items-center text-green-600">
+                                                                <i class="fas fa-check-circle mr-2"></i>
+                                                                Comprehensive coverage
+                                                            </div>
+                                                            <div class="flex items-center text-green-600">
+                                                                <i class="fas fa-check-circle mr-2"></i>
+                                                                Major surgeries covered
+                                                            </div>
+                                                            <div class="flex items-center text-green-600">
+                                                                <i class="fas fa-check-circle mr-2"></i>
+                                                                Family floater option
+                                                            </div>
+                                                        </div>
+                                                        <div class="mt-4 text-xs text-gray-500">Starting from
+                                                            ₹280/month*</div>
+                                                    </div>
+                                                </label>
+
+                                                <label class="cursor-pointer group">
+                                                    <input type="radio" name="coverage" value="2500000"
+                                                        class="sr-only peer">
+                                                    <div
+                                                        class="p-8 border-2 border-gray-200 rounded-2xl peer-checked:border-blue-500 peer-checked:bg-blue-50 hover:border-blue-300 transition-all duration-300 text-center group-hover:shadow-xl transform group-hover:scale-105">
+                                                        <div class="text-3xl font-bold text-blue-600 mb-3">₹25 Lac</div>
+                                                        <div class="text-sm text-gray-600 mb-4">Comprehensive coverage
+                                                        </div>
+                                                        <div class="space-y-2 text-xs text-left">
+                                                            <div class="flex items-center text-green-600">
+                                                                <i class="fas fa-check-circle mr-2"></i>
+                                                                Premium hospitals
+                                                            </div>
+                                                            <div class="flex items-center text-green-600">
+                                                                <i class="fas fa-check-circle mr-2"></i>
+                                                                Critical illness cover
+                                                            </div>
+                                                            <div class="flex items-center text-green-600">
+                                                                <i class="fas fa-check-circle mr-2"></i>
+                                                                No claim bonus
+                                                            </div>
+                                                        </div>
+                                                        <div class="mt-4 text-xs text-gray-500">Starting from
+                                                            ₹520/month*</div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <!-- Navigation Buttons -->
+                                        <div class="flex justify-between items-center pt-8 border-t border-gray-200">
+                                            <button type="button" id="prevButton"
+                                                class="hidden px-6 py-3 bg-gray-200 text-gray-700 rounded-xl font-semibold hover:bg-gray-300 transition-colors">
+                                                <i class="fas fa-chevron-left mr-2"></i>
+                                                Previous
+                                            </button>
+
+                                            <div class="flex space-x-4 ml-auto">
+                                                <button type="button" id="nextButton"
+                                                    class="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-colors transform hover:scale-105">
+                                                    Next
+                                                    <i class="fas fa-chevron-right ml-2"></i>
+                                                </button>
+
+                                                <button type="submit" id="calculateButton"
+                                                    class="hidden px-8 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-xl font-semibold hover:from-green-700 hover:to-emerald-700 transition-all transform hover:scale-105 shadow-lg">
+                                                    <i class="fas fa-calculator mr-2"></i>
+                                                    Calculate Premium
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Results Section -->
+                                        <div id="calculatorResults"
+                                            class="hidden mt-8 p-8 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border-2 border-green-200">
+                                            <div class="text-center">
+                                                <div
+                                                    class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                    <i class="fas fa-check text-white text-2xl"></i>
+                                                </div>
+                                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Your Premium Estimate
+                                                </h3>
+                                                <div class="text-4xl font-bold text-green-600 mb-4" id="premiumAmount">
+                                                    ₹---</div>
+                                                <p class="text-gray-600 mb-6">Monthly premium starting from above amount
+                                                </p>
+
+                                                <div class="grid md:grid-cols-3 gap-4 mb-6">
+                                                    <div class="bg-white rounded-lg p-4 shadow-sm">
+                                                        <div class="text-sm text-gray-600">Coverage</div>
+                                                        <div class="text-lg font-bold text-gray-900"
+                                                            id="selectedCoverage">---</div>
+                                                    </div>
+                                                    <div class="bg-white rounded-lg p-4 shadow-sm">
+                                                        <div class="text-sm text-gray-600">For</div>
+                                                        <div class="text-lg font-bold text-gray-900"
+                                                            id="selectedPerson">---</div>
+                                                    </div>
+                                                    <div class="bg-white rounded-lg p-4 shadow-sm">
+                                                        <div class="text-sm text-gray-600">Age Group</div>
+                                                        <div class="text-lg font-bold text-gray-900" id="selectedAge">
+                                                            ---</div>
+                                                    </div>
+                                                </div>
+
+                                                <div
+                                                    class="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
+                                                    <button type="button"
+                                                        class="bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                                                        View Detailed Plans
+                                                    </button>
+                                                    <button type="button"
+                                                        class="border-2 border-blue-600 text-blue-600 py-3 px-6 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                                                        Get Free Quote
+                                                    </button>
+                                                </div>
+
+                                                <p class="text-xs text-gray-500 mt-4">
+                                                    *Premium calculated based on basic information. Final premium may
+                                                    vary based on medical history and other factors.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Best Health Insurance Plans -->
+                <section class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-4 md:px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Best Health Insurance Plans In India
+                            </h2>
+                            <p class="text-xl text-gray-600">
+                                Compare and choose from top-rated health insurance plans from leading insurers
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <!-- Plan 1 -->
+                            <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                                <div class="flex items-center mb-4">
+                                    <img src="/images/OpenCredit-logo.png" alt="Care Health"
+                                        class="w-12 h-12 rounded-lg mr-3">
+                                    <div>
+                                        <h3 class="font-bold text-lg text-gray-900">Care Supreme Discounted</h3>
+                                        <p class="text-sm text-gray-600">Care Health Insurance Limited</p>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Cover Amount</span>
+                                        <span class="font-semibold text-gray-900">₹5 Lakh</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Starting at</span>
+                                        <span class="font-bold text-blue-600 text-xl">₹615/month</span>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2 mb-6">
+                                    <div class="flex items-center text-sm text-gray-700">
+                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        <span>No room rent limit</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-700">
+                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        <span>Unlimited restoration benefits</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex space-x-3">
+                                    <button
+                                        class="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                                        Check Premium
+                                    </button>
+                                    <button
+                                        class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Plan 2 -->
+                            <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                                <div class="flex items-center mb-4">
+                                    <img src="/images/OpenCredit-logo.png" alt="Max Bupa"
+                                        class="w-12 h-12 rounded-lg mr-3">
+                                    <div>
+                                        <h3 class="font-bold text-lg text-gray-900">Reassure 2.0 Titanium+</h3>
+                                        <p class="text-sm text-gray-600">MaxBupa</p>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Cover Amount</span>
+                                        <span class="font-semibold text-gray-900">₹5 Lakh</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Starting at</span>
+                                        <span class="font-bold text-blue-600 text-xl">₹628/month</span>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2 mb-6">
+                                    <div class="flex items-center text-sm text-gray-700">
+                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        <span>No room rent limit</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-700">
+                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        <span>100% no claim bonus</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex space-x-3">
+                                    <button
+                                        class="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                                        Check Premium
+                                    </button>
+                                    <button
+                                        class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Plan 3 -->
+                            <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                                <div class="flex items-center mb-4">
+                                    <img src="/images/OpenCredit-logo.png" alt="Star Health"
+                                        class="w-12 h-12 rounded-lg mr-3">
+                                    <div>
+                                        <h3 class="font-bold text-lg text-gray-900">Comprehensive Individual</h3>
+                                        <p class="text-sm text-gray-600">Star Health</p>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Cover Amount</span>
+                                        <span class="font-semibold text-gray-900">₹5 Lakh</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Starting at</span>
+                                        <span class="font-bold text-blue-600 text-xl">₹708/month</span>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2 mb-6">
+                                    <div class="flex items-center text-sm text-gray-700">
+                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        <span>Single Private A/C Room</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-700">
+                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        <span>100% restoration benefits</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex space-x-3">
+                                    <button
+                                        class="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                                        Check Premium
+                                    </button>
+                                    <button
+                                        class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-10">
+                            <button
+                                class="bg-blue-600 text-white py-3 px-8 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                                See More Plans
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Significance of Health Insurance -->
+                <section class="py-16 bg-white">
+                    <div class="container mx-auto px-4 md:px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Significance of having a health insurance policy
+                            </h2>
+                            <p class="text-xl text-gray-600">
+                                Following are some significant benefits of a comprehensive health insurance plan
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <div class="text-center">
+                                <div
+                                    class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-shield-alt text-3xl text-blue-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4">Financial Security</h3>
+                                <p class="text-gray-600">
+                                    A health insurance policy can free you and your family from the financial burden
+                                    that comes with a medical emergency, illness or health issues
+                                </p>
+                            </div>
+
+                            <div class="text-center">
+                                <div
+                                    class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-heart text-3xl text-green-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4">Peace of Mind</h3>
+                                <p class="text-gray-600">
+                                    Once you and your loved ones are covered under a health insurance plan,
+                                    you will have peace of mind and can focus on getting the right treatment stress-free
+                                </p>
+                            </div>
+
+                            <div class="text-center">
+                                <div
+                                    class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-hospital text-3xl text-purple-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4">Quality Healthcare Services</h3>
+                                <p class="text-gray-600">
+                                    With the rising expenses of medical treatments, a health insurance policy can
+                                    provide access to better quality healthcare services
+                                </p>
+                            </div>
+
+                            <div class="text-center">
+                                <div
+                                    class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-running text-3xl text-orange-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4">Altering Lifestyle</h3>
+                                <p class="text-gray-600">
+                                    Having health insurance can shield you from diseases that may arise due to an
+                                    altering lifestyle as with our current lifestyle we are faced with severe illnesses
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Types of Health Insurance Plans -->
+                <section class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-4 md:px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Types of Health Insurance Policies
+                            </h2>
+                            <p class="text-xl text-gray-600">
+                                Choose the right plan depending on your requirement and budget
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <!-- Individual Health Insurance -->
+                            <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                                <div
+                                    class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-user text-2xl text-blue-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Individual Health Insurance
+                                    Plan</h3>
+                                <p class="text-gray-600 text-center mb-4">
+                                    Policy that covers a single person in case of hospitalisation and medical bills
+                                </p>
+                                <div class="text-center">
+                                    <span
+                                        class="inline-block bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">
+                                        Eligibility: Individuals
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Family Floater -->
+                            <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                                <div
+                                    class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-users text-2xl text-green-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Family Floater Health
+                                    Insurance</h3>
+                                <p class="text-gray-600 text-center mb-4">
+                                    Policy that covers multiple family members under a single plan
+                                </p>
+                                <div class="text-center">
+                                    <span
+                                        class="inline-block bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm font-medium">
+                                        Eligibility: Family members
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Senior Citizen -->
+                            <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                                <div
+                                    class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-user-plus text-2xl text-purple-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Senior Citizen Health
+                                    Insurance</h3>
+                                <p class="text-gray-600 text-center mb-4">
+                                    Policy that covers individuals above the age of 65 years
+                                </p>
+                                <div class="text-center">
+                                    <span
+                                        class="inline-block bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">
+                                        Eligibility: 65+ years
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Critical Illness -->
+                            <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                                <div
+                                    class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-heartbeat text-2xl text-red-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Critical Illness Insurance
+                                </h3>
+                                <p class="text-gray-600 text-center mb-4">
+                                    Policy covering expensive treatment of critical illnesses such as cancer
+                                </p>
+                                <div class="text-center">
+                                    <span
+                                        class="inline-block bg-red-50 text-red-700 px-3 py-1 rounded-full text-sm font-medium">
+                                        Eligibility: Individuals
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Maternity Health Insurance -->
+                            <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                                <div
+                                    class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-baby text-2xl text-pink-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Maternity Health Insurance
+                                </h3>
+                                <p class="text-gray-600 text-center mb-4">
+                                    Policies for mothers to cover expenses during prenatal, delivery, and post-natal
+                                    stage
+                                </p>
+                                <div class="text-center">
+                                    <span
+                                        class="inline-block bg-pink-50 text-pink-700 px-3 py-1 rounded-full text-sm font-medium">
+                                        Eligibility: Women
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Top-up Health Insurance -->
+                            <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                                <div
+                                    class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-arrow-up text-2xl text-yellow-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Top-Up Health Insurance
+                                </h3>
+                                <p class="text-gray-600 text-center mb-4">
+                                    Policies that help upgrade your plan and provide additional coverage
+                                </p>
+                                <div class="text-center">
+                                    <span
+                                        class="inline-block bg-yellow-50 text-yellow-700 px-3 py-1 rounded-full text-sm font-medium">
+                                        Eligibility: Everyone
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Key Features Section -->
+                <section class="py-16 bg-white">
+                    <div class="container mx-auto px-4 md:px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Key Features of a Health Insurance Policy
+                            </h2>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="flex items-start space-x-4">
+                                <div
+                                    class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-hospital-alt text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">Pre & Post Hospitalisation</h3>
+                                    <p class="text-gray-600">Coverage starts from before hospitalisation to after
+                                        hospitalisation expenses.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div
+                                    class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-stethoscope text-green-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">OPD Expenses</h3>
+                                    <p class="text-gray-600">Covers OPD expenses from teleconsultation to routine
+                                        diagnostics.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div
+                                    class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-credit-card text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">Cashless Hospitalisation</h3>
+                                    <p class="text-gray-600">Visit network hospitals for cashless treatment without fund
+                                        arrangement worries.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div
+                                    class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-shield-virus text-orange-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">Pre-existing Diseases</h3>
+                                    <p class="text-gray-600">Covers pre-existing diseases after completion of waiting
+                                        period.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div
+                                    class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-plus-circle text-red-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">Add-on Benefits</h3>
+                                    <p class="text-gray-600">Extend coverage with add-ons like critical illness,
+                                        maternity benefits.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div
+                                    class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-percentage text-yellow-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">Tax Benefits Section 80D</h3>
+                                    <p class="text-gray-600">Claim up to ₹75,000 per year in tax deductions under
+                                        Section 80D.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-4 md:px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Frequently Asked Questions
+                            </h2>
+                        </div>
+
+                        <div class="max-w-4xl mx-auto">
+                            <div class="space-y-4">
+                                <div class="bg-white rounded-lg shadow-md">
+                                    <button
+                                        class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
+                                        onclick="toggleFAQ(0)">
+                                        <span class="font-semibold text-gray-900">What is health insurance?</span>
+                                        <i class="fas fa-chevron-down transform transition-transform duration-300"
+                                            id="faq-icon-0"></i>
+                                    </button>
+                                    <div class="px-6 pb-4 hidden" id="faq-content-0">
+                                        <p class="text-gray-600">Health insurance is a type of insurance policy that
+                                            covers the medical expenses of the insured. It covers expenses related to
+                                            hospitalization, daycare procedures, ambulance charges, and more.</p>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white rounded-lg shadow-md">
+                                    <button
+                                        class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
+                                        onclick="toggleFAQ(1)">
+                                        <span class="font-semibold text-gray-900">How much health insurance coverage do
+                                            I need?</span>
+                                        <i class="fas fa-chevron-down transform transition-transform duration-300"
+                                            id="faq-icon-1"></i>
+                                    </button>
+                                    <div class="px-6 pb-4 hidden" id="faq-content-1">
+                                        <p class="text-gray-600">Experts suggest getting coverage of at least 35% to 50%
+                                            of your annual income. However, you can start with ₹5-₹10 lakhs and increase
+                                            it based on your financial capacity and future risks.</p>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white rounded-lg shadow-md">
+                                    <button
+                                        class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
+                                        onclick="toggleFAQ(2)">
+                                        <span class="font-semibold text-gray-900">What is the waiting period in health
+                                            insurance?</span>
+                                        <i class="fas fa-chevron-down transform transition-transform duration-300"
+                                            id="faq-icon-2"></i>
+                                    </button>
+                                    <div class="px-6 pb-4 hidden" id="faq-content-2">
+                                        <p class="text-gray-600">Waiting period refers to the time during which you
+                                            cannot raise any health insurance claim. Usually, it's a minimum of 30 days
+                                            from the day of taking insurance. For pre-existing diseases, the waiting
+                                            period can be 2-4 years.</p>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white rounded-lg shadow-md">
+                                    <button
+                                        class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
+                                        onclick="toggleFAQ(3)">
+                                        <span class="font-semibold text-gray-900">What is cashless treatment?</span>
+                                        <i class="fas fa-chevron-down transform transition-transform duration-300"
+                                            id="faq-icon-3"></i>
+                                    </button>
+                                    <div class="px-6 pb-4 hidden" id="faq-content-3">
+                                        <p class="text-gray-600">Cashless treatment allows you to receive medical care
+                                            at network hospitals without paying upfront. The insurance company directly
+                                            settles the bill with the hospital after pre-authorization.</p>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white rounded-lg shadow-md">
+                                    <button
+                                        class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
+                                        onclick="toggleFAQ(4)">
+                                        <span class="font-semibold text-gray-900">Can I renew my health insurance
+                                            policy?</span>
+                                        <i class="fas fa-chevron-down transform transition-transform duration-300"
+                                            id="faq-icon-4"></i>
+                                    </button>
+                                    <div class="px-6 pb-4 hidden" id="faq-content-4">
+                                        <p class="text-gray-600">Yes, health insurance policies can be renewed annually.
+                                            You should ideally renew before the expiry date, though most insurers
+                                            provide a grace period of 15-45 days for renewal.</p>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white rounded-lg shadow-md">
+                                    <button
+                                        class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
+                                        onclick="toggleFAQ(5)">
+                                        <span class="font-semibold text-gray-900">What documents are required for buying
+                                            health insurance?</span>
+                                        <i class="fas fa-chevron-down transform transition-transform duration-300"
+                                            id="faq-icon-5"></i>
+                                    </button>
+                                    <div class="px-6 pb-4 hidden" id="faq-content-5">
+                                        <p class="text-gray-600">You need age proof (birth certificate, passport),
+                                            identity proof (Aadhaar, PAN card), address proof (utility bills), and may
+                                            require medical check-ups for certain plans or age groups.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA Section -->
+                <section class="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+                    <div class="container mx-auto px-4 md:px-6 lg:px-20 text-center">
+                        <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+                            Ready to Secure Your Family's Health?
+                        </h2>
+                        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                            Compare plans from top insurers, get instant quotes, and buy online with exclusive discounts
+                        </p>
+                        <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                            <button
+                                class="bg-white text-blue-600 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
+                                Compare Health Plans
+                            </button>
+                            <button
+                                class="border-2 border-white text-white py-4 px-8 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors">
+                                Calculate Premium
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+
+            <%- include('../partials/footer.ejs') %>
+                <%- include('../partials/privacy-policy.ejs') %>
+                    <%- include('../partials/terms-of-service.ejs') %>
+
+                        <script>
+                            // FAQ Toggle Function
+                            function toggleFAQ(index) {
+                                const content = document.getElementById(`faq-content-${index}`);
+                                const icon = document.getElementById(`faq-icon-${index}`);
+
+                                if (content.classList.contains('hidden')) {
+                                    content.classList.remove('hidden');
+                                    icon.classList.add('rotate-180');
+                                } else {
+                                    content.classList.add('hidden');
+                                    icon.classList.remove('rotate-180');
+                                }
+                            }
+
+                            // Quick Quote Form Handler
+                            document.getElementById('quickQuoteForm').addEventListener('submit', function (e) {
+                                e.preventDefault();
+
+                                // Get form data
+                                const formData = new FormData(this);
+                                const data = Object.fromEntries(formData);
+
+                                // Simulate form submission
+                                alert('Thank you for your interest! Our team will contact you shortly with personalized quotes.');
+
+                                console.log('Quote form submitted:', data);
+                            });
+
+                            // Enhanced Health Calculator with Multi-step functionality
+                            let currentCalculatorStep = 1;
+                            const totalCalculatorSteps = 3;
+
+                            // Step navigation functions
+                            function showCalculatorStep(step) {
+                                // Hide all steps
+                                document.querySelectorAll('.calculator-step').forEach(stepEl => {
+                                    stepEl.classList.add('hidden');
+                                });
+
+                                // Show current step
+                                document.querySelector(`.calculator-step[data-step="${step}"]`).classList.remove('hidden');
+
+                                // Update progress indicators
+                                for (let i = 1; i <= totalCalculatorSteps; i++) {
+                                    const indicator = document.getElementById(`step${i}-indicator`);
+                                    const progress = document.getElementById(`progress${i}-${i + 1}`);
+
+                                    if (i <= step) {
+                                        indicator.classList.remove('bg-gray-300', 'text-gray-600');
+                                        indicator.classList.add('bg-blue-600', 'text-white');
+                                        indicator.nextElementSibling.classList.remove('text-gray-500');
+                                        indicator.nextElementSibling.classList.add('text-blue-600');
+                                    } else {
+                                        indicator.classList.remove('bg-blue-600', 'text-white');
+                                        indicator.classList.add('bg-gray-300', 'text-gray-600');
+                                        indicator.nextElementSibling.classList.remove('text-blue-600');
+                                        indicator.nextElementSibling.classList.add('text-gray-500');
+                                    }
+
+                                    if (progress && i < step) {
+                                        progress.classList.remove('bg-gray-300');
+                                        progress.classList.add('bg-blue-600');
+                                    } else if (progress) {
+                                        progress.classList.remove('bg-blue-600');
+                                        progress.classList.add('bg-gray-300');
+                                    }
+                                }
+
+                                // Update navigation buttons
+                                const prevBtn = document.getElementById('prevButton');
+                                const nextBtn = document.getElementById('nextButton');
+                                const calcBtn = document.getElementById('calculateButton');
+
+                                if (step === 1) {
+                                    prevBtn.classList.add('hidden');
+                                } else {
+                                    prevBtn.classList.remove('hidden');
+                                }
+
+                                if (step === totalCalculatorSteps) {
+                                    nextBtn.classList.add('hidden');
+                                    calcBtn.classList.remove('hidden');
+                                } else {
+                                    nextBtn.classList.remove('hidden');
+                                    calcBtn.classList.add('hidden');
+                                }
+
+                                currentCalculatorStep = step;
+                            }
+
+                            function validateCalculatorStep() {
+                                const currentStepEl = document.querySelector(`.calculator-step[data-step="${currentCalculatorStep}"]`);
+                                const requiredInputs = currentStepEl.querySelectorAll('input[required]');
+
+                                for (let input of requiredInputs) {
+                                    if (input.type === 'radio') {
+                                        const radioGroup = currentStepEl.querySelectorAll(`input[name="${input.name}"]`);
+                                        const isChecked = Array.from(radioGroup).some(radio => radio.checked);
+                                        if (!isChecked) {
+                                            alert('Please make a selection to continue');
+                                            return false;
+                                        }
+                                    } else if (!input.value.trim()) {
+                                        alert('Please fill in all required fields');
+                                        input.focus();
+                                        return false;
+                                    }
+                                }
+                                return true;
+                            }
+
+                            // Navigation event listeners
+                            document.getElementById('nextButton').addEventListener('click', function () {
+                                if (validateCalculatorStep() && currentCalculatorStep < totalCalculatorSteps) {
+                                    showCalculatorStep(currentCalculatorStep + 1);
+                                }
+                            });
+
+                            document.getElementById('prevButton').addEventListener('click', function () {
+                                if (currentCalculatorStep > 1) {
+                                    showCalculatorStep(currentCalculatorStep - 1);
+                                }
+                            });
+
+                            // Health Calculator Form Handler
+                            document.getElementById('healthCalculator').addEventListener('submit', function (e) {
+                                e.preventDefault();
+
+                                if (!validateCalculatorStep()) {
+                                    return;
+                                }
+
+                                // Get selected values
+                                const insuranceFor = document.querySelector('input[name="insuranceFor"]:checked')?.value;
+                                const coverage = document.querySelector('input[name="coverage"]:checked')?.value;
+                                const age = document.getElementById('ageInput').value;
+                                const pincode = document.getElementById('pincodeInput').value;
+
+                                // Calculate premium
+                                const coverageAmount = parseInt(coverage);
+                                const userAge = parseInt(age);
+
+                                // Base premium calculation (0.15% to 0.3% of coverage annually)
+                                let basePremium = coverageAmount * 0.0018; // 0.18% base rate
+
+                                // Age multipliers
+                                if (userAge <= 25) basePremium *= 0.8;
+                                else if (userAge <= 35) basePremium *= 1.0;
+                                else if (userAge <= 45) basePremium *= 1.3;
+                                else if (userAge <= 55) basePremium *= 1.8;
+                                else basePremium *= 2.5;
+
+                                // Family multipliers
+                                if (insuranceFor === 'couple') basePremium *= 1.8;
+                                else if (insuranceFor === 'family') basePremium *= 2.5;
+
+                                const monthlyPremium = Math.round(basePremium / 12);
+
+                                // Display results
+                                document.getElementById('premiumAmount').textContent = `₹${monthlyPremium.toLocaleString()}`;
+                                document.getElementById('selectedCoverage').textContent = `₹${(coverageAmount / 100000).toFixed(0)} Lac`;
+                                document.getElementById('selectedPerson').textContent = insuranceFor.charAt(0).toUpperCase() + insuranceFor.slice(1);
+                                document.getElementById('selectedAge').textContent = `${age} years`;
+
+                                document.getElementById('calculatorResults').classList.remove('hidden');
+                                document.getElementById('calculatorResults').scrollIntoView({ behavior: 'smooth' });
+
+                                console.log('Calculator submitted:', { insuranceFor, coverage, age, pincode, monthlyPremium });
+                            });
+
+                            // Initialize calculator
+                            showCalculatorStep(1);
+
+                            // Form Validation
+                            document.querySelectorAll('input[required]').forEach(input => {
+                                input.addEventListener('blur', function () {
+                                    if (!this.value.trim()) {
+                                        this.classList.add('border-red-500');
+                                    } else {
+                                        this.classList.remove('border-red-500');
+                                        this.classList.add('border-green-500');
+                                    }
+                                });
+                            });
+                        </script>
+
+                        <style>
+                            /* Custom animations and transitions */
+                            .fade-in {
+                                animation: fadeIn 0.6s ease-in-out;
+                            }
+
+                            @keyframes fadeIn {
+                                from {
+                                    opacity: 0;
+                                    transform: translateY(20px);
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                }
+                            }
+
+                            /* Hover effects for cards */
+                            .hover-lift {
+                                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                            }
+
+                            .hover-lift:hover {
+                                transform: translateY(-5px);
+                                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+                            }
+
+                            /* Enhanced Radio button styling */
+                            input[type="radio"]:checked+div {
+                                border-color: #2563eb !important;
+                                background-color: #eff6ff !important;
+                                transform: scale(1.02);
+                                box-shadow: 0 10px 25px rgba(37, 99, 235, 0.15);
+                            }
+
+                            /* Calculator step animations */
+                            .calculator-step {
+                                animation: slideIn 0.5s ease-out;
+                            }
+
+                            @keyframes slideIn {
+                                from {
+                                    opacity: 0;
+                                    transform: translateX(30px);
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    transform: translateX(0);
+                                }
+                            }
+
+                            /* Progress indicator animations */
+                            #step1-indicator,
+                            #step2-indicator,
+                            #step3-indicator {
+                                transition: all 0.3s ease;
+                            }
+
+                            #progress1-2,
+                            #progress2-3 {
+                                transition: all 0.5s ease;
+                            }
+
+                            /* Button hover effects */
+                            .group:hover .group-hover\:shadow-lg {
+                                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+                            }
+
+                            .transform.group-hover\:scale-105:hover {
+                                transform: scale(1.05);
+                            }
+
+                            /* Input focus effects */
+                            input:focus {
+                                box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+                                transform: translateY(-1px);
+                            }
+
+                            /* Results animation */
+                            #calculatorResults {
+                                animation: resultsSlideUp 0.6s ease-out;
+                            }
+
+                            @keyframes resultsSlideUp {
+                                from {
+                                    opacity: 0;
+                                    transform: translateY(30px);
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                }
+                            }
+
+                            /* Pulse animation for popular badge */
+                            .bg-green-500 {
+                                animation: pulse 2s infinite;
+                            }
+
+                            @keyframes pulse {
+
+                                0%,
+                                100% {
+                                    transform: scale(1);
+                                }
+
+                                50% {
+                                    transform: scale(1.05);
+                                }
+                            }
+
+                            /* Gradient background */
+                            .bg-blue-25 {
+                                background-color: rgba(59, 130, 246, 0.05);
+                            }
+
+                            /* Smooth transitions */
+                            * {
+                                transition: all 0.3s ease;
+                            }
+
+                            /* Loading spinner for button */
+                            .loading {
+                                position: relative;
+                            }
+
+                            .loading::after {
+                                content: "";
+                                position: absolute;
+                                width: 16px;
+                                height: 16px;
+                                margin: auto;
+                                border: 2px solid transparent;
+                                border-top-color: #ffffff;
+                                border-radius: 50%;
+                                animation: spin 1s linear infinite;
+                            }
+
+                            @keyframes spin {
+                                0% {
+                                    transform: rotate(0deg);
+                                }
+
+                                100% {
+                                    transform: rotate(360deg);
+                                }
+                            }
+
+                            /* Mobile responsiveness */
+                            @media (max-width: 768px) {
+                                .hero-title {
+                                    font-size: 2.5rem;
+                                }
+
+                                .container {
+                                    padding-left: 1rem;
+                                    padding-right: 1rem;
+                                }
+
+                                .grid {
+                                    gap: 1rem;
+                                }
+
+                                .calculator-step .grid-cols-5 {
+                                    grid-template-columns: repeat(2, 1fr);
+                                }
+
+                                .text-3xl {
+                                    font-size: 1.8rem;
+                                }
+
+                                .text-2xl {
+                                    font-size: 1.5rem;
+                                }
+                            }
+
+                            /* Custom scrollbar for smooth experience */
+                            ::-webkit-scrollbar {
+                                width: 8px;
+                            }
+
+                            ::-webkit-scrollbar-track {
+                                background: #f1f1f1;
+                                border-radius: 4px;
+                            }
+
+                            ::-webkit-scrollbar-thumb {
+                                background: #c1c1c1;
+                                border-radius: 4px;
+                            }
+
+                            ::-webkit-scrollbar-thumb:hover {
+                                background: #a8a8a8;
+                            }
+                        </style>
+    </body>
+
+    </html>

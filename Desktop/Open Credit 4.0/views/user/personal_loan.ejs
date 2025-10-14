@@ -1,0 +1,1172 @@
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/navbar.ejs') %>
+
+            <main>
+                <!-- Hero Section -->
+                <section class="bg-gradient-to-r from-green-600 to-green-600 text-white py-20">
+                    <div class="container mx-auto px-6 lg:px-0">
+                        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+
+                            <div class="space-y-6">
+                                <div
+                                    class="inline-block px-4 py-2 bg-green-500 bg-opacity-50 rounded-full text-sm font-medium">
+                                    Personal Loan
+                                </div>
+                                <h1 class="text-4xl lg:text-5xl font-bold leading-tight">
+                                    Get Instant Personal Loans Up To ₹25 Lakhs
+                                </h1>
+                                <p class="text-xl text-white leading-relaxed">
+                                    Quick approval, minimal documentation, and competitive interest rates.
+                                    Fulfill your dreams with our hassle-free personal loans.
+                                </p>
+                                <div class="flex flex-wrap gap-6 pt-4">
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold">10.25%*</div>
+                                        <div class="text-blue-200 text-sm">Interest Rate p.a.</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold">₹20L</div>
+                                        <div class="text-blue-200 text-sm">Maximum Amount</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold">84</div>
+                                        <div class="text-blue-200 text-sm">Maximum Tenure</div>
+                                    </div>
+                                </div>
+                                <button onclick="scrollToForm()"
+                                    class="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg">
+                                    Apply Now
+                                </button>
+                            </div>
+
+
+                            <div class="relative ">
+                                <div class="bg-opacity-10 backdrop-blur-lg rounded-2xl p-2 space-y-6">
+                                    <img src="/images/pl-mobile-process.png" alt="Personal Loan"
+                                        class="w-full h-auto rounded-lg shadow-lg">
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Bank Partners Scrolling Section -->
+                <section class="py-12 bg-white border-t border-b border-gray-100 overflow-hidden">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="text-center mb-8">
+                            <p class="text-sm text-gray-500 uppercase tracking-wide font-medium">Trusted by</p>
+                            <h3 class="text-lg font-semibold text-gray-700">Our Banking Partners</h3>
+                        </div>
+
+                        <!-- Auto-scrolling logos container -->
+                        <div class="relative">
+                            <div class="flex animate-scroll space-x-12 items-center">
+                                <!-- First set of logos -->
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/hdfc-logo.png" alt="HDFC Bank"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/icici-logo.png" alt="ICICI Bank"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/axis-logo.png" alt="Axis Bank"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/sbi-logo.png" alt="SBI"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/kotak-logo.png" alt="Kotak Bank"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/yes-logo.png" alt="Yes Bank"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/indusind-logo.png" alt="IndusInd Bank"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/bajaj-logo.png" alt="Bajaj Finserv"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/tata-logo.png" alt="Tata Capital"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/bandhan-logo.png" alt="Bandhan Bank"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/rblbank-logo.png" alt="RBL Bank"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/idfc-logo.png" alt="IDFC First Bank"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/federalbank-logo.png" alt="Federal Bank"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/unionbank-logo.png" alt="Union Bank"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/pnb-logo.png" alt="Punjab National Bank"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+                                        onerror="this.style.display='none'">
+                                </div>
+
+                                <!-- Duplicate set for seamless scrolling -->
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/hdfc-logo.png" alt="HDFC Bank"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/icici-logo.png" alt="ICICI Bank"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/axis-logo.png" alt="Axis Bank"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/sbi-logo.png" alt="SBI"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/kotak-logo.png" alt="Kotak Bank"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/yes-logo.png" alt="Yes Bank"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/indusind-logo.png" alt="IndusInd Bank"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/bajaj-logo.png" alt="Bajaj Finserv"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/tata-logo.png" alt="Tata Capital"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/bandhan-logo.png" alt="Bandhan Bank"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/rblbank-logo.png" alt="RBL Bank"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/idfc-logo.png" alt="IDFC First Bank"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/federalbank-logo.png" alt="Federal Bank"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                                <div class="flex items-center justify-center min-w-[120px] h-16">
+                                    <img src="/images/bank-logos/unionbank-logo.png" alt="Union Bank"
+                                        class="max-h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Loan Features Section -->
+                <section class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Personal Loan Features & Benefits
+                            </h2>
+                            <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                                Discover the advantages of choosing our personal loan for all your financial needs
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                                    <i class="fas fa-bolt text-blue-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Quick Processing</h3>
+                                <p class="text-gray-600">Get your loan approved and disbursed within 24 hours with our
+                                    streamlined process.</p>
+                            </div>
+
+                            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                                    <i class="fas fa-percentage text-green-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Competitive Rates</h3>
+                                <p class="text-gray-600">Enjoy attractive interest rates starting from 10.49% per annum
+                                    with flexible terms.</p>
+                            </div>
+
+                            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                                    <i class="fas fa-file-alt text-purple-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Minimal Documentation</h3>
+                                <p class="text-gray-600">Simple paperwork with just basic documents required for quick
+                                    loan approval.</p>
+                            </div>
+
+                            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                                    <i class="fas fa-shield-alt text-orange-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">No Hidden Charges</h3>
+                                <p class="text-gray-600">Transparent pricing with no processing fees or prepayment
+                                    penalties.</p>
+                            </div>
+
+                            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                                    <i class="fas fa-calendar-alt text-red-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Flexible Tenure</h3>
+                                <p class="text-gray-600">Choose repayment tenure from 12 to 84 months based on your
+                                    convenience.</p>
+                            </div>
+
+                            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                                    <i class="fas fa-headset text-teal-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">24/7 Support</h3>
+                                <p class="text-gray-600">Round-the-clock customer support to assist you throughout your
+                                    loan journey.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Eligibility Section -->
+                <section class="py-16 bg-white">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="grid lg:grid-cols-2 gap-12">
+                            <!-- Eligibility Criteria -->
+                            <div class="space-y-8">
+                                <div>
+                                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Eligibility Criteria</h2>
+                                    <div class="space-y-4">
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-check text-green-500 mt-1"></i>
+                                            <div>
+                                                <span class="font-semibold">Age:</span> 21 to 60 years
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-check text-green-500 mt-1"></i>
+                                            <div>
+                                                <span class="font-semibold">Income:</span> Minimum ₹15,000 per month
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-check text-green-500 mt-1"></i>
+                                            <div>
+                                                <span class="font-semibold">Employment:</span> Salaried or Self-employed
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-check text-green-500 mt-1"></i>
+                                            <div>
+                                                <span class="font-semibold">Credit Score:</span> 650 and above
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-check text-green-500 mt-1"></i>
+                                            <div>
+                                                <span class="font-semibold">Work Experience:</span> Minimum 6 months
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Required Documents -->
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Required Documents</h3>
+                                    <div class="grid sm:grid-cols-2 gap-4">
+                                        <div class="p-4 bg-blue-50 rounded-lg">
+                                            <h4 class="font-semibold text-blue-900 mb-2">Identity Proof</h4>
+                                            <p class="text-blue-700 text-sm">Aadhaar Card, PAN Card, Passport, or Voter
+                                                ID</p>
+                                        </div>
+                                        <div class="p-4 bg-green-50 rounded-lg">
+                                            <h4 class="font-semibold text-green-900 mb-2">Address Proof</h4>
+                                            <p class="text-green-700 text-sm">Utility Bills, Rental Agreement, or Bank
+                                                Statement</p>
+                                        </div>
+                                        <div class="p-4 bg-purple-50 rounded-lg">
+                                            <h4 class="font-semibold text-purple-900 mb-2">Income Proof</h4>
+                                            <p class="text-purple-700 text-sm">Salary Slips, ITR, or Bank Statements</p>
+                                        </div>
+                                        <div class="p-4 bg-orange-50 rounded-lg">
+                                            <h4 class="font-semibold text-orange-900 mb-2">Employment Proof</h4>
+                                            <p class="text-orange-700 text-sm">Offer Letter, Employee ID, or Employment
+                                                Certificate</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Process Timeline -->
+                            <div class="space-y-8">
+                                <h2 class="text-3xl font-bold text-gray-900">Application Process</h2>
+                                <div class="space-y-6">
+                                    <div class="flex gap-4">
+                                        <div
+                                            class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">
+                                            1
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900 mb-1">Apply Online</h4>
+                                            <p class="text-gray-600">Fill out our simple online application form with
+                                                your details.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-4">
+                                        <div
+                                            class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">
+                                            2
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900 mb-1">Document Verification</h4>
+                                            <p class="text-gray-600">Upload required documents for quick verification
+                                                process.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-4">
+                                        <div
+                                            class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">
+                                            3
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900 mb-1">Instant Approval</h4>
+                                            <p class="text-gray-600">Get approval within 10 minutes of document
+                                                submission.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-4">
+                                        <div
+                                            class="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-semibold">
+                                            4
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900 mb-1">Fund Disbursal</h4>
+                                            <p class="text-gray-600">Receive funds directly in your bank account within
+                                                24 hours.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Best Loan Experience Section -->
+                <section class="py-16 bg-white">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="grid lg:grid-cols-2 gap-12 items-center">
+                            <!-- Content -->
+                            <div class="space-y-6">
+                                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900">
+                                    With Us you will get the <span class="text-green-600">best loan experience</span>
+                                    possible
+                                </h2>
+                                <p class="text-lg text-gray-600 leading-relaxed">
+                                    Say goodbye to <span class="text-blue-600 font-semibold">lengthy paperwork</span>
+                                    and <span class="text-blue-600 font-semibold">endless waiting</span>. Open Credit
+                                    offers a streamlined application process that puts you in control. Our user-friendly
+                                    online platform ensures that applying for a personal loan is quick, easy, and
+                                    stress-free.
+                                </p>
+
+                                <!-- Rating Stars -->
+                                <div class="flex flex-col sm:flex-row gap-6 pt-4">
+                                    <div class="text-center">
+                                        <div class="flex justify-center mb-2">
+                                            <div class="flex text-yellow-400 text-xl">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="/images/google.png" class="w-30 h-auto">
+                                        </div>
+                                    </div>
+                                    <div class="text-center space-x-6">
+                                        <div class="flex justify-center mb-2">
+                                            <div class="flex text-yellow-400 text-xl">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="/images/meta.png" class="w-30 h-auto">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button onclick="scrollToForm()"
+                                    class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-lg">
+                                    Apply now
+                                </button>
+                            </div>
+
+                            <!-- Image -->
+                            <div class="relative">
+                                <img src="/images/pl-credit-image.png" alt="" class="w-full h-auto">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- No Hidden Fees Section -->
+                <section class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="grid lg:grid-cols-2 gap-12 items-center">
+                            <!-- Image -->
+                            <div class="relative order-2 lg:order-1">
+                                <img src="/images/pl-interest-image.png" alt="personal loan" class="w-full h-auto">
+                            </div>
+
+                            <!-- Content -->
+                            <div class="space-y-6 order-1 lg:order-2">
+                                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900">
+                                    No hidden fees. <span class="text-green-600">Quick Approvals</span> & Disbursements
+                                </h2>
+                                <p class="text-lg text-gray-600 leading-relaxed">
+                                    We have more than <span class="font-bold text-blue-600">60 partner financial
+                                        institutions</span> registered. So with in a single apply, you can receive up to
+                                    10 pre approved credit offers within 5 minutes. After the application is approved,
+                                    the money is deposited in the
+                                    account within 24 hours.
+                                </p>
+
+                                <!-- Rating Stars -->
+                                <div class="flex flex-col sm:flex-row gap-6 pt-4">
+                                    <div class="text-center">
+                                        <div class="flex justify-center mb-2">
+                                            <div class="flex text-yellow-400 text-xl">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="/images/google.png" class="w-30 h-auto">
+                                        </div>
+                                    </div>
+                                    <div class="text-center space-x-6">
+                                        <div class="flex justify-center mb-2">
+                                            <div class="flex text-yellow-400 text-xl">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="/images/meta.png" class="w-30 h-auto">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button onclick="scrollToForm()"
+                                    class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-lg">
+                                    Apply now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Application Form Section -->
+                <section id="application-form" class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Apply for Personal Loan
+                            </h2>
+                            <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                                Complete the simple 3-step application process to get instant approval
+                            </p>
+                        </div>
+
+                        <div class="max-w-4xl mx-auto">
+                            <!-- Progress Steps -->
+                            <div class="mb-8">
+                                <div class="flex items-center justify-center space-x-8">
+                                    <div class="flex items-center">
+                                        <div id="step-1-indicator"
+                                            class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold step-indicator active">
+                                            1
+                                        </div>
+                                        <span class="ml-2 text-sm font-medium text-gray-900">Personal Info</span>
+                                    </div>
+                                    <div class="flex-1 h-1 bg-gray-300 mx-4">
+                                        <div id="progress-1-2" class="h-full bg-gray-300 rounded progress-bar"></div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div id="step-2-indicator"
+                                            class="w-10 h-10 bg-gray-300 text-gray-500 rounded-full flex items-center justify-center font-semibold step-indicator">
+                                            2
+                                        </div>
+                                        <span class="ml-2 text-sm font-medium text-gray-500">Employment Info</span>
+                                    </div>
+                                    <div class="flex-1 h-1 bg-gray-300 mx-4">
+                                        <div id="progress-2-3" class="h-full bg-gray-300 rounded progress-bar"></div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div id="step-3-indicator"
+                                            class="w-10 h-10 bg-gray-300 text-gray-500 rounded-full flex items-center justify-center font-semibold step-indicator">
+                                            3
+                                        </div>
+                                        <span class="ml-2 text-sm font-medium text-gray-500">Loan Details</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Form Container -->
+                            <div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12">
+                                <!-- Important Notice -->
+                                <div
+                                    class="bg-gradient-to-r from-red-50 to-orange-50 border-l-4 border-red-500 p-4 mb-8 rounded-r-lg">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-exclamation-triangle text-red-500 text-xl mr-3 mt-1"></i>
+                                        <div>
+                                            <h4 class="text-red-800 font-semibold text-lg mb-2">📱 Important Notice</h4>
+                                            <p class="text-red-700 font-medium">Please enter Aadhaar linked Mobile
+                                                Number to avoid rejection of application</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <form id="loanApplicationForm" class="space-y-8">
+                                    <!-- Step 1: Personal Information -->
+                                    <div id="step-1" class="form-step">
+                                        <div class="text-center mb-8">
+                                            <h3 class="text-2xl font-bold text-gray-900 mb-2">👤 Personal Information
+                                            </h3>
+                                            <p class="text-gray-600">Please provide your complete personal details</p>
+                                        </div>
+
+                                        <div class="grid md:grid-cols-2 gap-6">
+                                            <div>
+                                                <label for="customerName"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Customer Name <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="text" id="customerName" name="customerName" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                    placeholder="Enter your full name as per official documents">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="customerName-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="panNumber"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 PAN No <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="text" id="panNumber" name="panNumber" required
+                                                    maxlength="10"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors uppercase"
+                                                    placeholder="ABCDE1234F" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="panNumber-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="dateOfBirth"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Date Of Birth <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="date" id="dateOfBirth" name="dateOfBirth" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="dateOfBirth-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="contactNumber"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Contact no (Aadhaar Linked) <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="tel" id="contactNumber" name="contactNumber" required
+                                                    pattern="[0-9]{10}" maxlength="10"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                    placeholder="10-digit Aadhaar linked mobile number">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="contactNumber-error"></span>
+                                                <p class="text-sm text-orange-600 mt-1 font-medium">⚠️ Must be Aadhaar
+                                                    linked to avoid rejection</p>
+                                            </div>
+
+                                            <div>
+                                                <label for="mailId"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Mail id <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="email" id="mailId" name="mailId" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                    placeholder="Enter your email address">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="mailId-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="fatherName"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Father name <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="text" id="fatherName" name="fatherName" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                    placeholder="Enter father's full name">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="fatherName-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="motherName"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Mother name <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="text" id="motherName" name="motherName" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                    placeholder="Enter mother's full name">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="motherName-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="maritalStatus"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Married or single <span class="text-red-500">*</span>
+                                                </label>
+                                                <select id="maritalStatus" name="maritalStatus" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                                                    <option value="">Select marital status</option>
+                                                    <option value="single">Single</option>
+                                                    <option value="married">Married</option>
+                                                </select>
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="maritalStatus-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="houseType"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Own or rent house <span class="text-red-500">*</span>
+                                                </label>
+                                                <select id="houseType" name="houseType" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                                                    <option value="">Select house type</option>
+                                                    <option value="own">Own House</option>
+                                                    <option value="rent">Rent House</option>
+                                                    <option value="family">Family House</option>
+                                                </select>
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="houseType-error"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 2: Address Information -->
+                                    <div id="step-2" class="form-step hidden">
+                                        <div class="text-center mb-8">
+                                            <h3 class="text-2xl font-bold text-gray-900 mb-2">🏠 Address Information
+                                            </h3>
+                                            <p class="text-gray-600">Please provide your current and permanent address
+                                                details</p>
+                                        </div>
+
+                                        <div class="space-y-6">
+                                            <!-- Current Address -->
+                                            <div class="bg-blue-50 p-6 rounded-lg">
+                                                <h4 class="text-lg font-semibold text-blue-800 mb-4">Current Address
+                                                </h4>
+                                                <div class="grid md:grid-cols-2 gap-6">
+                                                    <div class="md:col-span-2">
+                                                        <label for="currentAddress"
+                                                            class="block text-sm font-medium text-gray-700 mb-2">
+                                                            👉 Current address <span class="text-red-500">*</span>
+                                                        </label>
+                                                        <textarea id="currentAddress" name="currentAddress" required
+                                                            rows="3"
+                                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                            placeholder="Enter complete current address with landmarks"></textarea>
+                                                        <span class="text-red-500 text-sm hidden error-message"
+                                                            id="currentAddress-error"></span>
+                                                    </div>
+                                                    <div>
+                                                        <label for="currentPincode"
+                                                            class="block text-sm font-medium text-gray-700 mb-2">
+                                                            👉 Pin code <span class="text-red-500">*</span>
+                                                        </label>
+                                                        <input type="text" id="currentPincode" name="currentPincode"
+                                                            required pattern="[0-9]{6}" maxlength="6"
+                                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                            placeholder="6-digit pincode">
+                                                        <span class="text-red-500 text-sm hidden error-message"
+                                                            id="currentPincode-error"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Permanent Address -->
+                                            <div class="bg-green-50 p-6 rounded-lg">
+                                                <div class="flex items-center justify-between mb-4">
+                                                    <h4 class="text-lg font-semibold text-green-800">Permanent Address
+                                                    </h4>
+                                                    <label class="flex items-center">
+                                                        <input type="checkbox" id="sameAsCurrentAddress"
+                                                            class="mr-2 rounded">
+                                                        <span class="text-sm text-gray-600">Same as current
+                                                            address</span>
+                                                    </label>
+                                                </div>
+                                                <div class="grid md:grid-cols-2 gap-6">
+                                                    <div class="md:col-span-2">
+                                                        <label for="permanentAddress"
+                                                            class="block text-sm font-medium text-gray-700 mb-2">
+                                                            👉 Permanent address <span class="text-red-500">*</span>
+                                                        </label>
+                                                        <textarea id="permanentAddress" name="permanentAddress" required
+                                                            rows="3"
+                                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                            placeholder="Enter complete permanent address with landmarks"></textarea>
+                                                        <span class="text-red-500 text-sm hidden error-message"
+                                                            id="permanentAddress-error"></span>
+                                                    </div>
+                                                    <div>
+                                                        <label for="permanentPincode"
+                                                            class="block text-sm font-medium text-gray-700 mb-2">
+                                                            👉 Pin code <span class="text-red-500">*</span>
+                                                        </label>
+                                                        <input type="text" id="permanentPincode" name="permanentPincode"
+                                                            required pattern="[0-9]{6}" maxlength="6"
+                                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                            placeholder="6-digit pincode">
+                                                        <span class="text-red-500 text-sm hidden error-message"
+                                                            id="permanentPincode-error"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 3: Employment & Banking Information -->
+                                    <div id="step-3" class="form-step hidden">
+                                        <div class="text-center mb-8">
+                                            <h3 class="text-2xl font-bold text-gray-900 mb-2">💼 Employment & Banking
+                                                Details</h3>
+                                            <p class="text-gray-600">Please provide your employment and banking
+                                                information</p>
+                                        </div>
+
+                                        <div class="grid md:grid-cols-2 gap-6">
+                                            <div>
+                                                <label for="salaryBankName"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Salary Bank Name <span class="text-red-500">*</span>
+                                                </label>
+                                                <select id="salaryBankName" name="salaryBankName" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                                                    <option value="">Select your salary bank</option>
+                                                    <option value="HDFC Bank">HDFC Bank</option>
+                                                    <option value="ICICI Bank">ICICI Bank</option>
+                                                    <option value="State Bank of India">State Bank of India (SBI)
+                                                    </option>
+                                                    <option value="Axis Bank">Axis Bank</option>
+                                                    <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
+                                                    <option value="IndusInd Bank">IndusInd Bank</option>
+                                                    <option value="Yes Bank">Yes Bank</option>
+                                                    <option value="Bank of Baroda">Bank of Baroda</option>
+                                                    <option value="Canara Bank">Canara Bank</option>
+                                                    <option value="Punjab National Bank">Punjab National Bank</option>
+                                                    <option value="Union Bank">Union Bank</option>
+                                                    <option value="IDFC First Bank">IDFC First Bank</option>
+                                                    <option value="Federal Bank">Federal Bank</option>
+                                                    <option value="RBL Bank">RBL Bank</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="salaryBankName-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="companyName"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Company name <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="text" id="companyName" name="companyName" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                    placeholder="Enter your current company name">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="companyName-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="loanAmount"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Loan Amount <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="number" id="loanAmount" name="loanAmount" required
+                                                    min="50000" max="2500000"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                    placeholder="Enter required loan amount">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="loanAmount-error"></span>
+                                                <p class="text-sm text-gray-500 mt-1">Range: ₹50,000 - ₹25,00,000</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Terms and Conditions -->
+                                        <div class="mt-8 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                                            <label class="flex items-start">
+                                                <input type="checkbox" id="termsConditions" name="termsConditions"
+                                                    required class="mt-1 mr-3">
+                                                <span class="text-sm text-gray-700">
+                                                    I hereby declare that all the information provided above is true and
+                                                    accurate.
+                                                    I agree to the <a href="#" data-terms-modal
+                                                        class="text-blue-600 hover:underline">Terms & Conditions</a>
+                                                    and <a href="#" data-privacy-modal
+                                                        class="text-blue-600 hover:underline">Privacy Policy</a>.
+                                                    I authorize Open Credit and its partners to contact me and verify
+                                                    the information provided.
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Form Navigation -->
+                                    <div class="flex justify-between pt-8">
+                                        <button type="button" id="prevBtn" onclick="changeStep(-1)"
+                                            class="px-6 py-3 bg-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-400 transition-colors hidden">
+                                            Previous
+                                        </button>
+                                        <button type="button" id="nextBtn" onclick="changeStep(1)"
+                                            class="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors ml-auto">
+                                            Next
+                                        </button>
+                                        <button type="submit" id="submitBtn"
+                                            class="px-8 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors hidden ml-auto">
+                                            Submit Application
+                                        </button>
+                                    </div>
+                                </form>
+
+                                <!-- Success Message -->
+                                <div id="success-message" class="hidden text-center py-12">
+                                    <div
+                                        class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-check text-green-600 text-2xl"></i>
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Application Submitted
+                                        Successfully!</h3>
+                                    <p class="text-gray-600 mb-6">Thank you for choosing Open Credit. Our team will
+                                        contact you within 24 hours.</p>
+                                    <div class="text-sm text-gray-500">
+                                        Application ID: <span class="font-mono font-bold" id="application-id"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            </main>
+            <%- include('../partials/footer.ejs') %>
+                <%- include('../partials/privacy-policy.ejs') %>
+                    <%- include('../partials/terms-of-service.ejs') %>
+
+                        <script>
+                            // Form step management
+                            let currentStep = 1;
+                            const totalSteps = 3;
+
+                            // Scroll to form function
+                            function scrollToForm() {
+                                document.getElementById('application-form').scrollIntoView({
+                                    behavior: 'smooth'
+                                });
+                            }
+
+                            // Form step navigation
+                            function changeStep(direction) {
+                                const newStep = currentStep + direction;
+
+                                if (newStep < 1 || newStep > totalSteps) return;
+
+                                if (direction === 1 && !validateCurrentStep()) return;
+
+                                showStep(newStep);
+                            }
+
+                            function showStep(step) {
+                                // Hide all steps
+                                for (let i = 1; i <= totalSteps; i++) {
+                                    document.getElementById(`step-${i}`).classList.add('hidden');
+                                    const indicator = document.getElementById(`step-${i}-indicator`);
+                                    if (indicator) {
+                                        indicator.classList.remove('active', 'bg-blue-600', 'text-white');
+                                        indicator.classList.add('bg-gray-300', 'text-gray-500');
+                                    }
+                                }
+
+                                // Show current step
+                                document.getElementById(`step-${step}`).classList.remove('hidden');
+                                const currentIndicator = document.getElementById(`step-${step}-indicator`);
+                                if (currentIndicator) {
+                                    currentIndicator.classList.remove('bg-gray-300', 'text-gray-500');
+                                    currentIndicator.classList.add('active', 'bg-blue-600', 'text-white');
+                                }
+
+                                // Update progress bars
+                                for (let i = 1; i < totalSteps; i++) {
+                                    const progressBar = document.getElementById(`progress-${i}-${i + 1}`);
+                                    if (progressBar) {
+                                        if (step > i) {
+                                            progressBar.classList.remove('bg-gray-300');
+                                            progressBar.classList.add('bg-blue-600');
+                                        } else {
+                                            progressBar.classList.remove('bg-blue-600');
+                                            progressBar.classList.add('bg-gray-300');
+                                        }
+                                    }
+                                }
+
+                                // Update navigation buttons
+                                const prevBtn = document.getElementById('prevBtn');
+                                const nextBtn = document.getElementById('nextBtn');
+                                const submitBtn = document.getElementById('submitBtn');
+
+                                if (step === 1) {
+                                    prevBtn.classList.add('hidden');
+                                } else {
+                                    prevBtn.classList.remove('hidden');
+                                }
+
+                                if (step === totalSteps) {
+                                    nextBtn.classList.add('hidden');
+                                    submitBtn.classList.remove('hidden');
+                                } else {
+                                    nextBtn.classList.remove('hidden');
+                                    submitBtn.classList.add('hidden');
+                                }
+
+                                currentStep = step;
+                            }
+
+                            // Form validation
+                            function validateCurrentStep() {
+                                const stepElement = document.getElementById(`step-${currentStep}`);
+                                const inputs = stepElement.querySelectorAll('input[required], select[required], textarea[required]');
+                                let isValid = true;
+
+                                inputs.forEach(input => {
+                                    clearError(input.id);
+
+                                    if (input.type === 'checkbox') {
+                                        if (!input.checked) {
+                                            showError(input.id, 'This field is required');
+                                            isValid = false;
+                                        }
+                                    } else if (!input.value.trim()) {
+                                        showError(input.id, 'This field is required');
+                                        isValid = false;
+                                    } else {
+                                        // Specific validations
+                                        if (input.id === 'contactNumber' && !validateMobile(input.value)) {
+                                            showError(input.id, 'Please enter a valid 10-digit mobile number');
+                                            isValid = false;
+                                        } else if (input.id === 'mailId' && !validateEmail(input.value)) {
+                                            showError(input.id, 'Please enter a valid email address');
+                                            isValid = false;
+                                        } else if ((input.id === 'currentPincode' || input.id === 'permanentPincode') && !validatePincode(input.value)) {
+                                            showError(input.id, 'Please enter a valid 6-digit pincode');
+                                            isValid = false;
+                                        } else if (input.id === 'panNumber' && !validatePAN(input.value)) {
+                                            showError(input.id, 'Please enter a valid PAN number (e.g., ABCDE1234F)');
+                                            isValid = false;
+                                        } else if (input.id === 'dateOfBirth' && !validateAge(input.value)) {
+                                            showError(input.id, 'You must be at least 21 years old and not more than 60 years old');
+                                            isValid = false;
+                                        } else if (input.id === 'loanAmount') {
+                                            const amount = parseInt(input.value);
+                                            if (amount < 50000 || amount > 2500000) {
+                                                showError(input.id, 'Loan amount must be between ₹50,000 and ₹25,00,000');
+                                                isValid = false;
+                                            }
+                                        }
+                                    }
+                                });
+
+                                return isValid;
+                            }
+
+                            function showError(fieldId, message) {
+                                const errorElement = document.getElementById(`${fieldId}-error`);
+                                const inputElement = document.getElementById(fieldId);
+
+                                if (errorElement) {
+                                    errorElement.textContent = message;
+                                    errorElement.classList.remove('hidden');
+                                }
+
+                                if (inputElement) {
+                                    inputElement.classList.add('border-red-500');
+                                    inputElement.classList.remove('border-gray-300');
+                                }
+                            }
+
+                            function clearError(fieldId) {
+                                const errorElement = document.getElementById(`${fieldId}-error`);
+                                const inputElement = document.getElementById(fieldId);
+
+                                if (errorElement) {
+                                    errorElement.classList.add('hidden');
+                                }
+
+                                if (inputElement) {
+                                    inputElement.classList.remove('border-red-500');
+                                    inputElement.classList.add('border-gray-300');
+                                }
+                            }
+
+                            // Validation helper functions
+                            function validateMobile(mobile) {
+                                return /^[6-9]\d{9}$/.test(mobile);
+                            }
+
+                            function validateEmail(email) {
+                                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+                            }
+
+                            function validatePincode(pincode) {
+                                return /^\d{6}$/.test(pincode);
+                            }
+
+                            function validatePAN(pan) {
+                                return /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(pan.toUpperCase());
+                            }
+
+                            function validateAge(dateOfBirth) {
+                                const today = new Date();
+                                const birthDate = new Date(dateOfBirth);
+                                let age = today.getFullYear() - birthDate.getFullYear();
+                                const monthDiff = today.getMonth() - birthDate.getMonth();
+
+                                if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                                    age--;
+                                }
+
+                                return age >= 21 && age <= 60;
+                            }
+
+                            // Address copy functionality
+                            document.getElementById('sameAsCurrentAddress').addEventListener('change', function () {
+                                if (this.checked) {
+                                    document.getElementById('permanentAddress').value = document.getElementById('currentAddress').value;
+                                    document.getElementById('permanentPincode').value = document.getElementById('currentPincode').value;
+                                } else {
+                                    document.getElementById('permanentAddress').value = '';
+                                    document.getElementById('permanentPincode').value = '';
+                                }
+                            });
+
+                            // PAN number uppercase conversion
+                            document.getElementById('panNumber').addEventListener('input', function () {
+                                this.value = this.value.toUpperCase();
+                            });
+
+                            // Form submission
+                            document.getElementById('loanApplicationForm').addEventListener('submit', function (e) {
+                                e.preventDefault();
+
+                                if (!validateCurrentStep()) {
+                                    return;
+                                }
+
+                                // Simulate form submission
+                                const formData = new FormData(this);
+                                const applicationId = 'OC' + Date.now().toString().slice(-8);
+
+                                // Hide form and show success message
+                                this.classList.add('hidden');
+                                document.getElementById('success-message').classList.remove('hidden');
+                                document.getElementById('application-id').textContent = applicationId;
+
+                                // Scroll to success message
+                                document.getElementById('success-message').scrollIntoView({ behavior: 'smooth' });
+
+                                console.log('Form submitted with data:', Object.fromEntries(formData));
+                            });
+
+                            // Clear errors on input
+                            document.querySelectorAll('input, select, textarea').forEach(input => {
+                                input.addEventListener('input', function () {
+                                    clearError(this.id);
+                                });
+                            });
+
+                            // Initialize first step
+                            showStep(1);
+                        </script>
+
+                        <!-- Auto-scrolling animation styles -->
+                        <style>
+                            @keyframes scroll {
+                                0% {
+                                    transform: translateX(0);
+                                }
+
+                                100% {
+                                    transform: translateX(-100%);
+                                }
+                            }
+
+                            .animate-scroll {
+                                animation: scroll 30s linear infinite;
+                            }
+
+                            .animate-scroll:hover {
+                                animation-play-state: paused;
+                            }
+                        </style>
+    </body>
+
+    </html>

@@ -1,0 +1,1553 @@
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/navbar.ejs') %>
+            <main>
+                <!-- Hero Section - Business Loan Style -->
+                <section class="relative bg-white overflow-hidden">
+                    <!-- Background Pattern -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50"></div>
+                    <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
+
+                    <div class="relative container mx-auto px-6 lg:px-20 py-16">
+                        <!-- Top Section -->
+                        <div class="text-center mb-12">
+                            <div
+                                class="inline-block px-6 py-3 bg-green-600 text-white rounded-full text-sm font-semibold mb-6">
+                                <i class="fas fa-calculator mr-2"></i>Smart EMI Calculator
+                            </div>
+                            <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                                Plan Your Loan
+                                <span class="text-green-600 ">Smartly</span>
+                            </h1>
+                            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+                                Calculate EMIs, analyze loan breakdowns, and make informed financial decisions with
+                                our advanced loan calculator. Get instant results with detailed amortization schedules.
+                            </p>
+                        </div>
+
+                        <!-- Statistics Cards Row -->
+                        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                                <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                                    <i class="fas fa-bolt text-green-600 text-xl"></i>
+                                </div>
+                                <div class="text-2xl font-bold text-gray-900 mb-2">0.1s</div>
+                                <div class="text-gray-600 text-sm">Instant Calculations</div>
+                            </div>
+
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                                <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                                    <i class="fas fa-chart-pie text-blue-600 text-xl"></i>
+                                </div>
+                                <div class="text-2xl font-bold text-gray-900 mb-2">360°</div>
+                                <div class="text-gray-600 text-sm">Complete Analysis</div>
+                            </div>
+
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                                <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                                    <i class="fas fa-mobile-alt text-purple-600 text-xl"></i>
+                                </div>
+                                <div class="text-2xl font-bold text-gray-900 mb-2">100%</div>
+                                <div class="text-gray-600 text-sm">Mobile Friendly</div>
+                            </div>
+
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                                <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
+                                    <i class="fas fa-users text-orange-600 text-xl"></i>
+                                </div>
+                                <div class="text-2xl font-bold text-gray-900 mb-2">50K+</div>
+                                <div class="text-gray-600 text-sm">Happy Users</div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Section -->
+                        <div class="text-center">
+                            <button onclick="scrollToCalculator()"
+                                class="inline-flex items-center px-8 py-4 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition-all shadow-lg hover:shadow-xl mr-4 mb-4">
+                                <i class="fas fa-calculator mr-2"></i>Start Calculating
+                            </button>
+                            <button onclick="showDemoCalculation()"
+                                class="inline-flex items-center px-8 py-4 bg-white text-gray-900 rounded-xl font-semibold hover:bg-gray-50 transition-colors shadow-lg border border-gray-200 mb-4">
+                                <i class="fas fa-play mr-2"></i>Watch Demo
+                            </button>
+                        </div>
+
+                        <!-- Trust Indicators -->
+                        <div class="mt-12 text-center">
+                            <p class="text-gray-500 text-sm mb-4">Trusted by professionals and individuals across India
+                            </p>
+                            <div class="flex justify-center items-center space-x-8 opacity-60">
+                                <div class="flex items-center">
+                                    <i class="fas fa-shield-alt text-green-600 mr-2"></i>
+                                    <span class="text-sm text-gray-600">Bank-Grade Security</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-chart-line text-blue-600 mr-2"></i>
+                                    <span class="text-sm text-gray-600">Advanced Analytics</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-clock text-purple-600 mr-2"></i>
+                                    <span class="text-sm text-gray-600">24/7 Available</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--EMI Calculator Section Start-->
+                <section id="calculator-section" class="py-20 bg-gray-50">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="text-center max-w-3xl mx-auto mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                <i class="fas fa-calculator text-green-600 mr-3"></i>EMI & Loan Calculator
+                            </h2>
+                            <p class="text-lg text-gray-600">
+                                Adjust the loan parameters below to see real-time EMI calculations and detailed payment
+                                breakdowns
+                            </p>
+                        </div>
+                        <!-- Calculator Container -->
+                        <div class="bg-white rounded-3xl shadow-2xl max-w-4xl mx-auto overflow-hidden ">
+                            <!-- Calculator Header -->
+                            <div class="bg-blue-500 p-6">
+                                <div class="flex items-center justify-between text-white">
+                                    <div>
+                                        <h3 class="text-xl font-semibold">Loan Calculator</h3>
+                                        <p class="text-green-100">Adjust parameters to see real-time results</p>
+                                    </div>
+                                    <div class="flex gap-2">
+                                        <button id="resetBtn"
+                                            class="cursor-pointer px-4 py-2 bg-white text-green-600 bg-opacity-20 rounded-lg hover:bg-opacity-30 transition-colors text-sm">
+                                            <i class="fas fa-refresh mr-1"></i>Reset
+                                        </button>
+                                        <button id="shareBtn"
+                                            class="cursor-pointer px-4 py-2 bg-white text-blue-600 bg-opacity-20 rounded-lg hover:bg-opacity-30 transition-colors text-sm">
+                                            <i class="fas fa-share mr-1"></i>Share
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-10">
+                                <div class="grid lg:grid-cols-2 gap-12">
+                                    <!-- Left side: Enhanced Controls -->
+                                    <div class="space-y-8">
+                                        <!-- Loan Amount -->
+                                        <div class="space-y-4">
+                                            <div class="flex justify-between items-center">
+                                                <label for="loanAmount" class="text-lg font-semibold text-gray-800">
+                                                    <i class="fas fa-rupee-sign text-green-600 mr-2"></i>Loan Amount
+                                                </label>
+                                                <span
+                                                    class="px-4 py-2 bg-green-50 text-green-700 rounded-lg font-bold text-lg">₹
+                                                    <span id="loanAmountValue">10,00,000</span>
+                                                </span>
+                                            </div>
+                                            <div class="relative">
+                                                <input type="range" id="loanAmount" min="50000" max="5000000"
+                                                    step="10000" value="1000000"
+                                                    class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer slider">
+                                                <div class="flex justify-between text-xs text-gray-500 mt-1">
+                                                    <span>₹50K</span>
+                                                    <span>₹50L</span>
+                                                </div>
+                                            </div>
+                                            <div class="flex gap-2">
+                                                <button onclick="adjustLoan(-100000)"
+                                                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded text-sm">-1L</button>
+                                                <button onclick="adjustLoan(-50000)"
+                                                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded text-sm">-50K</button>
+                                                <button onclick="adjustLoan(50000)"
+                                                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded text-sm">+50K</button>
+                                                <button onclick="adjustLoan(100000)"
+                                                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded text-sm">+1L</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Interest Rate -->
+                                        <div class="space-y-4">
+                                            <div class="flex justify-between items-center">
+                                                <label for="interestRate" class="text-lg font-semibold text-gray-800">
+                                                    <i class="fas fa-percentage text-blue-600 mr-2"></i>Interest Rate
+                                                    (p.a)
+                                                </label>
+                                                <span
+                                                    class="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg font-bold text-lg">
+                                                    <span id="interestRateValue">10.5</span>%
+                                                </span>
+                                            </div>
+                                            <div class="relative">
+                                                <input type="range" id="interestRate" min="8" max="20" step="0.1"
+                                                    value="10.5"
+                                                    class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer slider">
+                                                <div class="flex justify-between text-xs text-gray-500 mt-1">
+                                                    <span>8%</span>
+                                                    <span>20%</span>
+                                                </div>
+                                            </div>
+                                            <div class="flex gap-2">
+                                                <button onclick="adjustRate(-0.5)"
+                                                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded text-sm">-0.5%</button>
+                                                <button onclick="adjustRate(-0.1)"
+                                                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded text-sm">-0.1%</button>
+                                                <button onclick="adjustRate(0.1)"
+                                                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded text-sm">+0.1%</button>
+                                                <button onclick="adjustRate(0.5)"
+                                                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded text-sm">+0.5%</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Loan Tenure -->
+                                        <div class="space-y-4">
+                                            <div class="flex justify-between items-center">
+                                                <label for="loanTenure" class="text-lg font-semibold text-gray-800">
+                                                    <i class="fas fa-calendar-alt text-purple-600 mr-2"></i>Loan Tenure
+                                                </label>
+                                                <span
+                                                    class="px-4 py-2 bg-purple-50 text-purple-700 rounded-lg font-bold text-lg">
+                                                    <span id="loanTenureValue">5</span> Years
+                                                </span>
+                                            </div>
+                                            <div class="relative">
+                                                <input type="range" id="loanTenure" min="1" max="30" step="1" value="5"
+                                                    class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer slider">
+                                                <div class="flex justify-between text-xs text-gray-500 mt-1">
+                                                    <span>1 Yr</span>
+                                                    <span>30 Yrs</span>
+                                                </div>
+                                            </div>
+                                            <div class="flex gap-2">
+                                                <button onclick="adjustTenure(-1)"
+                                                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded text-sm">-1
+                                                    Yr</button>
+                                                <button onclick="adjustTenure(-0.5)"
+                                                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded text-sm">-6
+                                                    Mo</button>
+                                                <button onclick="adjustTenure(0.5)"
+                                                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded text-sm">+6
+                                                    Mo</button>
+                                                <button onclick="adjustTenure(1)"
+                                                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded text-sm">+1
+                                                    Yr</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Quick Presets -->
+                                        <div class="border-t pt-6">
+                                            <h4 class="font-semibold text-gray-800 mb-4">
+                                                <i class="fas fa-magic text-orange-600 mr-2"></i>Quick Presets
+                                            </h4>
+                                            <div class="grid grid-cols-2 gap-3">
+                                                <button onclick="setPreset(500000, 12, 3)"
+                                                    class="p-3 bg-orange-50 hover:bg-orange-100 rounded-lg text-left transition-colors">
+                                                    <div class="font-semibold text-gray-800">Personal Loan</div>
+                                                    <div class="text-sm text-gray-600">₹5L @ 12% for 3 years</div>
+                                                </button>
+                                                <button onclick="setPreset(3000000, 8.5, 20)"
+                                                    class="p-3 bg-green-50 hover:bg-green-100 rounded-lg text-left transition-colors">
+                                                    <div class="font-semibold text-gray-800">Home Loan</div>
+                                                    <div class="text-sm text-gray-600">₹30L @ 8.5% for 20 years</div>
+                                                </button>
+                                                <button onclick="setPreset(800000, 10, 7)"
+                                                    class="p-3 bg-blue-50 hover:bg-blue-100 rounded-lg text-left transition-colors">
+                                                    <div class="font-semibold text-gray-800">Car Loan</div>
+                                                    <div class="text-sm text-gray-600">₹8L @ 10% for 7 years</div>
+                                                </button>
+                                                <button onclick="setPreset(1500000, 11, 5)"
+                                                    class="p-3 bg-purple-50 hover:bg-purple-100 rounded-lg text-left transition-colors">
+                                                    <div class="font-semibold text-gray-800">Business Loan</div>
+                                                    <div class="text-sm text-gray-600">₹15L @ 11% for 5 years</div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Right side: Results & Chart -->
+                                    <div class="space-y-8">
+                                        <!-- EMI Result Card -->
+                                        <div
+                                            class="bg-gradient-to-r from-green-500 to-green-600 rounded-2xl p-6 text-white">
+                                            <div class="text-center">
+                                                <div class="text-sm opacity-90 mb-2">Monthly EMI</div>
+                                                <div class="text-4xl font-bold mb-2" id="emiResult">₹21,494</div>
+                                                <div class="text-sm opacity-90">Easy monthly payment</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Breakdown Cards -->
+                                        <div class="grid grid-cols-2 gap-4">
+                                            <div class="bg-blue-50 p-4 rounded-xl text-center">
+                                                <div class="text-sm text-blue-600 mb-1">Principal</div>
+                                                <div class="text-xl font-bold text-blue-800" id="principalResult">
+                                                    ₹10,00,000</div>
+                                            </div>
+                                            <div class="bg-orange-50 p-4 rounded-xl text-center">
+                                                <div class="text-sm text-orange-600 mb-1">Interest</div>
+                                                <div class="text-xl font-bold text-orange-800" id="interestResult">
+                                                    ₹2,89,641</div>
+                                            </div>
+                                            <div class="bg-purple-50 p-4 rounded-xl text-center col-span-2">
+                                                <div class="text-sm text-purple-600 mb-1">Total Amount</div>
+                                                <div class="text-2xl font-bold text-purple-800" id="totalResult">
+                                                    ₹12,89,641</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Enhanced Donut Chart -->
+                                        <div
+                                            class="flex flex-col items-center justify-center bg-gray-50 rounded-2xl p-6">
+                                            <h4 class="font-semibold text-gray-800 mb-4">Payment Breakdown</h4>
+                                            <div class="relative">
+                                                <div id="donutChart" class="w-40 h-40 rounded-full relative">
+                                                    <!-- Donut chart will be rendered here by JS -->
+                                                </div>
+                                                <div class="absolute inset-0 flex items-center justify-center">
+                                                    <div class="text-center">
+                                                        <div class="text-lg font-bold text-white"
+                                                            id="principalPercentage">77.5%</div>
+                                                        <div class="text-xs text-gray-600">Principal</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex justify-center gap-6 mt-4">
+                                                <div class="flex items-center gap-2">
+                                                    <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                                                    <span class="text-sm text-gray-600">Principal</span>
+                                                </div>
+                                                <div class="flex items-center gap-2">
+                                                    <span class="w-3 h-3 rounded-full bg-orange-400"></span>
+                                                    <span class="text-sm text-gray-600">Interest</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Savings Tips -->
+                                        <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-4">
+                                            <div class="flex items-start gap-3">
+                                                <i class="fas fa-lightbulb text-yellow-600 mt-1"></i>
+                                                <div>
+                                                    <div class="font-semibold text-yellow-800 mb-1">💡 Smart Tip</div>
+                                                    <div class="text-sm text-yellow-700" id="savingsTip">
+                                                        Consider increasing your EMI by 10% to save significantly on
+                                                        interest payments.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Amortization Details -->
+                            <div class="mt-12 border-t pt-8 pb-8 px-4">
+                                <div class="flex justify-center items-center mb-6">
+                                    <h3 class="text-xl font-bold text-gray-800 text-center">Your Amortization Details
+                                        (Yearly)</h3>
+                                </div>
+                                <div id="amortization-table" class="mt-6 max-w-4xl mx-auto space-y-2">
+                                    <!-- Amortization data will be injected here -->
+                                </div>
+                                <div class="flex justify-center items-center mt-6">
+                                    <button onclick="openDownloadModal()"
+                                        class="cursor-pointer inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-all shadow-md hover:shadow-lg">
+                                        <i class="fas fa-download mr-2"></i>
+                                        Download amortization schedule
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Benefits Section -->
+                <section class="py-16 bg-white">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Why Use Our EMI Calculator?
+                            </h2>
+                            <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                                Make smarter financial decisions with comprehensive loan analysis and planning tools
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <div class="text-center group">
+                                <div
+                                    class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-tachometer-alt text-green-600 text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Instant Results</h3>
+                                <p class="text-gray-600">Get EMI calculations instantly as you adjust loan parameters
+                                    with real-time updates.</p>
+                            </div>
+
+                            <div class="text-center group">
+                                <div
+                                    class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-chart-line text-blue-600 text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Smart Analytics</h3>
+                                <p class="text-gray-600">Visualize your loan breakdown with interactive charts and
+                                    detailed payment schedules.</p>
+                            </div>
+
+                            <div class="text-center group">
+                                <div
+                                    class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-coins text-purple-600 text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Save Money</h3>
+                                <p class="text-gray-600">Compare different loan scenarios to find the most
+                                    cost-effective repayment plan.</p>
+                            </div>
+
+                            <div class="text-center group">
+                                <div
+                                    class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-shield-alt text-orange-600 text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Plan Better</h3>
+                                <p class="text-gray-600">Make informed decisions with comprehensive amortization
+                                    schedules and insights.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Educational Content Section -->
+                <section class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-4">
+                        <!-- How EMI Works -->
+                        <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl p-8 mb-16">
+                            <div class="text-center mb-8">
+                                <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                                    <i class="fas fa-graduation-cap text-blue-600 mr-3"></i>
+                                    How EMI Calculation Works
+                                </h2>
+                                <p class="text-gray-600 max-w-2xl mx-auto">
+                                    Understanding EMI helps you make better financial decisions. Here's the science
+                                    behind it.
+                                </p>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <div class="bg-white p-6 rounded-2xl shadow-sm">
+                                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                                        <i class="fas fa-calculator text-blue-600 text-xl"></i>
+                                    </div>
+                                    <h3 class="font-semibold text-gray-800 mb-2">EMI Formula</h3>
+                                    <div class="text-sm text-gray-600 mb-3">
+                                        EMI = P × r × (1 + r)^n / [(1 + r)^n - 1]
+                                    </div>
+                                    <div class="text-xs text-gray-500">
+                                        Where P = Principal, r = Monthly Rate, n = Number of months
+                                    </div>
+                                </div>
+
+                                <div class="bg-white p-6 rounded-2xl shadow-sm">
+                                    <div
+                                        class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                                        <i class="fas fa-chart-line text-green-600 text-xl"></i>
+                                    </div>
+                                    <h3 class="font-semibold text-gray-800 mb-2">Interest vs Principal</h3>
+                                    <p class="text-sm text-gray-600 mb-3">
+                                        Early payments have more interest, later payments have more principal.
+                                    </p>
+                                    <div class="text-xs text-gray-500">
+                                        This is why prepayments save significant money
+                                    </div>
+                                </div>
+
+                                <div class="bg-white p-6 rounded-2xl shadow-sm">
+                                    <div
+                                        class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                                        <i class="fas fa-piggy-bank text-purple-600 text-xl"></i>
+                                    </div>
+                                    <h3 class="font-semibold text-gray-800 mb-2">Save on Interest</h3>
+                                    <p class="text-sm text-gray-600 mb-3">
+                                        Shorter tenure = Higher EMI but lower total interest paid.
+                                    </p>
+                                    <div class="text-xs text-gray-500">
+                                        Find the sweet spot for your budget
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Loan Types Comparison -->
+                        <div class="bg-white rounded-3xl shadow-xl p-8 mb-16">
+                            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">
+                                <i class="fas fa-compare text-green-600 mr-3"></i>
+                                Compare Different Loan Types
+                            </h2>
+
+                            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                <div class="border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
+                                    <div
+                                        class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                                        <i class="fas fa-user text-orange-600 text-2xl"></i>
+                                    </div>
+                                    <h3 class="font-bold text-center text-gray-800 mb-3">Personal Loan</h3>
+                                    <div class="space-y-2 text-sm">
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">Rate:</span>
+                                            <span class="font-semibold">11% - 18%</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">Tenure:</span>
+                                            <span class="font-semibold">1-5 years</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">Amount:</span>
+                                            <span class="font-semibold">Up to ₹40L</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
+                                    <div
+                                        class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                                        <i class="fas fa-home text-green-600 text-2xl"></i>
+                                    </div>
+                                    <h3 class="font-bold text-center text-gray-800 mb-3">Home Loan</h3>
+                                    <div class="space-y-2 text-sm">
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">Rate:</span>
+                                            <span class="font-semibold">8% - 10%</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">Tenure:</span>
+                                            <span class="font-semibold">5-30 years</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">Amount:</span>
+                                            <span class="font-semibold">Up to ₹10Cr</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
+                                    <div
+                                        class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                                        <i class="fas fa-car text-blue-600 text-2xl"></i>
+                                    </div>
+                                    <h3 class="font-bold text-center text-gray-800 mb-3">Car Loan</h3>
+                                    <div class="space-y-2 text-sm">
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">Rate:</span>
+                                            <span class="font-semibold">9% - 12%</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">Tenure:</span>
+                                            <span class="font-semibold">1-7 years</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">Amount:</span>
+                                            <span class="font-semibold">Up to ₹1Cr</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
+                                    <div
+                                        class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                                        <i class="fas fa-briefcase text-purple-600 text-2xl"></i>
+                                    </div>
+                                    <h3 class="font-bold text-center text-gray-800 mb-3">Business Loan</h3>
+                                    <div class="space-y-2 text-sm">
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">Rate:</span>
+                                            <span class="font-semibold">10% - 15%</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">Tenure:</span>
+                                            <span class="font-semibold">1-10 years</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">Amount:</span>
+                                            <span class="font-semibold">Up to ₹50Cr</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Financial Tips -->
+                        <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-3xl p-8">
+                            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">
+                                <i class="fas fa-lightbulb text-yellow-500 mr-3"></i>
+                                Smart Borrowing Tips
+                            </h2>
+
+                            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                <div class="bg-white p-6 rounded-2xl">
+                                    <div class="flex items-start gap-4">
+                                        <div
+                                            class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <span class="text-green-600 font-bold">1</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-800 mb-2">Check Your CIBIL Score</h3>
+                                            <p class="text-sm text-gray-600">A score above 750 gets you better interest
+                                                rates and faster approvals.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white p-6 rounded-2xl">
+                                    <div class="flex items-start gap-4">
+                                        <div
+                                            class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <span class="text-blue-600 font-bold">2</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-800 mb-2">Compare Interest Rates</h3>
+                                            <p class="text-sm text-gray-600">Even 0.5% difference can save thousands
+                                                over the loan tenure.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white p-6 rounded-2xl">
+                                    <div class="flex items-start gap-4">
+                                        <div
+                                            class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <span class="text-purple-600 font-bold">3</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-800 mb-2">Plan Prepayments</h3>
+                                            <p class="text-sm text-gray-600">Use bonuses and windfalls to reduce
+                                                principal and save on interest.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white p-6 rounded-2xl">
+                                    <div class="flex items-start gap-4">
+                                        <div
+                                            class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <span class="text-orange-600 font-bold">4</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-800 mb-2">Maintain 50% EMI Rule</h3>
+                                            <p class="text-sm text-gray-600">Keep total EMIs under 50% of your monthly
+                                                income for financial stability.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white p-6 rounded-2xl">
+                                    <div class="flex items-start gap-4">
+                                        <div
+                                            class="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <span class="text-red-600 font-bold">5</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-800 mb-2">Read Fine Print</h3>
+                                            <p class="text-sm text-gray-600">Understand processing fees, prepayment
+                                                charges, and other hidden costs.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white p-6 rounded-2xl">
+                                    <div class="flex items-start gap-4">
+                                        <div
+                                            class="w-8 h-8 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <span class="text-teal-600 font-bold">6</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-800 mb-2">Build Emergency Fund</h3>
+                                            <p class="text-sm text-gray-600">Keep 6-12 months of EMI as emergency fund
+                                                before taking any loan.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Apply for Loan CTA -->
+                <section class="py-16">
+                    <div class="container mx-auto px-4">
+                        <div class="bg-green-600 rounded-3xl p-8 text-white text-center">
+                            <div class="max-w-3xl mx-auto">
+                                <h2 class="text-3xl font-bold mb-4">Ready to Apply for Your Loan?</h2>
+                                <p class="text-lg opacity-90 mb-6">
+                                    Get pre-approved in minutes with our simple online application process.
+                                    Competitive rates, flexible terms, and quick disbursal guaranteed.
+                                </p>
+                                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                    <a href="/personal-loan"
+                                        class="px-8 py-3 bg-white text-green-600 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
+                                        <i class="fas fa-user mr-2"></i>Personal Loan
+                                    </a>
+                                    <a href="/business-loan"
+                                        class="px-8 py-3 bg-white text-green-600 bg-opacity-20 border border-white rounded-xl font-semibold hover:bg-opacity-30 transition-colors">
+                                        <i class="fas fa-briefcase mr-2"></i>Business Loan
+                                    </a>
+                                    <a href="/cibil-service"
+                                        class="px-8 py-3 bg-white text-green-600 bg-opacity-20 border border-white rounded-xl font-semibold hover:bg-opacity-30 transition-colors">
+                                        <i class="fas fa-chart-line mr-2"></i>Improve CIBIL
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--EMI and Loan Amount Section End-->
+
+            </main>
+
+            <!-- Download Modal -->
+            <div id="downloadModal" class="fixed inset-0 backdrop-blur-sm hidden z-50 flex items-center justify-center">
+                <div class="bg-white rounded-2xl p-8 max-w-xl w-full mx-4 transform scale-95 transition-transform shadow-2xl"
+                    id="modalContent">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-file-excel text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Download Amortization Schedule</h3>
+                        <p class="text-gray-600">Please provide your details to download the Excel file</p>
+                    </div>
+
+                    <form id="downloadForm" class="space-y-4">
+                        <div>
+                            <label for="fullName" class="block text-sm font-medium text-gray-700 mb-2">Full Name
+                                *</label>
+                            <input type="text" id="fullName" name="fullName" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                                placeholder="Enter your full name">
+                        </div>
+
+                        <div>
+                            <label for="mobileNumber" class="block text-sm font-medium text-gray-700 mb-2">Mobile Number
+                                *</label>
+                            <input type="tel" id="mobileNumber" name="mobileNumber" required pattern="[0-9]{10}"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                                placeholder="Enter 10-digit mobile number">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address
+                                *</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                                placeholder="Enter your email address">
+                        </div>
+
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-info-circle text-blue-600 mt-1 mr-3"></i>
+                                <div class="text-sm text-blue-800">
+                                    <p class="font-semibold mb-1">Why do we need this information?</p>
+                                    <p>We use this data to personalize your experience and provide better loan
+                                        recommendations.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-3 pt-4">
+                            <button type="button" onclick="closeDownloadModal()"
+                                class="flex-1 px-6 py-3 bg-gray-100 text-gray-700 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                                Cancel
+                            </button>
+                            <button type="submit" id="downloadBtn"
+                                class="flex-1 px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                                <span id="downloadBtnText">Download Now</span>
+                                <i id="downloadSpinner" class="fas fa-spinner fa-spin ml-2 hidden"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <%- include('../partials/footer.ejs')%>
+                <%- include('../partials/privacy-policy.ejs') %>
+                    <%- include('../partials/terms-of-service.ejs') %>
+
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+
+                                // --- EMI Calculator Logic ---
+                                const loanAmountInput = document.getElementById('loanAmount');
+                                const interestRateInput = document.getElementById('interestRate');
+                                const loanTenureInput = document.getElementById('loanTenure');
+
+                                const loanAmountValue = document.getElementById('loanAmountValue');
+                                const interestRateValue = document.getElementById('interestRateValue');
+                                const loanTenureValue = document.getElementById('loanTenureValue');
+                                const emiResult = document.getElementById('emiResult');
+                                const principalResult = document.getElementById('principalResult');
+                                const interestResult = document.getElementById('interestResult');
+                                const totalResult = document.getElementById('totalResult');
+                                const donutChart = document.getElementById('donutChart');
+                                const amortizationTableContainer = document.getElementById('amortization-table');
+
+
+                                function formatToINR(num) {
+                                    return `₹ ${Math.round(num).toLocaleString('en-IN')}`;
+                                }
+
+                                function updateDonut(principal, interest) {
+                                    const total = principal + interest;
+                                    if (total === 0) return;
+                                    const principalPercent = (principal / total) * 100;
+                                    donutChart.style.background = `conic-gradient(#22c55e ${principalPercent}%, #3b82f6 ${principalPercent}% 100%)`;
+                                } function generateAmortizationSchedule(p, r, n, emi) {
+                                    let balance = p;
+                                    const schedule = [];
+                                    const startDate = new Date();
+                                    startDate.setDate(1);
+
+                                    for (let i = 0; i < n; i++) {
+                                        const interestForMonth = balance * r;
+                                        let principalForMonth = emi - interestForMonth;
+                                        let currentPayment = emi;
+
+                                        // Adjust last payment to ensure balance is exactly zero
+                                        if (balance < emi) {
+                                            principalForMonth = balance;
+                                            currentPayment = balance + interestForMonth;
+                                            balance = 0;
+                                        } else {
+                                            balance -= principalForMonth;
+                                        }
+
+                                        const paymentDate = new Date(startDate);
+                                        paymentDate.setMonth(startDate.getMonth() + i + 1);
+
+                                        const month = paymentDate.getMonth() + 1;
+                                        const year = paymentDate.getFullYear();
+
+                                        schedule.push({
+                                            month: month,
+                                            year: year,
+                                            principal: principalForMonth,
+                                            interest: interestForMonth,
+                                            totalPayment: currentPayment,
+                                            balance: balance,
+                                        });
+                                        if (balance === 0) break; // Exit loop if loan is paid off
+                                    }
+                                    return schedule;
+                                }
+
+                                function renderAmortization(schedule) {
+                                    amortizationTableContainer.innerHTML = '';
+                                    const groupedByYear = schedule.reduce((acc, item) => {
+                                        (acc[item.year] = acc[item.year] || []).push(item);
+                                        return acc;
+                                    }, {});
+
+                                    for (const year in groupedByYear) {
+                                        const yearData = groupedByYear[year];
+                                        const yearDiv = document.createElement('div');
+                                        yearDiv.className = 'border border-gray-200 rounded-lg overflow-hidden';
+
+                                        const header = document.createElement('div');
+                                        header.className = 'flex justify-between items-center p-4 cursor-pointer bg-gray-50 hover:bg-gray-100 amortization-header';
+                                        header.innerHTML = `
+                                    <span class="font-semibold">${year}</span>
+                                    <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                `;
+
+                                        const content = document.createElement('div');
+                                        content.className = 'amortization-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out';
+
+                                        const table = document.createElement('table');
+                                        table.className = 'w-full text-sm text-left';
+                                        table.innerHTML = `
+                                    <thead class="bg-gray-100 text-gray-600 uppercase">
+                                        <tr>
+                                            <th class="p-3">Month</th>
+                                            <th class="p-3 text-right">Principal</th>
+                                            <th class="p-3 text-right">Interest</th>
+                                            <th class="p-3 text-right">Balance</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        ${yearData.map(row => `
+                                            <tr class="border-b border-gray-100">
+                                                <td class="p-3">${new Date(row.year, row.month - 1).toLocaleString('default', { month: 'long' })}</td>
+                                                <td class="p-3 text-right">${formatToINR(row.principal)}</td>
+                                                <td class="p-3 text-right">${formatToINR(row.interest)}</td>
+                                                <td class="p-3 text-right">${formatToINR(row.balance)}</td>
+                                            </tr>
+                                        `).join('')}
+                                    </tbody>
+                                `;
+                                        content.appendChild(table);
+                                        yearDiv.appendChild(header);
+                                        yearDiv.appendChild(content);
+                                        amortizationTableContainer.appendChild(yearDiv);
+                                    }
+                                }
+
+                                function calculateAndDisplay() {
+                                    const p = parseFloat(loanAmountInput.value);
+                                    const r = parseFloat(interestRateInput.value) / 100 / 12; // Monthly interest rate
+                                    const n = parseFloat(loanTenureInput.value) * 12; // Tenure in months
+
+                                    if (!p || !r || !n || p <= 0 || r <= 0 || n <= 0) {
+                                        amortizationTableContainer.innerHTML = '<p class="text-center text-gray-500">Please provide valid loan details.</p>';
+                                        return;
+                                    }
+
+                                    const emi_raw = (p * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+                                    const emi = Math.round(emi_raw); // Round to nearest integer for accuracy
+
+                                    const schedule = generateAmortizationSchedule(p, r, n, emi);
+
+                                    // Calculate accurate totals from the generated schedule, which accounts for final payment adjustment
+                                    const totalAmount = schedule.reduce((acc, row) => acc + row.totalPayment, 0);
+                                    const totalInterest = totalAmount - p;
+
+
+                                    // Update summary
+                                    emiResult.textContent = formatToINR(emi);
+                                    principalResult.textContent = formatToINR(p);
+                                    interestResult.textContent = formatToINR(totalInterest);
+                                    totalResult.textContent = formatToINR(totalAmount);
+
+                                    // Update display values
+                                    loanAmountValue.textContent = p.toLocaleString('en-IN');
+                                    interestRateValue.textContent = interestRateInput.value;
+                                    loanTenureValue.textContent = `${loanTenureInput.value} Yr`;
+
+                                    // Update Donut Chart
+                                    updateDonut(p, totalInterest);
+
+                                    // Render Amortization Table
+                                    renderAmortization(schedule);
+                                }
+
+                                // Enhanced Functions for new UI
+                                window.adjustLoan = function (amount) {
+                                    const currentValue = parseInt(loanAmountInput.value);
+                                    const newValue = Math.max(50000, Math.min(5000000, currentValue + amount));
+                                    loanAmountInput.value = newValue;
+                                    calculateAndDisplay();
+                                }
+
+                                window.adjustRate = function (rate) {
+                                    const currentValue = parseFloat(interestRateInput.value);
+                                    const newValue = Math.max(8, Math.min(20, currentValue + rate));
+                                    interestRateInput.value = newValue;
+                                    calculateAndDisplay();
+                                }
+
+                                window.adjustTenure = function (years) {
+                                    const currentValue = parseFloat(loanTenureInput.value);
+                                    const newValue = Math.max(1, Math.min(30, currentValue + years));
+                                    loanTenureInput.value = newValue;
+                                    calculateAndDisplay();
+                                }
+
+                                window.setPreset = function (amount, rate, tenure) {
+                                    loanAmountInput.value = amount;
+                                    interestRateInput.value = rate;
+                                    loanTenureInput.value = tenure;
+                                    calculateAndDisplay();
+                                }
+
+                                // Reset and Share functions
+                                document.getElementById('resetBtn')?.addEventListener('click', function () {
+                                    loanAmountInput.value = 1000000;
+                                    interestRateInput.value = 10.5;
+                                    loanTenureInput.value = 5;
+                                    calculateAndDisplay();
+                                });
+
+                                document.getElementById('shareBtn')?.addEventListener('click', function () {
+                                    const url = new URL(window.location);
+                                    url.searchParams.set('amount', loanAmountInput.value);
+                                    url.searchParams.set('rate', interestRateInput.value);
+                                    url.searchParams.set('tenure', loanTenureInput.value);
+
+                                    if (navigator.share) {
+                                        navigator.share({
+                                            title: 'EMI Calculator Result',
+                                            text: `Check out this loan calculation: EMI ₹${emiResult.textContent}`,
+                                            url: url.href
+                                        });
+                                    } else {
+                                        navigator.clipboard.writeText(url.href).then(() => {
+                                            alert('Link copied to clipboard!');
+                                        });
+                                    }
+                                });
+
+                                // Load from URL parameters on page load
+                                window.addEventListener('DOMContentLoaded', function () {
+                                    const params = new URLSearchParams(window.location.search);
+                                    if (params.get('amount')) loanAmountInput.value = params.get('amount');
+                                    if (params.get('rate')) interestRateInput.value = params.get('rate');
+                                    if (params.get('tenure')) loanTenureInput.value = params.get('tenure');
+                                });
+
+                                // Add event listeners to all inputs
+                                [loanAmountInput, interestRateInput, loanTenureInput].forEach(input => {
+                                    input.addEventListener('input', calculateAndDisplay);
+                                });
+
+                                // Event delegation for amortization accordion
+                                amortizationTableContainer.addEventListener('click', function (e) {
+                                    const header = e.target.closest('.amortization-header');
+                                    if (!header) return;
+
+                                    const content = header.nextElementSibling;
+                                    const arrow = header.querySelector('svg');
+
+                                    // Close all other open accordions in the amortization table
+                                    const allContents = amortizationTableContainer.querySelectorAll('.amortization-content');
+                                    const allArrows = amortizationTableContainer.querySelectorAll('.amortization-header svg');
+
+                                    allArrows.forEach(a => { if (a !== arrow) a.style.transform = 'rotate(0deg)'; });
+                                    allContents.forEach(c => { if (c !== content) c.style.maxHeight = null; });
+
+                                    if (content.style.maxHeight) {
+                                        content.style.maxHeight = null;
+                                        arrow.style.transform = 'rotate(0deg)';
+                                    } else {
+                                        content.style.maxHeight = content.scrollHeight + "px";
+                                        arrow.style.transform = 'rotate(180deg)';
+                                    }
+                                });
+
+
+                                // Initial calculation on page load
+                                calculateAndDisplay();
+
+                                // New Hero Section Functions
+                                window.scrollToCalculator = function () {
+                                    document.querySelector('.bg-white.rounded-3xl').scrollIntoView({
+                                        behavior: 'smooth',
+                                        block: 'start'
+                                    });
+                                }
+
+                                window.showDemoCalculation = function () {
+                                    // Scroll to calculator and simulate a demo calculation
+                                    scrollToCalculator();
+
+                                    setTimeout(() => {
+                                        // Set demo values
+                                        loanAmountInput.value = 2000000;  // 20 lakhs
+                                        interestRateInput.value = 9.5;   // 9.5%
+                                        loanTenureInput.value = 15;      // 15 years
+
+                                        // Animate the value changes
+                                        const inputs = [loanAmountInput, interestRateInput, loanTenureInput];
+                                        inputs.forEach((input, index) => {
+                                            setTimeout(() => {
+                                                input.dispatchEvent(new Event('input'));
+                                                input.style.transform = 'scale(1.05)';
+                                                input.style.boxShadow = '0 0 0 3px rgba(16, 185, 129, 0.2)';
+
+                                                setTimeout(() => {
+                                                    input.style.transform = 'scale(1)';
+                                                    input.style.boxShadow = '';
+                                                }, 300);
+                                            }, index * 500);
+                                        });
+                                    }, 1000);
+                                }
+
+                                // Parallax effect for hero background shapes
+                                window.addEventListener('scroll', function () {
+                                    const scrolled = window.pageYOffset;
+                                    const shapes = document.querySelectorAll('.absolute.animate-bounce, .absolute.animate-pulse, .absolute.animate-ping, .absolute.animate-spin');
+
+                                    shapes.forEach((shape, index) => {
+                                        const speed = 0.1 + (index * 0.05);
+                                        shape.style.transform += ` translateY(${scrolled * speed}px)`;
+                                    });
+                                });
+
+                                // --- FAQ Accordion Logic ---
+                                const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+                                accordionHeaders.forEach(header => {
+                                    header.addEventListener('click', () => {
+                                        const content = header.nextElementSibling;
+
+                                        // Toggle active class for arrow rotation
+                                        header.classList.toggle('active');
+
+                                        if (content.style.maxHeight) {
+                                            content.style.maxHeight = null;
+                                        } else {
+                                            // Close all other accordions
+                                            accordionHeaders.forEach(otherHeader => {
+                                                otherHeader.classList.remove('active');
+                                                otherHeader.nextElementSibling.style.maxHeight = null;
+                                            });
+
+                                            // Open the clicked one
+                                            header.classList.add('active');
+                                            content.style.maxHeight = content.scrollHeight + "px";
+                                        }
+                                    });
+                                });
+
+                            });
+
+                            // Global variable to store amortization data for download
+                            let currentAmortizationData = [];
+
+                            // Modal functionality
+                            function openDownloadModal() {
+                                const modal = document.getElementById('downloadModal');
+                                const modalContent = document.getElementById('modalContent');
+
+                                modal.classList.remove('hidden');
+                                setTimeout(() => {
+                                    modalContent.style.transform = 'scale(1)';
+                                }, 10);
+
+                                // Focus on first input
+                                document.getElementById('fullName').focus();
+                            }
+
+                            function closeDownloadModal() {
+                                const modal = document.getElementById('downloadModal');
+                                const modalContent = document.getElementById('modalContent');
+
+                                modalContent.style.transform = 'scale(0.95)';
+                                setTimeout(() => {
+                                    modal.classList.add('hidden');
+                                    // Reset form
+                                    document.getElementById('downloadForm').reset();
+                                }, 200);
+                            }
+
+                            // Close modal on backdrop click
+                            document.getElementById('downloadModal').addEventListener('click', function (e) {
+                                if (e.target === this) {
+                                    closeDownloadModal();
+                                }
+                            });
+
+                            // Handle form submission
+                            document.getElementById('downloadForm').addEventListener('submit', function (e) {
+                                e.preventDefault();
+
+                                const fullName = document.getElementById('fullName').value.trim();
+                                const mobile = document.getElementById('mobileNumber').value.trim();
+                                const email = document.getElementById('email').value.trim();
+
+                                // Validate mobile number
+                                if (!/^[0-9]{10}$/.test(mobile)) {
+                                    alert('Please enter a valid 10-digit mobile number');
+                                    return;
+                                }
+
+                                // Show loading state
+                                const downloadBtn = document.getElementById('downloadBtn');
+                                const downloadBtnText = document.getElementById('downloadBtnText');
+                                const downloadSpinner = document.getElementById('downloadSpinner');
+
+                                downloadBtn.disabled = true;
+                                downloadBtnText.textContent = 'Preparing...';
+                                downloadSpinner.classList.remove('hidden');
+
+                                // Simulate processing time then download
+                                setTimeout(() => {
+                                    generateAndDownloadExcel(fullName, mobile, email);
+
+                                    // Reset button state
+                                    downloadBtn.disabled = false;
+                                    downloadBtnText.textContent = 'Download Now';
+                                    downloadSpinner.classList.add('hidden');
+
+                                    // Close modal after successful download
+                                    setTimeout(() => {
+                                        closeDownloadModal();
+                                    }, 500);
+                                }, 2000);
+                            });
+
+                            function generateAndDownloadExcel(userName, mobile, email) {
+                                // Get current loan parameters
+                                const loanAmount = parseFloat(document.getElementById('loanAmount').value);
+                                const interestRate = parseFloat(document.getElementById('interestRate').value);
+                                const tenure = parseFloat(document.getElementById('loanTenure').value);
+
+                                // Calculate EMI and generate schedule
+                                const monthlyRate = interestRate / 100 / 12;
+                                const totalMonths = tenure * 12;
+                                const emi = Math.round((loanAmount * monthlyRate * Math.pow(1 + monthlyRate, totalMonths)) / (Math.pow(1 + monthlyRate, totalMonths) - 1));
+
+                                // Generate detailed monthly schedule
+                                const schedule = [];
+                                let balance = loanAmount;
+                                let totalInterestPaid = 0;
+
+                                for (let month = 1; month <= totalMonths; month++) {
+                                    const interestPayment = balance * monthlyRate;
+                                    let principalPayment = emi - interestPayment;
+
+                                    // Handle last payment
+                                    if (balance < emi) {
+                                        principalPayment = balance;
+                                        balance = 0;
+                                    } else {
+                                        balance -= principalPayment;
+                                    }
+
+                                    totalInterestPaid += interestPayment;
+
+                                    const date = new Date();
+                                    date.setMonth(date.getMonth() + month);
+
+                                    schedule.push({
+                                        'Payment No.': month,
+                                        'Payment Date': date.toLocaleDateString('en-IN'),
+                                        'EMI Amount': `₹${emi.toLocaleString('en-IN')}`,
+                                        'Principal': `₹${Math.round(principalPayment).toLocaleString('en-IN')}`,
+                                        'Interest': `₹${Math.round(interestPayment).toLocaleString('en-IN')}`,
+                                        'Outstanding Balance': `₹${Math.round(balance).toLocaleString('en-IN')}`
+                                    });
+
+                                    if (balance === 0) break;
+                                }
+
+                                // Create workbook
+                                const wb = XLSX.utils.book_new();
+
+                                // Combined data: Summary + Amortization Schedule in one sheet
+                                const combinedData = [
+                                    ['LOAN AMORTIZATION SCHEDULE', '', '', '', '', ''],
+                                    ['Generated for: ' + userName, '', '', '', '', ''],
+                                    ['Mobile: ' + mobile, '', '', '', '', ''],
+                                    ['Email: ' + email, '', '', '', '', ''],
+                                    ['Generated on: ' + new Date().toLocaleDateString('en-IN'), '', '', '', '', ''],
+                                    ['', '', '', '', '', ''],
+                                    ['LOAN DETAILS', '', '', '', '', ''],
+                                    ['Loan Amount', `₹${loanAmount.toLocaleString('en-IN')}`, '', '', '', ''],
+                                    ['Interest Rate', `${interestRate}% per annum`, '', '', '', ''],
+                                    ['Loan Tenure', `${tenure} years (${totalMonths} months)`, '', '', '', ''],
+                                    ['Monthly EMI', `₹${emi.toLocaleString('en-IN')}`, '', '', '', ''],
+                                    ['Total Interest', `₹${Math.round(totalInterestPaid).toLocaleString('en-IN')}`, '', '', '', ''],
+                                    ['Total Amount Payable', `₹${Math.round(loanAmount + totalInterestPaid).toLocaleString('en-IN')}`, '', '', '', ''],
+                                    ['', '', '', '', '', ''],
+                                    ['PAYMENT SCHEDULE', '', '', '', '', ''],
+                                    ['Payment No.', 'Payment Date', 'EMI Amount', 'Principal', 'Interest', 'Outstanding Balance']
+                                ];
+
+                                // Add schedule data to combined data
+                                schedule.forEach(payment => {
+                                    combinedData.push([
+                                        payment['Payment No.'],
+                                        payment['Payment Date'],
+                                        payment['EMI Amount'],
+                                        payment['Principal'],
+                                        payment['Interest'],
+                                        payment['Outstanding Balance']
+                                    ]);
+                                });
+
+                                const ws_combined = XLSX.utils.aoa_to_sheet(combinedData);
+
+                                // Set column widths for the combined sheet
+                                ws_combined['!cols'] = [
+                                    { width: 30 },  // Payment No.
+                                    { width: 20 },  // Payment Date
+                                    { width: 20 },  // EMI Amount
+                                    { width: 20 },  // Principal
+                                    { width: 20 },  // Interest
+                                    { width: 25 }   // Outstanding Balance
+                                ];
+
+                                // Add single sheet to workbook
+                                XLSX.utils.book_append_sheet(wb, ws_combined, 'Loan Summary');
+
+                                // Generate filename with current date
+                                const filename = `Loan_Amortization_${userName.replace(/\s+/g, '_')}_${new Date().toISOString().split('T')[0]}.xlsx`;
+
+                                // Download file
+                                XLSX.writeFile(wb, filename);
+
+                                // Show success message
+                                setTimeout(() => {
+                                    alert('Excel file downloaded successfully! Check your downloads folder.');
+                                }, 100);
+                            }
+                        </script>
+
+                        <!-- Enhanced Slider and Animation Styles -->
+                        <style>
+                            .slider::-webkit-slider-thumb {
+                                appearance: none;
+                                height: 20px;
+                                width: 20px;
+                                border-radius: 50%;
+                                background: linear-gradient(135deg, #10b981, #3b82f6);
+                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                                cursor: pointer;
+                                border: 2px solid white;
+                            }
+
+                            .slider::-moz-range-thumb {
+                                height: 20px;
+                                width: 20px;
+                                border-radius: 50%;
+                                background: linear-gradient(135deg, #10b981, #3b82f6);
+                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                                cursor: pointer;
+                                border: 2px solid white;
+                            }
+
+                            .slider::-webkit-slider-track {
+                                height: 12px;
+                                background: linear-gradient(to right, #e5e7eb 0%, #10b981 50%, #3b82f6 100%);
+                                border-radius: 6px;
+                            }
+
+                            .slider::-moz-range-track {
+                                height: 12px;
+                                background: linear-gradient(to right, #e5e7eb 0%, #10b981 50%, #3b82f6 100%);
+                                border-radius: 6px;
+                            }
+
+                            .slider:focus::-webkit-slider-thumb {
+                                box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+                            }
+
+                            .slider:focus::-moz-range-thumb {
+                                box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+                            }
+
+                            /* Card hover effects */
+                            .card-hover:hover {
+                                transform: translateY(-5px);
+                                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+                                transition: all 0.3s ease;
+                            }
+
+                            /* Gradient animations */
+                            .gradient-bg {
+                                background: linear-gradient(270deg, #10b981, #3b82f6, #8b5cf6);
+                                background-size: 600% 600%;
+                                animation: gradientShift 8s ease infinite;
+                            }
+
+                            @keyframes gradientShift {
+                                0% {
+                                    background-position: 0% 50%;
+                                }
+
+                                50% {
+                                    background-position: 100% 50%;
+                                }
+
+                                100% {
+                                    background-position: 0% 50%;
+                                }
+                            }
+
+                            /* Loading animation for calculations */
+                            .calculating {
+                                position: relative;
+                                opacity: 0.7;
+                            }
+
+                            .calculating::after {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+                                animation: shimmer 1.5s infinite;
+                            }
+
+                            @keyframes shimmer {
+                                0% {
+                                    transform: translateX(-100%);
+                                }
+
+                                100% {
+                                    transform: translateX(100%);
+                                }
+                            }
+
+                            /* Pulse animation for EMI result */
+                            .pulse-result {
+                                animation: pulseGlow 2s ease-in-out infinite alternate;
+                            }
+
+                            @keyframes pulseGlow {
+                                from {
+                                    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+                                }
+
+                                to {
+                                    box-shadow: 0 0 30px rgba(16, 185, 129, 0.6), 0 0 40px rgba(16, 185, 129, 0.2);
+                                }
+                            }
+
+                            /* New Hero Section Animations */
+                            @keyframes fadeIn {
+                                from {
+                                    opacity: 0;
+                                    transform: translateY(20px);
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                }
+                            }
+
+                            @keyframes slideInLeft {
+                                from {
+                                    opacity: 0;
+                                    transform: translateX(-50px);
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    transform: translateX(0);
+                                }
+                            }
+
+                            @keyframes slideInRight {
+                                from {
+                                    opacity: 0;
+                                    transform: translateX(50px);
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    transform: translateX(0);
+                                }
+                            }
+
+                            @keyframes scaleIn {
+                                from {
+                                    opacity: 0;
+                                    transform: scale(0.8);
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    transform: scale(1);
+                                }
+                            }
+
+                            @keyframes float {
+
+                                0%,
+                                100% {
+                                    transform: translateY(0px) rotate(0deg);
+                                }
+
+                                25% {
+                                    transform: translateY(-10px) rotate(5deg);
+                                }
+
+                                50% {
+                                    transform: translateY(-20px) rotate(0deg);
+                                }
+
+                                75% {
+                                    transform: translateY(-10px) rotate(-5deg);
+                                }
+                            }
+
+                            /* Simple entrance animations */
+                            .entrance-animation {
+                                animation: fadeInUp 0.8s ease-out;
+                            }
+
+                            .entrance-animation-delayed {
+                                animation: fadeInUp 0.8s ease-out 0.2s both;
+                            }
+
+                            .entrance-animation-delayed-2 {
+                                animation: fadeInUp 0.8s ease-out 0.4s both;
+                            }
+
+                            /* Clean card hover effects */
+                            .clean-card {
+                                transition: all 0.3s ease;
+                            }
+
+                            .clean-card:hover {
+                                transform: translateY(-3px);
+                                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+                            }
+
+                            /* Button hover effects */
+                            .btn-primary {
+                                transition: all 0.3s ease;
+                            }
+
+                            .btn-primary:hover {
+                                transform: translateY(-1px);
+                                box-shadow: 0 10px 20px -5px rgba(34, 197, 94, 0.4);
+                            }
+
+                            /* Grid pattern background */
+                            .bg-grid-pattern {
+                                background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
+                                background-size: 20px 20px;
+                            }
+
+                            /* Business loan style hover effects */
+                            .stat-card {
+                                transition: all 0.3s ease;
+                            }
+
+                            .stat-card:hover {
+                                transform: translateY(-5px);
+                                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+                            }
+
+                            /* Responsive optimizations */
+                            @media (max-width: 768px) {
+                                .hero-title {
+                                    font-size: 2.5rem !important;
+                                    line-height: 1.1 !important;
+                                }
+
+                                .hero-subtitle {
+                                    font-size: 1.1rem !important;
+                                }
+
+                                .hero-stats .grid {
+                                    grid-template-columns: 1fr !important;
+                                    gap: 1rem !important;
+                                }
+                            }
+
+                            /* Simple fade-in animations */
+                            .fade-in-up {
+                                animation: fadeInUp 0.6s ease-out;
+                            }
+
+                            @keyframes fadeInUp {
+                                from {
+                                    opacity: 0;
+                                    transform: translateY(30px);
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                }
+                            }
+                        </style>
+
+    </body>
+
+    </html>

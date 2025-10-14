@@ -1,0 +1,1099 @@
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/navbar.ejs') %>
+
+            <main>
+                <!-- Hero Section -->
+                <section class="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-16 md:py-20">
+                    <div class="container mx-auto px-4">
+                        <div class="flex flex-col lg:flex-row items-center justify-between">
+                            <div class="lg:w-1/2 mb-10 lg:mb-0">
+                                <div
+                                    class="inline-block bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                                    🎯 Expert Tax Services for Indians
+                                </div>
+                                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                                    GST, ITR Filing &
+                                    <span class="text-yellow-400">Tax Solutions</span>
+                                </h1>
+                                <p class="text-xl md:text-2xl mb-8 text-blue-100">
+                                    Complete taxation services for individuals and businesses. Expert CA assistance,
+                                    timely filing, and maximum refunds guaranteed.
+                                </p>
+                                <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                                    <button onclick="scrollToSection('services')"
+                                        class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-4 px-8 rounded-lg transition duration-300 transform hover:scale-105">
+                                        <i class="fas fa-calculator mr-2"></i>
+                                        Get Started Today
+                                    </button>
+                                    <button onclick="scrollToSection('contact')"
+                                        class="border-2 border-white hover:bg-white hover:text-blue-900 font-bold py-4 px-8 rounded-lg transition duration-300">
+                                        <i class="fas fa-phone mr-2"></i>
+                                        Free Consultation
+                                    </button>
+                                </div>
+
+                                <!-- Key Stats -->
+                                <div class="grid grid-cols-3 gap-6 text-center">
+                                    <div>
+                                        <div class="text-2xl font-bold text-yellow-400">50,000+</div>
+                                        <div class="text-sm text-blue-200">Tax Returns Filed</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-yellow-400">98%</div>
+                                        <div class="text-sm text-blue-200">Client Satisfaction</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-yellow-400">24/7</div>
+                                        <div class="text-sm text-blue-200">Expert Support</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Quick Service Form -->
+                            <div class="lg:w-1/2 lg:pl-12">
+                                <div class="bg-white rounded-2xl p-8 shadow-2xl">
+                                    <div class="text-center mb-6">
+                                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Get Expert Tax Help</h3>
+                                        <p class="text-gray-600">Fill the form below for instant assistance</p>
+                                    </div>
+
+                                    <form id="taxServiceForm" class="space-y-4">
+                                        <div class="grid md:grid-cols-2 gap-4">
+                                            <div>
+                                                <label class="block text-sm font-medium text-gray-700 mb-2">Full Name
+                                                    *</label>
+                                                <input type="text" id="fullName"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                                    placeholder="Enter your full name" required>
+                                            </div>
+                                            <div>
+                                                <label class="block text-sm font-medium text-gray-700 mb-2">Mobile
+                                                    Number *</label>
+                                                <input type="tel" id="mobileNumber"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                                    placeholder="10-digit mobile number" required>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">Email Address
+                                                *</label>
+                                            <input type="email" id="emailAddress"
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                                placeholder="Enter your email" required>
+                                        </div>
+
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">Service Required
+                                                *</label>
+                                            <select id="serviceType"
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                                required>
+                                                <option value="">Select Service</option>
+                                                <option value="itr_filing">ITR Filing</option>
+                                                <option value="gst_registration">GST Registration</option>
+                                                <option value="gst_filing">GST Return Filing</option>
+                                                <option value="tds_filing">TDS Return Filing</option>
+                                                <option value="business_registration">Business Registration</option>
+                                                <option value="tax_planning">Tax Planning</option>
+                                                <option value="audit_services">Audit Services</option>
+                                                <option value="other">Other Services</option>
+                                            </select>
+                                        </div>
+
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">Business
+                                                Type</label>
+                                            <select id="businessType"
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                                <option value="">Select Business Type</option>
+                                                <option value="individual">Individual/Salaried</option>
+                                                <option value="proprietorship">Proprietorship</option>
+                                                <option value="partnership">Partnership</option>
+                                                <option value="pvt_ltd">Private Limited</option>
+                                                <option value="llp">LLP</option>
+                                                <option value="public_ltd">Public Limited</option>
+                                                <option value="freelancer">Freelancer</option>
+                                            </select>
+                                        </div>
+
+                                        <button type="submit"
+                                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                                            <i class="fas fa-paper-plane mr-2"></i>
+                                            Get Free Consultation
+                                        </button>
+
+                                        <p class="text-xs text-gray-500 text-center">
+                                            <i class="fas fa-shield-alt mr-1"></i>
+                                            Your information is 100% secure and confidential
+                                        </p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Services Section -->
+                <section id="services" class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-4">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                                Complete Tax & Compliance Services
+                            </h2>
+                            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                                From individual tax filing to business compliance, we provide end-to-end taxation
+                                solutions for all your needs
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <!-- ITR Filing -->
+                            <div
+                                class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-green-500">
+                                <div class="text-center mb-6">
+                                    <div
+                                        class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-file-invoice text-2xl text-green-600"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-gray-900 mb-2">ITR Filing</h3>
+                                    <p class="text-gray-600">Expert income tax return filing for individuals and
+                                        businesses</p>
+                                </div>
+                                <ul class="space-y-3 mb-6">
+                                    <li class="flex items-center text-gray-700">
+                                        <i class="fas fa-check text-green-500 mr-3"></i>
+                                        All ITR Forms (1, 2, 3, 4, 5, 6, 7)
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <i class="fas fa-check text-green-500 mr-3"></i>
+                                        Maximum refund guarantee
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <i class="fas fa-check text-green-500 mr-3"></i>
+                                        CA assistance included
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <i class="fas fa-check text-green-500 mr-3"></i>
+                                        Free tax planning advice
+                                    </li>
+                                </ul>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-green-600 mb-2">Starting ₹499</div>
+                                    <button
+                                        class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                                        File ITR Now
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- GST Registration -->
+                            <div
+                                class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-blue-500">
+                                <div class="text-center mb-6">
+                                    <div
+                                        class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-registered text-2xl text-blue-600"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-gray-900 mb-2">GST Registration</h3>
+                                    <p class="text-gray-600">Quick and hassle-free GST registration for your business
+                                    </p>
+                                </div>
+                                <ul class="space-y-3 mb-6">
+                                    <li class="flex items-center text-gray-700">
+                                        <i class="fas fa-check text-blue-500 mr-3"></i>
+                                        Complete documentation support
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <i class="fas fa-check text-blue-500 mr-3"></i>
+                                        Fast 7-day processing
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <i class="fas fa-check text-blue-500 mr-3"></i>
+                                        Digital signature included
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <i class="fas fa-check text-blue-500 mr-3"></i>
+                                        HSN code assistance
+                                    </li>
+                                </ul>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-blue-600 mb-2">Starting ₹1,999</div>
+                                    <button
+                                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                                        Register for GST
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- GST Filing -->
+                            <div
+                                class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-purple-500">
+                                <div class="text-center mb-6">
+                                    <div
+                                        class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-file-alt text-2xl text-purple-600"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-gray-900 mb-2">GST Return Filing</h3>
+                                    <p class="text-gray-600">Monthly and quarterly GST return filing services</p>
+                                </div>
+                                <ul class="space-y-3 mb-6">
+                                    <li class="flex items-center text-gray-700">
+                                        <i class="fas fa-check text-purple-500 mr-3"></i>
+                                        GSTR-1, GSTR-3B, GSTR-9
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <i class="fas fa-check text-purple-500 mr-3"></i>
+                                        Timely filing guarantee
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <i class="fas fa-check text-purple-500 mr-3"></i>
+                                        Input tax credit optimization
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <i class="fas fa-check text-purple-500 mr-3"></i>
+                                        Monthly compliance report
+                                    </li>
+                                </ul>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-purple-600 mb-2">Monthly ₹999</div>
+                                    <button
+                                        class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                                        Start GST Filing
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- TDS Filing -->
+                            <div
+                                class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-red-500">
+                                <div class="text-center mb-6">
+                                    <div
+                                        class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-receipt text-2xl text-red-600"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-gray-900 mb-2">TDS Return Filing</h3>
+                                    <p class="text-gray-600">Quarterly TDS return filing and TDS certificate generation
+                                    </p>
+                                </div>
+                                <ul class="space-y-3 mb-6">
+                                    <li class="flex items-center text-gray-700">
+                                        <i class="fas fa-check text-red-500 mr-3"></i>
+                                        24Q, 26Q, 27Q, 27EQ returns
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <i class="fas fa-check text-red-500 mr-3"></i>
+                                        Form 16/16A generation
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <i class="fas fa-check text-red-500 mr-3"></i>
+                                        TDS reconciliation
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <i class="fas fa-check text-red-500 mr-3"></i>
+                                        Penalty avoidance guidance
+                                    </li>
+                                </ul>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-red-600 mb-2">Quarterly ₹1,499</div>
+                                    <button
+                                        class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                                        File TDS Returns
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Business Registration -->
+                            <div
+                                class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-indigo-500">
+                                <div class="text-center mb-6">
+                                    <div
+                                        class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-building text-2xl text-indigo-600"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-gray-900 mb-2">Business Registration</h3>
+                                    <p class="text-gray-600">Complete business setup and registration services</p>
+                                </div>
+                                <ul class="space-y-3 mb-6">
+                                    <li class="flex items-center text-gray-700">
+                                        <i class="fas fa-check text-indigo-500 mr-3"></i>
+                                        Private Limited Company
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <i class="fas fa-check text-indigo-500 mr-3"></i>
+                                        LLP Registration
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <i class="fas fa-check text-indigo-500 mr-3"></i>
+                                        Partnership Firm
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <i class="fas fa-check text-indigo-500 mr-3"></i>
+                                        Proprietorship setup
+                                    </li>
+                                </ul>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-indigo-600 mb-2">Starting ₹5,999</div>
+                                    <button
+                                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                                        Register Business
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Tax Planning -->
+                            <div
+                                class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-yellow-500">
+                                <div class="text-center mb-6">
+                                    <div
+                                        class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-chart-line text-2xl text-yellow-600"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-gray-900 mb-2">Tax Planning</h3>
+                                    <p class="text-gray-600">Strategic tax planning to minimize your tax liability
+                                        legally</p>
+                                </div>
+                                <ul class="space-y-3 mb-6">
+                                    <li class="flex items-center text-gray-700">
+                                        <i class="fas fa-check text-yellow-500 mr-3"></i>
+                                        Investment planning
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <i class="fas fa-check text-yellow-500 mr-3"></i>
+                                        80C optimization
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <i class="fas fa-check text-yellow-500 mr-3"></i>
+                                        HRA & house loan benefits
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <i class="fas fa-check text-yellow-500 mr-3"></i>
+                                        Capital gains planning
+                                    </li>
+                                </ul>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-yellow-600 mb-2">Starting ₹2,999</div>
+                                    <button
+                                        class="w-full bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                                        Plan Your Taxes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tax Calculator -->
+                <section class="py-16 bg-white">
+                    <div class="container mx-auto px-4">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                                Income Tax Calculator
+                            </h2>
+                            <p class="text-xl text-gray-600">
+                                Calculate your income tax liability for FY 2023-24 (AY 2024-25)
+                            </p>
+                        </div>
+
+                        <div class="max-w-4xl mx-auto">
+                            <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg">
+                                <form id="taxCalculator" class="space-y-6">
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">Financial
+                                                Year</label>
+                                            <select id="financialYear"
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                                                <option value="2023-24">2023-24 (AY 2024-25)</option>
+                                                <option value="2022-23">2022-23 (AY 2023-24)</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">Age
+                                                Category</label>
+                                            <select id="ageCategory"
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                                                <option value="below60">Below 60 years</option>
+                                                <option value="60to80">60 to 80 years (Senior Citizen)</option>
+                                                <option value="above80">Above 80 years (Super Senior Citizen)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">Annual Income
+                                                (₹)</label>
+                                            <input type="number" id="annualIncome"
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                                                placeholder="Enter your annual income" min="0">
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">80C Deductions
+                                                (₹)</label>
+                                            <input type="number" id="deduction80C"
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                                                placeholder="Max ₹1,50,000" max="150000" min="0">
+                                        </div>
+                                    </div>
+
+                                    <div class="grid md:grid-cols-3 gap-6">
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">80D (Health
+                                                Insurance)</label>
+                                            <input type="number" id="deduction80D"
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                                                placeholder="Max ₹25,000" max="25000" min="0">
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">HRA Exemption
+                                                (₹)</label>
+                                            <input type="number" id="hraExemption"
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                                                placeholder="Enter HRA exemption" min="0">
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">Home Loan
+                                                Interest</label>
+                                            <input type="number" id="homeLoanInterest"
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                                                placeholder="Max ₹2,00,000" max="200000" min="0">
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button type="button" onclick="calculateTax()"
+                                            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg transition duration-300 transform hover:scale-105">
+                                            <i class="fas fa-calculator mr-2"></i>
+                                            Calculate Tax
+                                        </button>
+                                    </div>
+                                </form>
+
+                                <!-- Tax Results -->
+                                <div id="taxResults" class="hidden mt-8 p-6 bg-white rounded-lg shadow-md">
+                                    <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Tax Calculation Results
+                                    </h3>
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div class="space-y-3">
+                                            <div class="flex justify-between">
+                                                <span class="font-medium">Gross Income:</span>
+                                                <span id="grossIncome" class="font-bold">₹0</span>
+                                            </div>
+                                            <div class="flex justify-between">
+                                                <span class="font-medium">Total Deductions:</span>
+                                                <span id="totalDeductions" class="font-bold text-green-600">₹0</span>
+                                            </div>
+                                            <div class="flex justify-between">
+                                                <span class="font-medium">Taxable Income:</span>
+                                                <span id="taxableIncome" class="font-bold">₹0</span>
+                                            </div>
+                                        </div>
+                                        <div class="space-y-3">
+                                            <div class="flex justify-between">
+                                                <span class="font-medium">Income Tax:</span>
+                                                <span id="incomeTax" class="font-bold text-red-600">₹0</span>
+                                            </div>
+                                            <div class="flex justify-between">
+                                                <span class="font-medium">Health & Education Cess:</span>
+                                                <span id="cess" class="font-bold text-red-600">₹0</span>
+                                            </div>
+                                            <div class="flex justify-between text-lg border-t pt-2">
+                                                <span class="font-bold">Total Tax Liability:</span>
+                                                <span id="totalTax" class="font-bold text-red-600">₹0</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-6 text-center">
+                                        <p class="text-gray-600 mb-4">Want professional help with tax planning and
+                                            filing?</p>
+                                        <button onclick="scrollToSection('contact')"
+                                            class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                                            Get Expert Assistance
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Why Choose Us -->
+                <section class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-4">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                                Why Choose Open Credit Tax Services?
+                            </h2>
+                            <p class="text-xl text-gray-600">
+                                Trusted by thousands of individuals and businesses across India
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <div class="text-center">
+                                <div
+                                    class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-user-tie text-3xl text-blue-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Expert CAs</h3>
+                                <p class="text-gray-600">Qualified Chartered Accountants with 10+ years experience</p>
+                            </div>
+
+                            <div class="text-center">
+                                <div
+                                    class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-clock text-3xl text-green-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Timely Filing</h3>
+                                <p class="text-gray-600">100% on-time filing guarantee with penalty protection</p>
+                            </div>
+
+                            <div class="text-center">
+                                <div
+                                    class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-shield-alt text-3xl text-purple-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">100% Secure</h3>
+                                <p class="text-gray-600">Bank-grade security for all your financial information</p>
+                            </div>
+
+                            <div class="text-center">
+                                <div
+                                    class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-headset text-3xl text-red-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">24/7 Support</h3>
+                                <p class="text-gray-600">Round-the-clock customer support via phone, email & chat</p>
+                            </div>
+                        </div>
+
+                        <!-- Additional Benefits -->
+                        <div class="mt-12 bg-white rounded-lg p-8 shadow-lg">
+                            <div class="grid md:grid-cols-3 gap-8">
+                                <div class="flex items-start">
+                                    <div
+                                        class="flex-shrink-0 w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
+                                        <i class="fas fa-money-bill-wave text-yellow-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-gray-900 mb-2">Maximum Refunds</h4>
+                                        <p class="text-gray-600">Expert optimization ensures you get maximum tax refunds
+                                            legally possible</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start">
+                                    <div
+                                        class="flex-shrink-0 w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                                        <i class="fas fa-mobile-alt text-indigo-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-gray-900 mb-2">Digital Process</h4>
+                                        <p class="text-gray-600">Complete paperless process with mobile app and online
+                                            dashboard</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start">
+                                    <div
+                                        class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                        <i class="fas fa-certificate text-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-gray-900 mb-2">Compliance Assured</h4>
+                                        <p class="text-gray-600">100% compliant with latest tax laws and government
+                                            regulations</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section class="py-16 bg-white">
+                    <div class="container mx-auto px-4">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                                Frequently Asked Questions
+                            </h2>
+                            <p class="text-xl text-gray-600">
+                                Get answers to common questions about tax services
+                            </p>
+                        </div>
+
+                        <div class="max-w-4xl mx-auto">
+                            <div class="space-y-4">
+                                <div class="faq-item bg-gray-50 rounded-lg">
+                                    <button
+                                        class="faq-question w-full px-6 py-4 text-left flex justify-between items-center font-semibold text-gray-900 hover:bg-gray-100 transition duration-300">
+                                        <span>What documents are required for ITR filing?</span>
+                                        <i
+                                            class="fas fa-plus faq-icon text-gray-600 transition-transform duration-300"></i>
+                                    </button>
+                                    <div class="faq-answer hidden px-6 pb-4">
+                                        <p class="text-gray-700">For salaried individuals: Form 16, salary slips, bank
+                                            statements, investment proofs (80C, 80D), interest certificates, and
+                                            Aadhaar/PAN cards. For business owners: P&L statements, balance sheet, cash
+                                            flow statements, GST returns, and all relevant financial documents.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item bg-gray-50 rounded-lg">
+                                    <button
+                                        class="faq-question w-full px-6 py-4 text-left flex justify-between items-center font-semibold text-gray-900 hover:bg-gray-100 transition duration-300">
+                                        <span>What is the GST registration threshold limit?</span>
+                                        <i
+                                            class="fas fa-plus faq-icon text-gray-600 transition-transform duration-300"></i>
+                                    </button>
+                                    <div class="faq-answer hidden px-6 pb-4">
+                                        <p class="text-gray-700">GST registration is mandatory if your annual turnover
+                                            exceeds ₹20 lakhs (₹10 lakhs for northeastern states and hill stations). For
+                                            service providers, the limit is ₹20 lakhs across India. However, voluntary
+                                            registration is allowed even below these limits.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item bg-gray-50 rounded-lg">
+                                    <button
+                                        class="faq-question w-full px-6 py-4 text-left flex justify-between items-center font-semibold text-gray-900 hover:bg-gray-100 transition duration-300">
+                                        <span>What are the penalties for late ITR filing?</span>
+                                        <i
+                                            class="fas fa-plus faq-icon text-gray-600 transition-transform duration-300"></i>
+                                    </button>
+                                    <div class="faq-answer hidden px-6 pb-4">
+                                        <p class="text-gray-700">Late filing penalties: ₹5,000 for income above ₹5
+                                            lakhs, ₹1,000 for income below ₹5 lakhs. Additional interest of 1% per month
+                                            on outstanding tax. Filing after December 31st may attract higher penalties
+                                            and restrictions on carry forward of losses.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item bg-gray-50 rounded-lg">
+                                    <button
+                                        class="faq-question w-full px-6 py-4 text-left flex justify-between items-center font-semibold text-gray-900 hover:bg-gray-100 transition duration-300">
+                                        <span>How long does GST registration take?</span>
+                                        <i
+                                            class="fas fa-plus faq-icon text-gray-600 transition-transform duration-300"></i>
+                                    </button>
+                                    <div class="faq-answer hidden px-6 pb-4">
+                                        <p class="text-gray-700">GST registration typically takes 3-7 working days if
+                                            all documents are correct and complete. The process may take longer if there
+                                            are document deficiencies or queries from the GST department. We ensure
+                                            proper documentation to minimize processing time.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item bg-gray-50 rounded-lg">
+                                    <button
+                                        class="faq-question w-full px-6 py-4 text-left flex justify-between items-center font-semibold text-gray-900 hover:bg-gray-100 transition duration-300">
+                                        <span>What is the difference between old and new tax regime?</span>
+                                        <i
+                                            class="fas fa-plus faq-icon text-gray-600 transition-transform duration-300"></i>
+                                    </button>
+                                    <div class="faq-answer hidden px-6 pb-4">
+                                        <p class="text-gray-700">Old regime allows various deductions (80C, 80D, HRA,
+                                            etc.) with higher tax rates. New regime has lower tax rates but limited
+                                            deductions. For FY 2023-24, new regime is default with standard deduction of
+                                            ₹50,000. Choice depends on your investment pattern and income level.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item bg-gray-50 rounded-lg">
+                                    <button
+                                        class="faq-question w-full px-6 py-4 text-left flex justify-between items-center font-semibold text-gray-900 hover:bg-gray-100 transition duration-300">
+                                        <span>Can I change my GST registration details later?</span>
+                                        <i
+                                            class="fas fa-plus faq-icon text-gray-600 transition-transform duration-300"></i>
+                                    </button>
+                                    <div class="faq-answer hidden px-6 pb-4">
+                                        <p class="text-gray-700">Yes, most GST registration details can be modified
+                                            through Amendment application on GST portal. Changes in business address,
+                                            contact details, bank accounts, and authorized signatories are allowed. Some
+                                            changes like legal name or constitution require specific procedures and
+                                            approvals.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Section -->
+                <section id="contact"
+                    class="py-16 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">
+                    <div class="container mx-auto px-4">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                                Ready to Get Started?
+                            </h2>
+                            <p class="text-xl text-blue-100">
+                                Connect with our tax experts today for personalized assistance
+                            </p>
+                        </div>
+
+                        <div class="grid lg:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <div class="space-y-6">
+                                    <div class="flex items-center">
+                                        <div
+                                            class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                                            <i class="fas fa-phone text-white"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold">Call Us</div>
+                                            <div class="text-blue-200">+91-9876543210</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-center">
+                                        <div
+                                            class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                                            <i class="fas fa-envelope text-white"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold">Email Us</div>
+                                            <div class="text-blue-200">tax@opencredit.com</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-center">
+                                        <div
+                                            class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                                            <i class="fas fa-map-marker-alt text-white"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold">Visit Us</div>
+                                            <div class="text-blue-200">123 Business Plaza, Connaught Place, New Delhi -
+                                                110001</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-center">
+                                        <div
+                                            class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                                            <i class="fas fa-clock text-white"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold">Business Hours</div>
+                                            <div class="text-blue-200">Mon-Sat: 9:00 AM - 8:00 PM</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-8">
+                                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                                    <div class="flex space-x-4">
+                                        <a href="#"
+                                            class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition duration-300">
+                                            <i class="fab fa-facebook-f text-white"></i>
+                                        </a>
+                                        <a href="#"
+                                            class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition duration-300">
+                                            <i class="fab fa-twitter text-white"></i>
+                                        </a>
+                                        <a href="#"
+                                            class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition duration-300">
+                                            <i class="fab fa-linkedin-in text-white"></i>
+                                        </a>
+                                        <a href="#"
+                                            class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition duration-300">
+                                            <i class="fab fa-instagram text-white"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-white rounded-2xl p-8 text-gray-900">
+                                <h3 class="text-2xl font-bold mb-6 text-center">Get Free Consultation</h3>
+                                <form id="contactForm" class="space-y-4">
+                                    <div class="grid md:grid-cols-2 gap-4">
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">First Name
+                                                *</label>
+                                            <input type="text" id="firstName"
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                                                required>
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">Last Name
+                                                *</label>
+                                            <input type="text" id="lastName"
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                                                required>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number
+                                            *</label>
+                                        <input type="tel" id="phoneNumber"
+                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                                            required>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Email Address
+                                            *</label>
+                                        <input type="email" id="emailId"
+                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                                            required>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Service Interested
+                                            In</label>
+                                        <select id="interestedService"
+                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                                            <option value="">Select Service</option>
+                                            <option value="itr_filing">ITR Filing</option>
+                                            <option value="gst_services">GST Services</option>
+                                            <option value="business_registration">Business Registration</option>
+                                            <option value="tax_planning">Tax Planning</option>
+                                            <option value="audit_services">Audit Services</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                        <textarea id="message" rows="4"
+                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                                            placeholder="Tell us about your requirements..."></textarea>
+                                    </div>
+
+                                    <button type="submit"
+                                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300">
+                                        <i class="fas fa-paper-plane mr-2"></i>
+                                        Send Message
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <%- include('../partials/footer.ejs') %>
+                <%- include('../partials/privacy-policy.ejs') %>
+                    <%- include('../partials/terms-of-service.ejs') %>
+
+                        <script>
+                            // Smooth scrolling function
+                            function scrollToSection(sectionId) {
+                                document.getElementById(sectionId).scrollIntoView({
+                                    behavior: 'smooth'
+                                });
+                            }
+
+                            // Tax Service Form Handler
+                            document.getElementById('taxServiceForm').addEventListener('submit', function (e) {
+                                e.preventDefault();
+
+                                const formData = {
+                                    fullName: document.getElementById('fullName').value,
+                                    mobileNumber: document.getElementById('mobileNumber').value,
+                                    emailAddress: document.getElementById('emailAddress').value,
+                                    serviceType: document.getElementById('serviceType').value,
+                                    businessType: document.getElementById('businessType').value
+                                };
+
+                                // Validate form
+                                if (!formData.fullName || !formData.mobileNumber || !formData.emailAddress || !formData.serviceType) {
+                                    alert('Please fill all required fields');
+                                    return;
+                                }
+
+                                // Validate mobile number (Indian format)
+                                const mobileRegex = /^[6-9]\d{9}$/;
+                                if (!mobileRegex.test(formData.mobileNumber)) {
+                                    alert('Please enter a valid 10-digit mobile number');
+                                    return;
+                                }
+
+                                // Here you would typically send the data to your server
+                                console.log('Tax Service Form Data:', formData);
+                                alert('Thank you! Our tax expert will contact you within 24 hours.');
+
+                                // Reset form
+                                this.reset();
+                            });
+
+                            // Tax Calculator Function
+                            function calculateTax() {
+                                const income = parseFloat(document.getElementById('annualIncome').value) || 0;
+                                const deduction80C = Math.min(parseFloat(document.getElementById('deduction80C').value) || 0, 150000);
+                                const deduction80D = Math.min(parseFloat(document.getElementById('deduction80D').value) || 0, 25000);
+                                const hraExemption = parseFloat(document.getElementById('hraExemption').value) || 0;
+                                const homeLoanInterest = Math.min(parseFloat(document.getElementById('homeLoanInterest').value) || 0, 200000);
+                                const ageCategory = document.getElementById('ageCategory').value;
+
+                                if (income <= 0) {
+                                    alert('Please enter a valid annual income');
+                                    return;
+                                }
+
+                                // Calculate total deductions
+                                const totalDeductions = deduction80C + deduction80D + hraExemption + homeLoanInterest;
+
+                                // Calculate taxable income
+                                const taxableIncome = Math.max(0, income - totalDeductions);
+
+                                // Tax slabs for FY 2023-24 (New Regime)
+                                let incomeTax = 0;
+                                let basicExemption = 300000; // ₹3 lakh basic exemption
+
+                                // Adjust exemption based on age
+                                if (ageCategory === '60to80') {
+                                    basicExemption = 300000; // Same as new regime
+                                } else if (ageCategory === 'above80') {
+                                    basicExemption = 500000; // ₹5 lakh for super senior citizens
+                                }
+
+                                if (taxableIncome > basicExemption) {
+                                    const taxableAmount = taxableIncome - basicExemption;
+
+                                    // New tax regime slabs
+                                    if (taxableAmount <= 300000) {
+                                        incomeTax = taxableAmount * 0.05;
+                                    } else if (taxableAmount <= 600000) {
+                                        incomeTax = 300000 * 0.05 + (taxableAmount - 300000) * 0.10;
+                                    } else if (taxableAmount <= 900000) {
+                                        incomeTax = 300000 * 0.05 + 300000 * 0.10 + (taxableAmount - 600000) * 0.15;
+                                    } else if (taxableAmount <= 1200000) {
+                                        incomeTax = 300000 * 0.05 + 300000 * 0.10 + 300000 * 0.15 + (taxableAmount - 900000) * 0.20;
+                                    } else if (taxableAmount <= 1500000) {
+                                        incomeTax = 300000 * 0.05 + 300000 * 0.10 + 300000 * 0.15 + 300000 * 0.20 + (taxableAmount - 1200000) * 0.25;
+                                    } else {
+                                        incomeTax = 300000 * 0.05 + 300000 * 0.10 + 300000 * 0.15 + 300000 * 0.20 + 300000 * 0.25 + (taxableAmount - 1500000) * 0.30;
+                                    }
+                                }
+
+                                // Calculate cess (4% of income tax)
+                                const cess = incomeTax * 0.04;
+                                const totalTax = incomeTax + cess;
+
+                                // Display results
+                                document.getElementById('grossIncome').textContent = `₹${income.toLocaleString('en-IN')}`;
+                                document.getElementById('totalDeductions').textContent = `₹${totalDeductions.toLocaleString('en-IN')}`;
+                                document.getElementById('taxableIncome').textContent = `₹${taxableIncome.toLocaleString('en-IN')}`;
+                                document.getElementById('incomeTax').textContent = `₹${Math.round(incomeTax).toLocaleString('en-IN')}`;
+                                document.getElementById('cess').textContent = `₹${Math.round(cess).toLocaleString('en-IN')}`;
+                                document.getElementById('totalTax').textContent = `₹${Math.round(totalTax).toLocaleString('en-IN')}`;
+
+                                // Show results
+                                document.getElementById('taxResults').classList.remove('hidden');
+                            }
+
+                            // FAQ Toggle Functionality
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const faqItems = document.querySelectorAll('.faq-item');
+
+                                faqItems.forEach(item => {
+                                    const question = item.querySelector('.faq-question');
+                                    const answer = item.querySelector('.faq-answer');
+                                    const icon = item.querySelector('.faq-icon');
+
+                                    question.addEventListener('click', () => {
+                                        // Close all other FAQ items
+                                        faqItems.forEach(otherItem => {
+                                            if (otherItem !== item) {
+                                                otherItem.querySelector('.faq-answer').classList.add('hidden');
+                                                otherItem.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+                                            }
+                                        });
+
+                                        // Toggle current item
+                                        answer.classList.toggle('hidden');
+                                        if (answer.classList.contains('hidden')) {
+                                            icon.style.transform = 'rotate(0deg)';
+                                        } else {
+                                            icon.style.transform = 'rotate(45deg)';
+                                        }
+                                    });
+                                });
+                            });
+
+                            // Contact Form Handler
+                            document.getElementById('contactForm').addEventListener('submit', function (e) {
+                                e.preventDefault();
+
+                                const formData = {
+                                    firstName: document.getElementById('firstName').value,
+                                    lastName: document.getElementById('lastName').value,
+                                    phoneNumber: document.getElementById('phoneNumber').value,
+                                    emailId: document.getElementById('emailId').value,
+                                    interestedService: document.getElementById('interestedService').value,
+                                    message: document.getElementById('message').value
+                                };
+
+                                // Validate required fields
+                                if (!formData.firstName || !formData.lastName || !formData.phoneNumber || !formData.emailId) {
+                                    alert('Please fill all required fields');
+                                    return;
+                                }
+
+                                // Validate mobile number
+                                const mobileRegex = /^[6-9]\d{9}$/;
+                                if (!mobileRegex.test(formData.phoneNumber)) {
+                                    alert('Please enter a valid 10-digit mobile number');
+                                    return;
+                                }
+
+                                // Here you would send the data to your server
+                                console.log('Contact Form Data:', formData);
+                                alert('Thank you for your inquiry! We will get back to you soon.');
+
+                                // Reset form
+                                this.reset();
+                            });
+                        </script>
+
+                        <style>
+                            /* Custom animations and hover effects */
+                            .transform {
+                                transition: transform 0.3s ease;
+                            }
+
+                            .hover\:scale-105:hover {
+                                transform: scale(1.05);
+                            }
+
+                            /* FAQ Icon rotation */
+                            .faq-icon {
+                                transition: transform 0.3s ease;
+                            }
+
+                            /* Gradient text */
+                            .gradient-text {
+                                background: linear-gradient(45deg, #3B82F6, #8B5CF6);
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                background-clip: text;
+                            }
+
+                            /* Custom scrollbar for better UX */
+                            ::-webkit-scrollbar {
+                                width: 8px;
+                            }
+
+                            ::-webkit-scrollbar-track {
+                                background: #f1f1f1;
+                            }
+
+                            ::-webkit-scrollbar-thumb {
+                                background: #3B82F6;
+                                border-radius: 4px;
+                            }
+
+                            ::-webkit-scrollbar-thumb:hover {
+                                background: #2563EB;
+                            }
+                        </style>
+    </body>
+
+    </html>

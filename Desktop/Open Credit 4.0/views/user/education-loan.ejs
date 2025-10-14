@@ -1,0 +1,1881 @@
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/navbar.ejs') %>
+
+            <main>
+                <!-- Hero Section -->
+                <section class="relative overflow-hidden pt-20 pb-16 bg-black">
+
+                    <div class="container mx-auto px-4 py-16 relative z-10">
+                        <div class="max-w-7xl mx-auto">
+                            <!-- Main Hero Content -->
+                            <div class="text-center mb-12">
+                                <div
+                                    class="inline-flex items-center bg-yellow-400/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
+                                    <span class="text-yellow-400 font-semibold text-sm">🎓 Education Loan</span>
+                                </div>
+                                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                                    Secure up to <span class="text-yellow-400">₹1.25 Crores</span><br>
+                                    for your education in India or abroad
+                                </h1>
+                                <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                                    Quick approval in just 3 days with attractive interest rates.
+                                </p>
+                            </div>
+
+                            <!-- Key Features Grid -->
+                            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                                <div
+                                    class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300">
+                                    <div class="text-3xl mb-3">💰</div>
+                                    <h3 class="font-semibold text-white mb-2">Loan Amount</h3>
+                                    <p class="text-sm text-gray-300">Up to ₹1.25 Crores</p>
+                                </div>
+                                <div
+                                    class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300">
+                                    <div class="text-3xl mb-3">⚡</div>
+                                    <h3 class="font-semibold text-white mb-2">Quick Approval</h3>
+                                    <p class="text-sm text-gray-300">Within 3 days</p>
+                                </div>
+                                <div
+                                    class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300">
+                                    <div class="text-3xl mb-3">📅</div>
+                                    <h3 class="font-semibold text-white mb-2">Tenure</h3>
+                                    <p class="text-sm text-gray-300">Up to 17 years</p>
+                                </div>
+                                <div
+                                    class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300">
+                                    <div class="text-3xl mb-3">🌍</div>
+                                    <h3 class="font-semibold text-white mb-2">Coverage</h3>
+                                    <p class="text-sm text-gray-300">India & Abroad</p>
+                                </div>
+                            </div>
+
+                            <!-- CTA Section -->
+                            <div class="text-center mb-12">
+                                <button onclick="scrollToForm()"
+                                    class="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-10 py-4 rounded-full font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 shadow-lg">
+                                    Apply Now - Free & Quick! 🚀
+                                </button>
+                                <p class="text-gray-400 text-sm mt-3">No hidden charges • 100% secure application</p>
+                            </div>
+
+                            <!-- Benefits Cards -->
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div
+                                    class="bg-gradient-to-br from-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-2xl p-6 border border-green-500/30">
+                                    <div class="flex items-center mb-4">
+                                        <div
+                                            class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                                            <i class="fas fa-check text-white text-xl"></i>
+                                        </div>
+                                        <h3 class="text-white font-semibold">100% Finance Available</h3>
+                                    </div>
+                                    <p class="text-gray-300 text-sm">Complete coverage for tuition, living, and travel
+                                        expenses</p>
+                                </div>
+
+                                <div
+                                    class="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30">
+                                    <div class="flex items-center mb-4">
+                                        <div
+                                            class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                                            <i class="fas fa-percentage text-white text-xl"></i>
+                                        </div>
+                                        <h3 class="text-white font-semibold">Low Processing Fee</h3>
+                                    </div>
+                                    <p class="text-gray-300 text-sm">Starting from just 1% with competitive interest
+                                        rates</p>
+                                </div>
+
+                                <div
+                                    class="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30">
+                                    <div class="flex items-center mb-4">
+                                        <div
+                                            class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mr-4">
+                                            <i class="fas fa-clock text-white text-xl"></i>
+                                        </div>
+                                        <h3 class="text-white font-semibold">Flexible Repayment</h3>
+                                    </div>
+                                    <p class="text-gray-300 text-sm">Start repaying after course completion or get a job
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Loan Benefits Section -->
+                <section class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-4">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                🌟 Why Choose Our Education Loan?
+                            </h2>
+                            <p class="text-xl text-gray-600">Comprehensive benefits designed for Indian students</p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="bg-white rounded-xl p-10 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="text-4xl mb-4">💸</div>
+                                <h3 class="text-xl font-semibold mb-3">100% Finance Coverage</h3>
+                                <p class="text-gray-600">Complete coverage for tuition fees, living expenses, travel
+                                    costs, and other study-related expenses.</p>
+                            </div>
+
+                            <div class="bg-white rounded-xl p-10 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="text-4xl mb-4">🔒</div>
+                                <h3 class="text-xl font-semibold mb-3">Secured & Unsecured Options</h3>
+                                <p class="text-gray-600">Choose from secured or unsecured loan options based on your
+                                    financial situation and requirements.</p>
+                            </div>
+
+                            <div class="bg-white rounded-xl p-10 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="text-4xl mb-4">📈</div>
+                                <h3 class="text-xl font-semibold mb-3">Competitive Interest Rates</h3>
+                                <p class="text-gray-600">Attractive education loan interest rates starting from 8.5%
+                                    with processing fees from just 1%.</p>
+                            </div>
+
+                            <div class="bg-white rounded-xl p-10 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="text-4xl mb-4">⏰</div>
+                                <h3 class="text-xl font-semibold mb-3">Quick Approval</h3>
+                                <p class="text-gray-600">Get your loan sanctioned within 3 days with minimal
+                                    documentation and hassle-free process.</p>
+                            </div>
+
+                            <div class="bg-white rounded-xl p-10 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="text-4xl mb-4">🔄</div>
+                                <h3 class="text-xl font-semibold mb-3">Flexible Repayment</h3>
+                                <p class="text-gray-600">Convenient repayment options with loan tenure up to 17 years.
+                                    Start repayment after course completion.</p>
+                            </div>
+
+                            <div class="bg-white rounded-xl p-10 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="text-4xl mb-4">🌍</div>
+                                <h3 class="text-xl font-semibold mb-3">Global Education Coverage</h3>
+                                <p class="text-gray-600">Finance your education in India or abroad across 51+ countries
+                                    and 1,700+ recognized institutes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Best Education Loan Banks Section -->
+                <section class="py-16 bg-white">
+                    <div class="container mx-auto px-4">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                🏦 Best Education Loan Banks in India 2025
+                            </h2>
+                            <p class="text-xl text-gray-600">Compare top banks offering education loans with competitive
+                                rates</p>
+                        </div>
+
+                        <div class="max-w-6xl mx-auto">
+                            <!-- Bank Comparison Table -->
+                            <div class="overflow-x-auto bg-white rounded-2xl shadow-xl">
+                                <table class="w-full">
+                                    <thead class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+                                        <tr>
+                                            <th class="px-6 py-4 text-left font-semibold">Bank</th>
+                                            <th class="px-6 py-4 text-center font-semibold">Interest Rate</th>
+                                            <th class="px-6 py-4 text-center font-semibold">Max Amount</th>
+                                            <th class="px-6 py-4 text-center font-semibold">Processing Fee</th>
+                                            <th class="px-6 py-4 text-center font-semibold">Collateral Free</th>
+                                            <th class="px-6 py-4 text-center font-semibold">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-gray-200">
+                                        <tr class="hover:bg-gray-50 transition-colors">
+                                            <td class="px-6 py-4">
+                                                <div class="flex items-center">
+                                                    <div
+                                                        class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-3">
+                                                        <span class="text-orange-600 font-bold text-sm">PNB</span>
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-semibold text-gray-900">Punjab National Bank
+                                                        </div>
+                                                        <div class="text-sm text-gray-600">Government Bank</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 text-center font-semibold text-green-600">8.5% - 11.5%
+                                            </td>
+                                            <td class="px-6 py-4 text-center font-semibold">₹1.5 Cr</td>
+                                            <td class="px-6 py-4 text-center">1% - 2%</td>
+                                            <td class="px-6 py-4 text-center">Up to ₹7.5 L</td>
+                                            <td class="px-6 py-4 text-center">
+                                                <button
+                                                    class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                                                    Apply Now
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="hover:bg-gray-50 transition-colors">
+                                            <td class="px-6 py-4">
+                                                <div class="flex items-center">
+                                                    <div
+                                                        class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                                        <span class="text-blue-600 font-bold text-sm">SBI</span>
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-semibold text-gray-900">State Bank of India
+                                                        </div>
+                                                        <div class="text-sm text-gray-600">Government Bank</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 text-center font-semibold text-green-600">9.0% - 13.25%
+                                            </td>
+                                            <td class="px-6 py-4 text-center font-semibold">₹1.5 Cr</td>
+                                            <td class="px-6 py-4 text-center">Zero up to ₹20 L</td>
+                                            <td class="px-6 py-4 text-center">Up to ₹7.5 L</td>
+                                            <td class="px-6 py-4 text-center">
+                                                <button
+                                                    class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                                                    Apply Now
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="hover:bg-gray-50 transition-colors">
+                                            <td class="px-6 py-4">
+                                                <div class="flex items-center">
+                                                    <div
+                                                        class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                                                        <span class="text-purple-600 font-bold text-sm">AXIS</span>
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-semibold text-gray-900">Axis Bank</div>
+                                                        <div class="text-sm text-gray-600">Private Bank</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 text-center font-semibold text-green-600">10.75% - 15%
+                                            </td>
+                                            <td class="px-6 py-4 text-center font-semibold">₹75 L</td>
+                                            <td class="px-6 py-4 text-center">1% - 2%</td>
+                                            <td class="px-6 py-4 text-center">Up to ₹4 L</td>
+                                            <td class="px-6 py-4 text-center">
+                                                <button
+                                                    class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                                                    Apply Now
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="hover:bg-gray-50 transition-colors">
+                                            <td class="px-6 py-4">
+                                                <div class="flex items-center">
+                                                    <div
+                                                        class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
+                                                        <span class="text-yellow-600 font-bold text-sm">BOB</span>
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-semibold text-gray-900">Bank of Baroda</div>
+                                                        <div class="text-sm text-gray-600">Government Bank</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 text-center font-semibold text-green-600">8.85% -
+                                                12.15%</td>
+                                            <td class="px-6 py-4 text-center font-semibold">₹1.5 Cr</td>
+                                            <td class="px-6 py-4 text-center">Zero</td>
+                                            <td class="px-6 py-4 text-center">Up to ₹7.5 L</td>
+                                            <td class="px-6 py-4 text-center">
+                                                <button
+                                                    class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                                                    Apply Now
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="hover:bg-gray-50 transition-colors">
+                                            <td class="px-6 py-4">
+                                                <div class="flex items-center">
+                                                    <div
+                                                        class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                                                        <span class="text-red-600 font-bold text-sm">HDFC</span>
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-semibold text-gray-900">HDFC Bank</div>
+                                                        <div class="text-sm text-gray-600">Private Bank</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 text-center font-semibold text-green-600">9.5% - 15%
+                                            </td>
+                                            <td class="px-6 py-4 text-center font-semibold">₹1.5 Cr</td>
+                                            <td class="px-6 py-4 text-center">Up to 1%</td>
+                                            <td class="px-6 py-4 text-center">Up to ₹7.5 L</td>
+                                            <td class="px-6 py-4 text-center">
+                                                <button
+                                                    class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                                                    Apply Now
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Special Features -->
+                            <div class="grid md:grid-cols-3 gap-6 mt-8">
+                                <div
+                                    class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-2xl border border-green-200">
+                                    <div class="flex items-center mb-4">
+                                        <div
+                                            class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center mr-3">
+                                            <i class="fas fa-percentage text-white"></i>
+                                        </div>
+                                        <h3 class="text-lg font-semibold text-green-800">Best Interest Rates</h3>
+                                    </div>
+                                    <p class="text-green-700 text-sm">Starting from 8.5% per annum with special rates
+                                        for government banks and merit students.</p>
+                                </div>
+
+                                <div
+                                    class="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-2xl border border-blue-200">
+                                    <div class="flex items-center mb-4">
+                                        <div
+                                            class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center mr-3">
+                                            <i class="fas fa-shield-alt text-white"></i>
+                                        </div>
+                                        <h3 class="text-lg font-semibold text-blue-800">Collateral Free</h3>
+                                    </div>
+                                    <p class="text-blue-700 text-sm">Get loans up to ₹7.5 lakhs without any collateral
+                                        or security deposit from top banks.</p>
+                                </div>
+
+                                <div
+                                    class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl border border-purple-200">
+                                    <div class="flex items-center mb-4">
+                                        <div
+                                            class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center mr-3">
+                                            <i class="fas fa-clock text-white"></i>
+                                        </div>
+                                        <h3 class="text-lg font-semibold text-purple-800">Quick Processing</h3>
+                                    </div>
+                                    <p class="text-purple-700 text-sm">Fast approval within 7-15 days with minimal
+                                        documentation and digital processing.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Expenses Covered Section -->
+                <section class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-4">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                💰 Expenses Covered under Education Loans
+                            </h2>
+                            <p class="text-xl text-gray-600">Comprehensive coverage for all your education-related
+                                expenses</p>
+                        </div>
+
+                        <div class="max-w-6xl mx-auto">
+                            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <div
+                                    class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                    <div class="text-center mb-4">
+                                        <div
+                                            class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-graduation-cap text-2xl text-blue-600"></i>
+                                        </div>
+                                        <h3 class="text-lg font-semibold text-gray-900">Tuition Fees</h3>
+                                    </div>
+                                    <p class="text-gray-600 text-sm text-center">Complete coverage of tuition fees
+                                        charged by educational institutions for courses and programs.</p>
+                                    <div class="mt-4 text-center">
+                                        <span
+                                            class="inline-flex items-center bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">
+                                            100% Coverage
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                    <div class="text-center mb-4">
+                                        <div
+                                            class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-home text-2xl text-green-600"></i>
+                                        </div>
+                                        <h3 class="text-lg font-semibold text-gray-900">Hostel & Accommodation</h3>
+                                    </div>
+                                    <p class="text-gray-600 text-sm text-center">Hostel fees, dormitory charges, and
+                                        other accommodation expenses during the course period.</p>
+                                    <div class="mt-4 text-center">
+                                        <span
+                                            class="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium px-3 py-1 rounded-full">
+                                            Fully Covered
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                    <div class="text-center mb-4">
+                                        <div
+                                            class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-book text-2xl text-purple-600"></i>
+                                        </div>
+                                        <h3 class="text-lg font-semibold text-gray-900">Books & Study Materials</h3>
+                                    </div>
+                                    <p class="text-gray-600 text-sm text-center">Cost of textbooks, reference materials,
+                                        and other study resources required for the course.</p>
+                                    <div class="mt-4 text-center">
+                                        <span
+                                            class="inline-flex items-center bg-purple-100 text-purple-800 text-xs font-medium px-3 py-1 rounded-full">
+                                            Essential Items
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                    <div class="text-center mb-4">
+                                        <div
+                                            class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-plane text-2xl text-yellow-600"></i>
+                                        </div>
+                                        <h3 class="text-lg font-semibold text-gray-900">Travel Expenses</h3>
+                                    </div>
+                                    <p class="text-gray-600 text-sm text-center">Airfare, train tickets, visa fees, and
+                                        other travel costs for studying abroad or in India.</p>
+                                    <div class="mt-4 text-center">
+                                        <span
+                                            class="inline-flex items-center bg-yellow-100 text-yellow-800 text-xs font-medium px-3 py-1 rounded-full">
+                                            Travel Support
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                    <div class="text-center mb-4">
+                                        <div
+                                            class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-flask text-2xl text-red-600"></i>
+                                        </div>
+                                        <h3 class="text-lg font-semibold text-gray-900">Laboratory & Examination Fees
+                                        </h3>
+                                    </div>
+                                    <p class="text-gray-600 text-sm text-center">Lab fees, examination charges, project
+                                        costs, and access to specialized equipment.</p>
+                                    <div class="mt-4 text-center">
+                                        <span
+                                            class="inline-flex items-center bg-red-100 text-red-800 text-xs font-medium px-3 py-1 rounded-full">
+                                            Academic Fees
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                    <div class="text-center mb-4">
+                                        <div
+                                            class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-shield-alt text-2xl text-indigo-600"></i>
+                                        </div>
+                                        <h3 class="text-lg font-semibold text-gray-900">Insurance & Miscellaneous</h3>
+                                    </div>
+                                    <p class="text-gray-600 text-sm text-center">Health insurance, accident coverage,
+                                        equipment rental, and other miscellaneous expenses.</p>
+                                    <div class="mt-4 text-center">
+                                        <span
+                                            class="inline-flex items-center bg-indigo-100 text-indigo-800 text-xs font-medium px-3 py-1 rounded-full">
+                                            Additional Support
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Additional Information -->
+                            <div class="mt-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+                                <div class="text-center">
+                                    <h3 class="text-2xl font-bold mb-4">💡 Pro Tip: Complete Financial Coverage</h3>
+                                    <p class="text-lg text-blue-100 mb-6">Education loans can cover up to 100% of your
+                                        total education expenses, making quality education accessible without financial
+                                        constraints.</p>
+                                    <div class="grid sm:grid-cols-3 gap-4 text-center">
+                                        <div class="bg-white/20 backdrop-blur rounded-lg p-4">
+                                            <div class="text-2xl font-bold">100%</div>
+                                            <div class="text-sm text-blue-100">Expense Coverage</div>
+                                        </div>
+                                        <div class="bg-white/20 backdrop-blur rounded-lg p-4">
+                                            <div class="text-2xl font-bold">₹1.25 Cr</div>
+                                            <div class="text-sm text-blue-100">Maximum Amount</div>
+                                        </div>
+                                        <div class="bg-white/20 backdrop-blur rounded-lg p-4">
+                                            <div class="text-2xl font-bold">51+</div>
+                                            <div class="text-sm text-blue-100">Countries Covered</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Eligibility Criteria Section -->
+                <section class="py-16 bg-white">
+                    <div class="container mx-auto px-4">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                ✅ Education Loan Eligibility Criteria
+                            </h2>
+                            <p class="text-xl text-gray-600">Check if you meet the requirements for education loan
+                                approval</p>
+                        </div>
+
+                        <div class="max-w-6xl mx-auto">
+                            <div class="grid md:grid-cols-2 gap-12">
+                                <!-- Eligibility Requirements -->
+                                <div class="space-y-6">
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-6">📋 Basic Requirements</h3>
+
+                                    <div class="space-y-4">
+                                        <div
+                                            class="flex items-start space-x-4 p-4 bg-green-50 rounded-lg border-l-4 border-green-500">
+                                            <div
+                                                class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                                <i class="fas fa-check text-white text-xs"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold text-gray-900">Nationality</h4>
+                                                <p class="text-gray-700 text-sm">Indian citizens, NRIs, OCIs, PIOs, and
+                                                    students born to Indian parents abroad</p>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="flex items-start space-x-4 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+                                            <div
+                                                class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                                <i class="fas fa-check text-white text-xs"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold text-gray-900">Age Criteria</h4>
+                                                <p class="text-gray-700 text-sm">Minimum 17 years and maximum 35 years
+                                                    at the time of application</p>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="flex items-start space-x-4 p-4 bg-purple-50 rounded-lg border-l-4 border-purple-500">
+                                            <div
+                                                class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                                <i class="fas fa-check text-white text-xs"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold text-gray-900">Academic Score</h4>
+                                                <p class="text-gray-700 text-sm">Minimum 50% marks in 12th standard and
+                                                    graduation (varies by bank)</p>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="flex items-start space-x-4 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-500">
+                                            <div
+                                                class="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                                <i class="fas fa-check text-white text-xs"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold text-gray-900">Admission Confirmation</h4>
+                                                <p class="text-gray-700 text-sm">Confirmed admission in recognized
+                                                    institutions through merit or entrance exam</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Course Eligibility -->
+                                <div class="space-y-6">
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-6">🎓 Eligible Courses</h3>
+
+                                    <div
+                                        class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-6 border border-indigo-200">
+                                        <div class="space-y-4">
+                                            <div class="flex items-center space-x-3">
+                                                <i class="fas fa-university text-indigo-600"></i>
+                                                <span class="font-medium text-gray-900">Undergraduate Courses</span>
+                                            </div>
+                                            <div class="flex items-center space-x-3">
+                                                <i class="fas fa-graduation-cap text-indigo-600"></i>
+                                                <span class="font-medium text-gray-900">Postgraduate Courses</span>
+                                            </div>
+                                            <div class="flex items-center space-x-3">
+                                                <i class="fas fa-award text-indigo-600"></i>
+                                                <span class="font-medium text-gray-900">Professional Courses (MBA,
+                                                    Engineering, Medical)</span>
+                                            </div>
+                                            <div class="flex items-center space-x-3">
+                                                <i class="fas fa-certificate text-indigo-600"></i>
+                                                <span class="font-medium text-gray-900">Diploma & Certificate
+                                                    Courses</span>
+                                            </div>
+                                            <div class="flex items-center space-x-3">
+                                                <i class="fas fa-microscope text-indigo-600"></i>
+                                                <span class="font-medium text-gray-900">Doctoral Courses & PhDs</span>
+                                            </div>
+                                            <div class="flex items-center space-x-3">
+                                                <i class="fas fa-briefcase text-indigo-600"></i>
+                                                <span class="font-medium text-gray-900">Job-Oriented Courses</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Income Requirements -->
+                                    <div
+                                        class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-200">
+                                        <h4 class="text-lg font-semibold text-gray-900 mb-4">💼 Co-applicant
+                                            Requirements</h4>
+                                        <div class="space-y-3">
+                                            <div
+                                                class="flex justify-between items-center py-2 border-b border-green-200">
+                                                <span class="text-gray-700">Minimum Annual Income</span>
+                                                <span class="font-semibold text-green-600">₹2,00,000</span>
+                                            </div>
+                                            <div
+                                                class="flex justify-between items-center py-2 border-b border-green-200">
+                                                <span class="text-gray-700">Relationship</span>
+                                                <span class="font-semibold text-green-600">Parent/Guardian</span>
+                                            </div>
+                                            <div class="flex justify-between items-center py-2">
+                                                <span class="text-gray-700">Employment Type</span>
+                                                <span class="font-semibold text-green-600">Salaried/Self-employed</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Collateral Information -->
+                            <div class="mt-12 bg-gray-50 rounded-2xl p-8">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">🏠 Collateral Requirements
+                                </h3>
+                                <div class="grid md:grid-cols-2 gap-8">
+                                    <div class="text-center">
+                                        <div
+                                            class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-handshake text-2xl text-green-600"></i>
+                                        </div>
+                                        <h4 class="text-xl font-semibold text-gray-900 mb-3">Collateral-Free Loans</h4>
+                                        <p class="text-gray-600 mb-4">Available up to ₹7.5 lakhs without any security or
+                                            collateral requirement</p>
+                                        <ul class="text-sm text-gray-600 text-left space-y-1">
+                                            <li>• No property needed</li>
+                                            <li>• Faster processing</li>
+                                            <li>• Lower documentation</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <div
+                                            class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-home text-2xl text-blue-600"></i>
+                                        </div>
+                                        <h4 class="text-xl font-semibold text-gray-900 mb-3">Secured Loans</h4>
+                                        <p class="text-gray-600 mb-4">For amounts above ₹7.5 lakhs, collateral may be
+                                            required</p>
+                                        <ul class="text-sm text-gray-600 text-left space-y-1">
+                                            <li>• Residential property</li>
+                                            <li>• Commercial property</li>
+                                            <li>• Fixed deposits</li>
+                                            <li>• Life insurance policies</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Documents Required Section -->
+                <section class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-4">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                📄 Documents Required for Education Loan
+                            </h2>
+                            <p class="text-xl text-gray-600">Complete checklist of documents needed for loan application
+                            </p>
+                        </div>
+
+                        <div class="max-w-6xl mx-auto">
+                            <div class="grid lg:grid-cols-3 gap-8">
+                                <!-- Student Documents -->
+                                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                                    <div class="text-center mb-6">
+                                        <div
+                                            class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-user-graduate text-2xl text-blue-600"></i>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-gray-900">Student Documents</h3>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <div class="flex items-start space-x-3">
+                                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                            <span class="text-gray-700 text-sm">Admission letter from institution</span>
+                                        </div>
+                                        <div class="flex items-start space-x-3">
+                                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                            <span class="text-gray-700 text-sm">Academic mark sheets (10th, 12th,
+                                                graduation)</span>
+                                        </div>
+                                        <div class="flex items-start space-x-3">
+                                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                            <span class="text-gray-700 text-sm">Age proof (Birth
+                                                certificate/Passport)</span>
+                                        </div>
+                                        <div class="flex items-start space-x-3">
+                                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                            <span class="text-gray-700 text-sm">Identity proof
+                                                (Aadhaar/PAN/Passport)</span>
+                                        </div>
+                                        <div class="flex items-start space-x-3">
+                                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                            <span class="text-gray-700 text-sm">Address proof documents</span>
+                                        </div>
+                                        <div class="flex items-start space-x-3">
+                                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                            <span class="text-gray-700 text-sm">Course fee structure</span>
+                                        </div>
+                                        <div class="flex items-start space-x-3">
+                                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                            <span class="text-gray-700 text-sm">Passport-size photographs</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Co-applicant Documents -->
+                                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                                    <div class="text-center mb-6">
+                                        <div
+                                            class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-users text-2xl text-green-600"></i>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-gray-900">Co-applicant Documents</h3>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <div class="flex items-start space-x-3">
+                                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                            <span class="text-gray-700 text-sm">Identity & address proof</span>
+                                        </div>
+                                        <div class="flex items-start space-x-3">
+                                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                            <span class="text-gray-700 text-sm">Latest salary slips (3 months)</span>
+                                        </div>
+                                        <div class="flex items-start space-x-3">
+                                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                            <span class="text-gray-700 text-sm">Bank statements (6 months)</span>
+                                        </div>
+                                        <div class="flex items-start space-x-3">
+                                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                            <span class="text-gray-700 text-sm">Income Tax Returns (ITR)</span>
+                                        </div>
+                                        <div class="flex items-start space-x-3">
+                                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                            <span class="text-gray-700 text-sm">Employment certificate</span>
+                                        </div>
+                                        <div class="flex items-start space-x-3">
+                                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                            <span class="text-gray-700 text-sm">Form 16 (for salaried)</span>
+                                        </div>
+                                        <div class="flex items-start space-x-3">
+                                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                            <span class="text-gray-700 text-sm">Business registration (for
+                                                self-employed)</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Additional Documents -->
+                                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                                    <div class="text-center mb-6">
+                                        <div
+                                            class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-passport text-2xl text-purple-600"></i>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-gray-900">Additional Documents</h3>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <div class="flex items-start space-x-3">
+                                            <i class="fas fa-check-circle text-purple-500 mt-1"></i>
+                                            <span class="text-gray-700 text-sm">Completed loan application form</span>
+                                        </div>
+                                        <div class="flex items-start space-x-3">
+                                            <i class="fas fa-check-circle text-purple-500 mt-1"></i>
+                                            <span class="text-gray-700 text-sm">Entrance exam scorecard (if
+                                                applicable)</span>
+                                        </div>
+                                        <div class="flex items-start space-x-3">
+                                            <i class="fas fa-check-circle text-purple-500 mt-1"></i>
+                                            <span class="text-gray-700 text-sm">Statement of purpose (SOP)</span>
+                                        </div>
+                                        <div class="flex items-start space-x-3">
+                                            <i class="fas fa-check-circle text-purple-500 mt-1"></i>
+                                            <span class="text-gray-700 text-sm">Property documents (if
+                                                collateral)</span>
+                                        </div>
+                                        <div class="flex items-start space-x-3">
+                                            <i class="fas fa-check-circle text-purple-500 mt-1"></i>
+                                            <span class="text-gray-700 text-sm">Visa & passport (for abroad
+                                                studies)</span>
+                                        </div>
+                                        <div class="flex items-start space-x-3">
+                                            <i class="fas fa-check-circle text-purple-500 mt-1"></i>
+                                            <span class="text-gray-700 text-sm">IELTS/TOEFL scores (if required)</span>
+                                        </div>
+                                        <div class="flex items-start space-x-3">
+                                            <i class="fas fa-check-circle text-purple-500 mt-1"></i>
+                                            <span class="text-gray-700 text-sm">Relationship proof with
+                                                co-applicant</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Document Tips -->
+                            <div
+                                class="mt-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl p-8 text-white">
+                                <div class="text-center mb-6">
+                                    <h3 class="text-2xl font-bold mb-2">📋 Documentation Tips</h3>
+                                    <p class="text-lg opacity-90">Ensure faster processing with proper documentation</p>
+                                </div>
+                                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                    <div class="text-center">
+                                        <div
+                                            class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                                            <i class="fas fa-copy text-white"></i>
+                                        </div>
+                                        <h4 class="font-semibold mb-2">Keep Copies</h4>
+                                        <p class="text-sm opacity-90">Maintain both original and photocopies of all
+                                            documents</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <div
+                                            class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                                            <i class="fas fa-signature text-white"></i>
+                                        </div>
+                                        <h4 class="font-semibold mb-2">Self-Attest</h4>
+                                        <p class="text-sm opacity-90">Self-attest all photocopies for verification</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <div
+                                            class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                                            <i class="fas fa-calendar-check text-white"></i>
+                                        </div>
+                                        <h4 class="font-semibold mb-2">Updated Docs</h4>
+                                        <p class="text-sm opacity-90">Ensure all documents are recent and valid</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <div
+                                            class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                                            <i class="fas fa-cloud-upload-alt text-white"></i>
+                                        </div>
+                                        <h4 class="font-semibold mb-2">Digital Ready</h4>
+                                        <p class="text-sm opacity-90">Scan documents in high quality for online
+                                            submission</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Advantages Section -->
+                <section class="py-16 bg-white">
+                    <div class="container mx-auto px-4">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                🌟 Advantages of Education Loan in India
+                            </h2>
+                            <p class="text-xl text-gray-600">Why education loans are the smart choice for funding your
+                                dreams</p>
+                        </div>
+
+                        <div class="max-w-6xl mx-auto">
+                            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <div
+                                    class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border border-green-200 hover:shadow-xl transition-all duration-300">
+                                    <div class="text-center mb-6">
+                                        <div
+                                            class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-percentage text-2xl text-white"></i>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-gray-900">Affordable Interest Rates</h3>
+                                    </div>
+                                    <p class="text-gray-700 text-center mb-4">Education loans offer lower interest rates
+                                        starting from 8.5% compared to personal loans, making education financing more
+                                        affordable.</p>
+                                    <div class="text-center">
+                                        <span
+                                            class="inline-flex items-center bg-green-100 text-green-800 text-sm font-medium px-4 py-2 rounded-full">
+                                            Starting 8.5% p.a.
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 border border-blue-200 hover:shadow-xl transition-all duration-300">
+                                    <div class="text-center mb-6">
+                                        <div
+                                            class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-calendar-alt text-2xl text-white"></i>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-gray-900">Long Repayment Tenure</h3>
+                                    </div>
+                                    <p class="text-gray-700 text-center mb-4">Repayment tenure up to 17 years allows
+                                        smaller EMIs and easier financial management without overwhelming burden.</p>
+                                    <div class="text-center">
+                                        <span
+                                            class="inline-flex items-center bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full">
+                                            Up to 17 Years
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border border-purple-200 hover:shadow-xl transition-all duration-300">
+                                    <div class="text-center mb-6">
+                                        <div
+                                            class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-receipt text-2xl text-white"></i>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-gray-900">Tax Benefits</h3>
+                                    </div>
+                                    <p class="text-gray-700 text-center mb-4">Enjoy tax deductions on interest payments
+                                        under Section 80E of Income Tax Act with no upper limit on deduction amount.</p>
+                                    <div class="text-center">
+                                        <span
+                                            class="inline-flex items-center bg-purple-100 text-purple-800 text-sm font-medium px-4 py-2 rounded-full">
+                                            Section 80E
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-8 border border-yellow-200 hover:shadow-xl transition-all duration-300">
+                                    <div class="text-center mb-6">
+                                        <div
+                                            class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-shield-alt text-2xl text-white"></i>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-gray-900">No Collateral Required</h3>
+                                    </div>
+                                    <p class="text-gray-700 text-center mb-4">Get loans up to ₹7.5 lakhs without any
+                                        collateral, making education accessible without property or security
+                                        requirements.</p>
+                                    <div class="text-center">
+                                        <span
+                                            class="inline-flex items-center bg-yellow-100 text-yellow-800 text-sm font-medium px-4 py-2 rounded-full">
+                                            Up to ₹7.5L
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl p-8 border border-red-200 hover:shadow-xl transition-all duration-300">
+                                    <div class="text-center mb-6">
+                                        <div
+                                            class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-globe text-2xl text-white"></i>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-gray-900">Complete Coverage</h3>
+                                    </div>
+                                    <p class="text-gray-700 text-center mb-4">Covers entire cost of education including
+                                        tuition, accommodation, travel, and living expenses for studies in India or
+                                        abroad.</p>
+                                    <div class="text-center">
+                                        <span
+                                            class="inline-flex items-center bg-red-100 text-red-800 text-sm font-medium px-4 py-2 rounded-full">
+                                            100% Coverage
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 border border-indigo-200 hover:shadow-xl transition-all duration-300">
+                                    <div class="text-center mb-6">
+                                        <div
+                                            class="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-chart-line text-2xl text-white"></i>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-gray-900">Build Credit History</h3>
+                                    </div>
+                                    <p class="text-gray-700 text-center mb-4">Timely repayment helps build excellent
+                                        credit score, beneficial for future loans and financial products throughout your
+                                        career.</p>
+                                    <div class="text-center">
+                                        <span
+                                            class="inline-flex items-center bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">
+                                            Credit Building
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Additional Benefits -->
+                            <div class="mt-12 bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 text-white">
+                                <div class="text-center mb-8">
+                                    <h3 class="text-2xl font-bold mb-4">🚀 Additional Benefits</h3>
+                                    <p class="text-lg text-gray-300">More reasons to choose education loans for your
+                                        academic journey</p>
+                                </div>
+
+                                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                    <div class="text-center p-4 bg-white/10 backdrop-blur rounded-lg">
+                                        <i class="fas fa-pause-circle text-2xl text-yellow-400 mb-3"></i>
+                                        <h4 class="font-semibold mb-2">Moratorium Period</h4>
+                                        <p class="text-sm text-gray-300">Start repayment after course completion or
+                                            getting a job</p>
+                                    </div>
+
+                                    <div class="text-center p-4 bg-white/10 backdrop-blur rounded-lg">
+                                        <i class="fas fa-coins text-2xl text-green-400 mb-3"></i>
+                                        <h4 class="font-semibold mb-2">Flexible EMI</h4>
+                                        <p class="text-sm text-gray-300">Choose EMI amount based on your income and
+                                            capacity</p>
+                                    </div>
+
+                                    <div class="text-center p-4 bg-white/10 backdrop-blur rounded-lg">
+                                        <i class="fas fa-handshake text-2xl text-blue-400 mb-3"></i>
+                                        <h4 class="font-semibold mb-2">No Penalty</h4>
+                                        <p class="text-sm text-gray-300">Partial or full prepayment allowed without
+                                            penalty charges</p>
+                                    </div>
+
+                                    <div class="text-center p-4 bg-white/10 backdrop-blur rounded-lg">
+                                        <i class="fas fa-headset text-2xl text-purple-400 mb-3"></i>
+                                        <h4 class="font-semibold mb-2">Expert Support</h4>
+                                        <p class="text-sm text-gray-300">Dedicated relationship manager for guidance
+                                            throughout loan tenure</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Application Form Section -->
+                <section id="application-form" class="py-16 bg-white">
+                    <div class="container mx-auto px-4">
+                        <div class="max-w-4xl mx-auto">
+                            <div class="text-center mb-12">
+                                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                    📝 Apply for Education Loan
+                                </h2>
+                                <p class="text-xl text-gray-600">Complete the form below and get your loan approved in
+                                    just 3 days</p>
+                            </div>
+
+                            <!-- Progress Indicator -->
+                            <div class="mb-8">
+                                <div class="flex items-center justify-center space-x-4">
+                                    <div class="flex items-center">
+                                        <div id="step-1-indicator"
+                                            class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm font-semibold">
+                                            1</div>
+                                        <span class="ml-2 text-sm font-medium text-gray-700">Student Info</span>
+                                    </div>
+                                    <div id="progress-1-2" class="w-16 h-1 bg-gray-300 rounded"></div>
+                                    <div class="flex items-center">
+                                        <div id="step-2-indicator"
+                                            class="w-10 h-10 rounded-full bg-gray-300 text-gray-500 flex items-center justify-center text-sm font-semibold">
+                                            2</div>
+                                        <span class="ml-2 text-sm font-medium text-gray-500">Course Details</span>
+                                    </div>
+                                    <div id="progress-2-3" class="w-16 h-1 bg-gray-300 rounded"></div>
+                                    <div class="flex items-center">
+                                        <div id="step-3-indicator"
+                                            class="w-10 h-10 rounded-full bg-gray-300 text-gray-500 flex items-center justify-center text-sm font-semibold">
+                                            3</div>
+                                        <span class="ml-2 text-sm font-medium text-gray-500">Financial Details</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Form Container -->
+                            <div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12">
+                                <!-- Important Notice -->
+                                <div
+                                    class="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-500 p-4 mb-8 rounded-r-lg">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-info-circle text-blue-500 text-xl mr-3 mt-1"></i>
+                                        <div>
+                                            <h4 class="text-blue-800 font-semibold text-lg mb-2">📚 Education Loan
+                                                Benefits</h4>
+                                            <p class="text-blue-700 font-medium">Finance up to ₹1.25 Crores • Quick
+                                                3-day approval • Study in India or abroad</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <form id="educationLoanForm" class="space-y-8">
+                                    <!-- Step 1: Student Information -->
+                                    <div id="step-1" class="form-step">
+                                        <div class="text-center mb-8">
+                                            <h3 class="text-2xl font-bold text-gray-900 mb-2">👤 Student Information
+                                            </h3>
+                                            <p class="text-gray-600">Please provide student's personal details</p>
+                                        </div>
+
+                                        <div class="grid md:grid-cols-2 gap-6">
+                                            <div>
+                                                <label for="studentName"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Student Full Name <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="text" id="studentName" name="studentName" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                    placeholder="Enter student's full name as per documents">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="studentName-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="studentMobile"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Student Mobile Number <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="tel" id="studentMobile" name="studentMobile" required
+                                                    pattern="[0-9]{10}" maxlength="10"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                    placeholder="10-digit mobile number">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="studentMobile-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="studentEmail"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Student Email ID <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="email" id="studentEmail" name="studentEmail" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                    placeholder="Enter student's email address">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="studentEmail-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="dateOfBirth"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Date of Birth <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="date" id="dateOfBirth" name="dateOfBirth" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="dateOfBirth-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="fatherName"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Father's Name <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="text" id="fatherName" name="fatherName" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                    placeholder="Enter father's full name">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="fatherName-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="fatherOccupation"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Father's Occupation <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="text" id="fatherOccupation" name="fatherOccupation"
+                                                    required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                    placeholder="Enter father's occupation">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="fatherOccupation-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="annualIncome"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Family Annual Income <span class="text-red-500">*</span>
+                                                </label>
+                                                <select id="annualIncome" name="annualIncome" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                                                    <option value="">Select annual income</option>
+                                                    <option value="2-4 LPA">₹2-4 Lakhs per annum</option>
+                                                    <option value="4-6 LPA">₹4-6 Lakhs per annum</option>
+                                                    <option value="6-10 LPA">₹6-10 Lakhs per annum</option>
+                                                    <option value="10-15 LPA">₹10-15 Lakhs per annum</option>
+                                                    <option value="15-25 LPA">₹15-25 Lakhs per annum</option>
+                                                    <option value="25+ LPA">₹25+ Lakhs per annum</option>
+                                                </select>
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="annualIncome-error"></span>
+                                            </div>
+
+                                            <div class="md:col-span-2">
+                                                <label for="currentAddress"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Current Address <span class="text-red-500">*</span>
+                                                </label>
+                                                <textarea id="currentAddress" name="currentAddress" required rows="3"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                    placeholder="Enter complete current address"></textarea>
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="currentAddress-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="pincode"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 PIN Code <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="text" id="pincode" name="pincode" required
+                                                    pattern="[0-9]{6}" maxlength="6"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                    placeholder="6-digit PIN code">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="pincode-error"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 2: Course & Institution Details -->
+                                    <div id="step-2" class="form-step hidden">
+                                        <div class="text-center mb-8">
+                                            <h3 class="text-2xl font-bold text-gray-900 mb-2">🎓 Course & Institution
+                                                Details</h3>
+                                            <p class="text-gray-600">Please provide details about your course and
+                                                institution</p>
+                                        </div>
+
+                                        <div class="grid md:grid-cols-2 gap-6">
+                                            <div>
+                                                <label for="studyDestination"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Study Destination <span class="text-red-500">*</span>
+                                                </label>
+                                                <select id="studyDestination" name="studyDestination" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                                                    <option value="">Select destination</option>
+                                                    <option value="India">India</option>
+                                                    <option value="USA">United States</option>
+                                                    <option value="UK">United Kingdom</option>
+                                                    <option value="Canada">Canada</option>
+                                                    <option value="Australia">Australia</option>
+                                                    <option value="Germany">Germany</option>
+                                                    <option value="Ireland">Ireland</option>
+                                                    <option value="Singapore">Singapore</option>
+                                                    <option value="New Zealand">New Zealand</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="studyDestination-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="courseLevel"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Course Level <span class="text-red-500">*</span>
+                                                </label>
+                                                <select id="courseLevel" name="courseLevel" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                                                    <option value="">Select course level</option>
+                                                    <option value="Undergraduate">Undergraduate</option>
+                                                    <option value="Postgraduate">Postgraduate</option>
+                                                    <option value="Doctorate/PhD">Doctorate/PhD</option>
+                                                    <option value="Diploma">Diploma</option>
+                                                    <option value="Certificate">Certificate Course</option>
+                                                </select>
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="courseLevel-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="courseName"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Course Name <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="text" id="courseName" name="courseName" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                    placeholder="Enter course name (e.g., MBA, MS in Computer Science)">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="courseName-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="instituteName"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Institute Name <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="text" id="instituteName" name="instituteName" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                    placeholder="Enter university/college name">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="instituteName-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="courseDuration"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Course Duration <span class="text-red-500">*</span>
+                                                </label>
+                                                <select id="courseDuration" name="courseDuration" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                                                    <option value="">Select duration</option>
+                                                    <option value="1 year">1 Year</option>
+                                                    <option value="1.5 years">1.5 Years</option>
+                                                    <option value="2 years">2 Years</option>
+                                                    <option value="3 years">3 Years</option>
+                                                    <option value="4 years">4 Years</option>
+                                                    <option value="5 years">5 Years</option>
+                                                    <option value="6+ years">6+ Years</option>
+                                                </select>
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="courseDuration-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="courseStartDate"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Course Start Date <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="date" id="courseStartDate" name="courseStartDate" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="courseStartDate-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="admissionStatus"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Admission Status <span class="text-red-500">*</span>
+                                                </label>
+                                                <select id="admissionStatus" name="admissionStatus" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                                                    <option value="">Select status</option>
+                                                    <option value="Admission Confirmed">Admission Confirmed</option>
+                                                    <option value="Conditional Offer">Conditional Offer</option>
+                                                    <option value="Admission Pending">Admission Pending</option>
+                                                    <option value="Planning to Apply">Planning to Apply</option>
+                                                </select>
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="admissionStatus-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="academicScore"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Academic Score (Last Qualification) <span
+                                                        class="text-red-500">*</span>
+                                                </label>
+                                                <input type="text" id="academicScore" name="academicScore" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                    placeholder="Enter percentage/CGPA (e.g., 85% or 8.5 CGPA)">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="academicScore-error"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 3: Financial Details -->
+                                    <div id="step-3" class="form-step hidden">
+                                        <div class="text-center mb-8">
+                                            <h3 class="text-2xl font-bold text-gray-900 mb-2">💰 Financial Details</h3>
+                                            <p class="text-gray-600">Please provide loan amount and financial
+                                                requirements</p>
+                                        </div>
+
+                                        <div class="grid md:grid-cols-2 gap-6">
+                                            <div>
+                                                <label for="totalCourseFee"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Total Course Fee <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="number" id="totalCourseFee" name="totalCourseFee" required
+                                                    min="100000"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                    placeholder="Enter total course fee in INR">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="totalCourseFee-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="loanAmountRequired"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Loan Amount Required <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="number" id="loanAmountRequired" name="loanAmountRequired"
+                                                    required min="100000" max="12500000"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                    placeholder="Enter required loan amount">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="loanAmountRequired-error"></span>
+                                                <p class="text-sm text-gray-500 mt-1">Maximum: ₹1.25 Crores</p>
+                                            </div>
+
+                                            <div>
+                                                <label for="collateralAvailable"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Collateral/Security Available? <span
+                                                        class="text-red-500">*</span>
+                                                </label>
+                                                <select id="collateralAvailable" name="collateralAvailable" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                                                    <option value="">Select option</option>
+                                                    <option value="Yes - Property">Yes - Property</option>
+                                                    <option value="Yes - FD/Bonds">Yes - Fixed Deposit/Bonds</option>
+                                                    <option value="Yes - Other">Yes - Other Assets</option>
+                                                    <option value="No">No - Unsecured Loan</option>
+                                                </select>
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="collateralAvailable-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="coApplicant"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Co-Applicant Details <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="text" id="coApplicant" name="coApplicant" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                    placeholder="Enter co-applicant name (Father/Mother/Guardian)">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="coApplicant-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="coApplicantIncome"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Co-Applicant Annual Income <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="number" id="coApplicantIncome" name="coApplicantIncome"
+                                                    required min="2000"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                                    placeholder="Enter co-applicant's annual income">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="coApplicantIncome-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="preferredBank"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    👉 Preferred Bank/NBFC <span class="text-red-500">*</span>
+                                                </label>
+                                                <select id="preferredBank" name="preferredBank" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                                                    <option value="">Select preferred lender</option>
+                                                    <option value="SBI">State Bank of India</option>
+                                                    <option value="HDFC Bank">HDFC Bank</option>
+                                                    <option value="ICICI Bank">ICICI Bank</option>
+                                                    <option value="Axis Bank">Axis Bank</option>
+                                                    <option value="Bank of Baroda">Bank of Baroda</option>
+                                                    <option value="Canara Bank">Canara Bank</option>
+                                                    <option value="PNB">Punjab National Bank</option>
+                                                    <option value="Avanse Financial Services">Avanse Financial Services
+                                                    </option>
+                                                    <option value="Credila Financial Services">Credila Financial
+                                                        Services</option>
+                                                    <option value="HDFC Credila">HDFC Credila</option>
+                                                    <option value="No Preference">No Preference</option>
+                                                </select>
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="preferredBank-error"></span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Loan Calculation Display -->
+                                        <div id="loan-calculation" class="mt-8 p-6 bg-blue-50 rounded-lg hidden">
+                                            <h4 class="text-lg font-semibold text-gray-900 mb-4">📊 Estimated Loan
+                                                Details</h4>
+                                            <div class="grid sm:grid-cols-3 gap-4 text-center">
+                                                <div>
+                                                    <div class="text-2xl font-bold text-blue-600" id="estimated-emi">₹0
+                                                    </div>
+                                                    <div class="text-sm text-gray-600">Estimated Monthly EMI</div>
+                                                </div>
+                                                <div>
+                                                    <div class="text-2xl font-bold text-green-600"
+                                                        id="total-interest-amount">₹0</div>
+                                                    <div class="text-sm text-gray-600">Total Interest</div>
+                                                </div>
+                                                <div>
+                                                    <div class="text-2xl font-bold text-purple-600"
+                                                        id="total-repayment">₹0</div>
+                                                    <div class="text-sm text-gray-600">Total Repayment</div>
+                                                </div>
+                                            </div>
+                                            <p class="text-xs text-gray-500 mt-3 text-center">
+                                                *This is an indicative calculation based on 10% interest rate for 10
+                                                years tenure
+                                            </p>
+                                        </div>
+
+                                        <!-- Terms and Conditions -->
+                                        <div class="mt-8 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                                            <label class="flex items-start">
+                                                <input type="checkbox" id="termsConditions" name="termsConditions"
+                                                    required class="mt-1 mr-3">
+                                                <span class="text-sm text-gray-700">
+                                                    I hereby authorize Open Credit and its partner lenders to contact me
+                                                    and verify the information provided.
+                                                    I agree to the <a href="#" data-terms-modal
+                                                        class="text-blue-600 hover:underline">Terms & Conditions</a>
+                                                    and <a href="#" data-privacy-modal
+                                                        class="text-blue-600 hover:underline">Privacy Policy</a>.
+                                                    I understand that loan approval is subject to bank's credit
+                                                    assessment and documentation.
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Form Navigation -->
+                                    <div class="flex justify-between pt-8">
+                                        <button type="button" id="prevBtn" onclick="changeStep(-1)"
+                                            class="px-6 py-3 bg-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-400 transition-colors hidden">
+                                            Previous
+                                        </button>
+                                        <button type="button" id="nextBtn" onclick="changeStep(1)"
+                                            class="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors ml-auto">
+                                            Next
+                                        </button>
+                                        <button type="submit" id="submitBtn"
+                                            class="px-8 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors hidden ml-auto">
+                                            Submit Application
+                                        </button>
+                                    </div>
+                                </form>
+
+                                <!-- Success Message -->
+                                <div id="success-message" class="hidden text-center py-12">
+                                    <div
+                                        class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-check text-green-600 text-2xl"></i>
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Education Loan Application
+                                        Submitted Successfully!</h3>
+                                    <p class="text-gray-600 mb-6">Thank you for choosing Open Credit. Our education loan
+                                        experts will contact you within 24 hours to guide you through the next steps.
+                                    </p>
+                                    <div class="text-sm text-gray-500">
+                                        Application ID: <span class="font-mono font-bold" id="application-id"></span>
+                                    </div>
+                                    <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+                                        <p class="text-blue-700 text-sm font-medium">
+                                            🚀 Next Steps: Our team will help you with documentation and connect you
+                                            with the best lenders for your education loan.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+            <%- include('../partials/footer.ejs') %>
+                <%- include('../partials/privacy-policy.ejs') %>
+                    <%- include('../partials/terms-of-service.ejs') %>
+
+                        <script>
+                            // Form step management
+                            let currentStep = 1;
+                            const totalSteps = 3;
+
+                            // Scroll to form function
+                            function scrollToForm() {
+                                document.getElementById('application-form').scrollIntoView({
+                                    behavior: 'smooth'
+                                });
+                            }
+
+                            // Form step navigation
+                            function changeStep(direction) {
+                                const newStep = currentStep + direction;
+
+                                if (newStep < 1 || newStep > totalSteps) return;
+
+                                if (direction === 1 && !validateCurrentStep()) return;
+
+                                showStep(newStep);
+                            }
+
+                            function showStep(step) {
+                                // Hide all steps
+                                for (let i = 1; i <= totalSteps; i++) {
+                                    document.getElementById(`step-${i}`).classList.add('hidden');
+                                    const indicator = document.getElementById(`step-${i}-indicator`);
+                                    if (indicator) {
+                                        indicator.classList.remove('active', 'bg-blue-600', 'text-white');
+                                        indicator.classList.add('bg-gray-300', 'text-gray-500');
+                                    }
+                                }
+
+                                // Show current step
+                                document.getElementById(`step-${step}`).classList.remove('hidden');
+                                const currentIndicator = document.getElementById(`step-${step}-indicator`);
+                                if (currentIndicator) {
+                                    currentIndicator.classList.remove('bg-gray-300', 'text-gray-500');
+                                    currentIndicator.classList.add('active', 'bg-blue-600', 'text-white');
+                                }
+
+                                // Update progress bars
+                                for (let i = 1; i < totalSteps; i++) {
+                                    const progressBar = document.getElementById(`progress-${i}-${i + 1}`);
+                                    if (progressBar) {
+                                        if (step > i) {
+                                            progressBar.classList.remove('bg-gray-300');
+                                            progressBar.classList.add('bg-blue-600');
+                                        } else {
+                                            progressBar.classList.remove('bg-blue-600');
+                                            progressBar.classList.add('bg-gray-300');
+                                        }
+                                    }
+                                }
+
+                                // Update navigation buttons
+                                const prevBtn = document.getElementById('prevBtn');
+                                const nextBtn = document.getElementById('nextBtn');
+                                const submitBtn = document.getElementById('submitBtn');
+
+                                if (step === 1) {
+                                    prevBtn.classList.add('hidden');
+                                } else {
+                                    prevBtn.classList.remove('hidden');
+                                }
+
+                                if (step === totalSteps) {
+                                    nextBtn.classList.add('hidden');
+                                    submitBtn.classList.remove('hidden');
+                                } else {
+                                    nextBtn.classList.remove('hidden');
+                                    submitBtn.classList.add('hidden');
+                                }
+
+                                currentStep = step;
+
+                                // Calculate loan estimate if on step 3
+                                if (step === 3) {
+                                    calculateLoanEstimate();
+                                }
+                            }
+
+                            // Form validation
+                            function validateCurrentStep() {
+                                const stepElement = document.getElementById(`step-${currentStep}`);
+                                const inputs = stepElement.querySelectorAll('input[required], select[required], textarea[required]');
+                                let isValid = true;
+
+                                inputs.forEach(input => {
+                                    clearError(input.id);
+
+                                    if (input.type === 'checkbox') {
+                                        if (!input.checked) {
+                                            showError(input.id, 'This field is required');
+                                            isValid = false;
+                                        }
+                                    } else if (!input.value.trim()) {
+                                        showError(input.id, 'This field is required');
+                                        isValid = false;
+                                    } else {
+                                        // Specific validations
+                                        if (input.id === 'studentMobile' && !validateMobile(input.value)) {
+                                            showError(input.id, 'Please enter a valid 10-digit mobile number');
+                                            isValid = false;
+                                        } else if (input.id === 'studentEmail' && !validateEmail(input.value)) {
+                                            showError(input.id, 'Please enter a valid email address');
+                                            isValid = false;
+                                        } else if (input.id === 'pincode' && !validatePincode(input.value)) {
+                                            showError(input.id, 'Please enter a valid 6-digit PIN code');
+                                            isValid = false;
+                                        } else if (input.id === 'dateOfBirth' && !validateAge(input.value)) {
+                                            showError(input.id, 'Student must be at least 17 years old and not more than 35 years old');
+                                            isValid = false;
+                                        } else if (input.id === 'courseStartDate' && !validateCourseStartDate(input.value)) {
+                                            showError(input.id, 'Course start date should be within next 24 months');
+                                            isValid = false;
+                                        } else if (input.id === 'totalCourseFee') {
+                                            const fee = parseInt(input.value);
+                                            if (fee < 100000) {
+                                                showError(input.id, 'Course fee should be at least ₹1,00,000');
+                                                isValid = false;
+                                            }
+                                        } else if (input.id === 'loanAmountRequired') {
+                                            const amount = parseInt(input.value);
+                                            if (amount < 100000 || amount > 12500000) {
+                                                showError(input.id, 'Loan amount must be between ₹1,00,000 and ₹1.25 Crores');
+                                                isValid = false;
+                                            }
+                                        } else if (input.id === 'coApplicantIncome') {
+                                            const income = parseInt(input.value);
+                                            if (income < 200000) {
+                                                showError(input.id, 'Co-applicant annual income should be at least ₹2,00,000');
+                                                isValid = false;
+                                            }
+                                        }
+                                    }
+                                });
+
+                                return isValid;
+                            }
+
+                            function showError(fieldId, message) {
+                                const errorElement = document.getElementById(`${fieldId}-error`);
+                                const inputElement = document.getElementById(fieldId);
+
+                                if (errorElement) {
+                                    errorElement.textContent = message;
+                                    errorElement.classList.remove('hidden');
+                                }
+
+                                if (inputElement) {
+                                    inputElement.classList.add('border-red-500');
+                                    inputElement.classList.remove('border-gray-300');
+                                }
+                            }
+
+                            function clearError(fieldId) {
+                                const errorElement = document.getElementById(`${fieldId}-error`);
+                                const inputElement = document.getElementById(fieldId);
+
+                                if (errorElement) {
+                                    errorElement.classList.add('hidden');
+                                }
+
+                                if (inputElement) {
+                                    inputElement.classList.remove('border-red-500');
+                                    inputElement.classList.add('border-gray-300');
+                                }
+                            }
+
+                            // Validation helper functions
+                            function validateMobile(mobile) {
+                                return /^[6-9]\d{9}$/.test(mobile);
+                            }
+
+                            function validateEmail(email) {
+                                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+                            }
+
+                            function validatePincode(pincode) {
+                                return /^\d{6}$/.test(pincode);
+                            }
+
+                            function validateAge(dateOfBirth) {
+                                const today = new Date();
+                                const birthDate = new Date(dateOfBirth);
+                                let age = today.getFullYear() - birthDate.getFullYear();
+                                const monthDiff = today.getMonth() - birthDate.getMonth();
+
+                                if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                                    age--;
+                                }
+
+                                return age >= 17 && age <= 35;
+                            }
+
+                            function validateCourseStartDate(courseStartDate) {
+                                const today = new Date();
+                                const startDate = new Date(courseStartDate);
+                                const monthsDiff = (startDate.getFullYear() - today.getFullYear()) * 12 + (startDate.getMonth() - today.getMonth());
+
+                                return monthsDiff >= 0 && monthsDiff <= 24;
+                            }
+
+                            // Loan calculation
+                            function calculateLoanEstimate() {
+                                const loanAmountInput = document.getElementById('loanAmountRequired');
+
+                                if (loanAmountInput.value) {
+                                    const principal = parseFloat(loanAmountInput.value);
+                                    const annualRate = 10; // Assumed interest rate
+                                    const tenureYears = 10; // Assumed tenure
+                                    const monthlyRate = annualRate / 12 / 100;
+                                    const totalMonths = tenureYears * 12;
+
+                                    // EMI calculation
+                                    const emi = (principal * monthlyRate * Math.pow(1 + monthlyRate, totalMonths)) /
+                                        (Math.pow(1 + monthlyRate, totalMonths) - 1);
+
+                                    const totalAmount = emi * totalMonths;
+                                    const totalInterest = totalAmount - principal;
+
+                                    // Display results
+                                    document.getElementById('estimated-emi').textContent = `₹${Math.round(emi).toLocaleString()}`;
+                                    document.getElementById('total-interest-amount').textContent = `₹${Math.round(totalInterest).toLocaleString()}`;
+                                    document.getElementById('total-repayment').textContent = `₹${Math.round(totalAmount).toLocaleString()}`;
+                                    document.getElementById('loan-calculation').classList.remove('hidden');
+                                }
+                            }
+
+                            // Form submission
+                            document.getElementById('educationLoanForm').addEventListener('submit', function (e) {
+                                e.preventDefault();
+
+                                if (!validateCurrentStep()) {
+                                    return;
+                                }
+
+                                // Simulate form submission
+                                const formData = new FormData(this);
+                                const applicationId = 'EDU' + Date.now().toString().slice(-8);
+
+                                // Hide form and show success message
+                                this.classList.add('hidden');
+                                document.getElementById('success-message').classList.remove('hidden');
+                                document.getElementById('application-id').textContent = applicationId;
+
+                                // Scroll to success message
+                                document.getElementById('success-message').scrollIntoView({ behavior: 'smooth' });
+
+                                console.log('Education loan application submitted with data:', Object.fromEntries(formData));
+                            });
+
+                            // Real-time loan calculation
+                            document.getElementById('loanAmountRequired').addEventListener('input', calculateLoanEstimate);
+
+                            // Clear errors on input
+                            document.querySelectorAll('input, select, textarea').forEach(input => {
+                                input.addEventListener('input', function () {
+                                    clearError(this.id);
+                                });
+                            });
+
+                            // Initialize first step
+                            showStep(1);
+                        </script>
+
+                        <!-- Animation styles -->
+                        <style>
+                            @keyframes fadeIn {
+                                from {
+                                    opacity: 0;
+                                    transform: translateY(20px);
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                }
+                            }
+
+                            .form-step {
+                                animation: fadeIn 0.5s ease-out;
+                            }
+
+                            .bg-gradient-to-br {
+                                background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+                            }
+                        </style>
+    </body>
+
+    </html>

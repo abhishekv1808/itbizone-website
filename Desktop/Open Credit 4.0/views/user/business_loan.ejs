@@ -1,0 +1,1074 @@
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/navbar.ejs') %>
+            <main>
+                <!-- Hero Section - Different Design from Personal Loan -->
+                <section class="relative bg-white overflow-hidden">
+                    <!-- Background Pattern -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50"></div>
+                    <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
+
+                    <div class="relative container mx-auto px-6 lg:px-20 py-16">
+                        <!-- Top Section with Statistics -->
+                        <div class="text-center mb-12">
+                            <div
+                                class="inline-block px-6 py-3 bg-green-600 text-white rounded-full text-sm font-semibold mb-6">
+                                <i class="fas fa-building mr-2"></i>Business Loans for Growth
+                            </div>
+                            <h1 class="text-3xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                                Fuel Your Business
+                                <span
+                                    class="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">Dreams</span>
+                            </h1>
+                            <p class="text-md text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+                                From startup funding to business expansion, get customized loan solutions
+                                designed to accelerate your business growth with minimal documentation and quick
+                                approvals.
+                            </p>
+                        </div>
+
+                        <!-- Statistics Cards Row -->
+                        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                                <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                                    <i class="fas fa-percentage text-green-600 text-xl"></i>
+                                </div>
+                                <div class="text-2xl font-bold text-gray-900 mb-2">8.5%*</div>
+                                <div class="text-gray-600 text-sm">Starting Interest Rate</div>
+                            </div>
+
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                                <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                                    <i class="fas fa-coins text-blue-600 text-xl"></i>
+                                </div>
+                                <div class="text-2xl font-bold text-gray-900 mb-2">₹50Cr</div>
+                                <div class="text-gray-600 text-sm">Maximum Loan Amount</div>
+                            </div>
+
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                                <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                                    <i class="fas fa-clock text-purple-600 text-xl"></i>
+                                </div>
+                                <div class="text-2xl font-bold text-gray-900 mb-2">48hrs</div>
+                                <div class="text-gray-600 text-sm">Quick Disbursal</div>
+                            </div>
+
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                                <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
+                                    <i class="fas fa-calendar-check text-orange-600 text-xl"></i>
+                                </div>
+                                <div class="text-2xl font-bold text-gray-900 mb-2">10Yrs</div>
+                                <div class="text-gray-600 text-sm">Flexible Tenure</div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Section -->
+                        <div class="text-center">
+                            <button onclick="scrollToForm()"
+                                class="inline-flex items-center px-8 py-4 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition-all shadow-lg hover:shadow-xl mr-4 mb-4">
+                                <i class="fas fa-rocket mr-2"></i>Apply Now
+                            </button>
+                            <button
+                                class="inline-flex items-center px-8 py-4 bg-white text-gray-900 rounded-xl font-semibold hover:bg-gray-50 transition-colors shadow-lg border border-gray-200 mb-4">
+                                <i class="fas fa-calculator mr-2"></i>Calculate EMI
+                            </button>
+                        </div>
+
+                        <!-- Trust Indicators -->
+                        <div class="mt-12 text-center">
+                            <p class="text-gray-500 text-sm mb-4">Trusted by 50,000+ businesses across India</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Business Loan Types Section -->
+                <section class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Business Loan Solutions for Every Need
+                            </h2>
+                            <p class="text-gray-600 text-md max-w-2xl mx-auto">
+                                Choose from our comprehensive range of business financing options tailored to your
+                                specific requirements
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <!-- Working Capital Loan -->
+                            <div
+                                class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-green-200">
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-chart-line text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4">Working Capital Loan</h3>
+                                <p class="text-gray-600 mb-6">Manage day-to-day operations, inventory, and cash flow
+                                    needs with flexible working capital solutions.</p>
+                                <div class="space-y-3">
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-gray-500">Amount:</span>
+                                        <span class="font-semibold text-gray-900">₹1L - ₹10Cr</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-gray-500">Interest:</span>
+                                        <span class="font-semibold text-gray-900">8.5% onwards</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-gray-500">Tenure:</span>
+                                        <span class="font-semibold text-gray-900">1-5 years</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Equipment Finance -->
+                            <div
+                                class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-200">
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-cogs text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4">Equipment Finance</h3>
+                                <p class="text-gray-600 mb-6">Purchase machinery, technology, and equipment to upgrade
+                                    your business operations and productivity.</p>
+                                <div class="space-y-3">
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-gray-500">Amount:</span>
+                                        <span class="font-semibold text-gray-900">₹5L - ₹25Cr</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-gray-500">Interest:</span>
+                                        <span class="font-semibold text-gray-900">9% onwards</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-gray-500">Tenure:</span>
+                                        <span class="font-semibold text-gray-900">3-10 years</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Business Expansion -->
+                            <div
+                                class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-purple-200">
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-expand-arrows-alt text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4">Business Expansion</h3>
+                                <p class="text-gray-600 mb-6">Scale your business with loans for new locations, product
+                                    lines, or market expansion initiatives.</p>
+                                <div class="space-y-3">
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-gray-500">Amount:</span>
+                                        <span class="font-semibold text-gray-900">₹10L - ₹50Cr</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-gray-500">Interest:</span>
+                                        <span class="font-semibold text-gray-900">8.75% onwards</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-gray-500">Tenure:</span>
+                                        <span class="font-semibold text-gray-900">5-10 years</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Startup Funding -->
+                            <div
+                                class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-orange-200">
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-rocket text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4">Startup Funding</h3>
+                                <p class="text-gray-600 mb-6">Launch your entrepreneurial journey with specially
+                                    designed funding solutions for new businesses.</p>
+                                <div class="space-y-3">
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-gray-500">Amount:</span>
+                                        <span class="font-semibold text-gray-900">₹2L - ₹5Cr</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-gray-500">Interest:</span>
+                                        <span class="font-semibold text-gray-900">10% onwards</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-gray-500">Tenure:</span>
+                                        <span class="font-semibold text-gray-900">2-7 years</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- MSME Loans -->
+                            <div
+                                class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-teal-200">
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-store text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4">MSME Loans</h3>
+                                <p class="text-gray-600 mb-6">Specialized financing for Micro, Small & Medium
+                                    Enterprises with government-backed schemes and benefits.</p>
+                                <div class="space-y-3">
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-gray-500">Amount:</span>
+                                        <span class="font-semibold text-gray-900">₹50K - ₹20Cr</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-gray-500">Interest:</span>
+                                        <span class="font-semibold text-gray-900">8.25% onwards</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-gray-500">Tenure:</span>
+                                        <span class="font-semibold text-gray-900">1-8 years</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Invoice Financing -->
+                            <div
+                                class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-red-200">
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-file-invoice-dollar text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4">Invoice Financing</h3>
+                                <p class="text-gray-600 mb-6">Get immediate cash flow by leveraging your pending
+                                    invoices and outstanding receivables.</p>
+                                <div class="space-y-3">
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-gray-500">Amount:</span>
+                                        <span class="font-semibold text-gray-900">₹1L - ₹10Cr</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-gray-500">Interest:</span>
+                                        <span class="font-semibold text-gray-900">12% onwards</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-gray-500">Tenure:</span>
+                                        <span class="font-semibold text-gray-900">3-12 months</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Business Features & Benefits -->
+                <section class="py-16 bg-white">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Why Choose Our Business Loans?
+                            </h2>
+                            <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                                Experience the advantages of partnering with India's leading business loan provider
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <div class="text-center group">
+                                <div
+                                    class="w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-handshake text-green-600 text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">No Collateral Required</h3>
+                                <p class="text-gray-600">Get unsecured business loans without pledging any assets or
+                                    property.</p>
+                            </div>
+
+                            <div class="text-center group">
+                                <div
+                                    class="w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-tachometer-alt text-blue-600 text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Quick Approval</h3>
+                                <p class="text-gray-600">Get loan approval within 48 hours with our streamlined process.
+                                </p>
+                            </div>
+
+                            <div class="text-center group">
+                                <div
+                                    class="w-20 h-20 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-file-contract text-purple-600 text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Minimal Documentation</h3>
+                                <p class="text-gray-600">Simple paperwork with digital document verification process.
+                                </p>
+                            </div>
+
+                            <div class="text-center group">
+                                <div
+                                    class="w-20 h-20 bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-calendar-alt text-orange-600 text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Flexible Repayment</h3>
+                                <p class="text-gray-600">Choose tenure from 1 to 10 years based on your cash flow needs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Eligibility & Documentation -->
+                <section class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="grid lg:grid-cols-2 gap-12">
+                            <!-- Eligibility Criteria -->
+                            <div class="space-y-8">
+                                <div>
+                                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Eligibility Criteria</h2>
+                                    <div class="space-y-4">
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-check text-green-500 mt-1"></i>
+                                            <div>
+                                                <span class="font-semibold">Business Age:</span> Minimum 1 year in
+                                                operation
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-check text-green-500 mt-1"></i>
+                                            <div>
+                                                <span class="font-semibold">Annual Turnover:</span> Minimum ₹10 lakhs
+                                                per annum
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-check text-green-500 mt-1"></i>
+                                            <div>
+                                                <span class="font-semibold">Credit Score:</span> 650+ (Business &
+                                                Personal)
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-check text-green-500 mt-1"></i>
+                                            <div>
+                                                <span class="font-semibold">Business Type:</span> Proprietorship,
+                                                Partnership, Pvt Ltd, LLP
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-check text-green-500 mt-1"></i>
+                                            <div>
+                                                <span class="font-semibold">ITR Filing:</span> Last 2 years filed
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <i class="fas fa-check text-green-500 mt-1"></i>
+                                            <div>
+                                                <span class="font-semibold">Bank Statements:</span> 12 months available
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Business Types Covered -->
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Business Types We Cover</h3>
+                                    <div class="grid sm:grid-cols-2 gap-4">
+                                        <div class="p-4 bg-white rounded-lg border border-gray-200">
+                                            <h4 class="font-semibold text-gray-900 mb-2">Manufacturing</h4>
+                                            <p class="text-gray-600 text-sm">Textile, Food Processing, Engineering, etc.
+                                            </p>
+                                        </div>
+                                        <div class="p-4 bg-white rounded-lg border border-gray-200">
+                                            <h4 class="font-semibold text-gray-900 mb-2">Trading</h4>
+                                            <p class="text-gray-600 text-sm">Wholesale, Retail, Import/Export</p>
+                                        </div>
+                                        <div class="p-4 bg-white rounded-lg border border-gray-200">
+                                            <h4 class="font-semibold text-gray-900 mb-2">Services</h4>
+                                            <p class="text-gray-600 text-sm">IT, Healthcare, Education, Consulting</p>
+                                        </div>
+                                        <div class="p-4 bg-white rounded-lg border border-gray-200">
+                                            <h4 class="font-semibold text-gray-900 mb-2">E-commerce</h4>
+                                            <p class="text-gray-600 text-sm">Online Retail, Digital Services</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Required Documents -->
+                            <div class="space-y-8">
+                                <div>
+                                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Required Documents</h2>
+                                    <div class="space-y-6">
+                                        <!-- Business Documents -->
+                                        <div class="p-6 bg-white rounded-2xl shadow-lg">
+                                            <h4 class="font-semibold text-blue-900 mb-4 flex items-center">
+                                                <i class="fas fa-building mr-2 text-blue-600"></i>Business Documents
+                                            </h4>
+                                            <ul class="space-y-2 text-sm text-gray-700">
+                                                <li class="flex items-center gap-2">
+                                                    <i class="fas fa-circle text-blue-600" style="font-size: 6px;"></i>
+                                                    Business Registration Certificate
+                                                </li>
+                                                <li class="flex items-center gap-2">
+                                                    <i class="fas fa-circle text-blue-600" style="font-size: 6px;"></i>
+                                                    GST Registration Certificate
+                                                </li>
+                                                <li class="flex items-center gap-2">
+                                                    <i class="fas fa-circle text-blue-600" style="font-size: 6px;"></i>
+                                                    Partnership Deed / MOA & AOA
+                                                </li>
+                                                <li class="flex items-center gap-2">
+                                                    <i class="fas fa-circle text-blue-600" style="font-size: 6px;"></i>
+                                                    Trade License / Professional License
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Financial Documents -->
+                                        <div class="p-6 bg-white rounded-2xl shadow-lg">
+                                            <h4 class="font-semibold text-green-900 mb-4 flex items-center">
+                                                <i class="fas fa-chart-line mr-2 text-green-600"></i>Financial Documents
+                                            </h4>
+                                            <ul class="space-y-2 text-sm text-gray-700">
+                                                <li class="flex items-center gap-2">
+                                                    <i class="fas fa-circle text-green-600" style="font-size: 6px;"></i>
+                                                    ITR for last 2 years
+                                                </li>
+                                                <li class="flex items-center gap-2">
+                                                    <i class="fas fa-circle text-green-600" style="font-size: 6px;"></i>
+                                                    Audited Financial Statements
+                                                </li>
+                                                <li class="flex items-center gap-2">
+                                                    <i class="fas fa-circle text-green-600" style="font-size: 6px;"></i>
+                                                    Bank Statements (12 months)
+                                                </li>
+                                                <li class="flex items-center gap-2">
+                                                    <i class="fas fa-circle text-green-600" style="font-size: 6px;"></i>
+                                                    GST Returns (6 months)
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Personal Documents -->
+                                        <div class="p-6 bg-white rounded-2xl shadow-lg">
+                                            <h4 class="font-semibold text-purple-900 mb-4 flex items-center">
+                                                <i class="fas fa-user mr-2 text-purple-600"></i>Personal Documents
+                                                (Directors/Partners)
+                                            </h4>
+                                            <ul class="space-y-2 text-sm text-gray-700">
+                                                <li class="flex items-center gap-2">
+                                                    <i class="fas fa-circle text-purple-600"
+                                                        style="font-size: 6px;"></i>
+                                                    PAN Card & Aadhaar Card
+                                                </li>
+                                                <li class="flex items-center gap-2">
+                                                    <i class="fas fa-circle text-purple-600"
+                                                        style="font-size: 6px;"></i>
+                                                    Address Proof
+                                                </li>
+                                                <li class="flex items-center gap-2">
+                                                    <i class="fas fa-circle text-purple-600"
+                                                        style="font-size: 6px;"></i>
+                                                    Personal Bank Statements
+                                                </li>
+                                                <li class="flex items-center gap-2">
+                                                    <i class="fas fa-circle text-purple-600"
+                                                        style="font-size: 6px;"></i>
+                                                    Photograph
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Application Form Section -->
+                <section id="application-form" class="py-16 bg-gradient-to-br from-blue-50 to-green-50">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Apply for Business Loan
+                            </h2>
+                            <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                                Complete the simple application process to get your business loan approved quickly
+                            </p>
+                        </div>
+
+                        <div class="max-w-5xl mx-auto">
+                            <!-- Progress Steps -->
+                            <div class="mb-8">
+                                <div class="flex items-center justify-center space-x-8">
+                                    <div class="flex items-center">
+                                        <div id="step-1-indicator"
+                                            class="w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-semibold step-indicator active">
+                                            1
+                                        </div>
+                                        <span class="ml-2 text-sm font-medium text-gray-900">Business Info</span>
+                                    </div>
+                                    <div class="flex-1 h-1 bg-gray-300 mx-4">
+                                        <div id="progress-1-2" class="h-full bg-gray-300 rounded progress-bar"></div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div id="step-2-indicator"
+                                            class="w-10 h-10 bg-gray-300 text-gray-500 rounded-full flex items-center justify-center font-semibold step-indicator">
+                                            2
+                                        </div>
+                                        <span class="ml-2 text-sm font-medium text-gray-500">Financial Details</span>
+                                    </div>
+                                    <div class="flex-1 h-1 bg-gray-300 mx-4">
+                                        <div id="progress-2-3" class="h-full bg-gray-300 rounded progress-bar"></div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div id="step-3-indicator"
+                                            class="w-10 h-10 bg-gray-300 text-gray-500 rounded-full flex items-center justify-center font-semibold step-indicator">
+                                            3
+                                        </div>
+                                        <span class="ml-2 text-sm font-medium text-gray-500">Loan Requirements</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Form Container -->
+                            <div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12">
+                                <form id="businessLoanForm" class="space-y-6">
+
+                                    <!-- Step 1: Business Information -->
+                                    <div id="step-1" class="form-step">
+                                        <div class="text-center mb-8">
+                                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Business Information</h3>
+                                            <p class="text-gray-600">Tell us about your business</p>
+                                        </div>
+
+                                        <div class="grid md:grid-cols-2 gap-6">
+                                            <div>
+                                                <label for="businessName"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    Business Name <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="text" id="businessName" name="businessName" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                                                    placeholder="Enter your business name">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="businessName-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="businessType"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    Business Type <span class="text-red-500">*</span>
+                                                </label>
+                                                <select id="businessType" name="businessType" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors">
+                                                    <option value="">Select business type</option>
+                                                    <option value="Sole Proprietorship">Sole Proprietorship</option>
+                                                    <option value="Partnership">Partnership</option>
+                                                    <option value="Private Limited">Private Limited Company</option>
+                                                    <option value="LLP">Limited Liability Partnership (LLP)</option>
+                                                    <option value="Public Limited">Public Limited Company</option>
+                                                    <option value="One Person Company">One Person Company (OPC)</option>
+                                                </select>
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="businessType-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="industry"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    Industry <span class="text-red-500">*</span>
+                                                </label>
+                                                <select id="industry" name="industry" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors">
+                                                    <option value="">Select industry</option>
+                                                    <option value="Manufacturing">Manufacturing</option>
+                                                    <option value="Trading">Trading</option>
+                                                    <option value="Services">Services</option>
+                                                    <option value="E-commerce">E-commerce</option>
+                                                    <option value="Healthcare">Healthcare</option>
+                                                    <option value="Education">Education</option>
+                                                    <option value="IT/Software">IT/Software</option>
+                                                    <option value="Food & Beverage">Food & Beverage</option>
+                                                    <option value="Retail">Retail</option>
+                                                    <option value="Construction">Construction</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="industry-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="businessAge"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    Business Age (Years) <span class="text-red-500">*</span>
+                                                </label>
+                                                <select id="businessAge" name="businessAge" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors">
+                                                    <option value="">Select business age</option>
+                                                    <option value="1-2">1-2 years</option>
+                                                    <option value="2-5">2-5 years</option>
+                                                    <option value="5-10">5-10 years</option>
+                                                    <option value="10+">10+ years</option>
+                                                </select>
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="businessAge-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="gstNumber"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    GST Number <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="text" id="gstNumber" name="gstNumber" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                                                    placeholder="Enter 15-digit GST number">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="gstNumber-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="panNumber"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    Business PAN <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="text" id="panNumber" name="panNumber" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                                                    placeholder="Enter business PAN number">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="panNumber-error"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 2: Financial Information -->
+                                    <div id="step-2" class="form-step hidden">
+                                        <div class="text-center mb-8">
+                                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Financial Information</h3>
+                                            <p class="text-gray-600">Provide your business financial details</p>
+                                        </div>
+
+                                        <div class="grid md:grid-cols-2 gap-6">
+                                            <div>
+                                                <label for="annualTurnover"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    Annual Turnover <span class="text-red-500">*</span>
+                                                </label>
+                                                <select id="annualTurnover" name="annualTurnover" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors">
+                                                    <option value="">Select annual turnover</option>
+                                                    <option value="10L-25L">₹10L - ₹25L</option>
+                                                    <option value="25L-50L">₹25L - ₹50L</option>
+                                                    <option value="50L-1Cr">₹50L - ₹1Cr</option>
+                                                    <option value="1Cr-5Cr">₹1Cr - ₹5Cr</option>
+                                                    <option value="5Cr-10Cr">₹5Cr - ₹10Cr</option>
+                                                    <option value="10Cr+">₹10Cr+</option>
+                                                </select>
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="annualTurnover-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="monthlyProfit"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    Monthly Profit <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="number" id="monthlyProfit" name="monthlyProfit" required
+                                                    min="50000"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                                                    placeholder="Enter monthly profit">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="monthlyProfit-error"></span>
+                                                <p class="text-sm text-gray-500 mt-1">Minimum: ₹50,000</p>
+                                            </div>
+
+                                            <div>
+                                                <label for="existingLoans"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    Existing Loan EMIs (Monthly)
+                                                </label>
+                                                <input type="number" id="existingLoans" name="existingLoans" min="0"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                                                    placeholder="Enter total monthly EMI (if any)">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="existingLoans-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="bankAccount"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    Primary Bank <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="text" id="bankAccount" name="bankAccount" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                                                    placeholder="Enter primary bank name">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="bankAccount-error"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 3: Loan Requirements -->
+                                    <div id="step-3" class="form-step hidden">
+                                        <div class="text-center mb-8">
+                                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Loan Requirements</h3>
+                                            <p class="text-gray-600">Specify your loan needs</p>
+                                        </div>
+
+                                        <div class="grid md:grid-cols-2 gap-6">
+                                            <div>
+                                                <label for="loanType"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    Loan Type <span class="text-red-500">*</span>
+                                                </label>
+                                                <select id="loanType" name="loanType" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors">
+                                                    <option value="">Select loan type</option>
+                                                    <option value="Working Capital">Working Capital Loan</option>
+                                                    <option value="Equipment Finance">Equipment Finance</option>
+                                                    <option value="Business Expansion">Business Expansion</option>
+                                                    <option value="Startup Funding">Startup Funding</option>
+                                                    <option value="MSME Loan">MSME Loan</option>
+                                                    <option value="Invoice Financing">Invoice Financing</option>
+                                                </select>
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="loanType-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="loanAmount"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    Required Loan Amount <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="number" id="loanAmount" name="loanAmount" required
+                                                    min="100000" max="50000000"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                                                    placeholder="Enter loan amount">
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="loanAmount-error"></span>
+                                                <p class="text-sm text-gray-500 mt-1">Amount range: ₹1,00,000 -
+                                                    ₹5,00,00,000</p>
+                                            </div>
+
+                                            <div>
+                                                <label for="loanTenure"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    Tenure (in years) <span class="text-red-500">*</span>
+                                                </label>
+                                                <select id="loanTenure" name="loanTenure" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors">
+                                                    <option value="">Select tenure</option>
+                                                    <option value="1">1 year</option>
+                                                    <option value="2">2 years</option>
+                                                    <option value="3">3 years</option>
+                                                    <option value="4">4 years</option>
+                                                    <option value="5">5 years</option>
+                                                    <option value="7">7 years</option>
+                                                    <option value="10">10 years</option>
+                                                </select>
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="loanTenure-error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="loanPurpose"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">
+                                                    Loan Purpose <span class="text-red-500">*</span>
+                                                </label>
+                                                <textarea id="loanPurpose" name="loanPurpose" required rows="3"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                                                    placeholder="Describe the purpose of the loan"></textarea>
+                                                <span class="text-red-500 text-sm hidden error-message"
+                                                    id="loanPurpose-error"></span>
+                                            </div>
+                                        </div>
+
+                                        <!-- EMI Calculator Display -->
+                                        <div id="emi-display" class="mt-8 p-6 bg-green-50 rounded-lg hidden">
+                                            <h4 class="text-lg font-semibold text-gray-900 mb-4">Estimated EMI
+                                                Calculation</h4>
+                                            <div class="grid sm:grid-cols-3 gap-4 text-center">
+                                                <div>
+                                                    <div class="text-2xl font-bold text-green-600" id="calculated-emi">
+                                                        ₹0</div>
+                                                    <div class="text-sm text-gray-600">Monthly EMI</div>
+                                                </div>
+                                                <div>
+                                                    <div class="text-2xl font-bold text-blue-600" id="total-interest">₹0
+                                                    </div>
+                                                    <div class="text-sm text-gray-600">Total Interest</div>
+                                                </div>
+                                                <div>
+                                                    <div class="text-2xl font-bold text-purple-600" id="total-amount">₹0
+                                                    </div>
+                                                    <div class="text-sm text-gray-600">Total Amount</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Form Navigation -->
+                                    <div class="flex justify-between pt-8">
+                                        <button type="button" id="prevBtn" onclick="changeStep(-1)"
+                                            class="px-6 py-3 bg-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-400 transition-colors hidden">
+                                            Previous
+                                        </button>
+                                        <button type="button" id="nextBtn" onclick="changeStep(1)"
+                                            class="px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors ml-auto">
+                                            Next
+                                        </button>
+                                        <button type="submit" id="submitBtn"
+                                            class="px-8 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors hidden ml-auto">
+                                            Submit Application
+                                        </button>
+                                    </div>
+                                </form>
+
+                                <!-- Success Message -->
+                                <div id="success-message" class="hidden text-center py-12">
+                                    <div
+                                        class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-check text-green-600 text-2xl"></i>
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Business Loan Application
+                                        Submitted!</h3>
+                                    <p class="text-gray-600 mb-6">Thank you for applying. Our business loan specialist
+                                        will contact you within 48 hours.</p>
+                                    <div class="text-sm text-gray-500">
+                                        Application ID: <span class="font-mono font-bold" id="application-id"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            </main>
+            <%- include('../partials/footer.ejs') %>
+                <%- include('../partials/privacy-policy.ejs') %>
+                    <%- include('../partials/terms-of-service.ejs') %>
+
+                        <script>
+                            // Form step management
+                            let currentStep = 1;
+                            const totalSteps = 3;
+
+                            // Scroll to form function
+                            function scrollToForm() {
+                                document.getElementById('application-form').scrollIntoView({
+                                    behavior: 'smooth'
+                                });
+                            }
+
+                            // Form step navigation
+                            function changeStep(direction) {
+                                const newStep = currentStep + direction;
+
+                                if (newStep < 1 || newStep > totalSteps) return;
+
+                                if (direction === 1 && !validateCurrentStep()) return;
+
+                                showStep(newStep);
+                            }
+
+                            function showStep(step) {
+                                // Hide all steps
+                                for (let i = 1; i <= totalSteps; i++) {
+                                    document.getElementById(`step-${i}`).classList.add('hidden');
+                                    document.getElementById(`step-${i}-indicator`).classList.remove('active', 'bg-green-600', 'text-white');
+                                    document.getElementById(`step-${i}-indicator`).classList.add('bg-gray-300', 'text-gray-500');
+                                }
+
+                                // Show current step
+                                document.getElementById(`step-${step}`).classList.remove('hidden');
+                                document.getElementById(`step-${step}-indicator`).classList.remove('bg-gray-300', 'text-gray-500');
+                                document.getElementById(`step-${step}-indicator`).classList.add('active', 'bg-green-600', 'text-white');
+
+                                // Update progress bars
+                                for (let i = 1; i < totalSteps; i++) {
+                                    const progressBar = document.getElementById(`progress-${i}-${i + 1}`);
+                                    if (step > i) {
+                                        progressBar.classList.remove('bg-gray-300');
+                                        progressBar.classList.add('bg-green-600');
+                                    } else {
+                                        progressBar.classList.remove('bg-green-600');
+                                        progressBar.classList.add('bg-gray-300');
+                                    }
+                                }
+
+                                // Update navigation buttons
+                                const prevBtn = document.getElementById('prevBtn');
+                                const nextBtn = document.getElementById('nextBtn');
+                                const submitBtn = document.getElementById('submitBtn');
+
+                                if (step === 1) {
+                                    prevBtn.classList.add('hidden');
+                                } else {
+                                    prevBtn.classList.remove('hidden');
+                                }
+
+                                if (step === totalSteps) {
+                                    nextBtn.classList.add('hidden');
+                                    submitBtn.classList.remove('hidden');
+                                } else {
+                                    nextBtn.classList.remove('hidden');
+                                    submitBtn.classList.add('hidden');
+                                }
+
+                                currentStep = step;
+
+                                // Calculate EMI if on step 3 and fields are filled
+                                if (step === 3) {
+                                    calculateEMI();
+                                }
+                            }
+
+                            // Form validation
+                            function validateCurrentStep() {
+                                const stepElement = document.getElementById(`step-${currentStep}`);
+                                const inputs = stepElement.querySelectorAll('input[required], select[required], textarea[required]');
+                                let isValid = true;
+
+                                inputs.forEach(input => {
+                                    clearError(input.id);
+
+                                    if (!input.value.trim()) {
+                                        showError(input.id, 'This field is required');
+                                        isValid = false;
+                                    } else {
+                                        // Specific validations
+                                        if (input.id === 'gstNumber' && !validateGST(input.value)) {
+                                            showError(input.id, 'Please enter a valid 15-digit GST number');
+                                            isValid = false;
+                                        } else if (input.id === 'panNumber' && !validatePAN(input.value)) {
+                                            showError(input.id, 'Please enter a valid PAN number');
+                                            isValid = false;
+                                        } else if (input.id === 'monthlyProfit' && parseInt(input.value) < 50000) {
+                                            showError(input.id, 'Minimum monthly profit requirement is ₹50,000');
+                                            isValid = false;
+                                        } else if (input.id === 'loanAmount') {
+                                            const amount = parseInt(input.value);
+                                            if (amount < 100000 || amount > 50000000) {
+                                                showError(input.id, 'Loan amount must be between ₹1,00,000 and ₹5,00,00,000');
+                                                isValid = false;
+                                            }
+                                        }
+                                    }
+                                });
+
+                                return isValid;
+                            }
+
+                            function showError(fieldId, message) {
+                                const errorElement = document.getElementById(`${fieldId}-error`);
+                                const inputElement = document.getElementById(fieldId);
+
+                                if (errorElement) {
+                                    errorElement.textContent = message;
+                                    errorElement.classList.remove('hidden');
+                                }
+
+                                if (inputElement) {
+                                    inputElement.classList.add('border-red-500');
+                                    inputElement.classList.remove('border-gray-300');
+                                }
+                            }
+
+                            function clearError(fieldId) {
+                                const errorElement = document.getElementById(`${fieldId}-error`);
+                                const inputElement = document.getElementById(fieldId);
+
+                                if (errorElement) {
+                                    errorElement.classList.add('hidden');
+                                }
+
+                                if (inputElement) {
+                                    inputElement.classList.remove('border-red-500');
+                                    inputElement.classList.add('border-gray-300');
+                                }
+                            }
+
+                            // Validation helper functions
+                            function validateGST(gst) {
+                                return /^\d{2}[A-Z]{5}\d{4}[A-Z]{1}\d[Z]{1}[A-Z\d]{1}$/.test(gst.toUpperCase());
+                            }
+
+                            function validatePAN(pan) {
+                                return /^[A-Z]{5}\d{4}[A-Z]{1}$/.test(pan.toUpperCase());
+                            }
+
+                            // EMI Calculator for Business Loans
+                            function calculateEMI() {
+                                const loanAmountInput = document.getElementById('loanAmount');
+                                const tenureInput = document.getElementById('loanTenure');
+
+                                if (loanAmountInput.value && tenureInput.value) {
+                                    const principal = parseFloat(loanAmountInput.value);
+                                    const tenureYears = parseInt(tenureInput.value);
+                                    const tenureMonths = tenureYears * 12;
+                                    const annualRate = 9.5; // Business loan interest rate
+                                    const monthlyRate = annualRate / 12 / 100;
+
+                                    // EMI calculation using the formula
+                                    const emi = (principal * monthlyRate * Math.pow(1 + monthlyRate, tenureMonths)) /
+                                        (Math.pow(1 + monthlyRate, tenureMonths) - 1);
+
+                                    const totalAmount = emi * tenureMonths;
+                                    const totalInterest = totalAmount - principal;
+
+                                    // Display results
+                                    document.getElementById('calculated-emi').textContent = `₹${Math.round(emi).toLocaleString()}`;
+                                    document.getElementById('total-interest').textContent = `₹${Math.round(totalInterest).toLocaleString()}`;
+                                    document.getElementById('total-amount').textContent = `₹${Math.round(totalAmount).toLocaleString()}`;
+                                    document.getElementById('emi-display').classList.remove('hidden');
+                                }
+                            }
+
+                            // Form submission
+                            document.getElementById('businessLoanForm').addEventListener('submit', function (e) {
+                                e.preventDefault();
+
+                                if (!validateCurrentStep()) {
+                                    return;
+                                }
+
+                                // Simulate form submission
+                                const formData = new FormData(this);
+                                const applicationId = 'BL' + Date.now().toString().slice(-8);
+
+                                // Hide form and show success message
+                                this.classList.add('hidden');
+                                document.getElementById('success-message').classList.remove('hidden');
+                                document.getElementById('application-id').textContent = applicationId;
+
+                                // Scroll to success message
+                                document.getElementById('success-message').scrollIntoView({ behavior: 'smooth' });
+
+                                console.log('Business loan form submitted with data:', Object.fromEntries(formData));
+                            });
+
+                            // Real-time EMI calculation
+                            document.getElementById('loanAmount').addEventListener('input', calculateEMI);
+                            document.getElementById('loanTenure').addEventListener('change', calculateEMI);
+
+                            // Clear errors on input
+                            document.querySelectorAll('input, select, textarea').forEach(input => {
+                                input.addEventListener('input', function () {
+                                    clearError(this.id);
+                                });
+                            });
+
+                            // Format GST and PAN inputs
+                            document.getElementById('gstNumber').addEventListener('input', function () {
+                                this.value = this.value.toUpperCase();
+                            });
+
+                            document.getElementById('panNumber').addEventListener('input', function () {
+                                this.value = this.value.toUpperCase();
+                            });
+
+                            // Initialize first step
+                            showStep(1);
+                        </script>
+    </body>
+
+    </html>

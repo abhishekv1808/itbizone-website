@@ -1,0 +1,285 @@
+<header class="bg-white">
+    <!-- Navbar -->
+    <nav class="navbar sticky top-0 left-0 right-0 z-50 bg-white">
+        <div class="container mx-auto px-6 lg:px-20">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <a href="/"><img src="/images/OpenCredit-logo.png" alt="Open Credit Logo" class="w-auto h-14"></a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center gap-8">
+
+                    <a href="/"
+                        class="nav-link text-gray-900 font-medium <%= (typeof currentPage !== 'undefined' && currentPage === 'home') ? 'active' : '' %>">
+                        Home
+                    </a>
+
+                    <!-- Products Dropdown -->
+                    <div class="dropdown relative">
+                        <button class="nav-link text-gray-900 font-medium flex items-center gap-1">
+                            Products
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 py-2 animate-slide-down">
+                            <a href="/personal_loan"
+                                class="block px-6 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">
+                                <div class="font-semibold">Personal Loan</div>
+                                <div class="text-xs text-gray-500">Quick cash for any need</div>
+                            </a>
+                            <a href="/business_loan"
+                                class="block px-6 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">
+                                <div class="font-semibold">Business Loan</div>
+                                <div class="text-xs text-gray-500">Fuel your business growth</div>
+                            </a>
+                            <a href="/home_loan"
+                                class="block px-6 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">
+                                <div class="font-semibold">Home Loan</div>
+                                <div class="text-xs text-gray-500">Your dream home awaits</div>
+                            </a>
+                            <a href="/car_loan"
+                                class="block px-6 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">
+                                <div class="font-semibold">Car Loan</div>
+                                <div class="text-xs text-gray-500">Drive your dream car</div>
+                            </a>
+                            <a href="/education_loan"
+                                class="block px-6 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">
+                                <div class="font-semibold">Education Loan</div>
+                                <div class="text-xs text-gray-500">Invest in your future</div>
+                            </a>
+                            <div class="border-t border-gray-100 my-2"></div>
+                            <a href="/credit_cards"
+                                class="block px-6 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">
+                                <div class="font-semibold">Credit Cards</div>
+                                <div class="text-xs text-gray-500">Best card offers</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Services Dropdown -->
+                    <div class="dropdown relative">
+                        <button class="nav-link text-gray-900 font-medium flex items-center gap-1">
+                            Services
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 py-2 animate-slide-down">
+                            <a href="/cibil_service"
+                                class="block px-6 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">
+                                <div class="font-semibold">CIBIL Update Services</div>
+                                <div class="text-xs text-gray-500">Improve your credit score</div>
+                            </a>
+                            <a href="#taxation"
+                                class="block px-6 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">
+                                <div class="font-semibold">Taxation Services</div>
+                                <div class="text-xs text-gray-500">GST, ITR filing & more</div>
+                            </a>
+                            <a href="#insurance"
+                                class="block px-6 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">
+                                <div class="font-semibold">Insurance</div>
+                                <div class="text-xs text-gray-500">Life, health & vehicle</div>
+                            </a>
+                            <a href="#legal-services"
+                                class="block px-6 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">
+                                <div class="font-semibold">Legal Services</div>
+                                <div class="text-xs text-gray-500">Registration & filings</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="/emi_calculator"
+                        class="nav-link text-gray-900 font-medium <%= (typeof currentPage !== 'undefined' && currentPage === 'emi-calculator') ? 'active' : '' %>">
+                        EMI Calculator
+                    </a>
+
+                    <a href="/about_Us"
+                        class="nav-link text-gray-900 font-medium <%= (typeof currentPage !== 'undefined' && currentPage === 'about') ? 'active' : '' %>">
+                        About Us
+                    </a>
+
+                    <a href="/contact"
+                        class="nav-link text-gray-900 font-medium <%= (typeof currentPage !== 'undefined' && currentPage === 'contact') ? 'active' : '' %>">
+                        Contact Us
+                    </a>
+
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <button
+                        class="px-6 py-2.5 text-green-600 font-semibold hover:bg-green-50 rounded-lg transition-colors">
+                        Login
+                    </button>
+                    <button class="cta-button px-6 py-2.5 bg-green-600 text-white font-semibold rounded-lg shadow-lg">
+                        Apply Now
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors">
+                    <svg id="menuIcon" class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg id="closeIcon" class="w-6 h-6 text-gray-900 hidden" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="mobile-menu lg:hidden">
+                <div class="py-4 space-y-2 border-t border-gray-100">
+
+                    <a href="/"
+                        class="mobile-nav-link block px-4 py-3 text-gray-900 font-medium rounded-lg <%= (typeof currentPage !== 'undefined' && currentPage === 'home') ? 'active' : '' %>">
+                        Home
+                    </a>
+
+                    <!-- Mobile Products Section -->
+                    <div class="mobile-dropdown">
+                        <button id="mobileProductsBtn"
+                            class="mobile-nav-link w-full flex items-center justify-between px-4 py-3 text-gray-900 font-medium rounded-lg">
+                            Products
+                            <svg class="w-5 h-5 transition-transform" id="productsChevron" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="mobileProductsMenu" class="max-h-0 overflow-hidden transition-all duration-300">
+                            <div class="pl-8 pr-4 py-2 space-y-2">
+                                <a href="#personal-loan" class="block py-2 text-gray-600 hover:text-green-600">Personal
+                                    Loan</a>
+                                <a href="#business-loan" class="block py-2 text-gray-600 hover:text-green-600">Business
+                                    Loan</a>
+                                <a href="#home-loan" class="block py-2 text-gray-600 hover:text-green-600">Home Loan</a>
+                                <a href="#car-loan" class="block py-2 text-gray-600 hover:text-green-600">Car Loan</a>
+                                <a href="#education-loan"
+                                    class="block py-2 text-gray-600 hover:text-green-600">Education
+                                    Loan</a>
+                                <a href="#credit-cards" class="block py-2 text-gray-600 hover:text-green-600">Credit
+                                    Cards</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Services Section -->
+                    <div class="mobile-dropdown">
+                        <button id="mobileServicesBtn"
+                            class="mobile-nav-link w-full flex items-center justify-between px-4 py-3 text-gray-900 font-medium rounded-lg">
+                            Services
+                            <svg class="w-5 h-5 transition-transform" id="servicesChevron" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="mobileServicesMenu" class="max-h-0 overflow-hidden transition-all duration-300">
+                            <div class="pl-8 pr-4 py-2 space-y-2">
+                                <a href="#cibil-update" class="block py-2 text-gray-600 hover:text-green-600">CIBIL
+                                    Update
+                                    Services</a>
+                                <a href="#taxation" class="block py-2 text-gray-600 hover:text-green-600">Taxation
+                                    Services</a>
+                                <a href="#insurance" class="block py-2 text-gray-600 hover:text-green-600">Insurance</a>
+                                <a href="#legal-services" class="block py-2 text-gray-600 hover:text-green-600">Legal
+                                    Services</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#about"
+                        class="mobile-nav-link block px-4 py-3 text-gray-900 font-medium rounded-lg <%= (typeof currentPage !== 'undefined' && currentPage === 'about') ? 'active' : '' %>">
+                        About Us
+                    </a>
+
+                    <a href="#contact"
+                        class="mobile-nav-link block px-4 py-3 text-gray-900 font-medium rounded-lg <%= (typeof currentPage !== 'undefined' && currentPage === 'contact') ? 'active' : '' %>">
+                        Contact
+                    </a>
+
+                    <!-- Mobile CTA Buttons -->
+                    <div class="px-4 pt-4 space-y-3 border-t border-gray-100 mt-4">
+                        <button class="w-full px-6 py-3 text-green-600 font-semibold bg-green-50 rounded-lg">
+                            Login
+                        </button>
+                        <button class="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg shadow-lg">
+                            Apply Now
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+    });
+
+    // Mobile dropdown toggles
+    const mobileProductsBtn = document.getElementById('mobileProductsBtn');
+    const mobileProductsMenu = document.getElementById('mobileProductsMenu');
+    const productsChevron = document.getElementById('productsChevron');
+
+    mobileProductsBtn.addEventListener('click', () => {
+        const isOpen = mobileProductsMenu.style.maxHeight && mobileProductsMenu.style.maxHeight !== '0px';
+        mobileProductsMenu.style.maxHeight = isOpen ? '0px' : mobileProductsMenu.scrollHeight + 'px';
+        productsChevron.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+    });
+
+    const mobileServicesBtn = document.getElementById('mobileServicesBtn');
+    const mobileServicesMenu = document.getElementById('mobileServicesMenu');
+    const servicesChevron = document.getElementById('servicesChevron');
+
+    mobileServicesBtn.addEventListener('click', () => {
+        const isOpen = mobileServicesMenu.style.maxHeight && mobileServicesMenu.style.maxHeight !== '0px';
+        mobileServicesMenu.style.maxHeight = isOpen ? '0px' : mobileServicesMenu.scrollHeight + 'px';
+        servicesChevron.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+    });
+
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Active link highlighting
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
+</script>

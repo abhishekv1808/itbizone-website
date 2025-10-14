@@ -1,0 +1,927 @@
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/navbar.ejs') %>
+            <main>
+                <!-- Hero Section -->
+                <section class="bg-white py-16 overflow-hidden">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="grid lg:grid-cols-2 gap-12 items-center">
+                            <!-- Left Content -->
+                            <div class="space-y-8">
+                                <div class="space-y-6">
+                                    <div
+                                        class="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold">
+                                        <i class="fas fa-chart-line mr-2"></i>CIBIL Update Service
+                                    </div>
+                                    <h1 class="text-3xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                                        Improve Your
+                                        <span class="text-green-600">Credit Score</span>
+                                        & Get Better Loans
+                                    </h1>
+                                    <p class="text-lg text-gray-600 leading-relaxed">
+                                        Professional CIBIL report analysis, error correction, and personalized credit
+                                        improvement strategies.
+                                        Transform your credit profile with our expert guidance.
+                                    </p>
+                                </div>
+
+                                <!-- Key Benefits -->
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
+                                        <div
+                                            class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                                            <i class="fas fa-check text-green-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900">Free Credit Report</div>
+                                            <div class="text-sm text-gray-600">Complete analysis included</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
+                                        <div
+                                            class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                                            <i class="fas fa-user-tie text-blue-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900">Expert Guidance</div>
+                                            <div class="text-sm text-gray-600">Dedicated credit specialists</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
+                                        <div
+                                            class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                                            <i class="fas fa-shield-alt text-purple-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900">Secure Process</div>
+                                            <div class="text-sm text-gray-600">256-bit SSL encryption</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
+                                        <div
+                                            class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
+                                            <i class="fas fa-clock text-orange-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900">Quick Results</div>
+                                            <div class="text-sm text-gray-600">30-90 days improvement</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- CTA Buttons -->
+                                <div class="flex flex-wrap gap-4">
+                                    <button onclick="scrollToPackages()"
+                                        class="px-8 py-4 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors shadow-lg">
+                                        <i class="fas fa-rocket mr-2"></i>Start Credit Repair
+                                    </button>
+                                    <button onclick="scrollToScore()"
+                                        class="px-8 py-4 bg-white text-green-600 border-2 border-green-600 rounded-lg font-semibold hover:bg-green-50 transition-colors">
+                                        <i class="fas fa-download mr-2"></i>Get Free Credit Score
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Right Content - Score Display -->
+                            <div class="relative">
+                                <img src="/images/cibil-hero-image.png" alt="CIBIL SCORE" class="w-120 h-auto mx-auto">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Myth vs Truth Section -->
+                <section class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Myth vs Reality
+                            </h2>
+                            <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                                Don't let misconceptions about credit scores hold you back
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                            <!-- Myth -->
+                            <div class="bg-red-50 border border-red-200 rounded-2xl p-8">
+                                <div class="text-center">
+                                    <div
+                                        class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-times text-red-600 text-2xl"></i>
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-red-800 mb-4">MYTH</h3>
+                                    <p class="text-red-700 text-lg font-semibold">
+                                        "Bad Credit Score cannot be improved"
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Truth -->
+                            <div class="bg-green-50 border border-green-200 rounded-2xl p-8">
+                                <div class="text-center">
+                                    <div
+                                        class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-check text-green-600 text-2xl"></i>
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-green-800 mb-4">TRUTH</h3>
+                                    <p class="text-green-700 text-lg font-semibold">
+                                        "We have been successfully improving credit scores for over 10 years"
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Statistics -->
+                        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-green-600">10+</div>
+                                <div class="text-gray-600">Years Experience</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-blue-600">50,000+</div>
+                                <div class="text-gray-600">Happy Clients</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-purple-600">95%</div>
+                                <div class="text-gray-600">Success Rate</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-orange-600">150+</div>
+                                <div class="text-gray-600">Points Average Improvement</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- How Our Service Works -->
+                <section class="py-16 bg-white">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                How Our Credit Improvement Service Works
+                            </h2>
+                            <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                                Our proven 3-step process to improve your credit score and financial health
+                            </p>
+                        </div>
+
+                        <div class="grid lg:grid-cols-3 gap-8">
+                            <!-- Step 1 -->
+                            <div class="relative">
+                                <div
+                                    class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-100">
+                                    <div class="text-center mb-6">
+                                        <div
+                                            class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-search text-blue-600 text-2xl"></i>
+                                        </div>
+                                        <div
+                                            class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">
+                                            1
+                                        </div>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Analyze Your Credit
+                                        Report</h3>
+                                    <p class="text-gray-600 text-center mb-6">
+                                        Our experts thoroughly analyze your credit report to identify errors,
+                                        discrepancies, and improvement opportunities.
+                                    </p>
+                                    <ul class="space-y-2 text-sm text-gray-600">
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check-circle text-green-500"></i>
+                                            Comprehensive credit report review
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check-circle text-green-500"></i>
+                                            Error identification and documentation
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check-circle text-green-500"></i>
+                                            Free credit score consultation
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Arrow -->
+                                <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
+                                    <i class="fas fa-arrow-right text-gray-400 text-2xl"></i>
+                                </div>
+                            </div>
+
+                            <!-- Step 2 -->
+                            <div class="relative">
+                                <div
+                                    class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-100">
+                                    <div class="text-center mb-6">
+                                        <div
+                                            class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-tools text-green-600 text-2xl"></i>
+                                        </div>
+                                        <div
+                                            class="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">
+                                            2
+                                        </div>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Resolve Credit Issues
+                                    </h3>
+                                    <p class="text-gray-600 text-center mb-6">
+                                        We work directly with credit bureaus and lenders to dispute inaccuracies and
+                                        resolve issues affecting your score.
+                                    </p>
+                                    <ul class="space-y-2 text-sm text-gray-600">
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check-circle text-green-500"></i>
+                                            Dispute incorrect information
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check-circle text-green-500"></i>
+                                            Negotiate with creditors
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-check-circle text-green-500"></i>
+                                            Remove negative entries
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Arrow -->
+                                <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
+                                    <i class="fas fa-arrow-right text-gray-400 text-2xl"></i>
+                                </div>
+                            </div>
+
+                            <!-- Step 3 -->
+                            <div
+                                class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-100">
+                                <div class="text-center mb-6">
+                                    <div
+                                        class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-chart-line text-purple-600 text-2xl"></i>
+                                    </div>
+                                    <div
+                                        class="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">
+                                        3
+                                    </div>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Personalized Improvement
+                                    Plan</h3>
+                                <p class="text-gray-600 text-center mb-6">
+                                    Receive customized recommendations and strategies to build and maintain a strong
+                                    credit profile.
+                                </p>
+                                <ul class="space-y-2 text-sm text-gray-600">
+                                    <li class="flex items-center gap-2">
+                                        <i class="fas fa-check-circle text-green-500"></i>
+                                        Tailored credit building strategy
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i class="fas fa-check-circle text-green-500"></i>
+                                        Ongoing monitoring and support
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i class="fas fa-check-circle text-green-500"></i>
+                                        Educational resources and tips
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Free Credit Score Section -->
+                <section id="credit-score-section" class="py-16 bg-gradient-to-br from-green-50 to-blue-50">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Get Your Free Credit Report & Analysis
+                            </h2>
+                            <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                                Start your credit improvement journey with a comprehensive free analysis
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                            <!-- Free Credit Score -->
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow text-center">
+                                <div
+                                    class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-file-alt text-blue-600 text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">FREE Credit Score & Report</h3>
+                                <p class="text-gray-600 mb-4">Get your complete credit report with detailed analysis</p>
+                                <button
+                                    class="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                                    Get Report
+                                </button>
+                            </div>
+
+                            <!-- Free Analysis -->
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow text-center">
+                                <div
+                                    class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-chart-pie text-green-600 text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">FREE Analysis of Credit Report</h3>
+                                <p class="text-gray-600 mb-4">Expert review and identification of improvement areas</p>
+                                <button
+                                    class="w-full px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
+                                    Get Analysis
+                                </button>
+                            </div>
+
+                            <!-- Free Counseling -->
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow text-center">
+                                <div
+                                    class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-user-tie text-purple-600 text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">FREE Credit Counselling</h3>
+                                <p class="text-gray-600 mb-4">One-on-one consultation with credit experts</p>
+                                <button
+                                    class="w-full px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
+                                    Book Session
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Service Packages -->
+                <section id="packages-section" class="py-16 bg-white">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Choose Your Credit Improvement Package
+                            </h2>
+                            <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                                Select the perfect plan to transform your credit score and unlock better financial
+                                opportunities
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <!-- Basic Package -->
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-200">
+                                <div class="text-center mb-6">
+                                    <h3 class="text-xl font-bold text-gray-900 mb-2">BASIC</h3>
+                                    <p class="text-gray-600 text-sm">Perfect for beginners</p>
+                                    <div class="text-3xl font-bold text-green-600 mt-4">₹2,999</div>
+                                    <div class="text-gray-500 text-sm">One-time payment</div>
+                                </div>
+
+                                <ul class="space-y-3 mb-6">
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <i class="fas fa-check text-green-500"></i>
+                                        Analysis of Credit Report
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <i class="fas fa-check text-green-500"></i>
+                                        Identification of Errors
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <i class="fas fa-check text-green-500"></i>
+                                        Issue Resolution
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <i class="fas fa-check text-green-500"></i>
+                                        Personalised Credit Expert
+                                    </li>
+                                </ul>
+
+                                <button
+                                    class="w-full px-4 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-semibold">
+                                    Choose Plan
+                                </button>
+                            </div>
+
+                            <!-- Standard Package -->
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border-2 border-green-500 relative">
+                                <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                                    <span
+                                        class="bg-green-500 text-white px-4 py-1 rounded-full text-xs font-semibold">POPULAR</span>
+                                </div>
+
+                                <div class="text-center mb-6">
+                                    <h3 class="text-xl font-bold text-gray-900 mb-2">STANDARD</h3>
+                                    <p class="text-gray-600 text-sm">Most chosen plan</p>
+                                    <div class="text-3xl font-bold text-green-600 mt-4">₹4,999</div>
+                                    <div class="text-gray-500 text-sm">One-time payment</div>
+                                </div>
+
+                                <ul class="space-y-3 mb-6">
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <i class="fas fa-check text-green-500"></i>
+                                        Analysis of Credit Report
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <i class="fas fa-check text-green-500"></i>
+                                        Identification of Errors
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <i class="fas fa-check text-green-500"></i>
+                                        Issue Resolution
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <i class="fas fa-check text-green-500"></i>
+                                        Senior Credit Expert
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <i class="fas fa-check text-green-500"></i>
+                                        Score Improvement Program
+                                    </li>
+                                </ul>
+
+                                <button
+                                    class="w-full px-4 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-semibold">
+                                    Choose Plan
+                                </button>
+                            </div>
+
+                            <!-- Premium Package -->
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-200">
+                                <div class="text-center mb-6">
+                                    <h3 class="text-xl font-bold text-gray-900 mb-2">PREMIUM</h3>
+                                    <p class="text-gray-600 text-sm">Advanced features</p>
+                                    <div class="text-3xl font-bold text-green-600 mt-4">₹7,999</div>
+                                    <div class="text-gray-500 text-sm">One-time payment</div>
+                                </div>
+
+                                <ul class="space-y-3 mb-6">
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <i class="fas fa-check text-green-500"></i>
+                                        Analysis of Credit Report
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <i class="fas fa-check text-green-500"></i>
+                                        Identification of Errors
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <i class="fas fa-check text-green-500"></i>
+                                        Issue Resolution
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <i class="fas fa-check text-green-500"></i>
+                                        Score Improvement Program
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <i class="fas fa-check text-green-500"></i>
+                                        Dedicated Credit Expert
+                                    </li>
+                                </ul>
+
+                                <button
+                                    class="w-full px-4 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-semibold">
+                                    Choose Plan
+                                </button>
+                            </div>
+
+                            <!-- Commercial Package -->
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-200">
+                                <div class="text-center mb-6">
+                                    <h3 class="text-xl font-bold text-gray-900 mb-2">COMMERCIAL</h3>
+                                    <p class="text-gray-600 text-sm">For businesses</p>
+                                    <div class="text-3xl font-bold text-green-600 mt-4">₹12,999</div>
+                                    <div class="text-gray-500 text-sm">One-time payment</div>
+                                </div>
+
+                                <ul class="space-y-3 mb-6">
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <i class="fas fa-check text-green-500"></i>
+                                        Analysis of Credit Report
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <i class="fas fa-check text-green-500"></i>
+                                        Identification of Errors
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <i class="fas fa-check text-green-500"></i>
+                                        Issue Resolution
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <i class="fas fa-check text-green-500"></i>
+                                        CMR Improvement Program
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <i class="fas fa-check text-green-500"></i>
+                                        Senior Credit Expert
+                                    </li>
+                                </ul>
+
+                                <button
+                                    class="w-full px-4 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-semibold">
+                                    Choose Plan
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-8">
+                            <p class="text-gray-600 mb-4">Need help choosing the right package?</p>
+                            <button
+                                class="px-6 py-3 bg-white text-green-600 border-2 border-green-600 rounded-lg hover:bg-green-50 transition-colors font-semibold">
+                                <i class="fas fa-phone mr-2"></i>Talk to Expert
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Benefits Section -->
+                <section class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                Benefits of Good Credit Score
+                            </h2>
+                            <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                                Unlock better financial opportunities with an improved credit profile
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                                    <i class="fas fa-percentage text-blue-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Lower Interest Rates</h3>
+                                <p class="text-gray-600">Get loans and credit cards at significantly lower interest
+                                    rates, saving thousands of rupees.</p>
+                            </div>
+
+                            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                                    <i class="fas fa-thumbs-up text-green-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Quick Loan Approval</h3>
+                                <p class="text-gray-600">Fast-track approval process with minimal documentation and
+                                    verification requirements.</p>
+                            </div>
+
+                            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                                    <i class="fas fa-coins text-purple-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Higher Loan Amounts</h3>
+                                <p class="text-gray-600">Qualify for larger loan amounts to meet your bigger financial
+                                    needs and goals.</p>
+                            </div>
+
+                            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                                    <i class="fas fa-credit-card text-orange-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Premium Credit Cards</h3>
+                                <p class="text-gray-600">Access to exclusive credit cards with better rewards, cashback,
+                                    and benefits.</p>
+                            </div>
+
+                            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                                    <i class="fas fa-home text-red-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Better Home Loans</h3>
+                                <p class="text-gray-600">Secure home loans with attractive interest rates and flexible
+                                    repayment terms.</p>
+                            </div>
+
+                            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                                    <i class="fas fa-briefcase text-teal-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-3">Business Opportunities</h3>
+                                <p class="text-gray-600">Enhanced credibility for business loans, partnerships, and
+                                    vendor relationships.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Testimonials -->
+                <section class="py-16 bg-white">
+                    <div class="container mx-auto px-6 lg:px-20">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                What Our Clients Say
+                            </h2>
+                            <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                                Real stories from customers who transformed their credit scores
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="bg-gray-50 rounded-xl p-6">
+                                <div class="flex items-center mb-4">
+                                    <div class="flex text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 mb-4 italic">
+                                    "My credit score improved from 580 to 750 in just 4 months. The team was
+                                    professional and kept me updated throughout the process."
+                                </p>
+                                <div class="flex items-center">
+                                    <div
+                                        class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-semibold">
+                                        D
+                                    </div>
+                                    <div class="ml-3">
+                                        <div class="font-semibold text-gray-900">Durga Prasad</div>
+                                        <div class="text-sm text-gray-600">Mumbai</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-gray-50 rounded-xl p-6">
+                                <div class="flex items-center mb-4">
+                                    <div class="flex text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 mb-4 italic">
+                                    "Excellent service! They helped remove incorrect entries from my report and guided
+                                    me on building better credit habits."
+                                </p>
+                                <div class="flex items-center">
+                                    <div
+                                        class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-semibold">
+                                        R
+                                    </div>
+                                    <div class="ml-3">
+                                        <div class="font-semibold text-gray-900">Rahul Sharma</div>
+                                        <div class="text-sm text-gray-600">Delhi</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-gray-50 rounded-xl p-6">
+                                <div class="flex items-center mb-4">
+                                    <div class="flex text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 mb-4 italic">
+                                    "Thanks to their service, I got approved for a home loan at a much better interest
+                                    rate. Highly recommended!"
+                                </p>
+                                <div class="flex items-center">
+                                    <div
+                                        class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-semibold">
+                                        P
+                                    </div>
+                                    <div class="ml-3">
+                                        <div class="font-semibold text-gray-900">Priya Patel</div>
+                                        <div class="text-sm text-gray-600">Bangalore</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Call to Action -->
+                <section class="py-16 bg-green-600 text-white">
+                    <div class="container mx-auto px-6 lg:px-20 text-center">
+                        <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+                            Ready to Improve Your Credit Score?
+                        </h2>
+                        <p class="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+                            Take the first step towards financial freedom with our expert credit repair services
+                        </p>
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <button
+                                class="px-8 py-4 bg-white text-green-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                <i class="fas fa-chart-line mr-2"></i>Get Free Credit Report
+                            </button>
+                            <button
+                                class="px-8 py-4 bg-green-700 text-white border-2 border-white rounded-lg font-semibold hover:bg-green-800 transition-colors">
+                                <i class="fas fa-phone mr-2"></i>Call Now: +91 9900077949
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+
+            </main>
+            <%- include('../partials/footer.ejs') %>
+                <%- include('../partials/privacy-policy.ejs') %>
+                    <%- include('../partials/terms-of-service.ejs') %>
+
+                        <script>
+                            // Smooth scrolling functions
+                            function scrollToPackages() {
+                                document.getElementById('packages-section').scrollIntoView({
+                                    behavior: 'smooth'
+                                });
+                            }
+
+                            function scrollToScore() {
+                                document.getElementById('credit-score-section').scrollIntoView({
+                                    behavior: 'smooth'
+                                });
+                            }
+
+                            // Animate credit score gauge on page load
+                            document.addEventListener('DOMContentLoaded', function () {
+                                // Animate the credit score circle
+                                const scoreCircle = document.querySelector('circle[stroke="#10b981"]');
+                                if (scoreCircle) {
+                                    // Start with full dash offset (hidden)
+                                    scoreCircle.style.strokeDashoffset = '377';
+
+                                    // Animate to show 750/900 score (approximately 83%)
+                                    setTimeout(() => {
+                                        scoreCircle.style.transition = 'stroke-dashoffset 2s ease-in-out';
+                                        scoreCircle.style.strokeDashoffset = '64'; // Shows about 83% of the circle
+                                    }, 500);
+                                }
+
+                                // Animate score range bars
+                                const scoreBars = document.querySelectorAll('.w-16.h-2 > div');
+                                scoreBars.forEach((bar, index) => {
+                                    setTimeout(() => {
+                                        if (index === 3) { // Excellent range (750-900)
+                                            bar.style.transition = 'width 1s ease-in-out';
+                                            bar.classList.remove('w-0');
+                                            bar.classList.add('w-12');
+                                        }
+                                    }, 1000 + (index * 200));
+                                });
+
+                                // Add hover effects to package cards
+                                const packageCards = document.querySelectorAll('#packages-section .bg-white.rounded-2xl');
+                                packageCards.forEach(card => {
+                                    card.addEventListener('mouseenter', function () {
+                                        this.style.transform = 'translateY(-8px)';
+                                        this.style.transition = 'transform 0.3s ease';
+                                    });
+
+                                    card.addEventListener('mouseleave', function () {
+                                        this.style.transform = 'translateY(0)';
+                                    });
+                                });
+
+                                // Add click handlers for service buttons
+                                document.querySelectorAll('button').forEach(button => {
+                                    if (button.textContent.includes('Get Report') ||
+                                        button.textContent.includes('Get Analysis') ||
+                                        button.textContent.includes('Book Session')) {
+                                        button.addEventListener('click', function () {
+                                            // Simulate modal or form opening
+                                            alert('Feature coming soon! This will open a form to collect your details.');
+                                        });
+                                    }
+
+                                    if (button.textContent.includes('Choose Plan')) {
+                                        button.addEventListener('click', function () {
+                                            // Get the package name from the card
+                                            const packageName = this.closest('.bg-white').querySelector('h3').textContent;
+                                            alert(`You selected the ${packageName} package. Redirecting to payment...`);
+                                        });
+                                    }
+
+                                    if (button.textContent.includes('Talk to Expert')) {
+                                        button.addEventListener('click', function () {
+                                            // Simulate phone call or chat
+                                            alert('Connecting you to our credit expert. Please hold on...');
+                                        });
+                                    }
+                                });
+
+                                // Counter animation for statistics
+                                const stats = [
+                                    { element: document.querySelector('.text-3xl.font-bold.text-green-600'), target: 10, suffix: '+' },
+                                    { element: document.querySelector('.text-3xl.font-bold.text-blue-600'), target: 50000, suffix: '+' },
+                                    { element: document.querySelector('.text-3xl.font-bold.text-purple-600'), target: 95, suffix: '%' },
+                                    { element: document.querySelector('.text-3xl.font-bold.text-orange-600'), target: 150, suffix: '+' }
+                                ];
+
+                                // Intersection Observer for animations
+                                const observer = new IntersectionObserver((entries) => {
+                                    entries.forEach(entry => {
+                                        if (entry.isIntersecting) {
+                                            // Animate statistics when they come into view
+                                            if (entry.target.closest('.grid.grid-cols-2.lg\\:grid-cols-4')) {
+                                                animateStats();
+                                            }
+                                        }
+                                    });
+                                }, { threshold: 0.5 });
+
+                                // Observe the statistics section
+                                const statsSection = document.querySelector('.grid.grid-cols-2.lg\\:grid-cols-4.gap-6.mt-12');
+                                if (statsSection) {
+                                    observer.observe(statsSection);
+                                }
+
+                                function animateStats() {
+                                    stats.forEach((stat, index) => {
+                                        if (stat.element) {
+                                            let current = 0;
+                                            const increment = stat.target / 50; // 50 steps
+                                            const timer = setInterval(() => {
+                                                current += increment;
+                                                if (current >= stat.target) {
+                                                    current = stat.target;
+                                                    clearInterval(timer);
+                                                }
+
+                                                if (stat.target === 50000) {
+                                                    stat.element.textContent = Math.floor(current).toLocaleString() + stat.suffix;
+                                                } else {
+                                                    stat.element.textContent = Math.floor(current) + stat.suffix;
+                                                }
+                                            }, 40);
+                                        }
+                                    });
+                                }
+                            });
+
+                            // Form validation for future forms
+                            function validateCreditForm(formData) {
+                                const required = ['name', 'email', 'phone', 'panCard'];
+                                const errors = [];
+
+                                required.forEach(field => {
+                                    if (!formData[field] || formData[field].trim() === '') {
+                                        errors.push(`${field} is required`);
+                                    }
+                                });
+
+                                // Validate email
+                                if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+                                    errors.push('Please enter a valid email address');
+                                }
+
+                                // Validate phone
+                                if (formData.phone && !/^[6-9]\d{9}$/.test(formData.phone)) {
+                                    errors.push('Please enter a valid 10-digit mobile number');
+                                }
+
+                                // Validate PAN
+                                if (formData.panCard && !/^[A-Z]{5}\d{4}[A-Z]{1}$/.test(formData.panCard.toUpperCase())) {
+                                    errors.push('Please enter a valid PAN card number');
+                                }
+
+                                return errors;
+                            }
+
+                            // Credit score calculator (simplified)
+                            function calculateCreditScore(factors) {
+                                // This is a simplified calculation for demonstration
+                                let score = 300; // Base score
+
+                                // Payment history (35% weight)
+                                score += (factors.paymentHistory || 0) * 0.35 * 600;
+
+                                // Credit utilization (30% weight)
+                                score += (100 - (factors.creditUtilization || 0)) * 0.3 * 6;
+
+                                // Credit age (15% weight)
+                                score += Math.min(factors.creditAge || 0, 10) * 0.15 * 60;
+
+                                // Credit mix (10% weight)
+                                score += (factors.creditMix || 0) * 0.1 * 600;
+
+                                // New credit (10% weight)
+                                score += (100 - (factors.newCredit || 0)) * 0.1 * 6;
+
+                                return Math.min(Math.max(Math.round(score), 300), 900);
+                            }
+
+                            // Credit score tips
+                            const creditTips = [
+                                "Pay all your bills on time to maintain a good payment history",
+                                "Keep your credit utilization below 30% of available credit limit",
+                                "Don't close old credit cards as they help increase credit age",
+                                "Maintain a good mix of credit types (cards, loans, etc.)",
+                                "Limit new credit applications to avoid multiple inquiries",
+                                "Check your credit report regularly for errors and disputes",
+                                "Pay more than the minimum amount due on credit cards",
+                                "Consider becoming an authorized user on someone's account"
+                            ];
+
+                            // Display random tip (for future use)
+                            function getRandomCreditTip() {
+                                return creditTips[Math.floor(Math.random() * creditTips.length)];
+                            }
+                        </script>
+    </body>
+
+    </html>
