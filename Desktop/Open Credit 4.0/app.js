@@ -19,7 +19,6 @@ app.use(userRouter);
 
 const port = 3005;
 
-
 mongoose.connect(mongoDBURL).then(()=>{
     console.log("Connected to Mongodb database");
     app.listen(port, ()=>{
