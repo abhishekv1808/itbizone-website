@@ -6,7 +6,7 @@ module.exports = {
     "./public/**/*.js",
     "./*.js"
   ],
-  darkMode: ['selector', '[data-theme="dark"]'],
+  darkMode: false, // Disable dark mode for light theme only
   theme: {
     extend: {
       colors: {
@@ -93,6 +93,15 @@ module.exports = {
           600: '#d97706',
           700: '#b45309',
           900: '#78350f'
+        },
+        // Light theme specific colors
+        'light-bg': '#ffffff',
+        'light-surface': '#f8fafc',
+        'light-border': '#e2e8f0',
+        'light-text': {
+          DEFAULT: '#1e293b',
+          secondary: '#475569',
+          muted: '#64748b'
         }
       },
       fontFamily: {

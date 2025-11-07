@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #1e293b; color: #fff; padding: 20px; }
+        .container { max-width: 600px; margin: 0 auto; }
+        .service { margin: 10px 0; }
+        .pricing-panel { background: #334155; padding: 20px; border-radius: 8px; margin-top: 20px; }
+        input[type="checkbox"] { margin-right: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pricing Calculator Test</h1>
+        
+        <div>
+            <h3>Website Development Services</h3>
+            <label class="service">
+                <input type="checkbox" class="service-checkbox" data-price="35000" />
+                Custom Website Design & Development - ₹35,000
+            </label>
+            <label class="service">
+                <input type="checkbox" class="service-checkbox" data-price="50000" />
+                E-commerce Development - ₹50,000
+            </label>
+            <label class="service">
+                <input type="checkbox" class="service-checkbox" data-price="65000" />
+                Web Application Development - ₹65,000
+            </label>
+        </div>
+
+        <div class="pricing-panel">
+            <h3>Your Quote</h3>
+            <div id="selected-services">
+                <p>Select services to see quote</p>
+            </div>
+            <hr style="margin: 15px 0; border: none; border-top: 1px solid #475569;">
+            <div style="margin-bottom: 10px;">
+                <strong>Subtotal: <span id="subtotal">₹0</span></strong>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <strong>Discount (10%): <span id="discount">₹0</span></strong>
+            </div>
+            <div style="font-size: 18px;">
+                <strong>Total: <span id="total">₹0</span></strong>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        console.log('Page loaded - Testing pricing calculator');
+
+        function setupPricingCalculator() {
+            const subtotalEl = document.getElementById('subtotal');
+            const discountEl = document.getElementById('discount');
+            const totalEl = document.getElementById('total');
+            const selectedServicesEl = document.getElementById('selected-services');
+            const checkboxes = document.querySelectorAll('.service-checkbox');
+
+            console.log('✓ setupPricingCalculator called');
+            console.log('Total checkboxes found:', checkboxes.length);
+            console.log('Subtotal element:', subtotalEl);
+            console.log('Discount element:', discountEl);
+            console.log('Total element:', totalEl);
+
+            if (checkboxes.length === 0) {
+                console.warn('✗ No checkboxes found!');
+                return;
+            }
+
+            function updatePricing() {
+                let totalPrice = 0;
+                let selectedServices = [];
+
+                checkboxes.forEach((checkbox, index) => {
+                    if (checkbox.checked) {
+                        const price = parseInt(checkbox.dataset.price);
+                        const label = checkbox.closest('label').textContent.trim();
+                        
+                        console.log(`  Checkbox ${index}: Price = ${price}, Label = ${label}`);
+                        
+                        if (!isNaN(price)) {
+                            selectedServices.push({ name: label, price: price });
+                            totalPrice += price;
+                        }
+                    }
+                });
+
+                console.log('✓ Total Price:', totalPrice, 'Selected:', selectedServices.length);
+
+                // Update selected services list
+                if (selectedServices.length === 0) {
+                    selectedServicesEl.innerHTML = '<p>Select services to see quote</p>';
+                } else {
+                    selectedServicesEl.innerHTML = selectedServices.map(service =>
+                        `<div style="margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid #475569;">
+                            <span>${service.name}</span><br/>
+                            <span style="color: #60a5fa;">₹${service.price.toLocaleString('en-IN')}</span>
+                        </div>`
+                    ).join('');
+                }
+
+                // Calculate discount and final price
+                const discount = Math.floor(totalPrice * 0.1);
+                const finalPrice = totalPrice - discount;
+
+                // Update UI
+                subtotalEl.textContent = `₹${totalPrice.toLocaleString('en-IN')}`;
+                discountEl.textContent = `₹${discount.toLocaleString('en-IN')}`;
+                totalEl.textContent = `₹${finalPrice.toLocaleString('en-IN')}`;
+
+                console.log('✓ Updated - Subtotal:', totalPrice, 'Discount:', discount, 'Final:', finalPrice);
+            }
+
+            // Attach change event to all checkboxes
+            checkboxes.forEach((checkbox, idx) => {
+                checkbox.addEventListener('change', function() {
+                    console.log(`✓ Checkbox ${idx} clicked - value: ${this.checked}`);
+                    updatePricing();
+                });
+                console.log(`  Event listener attached to checkbox ${idx}`);
+            });
+
+            // Initial update
+            updatePricing();
+            console.log('✓ Pricing calculator initialized successfully');
+        }
+
+        // Initialize when document is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', setupPricingCalculator);
+            console.log('  DOMContentLoaded listener added');
+        } else {
+            setupPricingCalculator();
+            console.log('  Document already loaded, initializing directly');
+        }
+    </script>
+</body>
+</html>

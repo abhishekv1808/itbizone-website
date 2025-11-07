@@ -1,0 +1,661 @@
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/navbar.ejs') %>
+            <main class="pt-16">
+                <!-- Hero Section -->
+                <section class="py-20 bg-white">
+                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+                        <div class="mb-16 text-center">
+                            <!-- Badge -->
+                            <div
+                                class="inline-flex items-center px-4 py-2 mb-6 text-sm font-medium text-blue-600 border border-blue-200 rounded-full bg-blue-50 ">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                                    </path>
+                                </svg>
+                                Our Portfolio
+                            </div>
+
+                            <!-- Main Heading -->
+                            <h1 class="mb-6 text-4xl font-bold leading-tight text-gray-900 md:text-5xl lg:text-4xl">
+                                Showcasing Our <span class="primary">Digital Excellence</span>
+                            </h1>
+                            <p class="max-w-3xl mx-auto text-gray-600 text-md">
+                                Explore our diverse portfolio of successful projects spanning web development, graphic
+                                design, and digital marketing solutions that have helped businesses thrive.
+                            </p>
+                        </div>
+
+                        <!-- Stats Section -->
+                        <div class="grid grid-cols-2 gap-8 pt-12 mb-16 border-t border-gray-200 md:grid-cols-4 ">
+                            <div class="text-center">
+                                <div class="mb-2 text-3xl font-bold text-gray-900">150+</div>
+                                <div class="text-sm text-gray-600 ">Projects Completed</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="mb-2 text-3xl font-bold text-gray-900">50+</div>
+                                <div class="text-sm text-gray-600 ">Happy Clients</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="mb-2 text-3xl font-bold text-gray-900">5+</div>
+                                <div class="text-sm text-gray-600 ">Years Experience</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="mb-2 text-3xl font-bold text-gray-900">98%</div>
+                                <div class="text-sm text-gray-600 ">Client Satisfaction</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Filter Tabs -->
+                <section class="py-8 bg-gray-50">
+                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <button onclick="filterProjects('all')"
+                                class="px-6 py-3 font-medium text-white transition-all duration-300 rounded-lg filter-btn active bg-main">
+                                All Projects
+                            </button>
+                            <button onclick="filterProjects('web-development')"
+                                class="px-6 py-3 font-medium text-gray-700 transition-all duration-300 bg-white rounded-lg filter-btn hover:bg-main hover:text-white">
+                                Web Development
+                            </button>
+                            <button onclick="filterProjects('graphic-design')"
+                                class="px-6 py-3 font-medium text-gray-700 transition-all duration-300 bg-white rounded-lg filter-btn hover:bg-main hover:text-white">
+                                Graphic Design
+                            </button>
+                            <button onclick="filterProjects('digital-marketing')"
+                                class="px-6 py-3 font-medium text-gray-700 transition-all duration-300 bg-white rounded-lg filter-btn hover:bg-main hover:text-white">
+                                Digital Marketing
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Portfolio Grid -->
+                <section class="py-20 bg-white">
+                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+                        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3" id="portfolio-grid">
+
+                            <!-- Web Development Project 1 -->
+                            <div class="project-item web-development group">
+                                <div
+                                    class="overflow-hidden transition-all duration-300 bg-white border border-gray-200 shadow-lg rounded-2xl hover:shadow-xl ">
+                                    <div class="w-full h-48 overflow-hidden">
+                                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80"
+                                            alt="E-commerce Platform"
+                                            class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105">
+                                    </div>
+                                    <div class="p-6">
+                                        <div class="flex items-center mb-3">
+                                            <span class="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full">Web
+                                                Development</span>
+                                        </div>
+                                        <h3 class="mb-2 text-xl font-bold text-gray-900">E-commerce
+                                            Platform</h3>
+                                        <p class="mb-4 text-gray-600">Full-stack e-commerce solution
+                                            with payment integration, inventory management, and responsive design.</p>
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span
+                                                class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">React</span>
+                                            <span
+                                                class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">Node.js</span>
+                                            <span
+                                                class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">MongoDB</span>
+                                        </div>
+                                        <a href="#"
+                                            class="inline-flex items-center font-semibold text-blue-600 hover:underline">
+                                            View Project
+                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Graphic Design Project 1 -->
+                            <div class="project-item graphic-design group">
+                                <div
+                                    class="overflow-hidden transition-all duration-300 bg-white border border-gray-200 shadow-lg rounded-2xl hover:shadow-xl ">
+                                    <div class="w-full h-48 overflow-hidden">
+                                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=600&q=80"
+                                            alt="Brand Identity Design"
+                                            class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105">
+                                    </div>
+                                    <div class="p-6">
+                                        <div class="flex items-center mb-3">
+                                            <span
+                                                class="px-3 py-1 text-xs text-purple-600 bg-purple-100 rounded-full">Graphic
+                                                Design</span>
+                                        </div>
+                                        <h3 class="mb-2 text-xl font-bold text-gray-900">Tech Startup
+                                            Branding</h3>
+                                        <p class="mb-4 text-gray-600">Complete brand identity
+                                            including logo design, business cards, and marketing materials for a tech
+                                            startup.</p>
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">Logo
+                                                Design</span>
+                                            <span class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">Brand
+                                                Identity</span>
+                                            <span class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">Print
+                                                Design</span>
+                                        </div>
+                                        <a href="#"
+                                            class="inline-flex items-center font-semibold text-blue-600 hover:underline">
+                                            View Project
+                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Digital Marketing Project 1 -->
+                            <div class="project-item digital-marketing group">
+                                <div
+                                    class="overflow-hidden transition-all duration-300 bg-white border border-gray-200 shadow-lg rounded-2xl hover:shadow-xl ">
+                                    <div class="w-full h-48 overflow-hidden">
+                                        <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=600&q=80"
+                                            alt="Social Media Campaign"
+                                            class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105">
+                                    </div>
+                                    <div class="p-6">
+                                        <div class="flex items-center mb-3">
+                                            <span
+                                                class="px-3 py-1 text-xs text-green-600 bg-green-100 rounded-full">Digital
+                                                Marketing</span>
+                                        </div>
+                                        <h3 class="mb-2 text-xl font-bold text-gray-900">Social Media
+                                            Campaign</h3>
+                                        <p class="mb-4 text-gray-600">Comprehensive social media
+                                            strategy and campaign that increased engagement by 300% for a fitness brand.
+                                        </p>
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">Social
+                                                Media</span>
+                                            <span class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">Content
+                                                Strategy</span>
+                                            <span
+                                                class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">Analytics</span>
+                                        </div>
+                                        <a href="#"
+                                            class="inline-flex items-center font-semibold text-blue-600 hover:underline">
+                                            View Project
+                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Web Development Project 2 -->
+                            <div class="project-item web-development group">
+                                <div
+                                    class="overflow-hidden transition-all duration-300 bg-white border border-gray-200 shadow-lg rounded-2xl hover:shadow-xl ">
+                                    <div class="w-full h-48 overflow-hidden">
+                                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=600&q=80"
+                                            alt="Corporate Website"
+                                            class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105">
+                                    </div>
+                                    <div class="p-6">
+                                        <div class="flex items-center mb-3">
+                                            <span class="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full">Web
+                                                Development</span>
+                                        </div>
+                                        <h3 class="mb-2 text-xl font-bold text-gray-900">Corporate
+                                            Website</h3>
+                                        <p class="mb-4 text-gray-600">Professional corporate website
+                                            with CMS integration, SEO optimization, and mobile-first design.</p>
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span
+                                                class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">Vue.js</span>
+                                            <span
+                                                class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">PHP</span>
+                                            <span
+                                                class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">MySQL</span>
+                                        </div>
+                                        <a href="#"
+                                            class="inline-flex items-center font-semibold text-blue-600 hover:underline">
+                                            View Project
+                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Graphic Design Project 2 -->
+                            <div class="project-item graphic-design group">
+                                <div
+                                    class="overflow-hidden transition-all duration-300 bg-white border border-gray-200 shadow-lg rounded-2xl hover:shadow-xl ">
+                                    <div class="w-full h-48 overflow-hidden">
+                                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80"
+                                            alt="Marketing Materials"
+                                            class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105">
+                                    </div>
+                                    <div class="p-6">
+                                        <div class="flex items-center mb-3">
+                                            <span
+                                                class="px-3 py-1 text-xs text-purple-600 bg-purple-100 rounded-full">Graphic
+                                                Design</span>
+                                        </div>
+                                        <h3 class="mb-2 text-xl font-bold text-gray-900">Restaurant
+                                            Marketing Kit</h3>
+                                        <p class="mb-4 text-gray-600">Complete marketing materials
+                                            including menu design, flyers, business cards, and signage for a restaurant
+                                            chain.</p>
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">Menu
+                                                Design</span>
+                                            <span
+                                                class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">Flyers</span>
+                                            <span
+                                                class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">Signage</span>
+                                        </div>
+                                        <a href="#"
+                                            class="inline-flex items-center font-semibold text-blue-600 hover:underline">
+                                            View Project
+                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Digital Marketing Project 2 -->
+                            <div class="project-item digital-marketing group">
+                                <div
+                                    class="overflow-hidden transition-all duration-300 bg-white border border-gray-200 shadow-lg rounded-2xl hover:shadow-xl ">
+                                    <div class="w-full h-48 overflow-hidden">
+                                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&q=80"
+                                            alt="SEO Campaign"
+                                            class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105">
+                                    </div>
+                                    <div class="p-6">
+                                        <div class="flex items-center mb-3">
+                                            <span
+                                                class="px-3 py-1 text-xs text-green-600 bg-green-100 rounded-full">Digital
+                                                Marketing</span>
+                                        </div>
+                                        <h3 class="mb-2 text-xl font-bold text-gray-900">SEO & Content
+                                            Strategy</h3>
+                                        <p class="mb-4 text-gray-600">Complete SEO overhaul and
+                                            content strategy that increased organic traffic by 250% for a B2B company.
+                                        </p>
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span
+                                                class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">SEO</span>
+                                            <span class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">Content
+                                                Strategy</span>
+                                            <span class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">Link
+                                                Building</span>
+                                        </div>
+                                        <a href="#"
+                                            class="inline-flex items-center font-semibold text-blue-600 hover:underline">
+                                            View Project
+                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Web Development Project 3 -->
+                            <div class="project-item web-development group">
+                                <div
+                                    class="overflow-hidden transition-all duration-300 bg-white border border-gray-200 shadow-lg rounded-2xl hover:shadow-xl ">
+                                    <div class="w-full h-48 overflow-hidden">
+                                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80"
+                                            alt="Mobile App Development"
+                                            class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105">
+                                    </div>
+                                    <div class="p-6">
+                                        <div class="flex items-center mb-3">
+                                            <span class="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full">Web
+                                                Development</span>
+                                        </div>
+                                        <h3 class="mb-2 text-xl font-bold text-gray-900">Learning
+                                            Management System</h3>
+                                        <p class="mb-4 text-gray-600">Custom LMS platform with video
+                                            streaming, progress tracking, and interactive assignments for online
+                                            education.</p>
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span
+                                                class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">Angular</span>
+                                            <span
+                                                class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">Python</span>
+                                            <span
+                                                class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">PostgreSQL</span>
+                                        </div>
+                                        <a href="#"
+                                            class="inline-flex items-center font-semibold text-blue-600 hover:underline">
+                                            View Project
+                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Graphic Design Project 3 -->
+                            <div class="project-item graphic-design group">
+                                <div
+                                    class="overflow-hidden transition-all duration-300 bg-white border border-gray-200 shadow-lg rounded-2xl hover:shadow-xl ">
+                                    <div class="w-full h-48 overflow-hidden">
+                                        <img src="https://images.unsplash.com/photo-1586880244386-8b3e34c8382c?auto=format&fit=crop&w=600&q=80"
+                                            alt="Product Packaging"
+                                            class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105">
+                                    </div>
+                                    <div class="p-6">
+                                        <div class="flex items-center mb-3">
+                                            <span
+                                                class="px-3 py-1 text-xs text-purple-600 bg-purple-100 rounded-full">Graphic
+                                                Design</span>
+                                        </div>
+                                        <h3 class="mb-2 text-xl font-bold text-gray-900">Product
+                                            Packaging Design</h3>
+                                        <p class="mb-4 text-gray-600">Premium packaging design for
+                                            cosmetic products including box design, labels, and promotional materials.
+                                        </p>
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span
+                                                class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">Packaging</span>
+                                            <span class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">Label
+                                                Design</span>
+                                            <span class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">3D
+                                                Mockups</span>
+                                        </div>
+                                        <a href="#"
+                                            class="inline-flex items-center font-semibold text-blue-600 hover:underline">
+                                            View Project
+                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Digital Marketing Project 3 -->
+                            <div class="project-item digital-marketing group">
+                                <div
+                                    class="overflow-hidden transition-all duration-300 bg-white border border-gray-200 shadow-lg rounded-2xl hover:shadow-xl ">
+                                    <div class="w-full h-48 overflow-hidden">
+                                        <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?auto=format&fit=crop&w=600&q=80"
+                                            alt="Email Marketing Campaign"
+                                            class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105">
+                                    </div>
+                                    <div class="p-6">
+                                        <div class="flex items-center mb-3">
+                                            <span
+                                                class="px-3 py-1 text-xs text-green-600 bg-green-100 rounded-full">Digital
+                                                Marketing</span>
+                                        </div>
+                                        <h3 class="mb-2 text-xl font-bold text-gray-900">Email Marketing
+                                            Automation</h3>
+                                        <p class="mb-4 text-gray-600">Automated email marketing
+                                            system with personalization that achieved 45% open rates and 12% CTR.</p>
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">Email
+                                                Marketing</span>
+                                            <span
+                                                class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">Automation</span>
+                                            <span class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded">A/B
+                                                Testing</span>
+                                        </div>
+                                        <a href="#"
+                                            class="inline-flex items-center font-semibold text-blue-600 hover:underline">
+                                            View Project
+                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Testimonials Section -->
+                <section class="py-20 bg-gray-50">
+                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+                        <div class="mb-16 text-center">
+                            <h2 class="mb-6 text-3xl font-bold text-gray-900 md:text-4xl">
+                                What Our Clients Say
+                            </h2>
+                            <p class="max-w-2xl mx-auto text-lg text-gray-600">
+                                Don't just take our word for it. Here's what our satisfied clients have to say about our
+                                work.
+                            </p>
+                        </div>
+
+                        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                            <!-- Testimonial 1 -->
+                            <div class="p-6 bg-white border border-gray-200 shadow-lg rounded-2xl ">
+                                <div class="flex items-center mb-4">
+                                    <div class="flex text-yellow-400">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="mb-4 text-gray-600">
+                                    "ITBIZONE exceeded our expectations with their e-commerce platform. Our sales
+                                    increased by 200% within the first quarter!"
+                                </p>
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 mr-3 bg-gray-300 rounded-full"></div>
+                                    <div>
+                                        <div class="font-semibold text-gray-900 ">Sarah Johnson</div>
+                                        <div class="text-sm text-gray-600 ">CEO, TechStart Solutions
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial 2 -->
+                            <div class="p-6 bg-white border border-gray-200 shadow-lg rounded-2xl ">
+                                <div class="flex items-center mb-4">
+                                    <div class="flex text-yellow-400">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="mb-4 text-gray-600">
+                                    "The branding and design work was exceptional. Our brand recognition improved
+                                    significantly after the rebrand."
+                                </p>
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 mr-3 bg-gray-300 rounded-full"></div>
+                                    <div>
+                                        <div class="font-semibold text-gray-900 ">Michael Chen</div>
+                                        <div class="text-sm text-gray-600 ">Marketing Director,
+                                            Innovate Corp</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial 3 -->
+                            <div class="p-6 bg-white border border-gray-200 shadow-lg rounded-2xl ">
+                                <div class="flex items-center mb-4">
+                                    <div class="flex text-yellow-400">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="mb-4 text-gray-600">
+                                    "Their digital marketing strategy helped us achieve a 300% increase in organic
+                                    traffic. Highly recommended!"
+                                </p>
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 mr-3 bg-gray-300 rounded-full"></div>
+                                    <div>
+                                        <div class="font-semibold text-gray-900 ">Emily Rodriguez</div>
+                                        <div class="text-sm text-gray-600 ">Founder, Digital Fitness
+                                            Co</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA Section -->
+                <section class="py-20 bg-main">
+                    <div class="max-w-screen-xl px-4 mx-auto text-center sm:px-6 lg:px-8">
+                        <h2 class="mb-6 text-3xl font-bold text-white md:text-4xl">
+                            Ready to Start Your Next Project?
+                        </h2>
+                        <p class="max-w-3xl mx-auto mb-8 text-xl text-blue-100">
+                            Let's discuss how we can help bring your vision to life with our comprehensive digital
+                            solutions.
+                        </p>
+                        <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
+                            <a href="/contact"
+                                class="inline-flex items-center px-8 py-4 font-semibold text-blue-600 transition-colors duration-300 bg-white rounded-lg shadow-lg hover:bg-gray-100">
+                                Start Your Project
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                            <a href="/about"
+                                class="inline-flex items-center px-8 py-4 font-semibold text-white transition-all duration-300 border-2 border-white rounded-lg hover:bg-white hover:text-blue-600">
+                                Learn More About Us
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- JavaScript for Portfolio Filtering -->
+                <script>
+                    function filterProjects(category) {
+                        const projects = document.querySelectorAll('.project-item');
+                        const buttons = document.querySelectorAll('.filter-btn');
+
+                        // Remove active class from all buttons
+                        buttons.forEach(btn => {
+                            btn.classList.remove('active', 'bg-main', 'text-white');
+                            btn.classList.add('bg-white', 'text-gray-700');
+                        });
+
+                        // Add active class to clicked button
+                        event.target.classList.add('active', 'bg-main', 'text-white');
+                        event.target.classList.remove('bg-white', 'text-gray-700');
+
+                        // Show/hide projects based on category
+                        projects.forEach(project => {
+                            if (category === 'all' || project.classList.contains(category)) {
+                                project.style.display = 'block';
+                                project.style.opacity = '1';
+                            } else {
+                                project.style.display = 'none';
+                                project.style.opacity = '0';
+                            }
+                        });
+                    }
+
+                    // Initialize with all projects visible
+                    document.addEventListener('DOMContentLoaded', function () {
+                        filterProjects('all');
+                    });
+                </script>
+
+            </main>
+            <%- include('../partials/footer.ejs') %>
+
+    </body>
+
+    </html>

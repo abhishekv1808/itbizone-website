@@ -8,41 +8,33 @@
         <%= pageTitle %>
     </title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/icon.ico">
+
     <!-- Google Fonts - Inter Variable Font for Tailwind CSS 4.1 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap"
         rel="stylesheet">
 
     <!-- Tailwind CSS 4.1 Optimized Output -->
-    <link rel="stylesheet" href="/output.css">
-    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="/output.css" type="text/css">
 
     <!-- Font Awesome 7.0 for Modern Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Optimized Dark Mode Script for Tailwind CSS 4.1 -->
+    <!-- Lenis - Smooth Scrolling Library -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.43/dist/lenis.min.js"></script>
+
+    <!-- Light Mode Only - No Theme Toggle -->
     <script>
-        // Prevent flash of unstyled content with optimized theme loading
-        (function () {
-            const theme = localStorage.getItem('theme') ||
-                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-
-            // Set data attribute for Tailwind CSS 4.1 dark mode
-            document.documentElement.setAttribute('data-theme', theme);
-
-            // Add class for immediate styling
-            if (theme === 'dark') {
-                document.documentElement.classList.add('dark');
-            } else {
-                document.documentElement.classList.remove('dark');
-            }
-
-            // Store the preference
-            localStorage.setItem('theme', theme);
-        })();
+        // Force light theme initialization before page renders
+        document.documentElement.classList.remove('dark');
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
     </script>
 </head>
