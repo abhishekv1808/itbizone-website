@@ -7,7 +7,22 @@ exports.getHome =(req,res,next)=>{
 }
 
 exports.getContactUs = (req,res,next)=>{
-    res.render('../views/user/contact.ejs', {pageTitle : "Contact Us | ITBIZONE", oldInput :{fullName: '', email: '', mobileNumber: '', company: '', service: '', description: '', timeline: ''}, errors: []});
+    const showSuccessModal = req.query.success === 'true';
+    res.render('../views/user/contact.ejs', {
+        pageTitle : "Contact Us | ITBIZONE", 
+        oldInput :{
+            fullName: '', 
+            email: '', 
+            mobileNumber: '', 
+            company: '', 
+            service: '', 
+            description: '', 
+            timeline: '',
+            newsletter: ''
+        }, 
+        errors: [],
+        showSuccessModal: showSuccessModal
+    });
 }
 
 
@@ -24,100 +39,227 @@ exports.getGraphicDesign = (req,res,next)=>{
 }
 
 
+
+exports.getPortfolio = (req,res,next)=>{
+    res.render('../views/user/portfolio.ejs', {pageTitle : "Portfolio | ITBIZONE"});
+}
+
+
+
 exports.postContact = [
 
     check('fullName')
-    .notEmpty().withMessage('Please Enter Full Name')
-    .isLength({ min: 3 }).withMessage('Full Name must be at least 3 characters long')
-    .matches(/^[a-zA-Z\s]*$/).withMessage('Full Name must contain only letters and spaces'),
+    .notEmpty().withMessage('Full Name is required')
+    .isLength({ min: 2, max: 50 }).withMessage('Full Name must be between 2 and 50 characters')
+    .matches(/^[a-zA-Z\s]+$/).withMessage('Full Name must contain only letters and spaces')
+    .custom((value) => {
+        if (value.trim().split(' ').length < 2) {
+            throw new Error('Please enter your full name (first and last name)');
+        }
+        return true;
+    }),
 
     check('email')
-    .notEmpty().withMessage('Please Enter Email')
-    .isEmail().withMessage('Please Enter a Valid Email'),
+    .notEmpty().withMessage('Email address is required')
+    .isEmail().withMessage('Please enter a valid email address')
+    .normalizeEmail()
+    .custom((value) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(value)) {
+            throw new Error('Please enter a valid email format');
+        }
+        return true;
+    }),
 
     check('mobileNumber')
-    .notEmpty().withMessage('Please Enter Mobile Number')
-    .isLength({min:10, max:10}).withMessage('Mobile Number must be 10 digits')
-    .matches(/^[0-9]*$/).withMessage('Mobile Number must contain only numbers'),
+    .optional({ checkFalsy: true })
+    .isMobilePhone('en-IN').withMessage('Please enter a valid Indian mobile number')
+    .isLength({min:10, max:10}).withMessage('Mobile number must be exactly 10 digits')
+    .matches(/^[6-9][0-9]{9}$/).withMessage('Please enter a valid Indian mobile number starting with 6, 7, 8, or 9'),
 
     check('company')
-    .notEmpty().withMessage('Please Enter Company Name')
-    .isLength({ min: 2 }).withMessage('Company Name must be at least 2 characters long')
-    .matches(/^[a-zA-Z\s]*$/).withMessage('Company Name must contain only letters and spaces'),
+    .optional({ checkFalsy: true })
+    .isLength({ min: 2, max: 100 }).withMessage('Company name must be between 2 and 100 characters')
+    .matches(/^[a-zA-Z0-9\s&.-]+$/).withMessage('Company name contains invalid characters'),
 
     check('service')
-    .notEmpty().withMessage('Please Select a Service')
-    .isIn(['Website-Development', 'Graphic-Design', 'Digital-Marketing', 'Other', 'IT-Consulting']).withMessage('Please Select a Valid Service'),
+    .optional({ checkFalsy: true })
+    .isIn(['Website-Development', 'Graphic-Design', 'Digital-Marketing', 'Other', 'IT-Consulting']).withMessage('Please select a valid service'),
 
     check('description')
-    .notEmpty().withMessage('Please Enter a Description')
-    .isLength({ min: 10 }).withMessage('Description must be at least 10 characters long'),
-
+    .notEmpty().withMessage('Project description is required')
+    .isLength({ min: 20, max: 1000 }).withMessage('Project description must be between 20 and 1000 characters')
+    .custom((value) => {
+        // Remove extra whitespace and check meaningful content
+        const cleaned = value.trim().replace(/\s+/g, ' ');
+        if (cleaned.length < 20) {
+            throw new Error('Please provide a more detailed project description');
+        }
+        return true;
+    }),
 
     check('timeline')
-    .notEmpty().withMessage('Please Select a Timeline') 
-    .isIn(['asap', '1-month', '2-3-months', '3-6-months', '6-plus-months', 'just-exploring']).withMessage('Please Select a Valid Timeline'),
+    .optional({ checkFalsy: true })
+    .isIn(['asap', '1-month', '2-3-months', '3-6-months', '6-plus-months', 'just-exploring']).withMessage('Please select a valid timeline'),
 
     async(req,res,next)=>{
-        const {fullName, email, mobileNumber, company, service, description, timeline} = req.body;
+        const {fullName, email, mobileNumber, company, service, description, timeline, newsletter} = req.body;
         const errors = validationResult(req);
-            if(!errors.isEmpty()){
-                return res.status(422).render('../views/user/contact.ejs', {
-                    pageTitle: "Contact Us | ITBIZONE",
-                    errors: errors.array().map(err => err.msg),
-                    oldInput: {
-                        fullName ,
-                        email ,
-                        mobileNumber,
-                        company,
-                        service,
-                        description,
-                        timeline
-                    }
-                });
-            }
+        
+        if(!errors.isEmpty()){
+            return res.status(422).render('../views/user/contact.ejs', {
+                pageTitle: "Contact Us | ITBIZONE",
+                errors: errors.array().map(err => err.msg),
+                oldInput: {
+                    fullName: fullName || '',
+                    email: email || '',
+                    mobileNumber: mobileNumber || '',
+                    company: company || '',
+                    service: service || '',
+                    description: description || '',
+                    timeline: timeline || '',
+                    newsletter: newsletter || ''
+                }
+            });
+        }
 
-        const contactForm = new ContactForm({
-            fullName,
-            email,
-            mobileNumber,
-            company,
-            service,
-            description,
-            timeline
-        });
+        try {
+            const contactForm = new ContactForm({
+                fullName: fullName.trim(),
+                email: email.toLowerCase().trim(),
+                mobileNumber: mobileNumber || '',
+                company: company || '',
+                service: service || '',
+                description: description.trim(),
+                timeline: timeline || '',
+                newsletter: newsletter === 'yes'
+            });
 
-        await contactForm.save().then(()=>{
-                res.status(201).render('../views/user/contact.ejs', {
-                    pageTitle: "Contact Us | ITBIZONE",
-                    successMessage: 'Your message has been sent successfully!',
-                    errors: {},
-                    oldInput: {
-                        fullName:"",
-                        email:"",
-                        mobileNumber:"",
-                        company:"",
-                        service:"",
-                        description:"",
-                        timeline :""
-                    }
-                });
-        }).catch(err=>{
-            console.log(err);
-                res.status(500).render('../views/user/contact.ejs', {
-                    pageTitle: "Contact Us | ITBIZONE",
-                    errors: { general: 'An error occurred while submitting the form. Please try again later.' },
-                    oldInput: {
-                        fullName,
-                        email,
-                        mobileNumber,
-                        company,
-                        service,
-                        description,
-                        timeline
-                    }
-                });
-        });
+            await contactForm.save();
+            
+            // Redirect to contact page with success parameter
+            res.redirect('/contact?success=true');
+            
+        } catch(err) {
+            console.error('Contact form submission error:', err);
+            return res.status(500).render('../views/user/contact.ejs', {
+                pageTitle: "Contact Us | ITBIZONE",
+                errors: ['An error occurred while submitting the form. Please try again later.'],
+                oldInput: {
+                    fullName: fullName || '',
+                    email: email || '',
+                    mobileNumber: mobileNumber || '',
+                    company: company || '',
+                    service: service || '',
+                    description: description || '',
+                    timeline: timeline || '',
+                    newsletter: newsletter || ''
+                }
+            });
+        }
     }
 ]
-    
+
+
+exports.getAboutUs = (req, res, next) => {
+    res.render('../views/user/about.ejs', { pageTitle: "About Us | ITBIZONE" });
+}
+
+exports.getUIUX = (req, res, next) => {
+    res.render('../views/user/ui-ux.ejs', { pageTitle: "UI/UX Design | ITBIZONE" });
+}
+
+exports.getPricing = (req, res, next) => {
+    // Define all services with their details (prices in INR) - Realistic Indian Market Rates
+    const services = {
+        websiteDevelopment: {
+            category: 'Website Development',
+            description: 'Build, design, and optimize high-performing websites.',
+            subServices: [
+                { name: 'Custom Website Design & Development', price: 35000 },
+                { name: 'E-commerce Development', price: 50000 },
+                { name: 'Web Application Development', price: 65000 },
+                { name: 'Responsive Design & Mobile Optimization', price: 25000 },
+                { name: 'Website Redesign & Modernization', price: 40000 },
+                { name: 'Landing Page Design & Development', price: 15000 },
+                { name: 'CMS Development', price: 30000 },
+                { name: 'UI/UX Design', price: 28000 },
+                { name: 'Performance Optimization', price: 20000 },
+                { name: 'Website Maintenance & Support', price: 10000 },
+                { name: 'Domain & Hosting Setup', price: 8000 },
+                { name: 'Website Security Implementation', price: 18000 },
+                { name: 'API Integration', price: 25000 },
+                { name: 'Payment Gateway Integration', price: 20000 },
+                { name: 'SEO-Friendly Web Structure Development', price: 18000 }
+            ]
+        },
+        graphicDesign: {
+            category: 'Graphic Design',
+            description: 'Create impactful visuals that define your brand.',
+            subServices: [
+                { name: 'Logo & Brand Identity Design', price: 25000 },
+                { name: 'Brochure, Flyer & Poster Design', price: 12000 },
+                { name: 'Business Card & Stationery Design', price: 8000 },
+                { name: 'Social Media Post Design', price: 10000 },
+                { name: 'Banner & Ad Creative Design', price: 12000 },
+                { name: 'Infographics & Presentation Design', price: 15000 },
+                { name: 'Packaging Design', price: 20000 },
+                { name: 'UI/UX Design Mockups', price: 22000 },
+                { name: 'Email Newsletter Design', price: 12000 },
+                { name: 'Illustrations & Vector Art', price: 18000 },
+                { name: 'Product Catalogue Design', price: 20000 },
+                { name: 'Rebranding & Visual Refresh', price: 28000 },
+                { name: 'Website & App Graphic Assets', price: 25000 },
+                { name: 'Print Media Design', price: 15000 },
+                { name: '3D & Motion Graphic Elements', price: 35000 }
+            ]
+        },
+        digitalMarketing: {
+            category: 'Digital Marketing',
+            description: 'Grow your business with data-driven marketing strategies.',
+            subServices: [
+                { name: 'Search Engine Optimization (SEO)', price: 30000 },
+                { name: 'Search Engine Marketing (SEM / Google Ads)', price: 35000 },
+                { name: 'Social Media Marketing (SMM)', price: 28000 },
+                { name: 'Email Marketing', price: 18000 },
+                { name: 'Content Marketing & Copywriting', price: 22000 },
+                { name: 'Influencer Marketing', price: 32000 },
+                { name: 'Online Reputation Management (ORM)', price: 25000 },
+                { name: 'Pay-Per-Click (PPC) Campaigns', price: 28000 },
+                { name: 'Video Marketing', price: 30000 },
+                { name: 'Conversion Rate Optimization (CRO)', price: 25000 },
+                { name: 'Affiliate Marketing', price: 22000 },
+                { name: 'Marketing Automation', price: 32000 },
+                { name: 'Lead Generation Campaigns', price: 28000 },
+                { name: 'Analytics & Performance Tracking', price: 18000 },
+                { name: 'Retargeting & Remarketing Campaigns', price: 22000 }
+            ]
+        },
+        socialMediaManagement: {
+            category: 'Social Media Management',
+            description: 'Build, engage, and grow your online community.',
+            subServices: [
+                { name: 'Social Media Strategy Development', price: 15000 },
+                { name: 'Account Setup & Optimization', price: 10000 },
+                { name: 'Content Creation & Scheduling', price: 18000 },
+                { name: 'Creative Design for Posts & Stories', price: 15000 },
+                { name: 'Hashtag Research & Trend Analysis', price: 10000 },
+                { name: 'Community Management', price: 15000 },
+                { name: 'Ad Campaign Management', price: 18000 },
+                { name: 'Analytics & Monthly Reporting', price: 12000 },
+                { name: 'Social Media Branding', price: 15000 },
+                { name: 'Influencer Collaboration Management', price: 22000 },
+                { name: 'Reel & Short Video Content Strategy', price: 18000 },
+                { name: 'Social Media Contest & Campaign Execution', price: 16000 },
+                { name: 'Social Listening & Competitor Analysis', price: 12000 },
+                { name: 'Profile Growth & Engagement Boost', price: 15000 },
+                { name: 'Crisis & Reputation Handling', price: 18000 }
+            ]
+        }
+    };
+
+    res.render('../views/user/pricing.ejs', {
+        pageTitle: "Custom Pricing | ITBIZONE",
+        services: services
+    });
+}

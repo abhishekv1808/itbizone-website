@@ -7,8 +7,6 @@ const mongodbURL =  'mongodb+srv://abhishekv1808:' + encodeURIComponent('Grow@$@
 const userRouter = require('./routes/userRouter');
 
 
-
-
 const app = express();
 app.set('view engine', 'ejs');
 app.set('views', 'views');
