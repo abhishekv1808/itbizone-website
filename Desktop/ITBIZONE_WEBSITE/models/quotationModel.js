@@ -4,13 +4,12 @@ const quotationSchema = new mongoose.Schema({
     quotationNumber: {
         type: String,
         unique: true,
+        sparse: true,
         required: true
     },
     series: {
         type: Number,
-        required: true,
-        unique: true,
-        auto: true
+        required: true
     },
     clientDetails: {
         fullName: { type: String, required: true },
@@ -62,9 +61,6 @@ const quotationSchema = new mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now
-    },
-    expiresAt: {
-        type: Date
     }
 });
 
